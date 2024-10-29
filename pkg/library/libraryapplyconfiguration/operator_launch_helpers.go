@@ -62,7 +62,7 @@ func (a SimpleOperatorStarter) RunOnce(ctx context.Context) error {
 	errs := []error{}
 	for _, controllerRunner := range a.ControllerNamedRunOnceFns {
 		func() {
-			if (controllersToRunSet.Len() > 0) && !controllersToRunSet.Has(controllerRunner.ControllerInstanceName()) {
+			if !controllersToRunSet.Has(controllerRunner.ControllerInstanceName()) {
 				return
 			}
 			localCtx, localCancel := context.WithTimeout(ctx, 1*time.Second)
