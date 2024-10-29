@@ -1,0 +1,90 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.2.13
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+    targetRef:
+      kind: Pod
+      name: networking-console-plugin-5cd86b96f5-dh6vw
+      namespace: openshift-network-console
+      uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+    zone: us-central1-b
+  - addresses:
+    - 10.131.0.16
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+    targetRef:
+      kind: Pod
+      name: networking-console-plugin-5cd86b96f5-4mr48
+      namespace: openshift-network-console
+      uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+    zone: us-central1-a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:26:46Z"
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    generateName: networking-console-plugin-
+    generation: 3
+    labels:
+      app.kubernetes.io/component: networking-console-plugin
+      app.kubernetes.io/managed-by: cluster-network-operator
+      app.kubernetes.io/name: networking-console-plugin
+      app.kubernetes.io/part-of: cluster-network-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: networking-console-plugin
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f67abe2d-4adb-45b2-94ca-2f3ce28a29e4"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:26:46Z"
+    name: networking-console-plugin-whbxx
+    namespace: openshift-network-console
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: networking-console-plugin
+      uid: f67abe2d-4adb-45b2-94ca-2f3ce28a29e4
+    resourceVersion: "28800"
+    uid: fd8ddcc8-54a3-4795-806f-175c2e0f5ca3
+  ports:
+  - name: https
+    port: 9443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "61009"

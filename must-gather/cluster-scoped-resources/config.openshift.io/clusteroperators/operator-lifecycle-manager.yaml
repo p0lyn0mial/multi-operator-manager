@@ -1,0 +1,86 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: OperatorLifecycleManager
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2024-10-24T12:58:39Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:58:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:05:22Z"
+  name: operator-lifecycle-manager
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "11268"
+  uid: 07ad6f71-7ca0-4f23-acd0-bf0ff1e8dc20
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:05:22Z"
+    message: Deployed 0.0.0-5e2c73b7663d0122c9dc3e59ea39e515a31e2719
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2024-10-24T13:05:22Z"
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:05:22Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:05:22Z"
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operators.coreos.com
+    name: packageserver
+    namespace: openshift-operator-lifecycle-manager
+    resource: clusterserviceversions
+  versions:
+  - name: operator
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  - name: operator-lifecycle-manager
+    version: 0.0.0-5e2c73b7663d0122c9dc3e59ea39e515a31e2719

@@ -1,0 +1,59 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2024-10-24T13:02:13Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+      f:rules: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:02:13Z"
+  name: cloud-network-config-controller
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "3784"
+  uid: 0cb89d24-b922-47c6-961f-6ef2a45eff49
+rules:
+- apiGroups:
+  - cloud.network.openshift.io
+  resources:
+  - cloudprivateipconfigs
+  - cloudprivateipconfigs/status
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - patch
+  - update
+- apiGroups:
+  - config.openshift.io
+  resources:
+  - infrastructures
+  - featuregates
+  - clusterversions
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - get
+  - list
+  - watch
+  - update
+  - patch

@@ -1,0 +1,74 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2024-10-24T13:22:06Z"
+    labels:
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: kubelet
+      k8s-app: kubelet
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: PrometheusOperator
+      operation: Update
+      time: "2024-10-24T13:22:06Z"
+    name: kubelet
+    namespace: kube-system
+    resourceVersion: "24036"
+    uid: 858ac877-1d23-45ed-8133-76280d626b68
+  subsets:
+  - addresses:
+    - ip: 10.0.0.3
+      targetRef:
+        kind: Node
+        name: ci-op-2fcpj5j6-f6035-2lklf-master-0
+        uid: 70cf08f3-a1d7-4bf2-aa24-f4dca7982067
+    - ip: 10.0.0.4
+      targetRef:
+        kind: Node
+        name: ci-op-2fcpj5j6-f6035-2lklf-master-1
+        uid: f4481a95-240d-4676-aa02-a052595ffb9c
+    - ip: 10.0.0.6
+      targetRef:
+        kind: Node
+        name: ci-op-2fcpj5j6-f6035-2lklf-master-2
+        uid: 91fdf654-c8bd-472e-993a-1c998ef66831
+    - ip: 10.0.128.2
+      targetRef:
+        kind: Node
+        name: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+        uid: 435c668f-91be-40bb-beee-cd19fbfd60ca
+    - ip: 10.0.128.3
+      targetRef:
+        kind: Node
+        name: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+        uid: 51d242d2-2dde-4a52-9c72-a758966f4b8f
+    - ip: 10.0.128.4
+      targetRef:
+        kind: Node
+        name: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+        uid: c8f235c1-ba26-41f5-b1ff-3a914274a718
+    ports:
+    - name: https-metrics
+      port: 10250
+      protocol: TCP
+    - name: http-metrics
+      port: 10255
+      protocol: TCP
+    - name: cadvisor
+      port: 4194
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60844"

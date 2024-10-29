@@ -1,0 +1,137 @@
+2024-10-24T13:16:21.090365892Z + . /ovnkube-lib/ovnkube-lib.sh
+2024-10-24T13:16:21.090493352Z ++ set -x
+2024-10-24T13:16:21.090493352Z ++ K8S_NODE=ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:16:21.090493352Z ++ [[ -n ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz ]]
+2024-10-24T13:16:21.090493352Z ++ [[ -f /env/ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz ]]
+2024-10-24T13:16:21.090509675Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2024-10-24T13:16:21.090509675Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2024-10-24T13:16:21.090521643Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2024-10-24T13:16:21.090532749Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2024-10-24T13:16:21.090543635Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2024-10-24T13:16:21.090554545Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2024-10-24T13:16:21.090565412Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2024-10-24T13:16:21.090576549Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2024-10-24T13:16:21.090576549Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2024-10-24T13:16:21.090587698Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2024-10-24T13:16:21.091936296Z + start-ovnkube-node 4 29103 29105
+2024-10-24T13:16:21.091974218Z + local log_level=4
+2024-10-24T13:16:21.091986406Z + local metrics_port=29103
+2024-10-24T13:16:21.091997672Z + local ovn_metrics_port=29105
+2024-10-24T13:16:21.092008433Z + [[ 3 -ne 3 ]]
+2024-10-24T13:16:21.092019658Z + cni-bin-copy
+2024-10-24T13:16:21.092056940Z + . /host/etc/os-release
+2024-10-24T13:16:21.092335913Z ++ NAME='Red Hat Enterprise Linux CoreOS'
+2024-10-24T13:16:21.092335913Z ++ ID=rhcos
+2024-10-24T13:16:21.092335913Z ++ ID_LIKE='rhel fedora'
+2024-10-24T13:16:21.092355490Z ++ VERSION=418.94.202410230039-0
+2024-10-24T13:16:21.092355490Z ++ VERSION_ID=4.18
+2024-10-24T13:16:21.092355490Z ++ VARIANT=CoreOS
+2024-10-24T13:16:21.092368171Z ++ VARIANT_ID=coreos
+2024-10-24T13:16:21.092368171Z ++ PLATFORM_ID=platform:el9
+2024-10-24T13:16:21.092390443Z ++ PRETTY_NAME='Red Hat Enterprise Linux CoreOS 418.94.202410230039-0'
+2024-10-24T13:16:21.092402510Z ++ ANSI_COLOR='0;31'
+2024-10-24T13:16:21.092413624Z ++ CPE_NAME=cpe:/o:redhat:enterprise_linux:9::baseos::coreos
+2024-10-24T13:16:21.092424601Z ++ HOME_URL=https://www.redhat.com/
+2024-10-24T13:16:21.092435605Z ++ DOCUMENTATION_URL=https://docs.okd.io/latest/welcome/index.html
+2024-10-24T13:16:21.092446511Z ++ BUG_REPORT_URL=https://access.redhat.com/labs/rhir/
+2024-10-24T13:16:21.092457523Z ++ REDHAT_BUGZILLA_PRODUCT='OpenShift Container Platform'
+2024-10-24T13:16:21.092468288Z ++ REDHAT_BUGZILLA_PRODUCT_VERSION=4.18
+2024-10-24T13:16:21.092479084Z ++ REDHAT_SUPPORT_PRODUCT='OpenShift Container Platform'
+2024-10-24T13:16:21.092489921Z ++ REDHAT_SUPPORT_PRODUCT_VERSION=4.18
+2024-10-24T13:16:21.092501347Z ++ OPENSHIFT_VERSION=4.18
+2024-10-24T13:16:21.092501347Z ++ RHEL_VERSION=9.4
+2024-10-24T13:16:21.092530098Z ++ OSTREE_VERSION=418.94.202410230039-0
+2024-10-24T13:16:21.092542400Z + rhelmajor=
+2024-10-24T13:16:21.092542400Z + case "${ID}" in
+2024-10-24T13:16:21.093386120Z ++ echo cpe:/o:redhat:enterprise_linux:9::baseos::coreos
+2024-10-24T13:16:21.093612540Z ++ cut -f 5 -d :
+2024-10-24T13:16:21.096947718Z + RHEL_VERSION=9
+2024-10-24T13:16:21.097629090Z ++ echo 9
+2024-10-24T13:16:21.097854291Z ++ sed -E 's/([0-9]+)\.{1}[0-9]+(\.[0-9]+)?/\1/'
+2024-10-24T13:16:21.099633158Z + rhelmajor=9
+2024-10-24T13:16:21.099633158Z + sourcedir=/usr/libexec/cni/
+2024-10-24T13:16:21.099633158Z + case "${rhelmajor}" in
+2024-10-24T13:16:21.099684434Z + sourcedir=/usr/libexec/cni/rhel9
+2024-10-24T13:16:21.099684434Z + cp -f /usr/libexec/cni/rhel9/ovn-k8s-cni-overlay /cni-bin-dir/
+2024-10-24T13:16:21.158302497Z ++ date '+%m%d %H:%M:%S.%N'
+2024-10-24T13:16:21.160861938Z + echo 'I1024 13:16:21.160383088 - disable conntrack on geneve port'
+2024-10-24T13:16:21.160896684Z I1024 13:16:21.160383088 - disable conntrack on geneve port
+2024-10-24T13:16:21.160905070Z + iptables -t raw -A PREROUTING -p udp --dport 6081 -j NOTRACK
+2024-10-24T13:16:21.178844916Z + iptables -t raw -A OUTPUT -p udp --dport 6081 -j NOTRACK
+2024-10-24T13:16:21.181670697Z + ip6tables -t raw -A PREROUTING -p udp --dport 6081 -j NOTRACK
+2024-10-24T13:16:21.184726479Z + ip6tables -t raw -A OUTPUT -p udp --dport 6081 -j NOTRACK
+2024-10-24T13:16:21.188052870Z ++ date '+%m%d %H:%M:%S.%N'
+2024-10-24T13:16:21.190571647Z + echo 'I1024 13:16:21.190129476 - starting ovnkube-node'
+2024-10-24T13:16:21.190634527Z I1024 13:16:21.190129476 - starting ovnkube-node
+2024-10-24T13:16:21.190704552Z + '[' shared == shared ']'
+2024-10-24T13:16:21.190762062Z + gateway_mode_flags='--gateway-mode shared --gateway-interface br-ex'
+2024-10-24T13:16:21.190762062Z + export_network_flows_flags=
+2024-10-24T13:16:21.190850610Z + [[ -n '' ]]
+2024-10-24T13:16:21.190850610Z + [[ -n '' ]]
+2024-10-24T13:16:21.190850610Z + [[ -n '' ]]
+2024-10-24T13:16:21.190850610Z + [[ -n '' ]]
+2024-10-24T13:16:21.190850610Z + [[ -n '' ]]
+2024-10-24T13:16:21.190850610Z + [[ -n '' ]]
+2024-10-24T13:16:21.190850610Z + gw_interface_flag=
+2024-10-24T13:16:21.190871719Z + '[' -d /sys/class/net/br-ex1 ']'
+2024-10-24T13:16:21.190892888Z + node_mgmt_port_netdev_flags=
+2024-10-24T13:16:21.190904544Z + [[ -n '' ]]
+2024-10-24T13:16:21.190916278Z + [[ -n '' ]]
+2024-10-24T13:16:21.190916278Z + multi_network_enabled_flag=
+2024-10-24T13:16:21.190929985Z + [[ true == \t\r\u\e ]]
+2024-10-24T13:16:21.190949704Z + multi_network_enabled_flag=--enable-multi-network
+2024-10-24T13:16:21.190949704Z + network_segmentation_enabled_flag=
+2024-10-24T13:16:21.190961489Z + [[ false == \t\r\u\e ]]
+2024-10-24T13:16:21.190961489Z + network_observability_enabled_flag=
+2024-10-24T13:16:21.190973064Z + [[ false == \t\r\u\e ]]
+2024-10-24T13:16:21.190973064Z + multi_network_policy_enabled_flag=
+2024-10-24T13:16:21.190984760Z + [[ false == \t\r\u\e ]]
+2024-10-24T13:16:21.190984760Z + admin_network_policy_enabled_flag=
+2024-10-24T13:16:21.190995544Z + [[ true == \t\r\u\e ]]
+2024-10-24T13:16:21.191006542Z + admin_network_policy_enabled_flag=--enable-admin-network-policy
+2024-10-24T13:16:21.191006542Z + dns_name_resolver_enabled_flag=
+2024-10-24T13:16:21.191020378Z + [[ false == \t\r\u\e ]]
+2024-10-24T13:16:21.191020378Z + ip_forwarding_flag=
+2024-10-24T13:16:21.191037339Z + '[' '' == Global ']'
+2024-10-24T13:16:21.191048666Z + ip_forwarding_flag=--disable-forwarding
+2024-10-24T13:16:21.191059953Z + sysctl -w net.ipv4.ip_forward=0
+2024-10-24T13:16:21.193886395Z net.ipv4.ip_forward = 0
+2024-10-24T13:16:21.194166049Z + sysctl -w net.ipv6.conf.all.forwarding=0
+2024-10-24T13:16:21.195724985Z net.ipv6.conf.all.forwarding = 0
+2024-10-24T13:16:21.196005603Z + NETWORK_NODE_IDENTITY_ENABLE=
+2024-10-24T13:16:21.196069210Z + [[ true == \t\r\u\e ]]
+2024-10-24T13:16:21.196114133Z + NETWORK_NODE_IDENTITY_ENABLE='
+2024-10-24T13:16:21.196114133Z       --bootstrap-kubeconfig=/var/lib/kubelet/kubeconfig
+2024-10-24T13:16:21.196114133Z       --cert-dir=/etc/ovn/ovnkube-node-certs
+2024-10-24T13:16:21.196114133Z       --cert-duration=24h
+2024-10-24T13:16:21.196150586Z     '
+2024-10-24T13:16:21.196182685Z + ovn_v4_join_subnet_opt=
+2024-10-24T13:16:21.196216821Z + [[ '' != '' ]]
+2024-10-24T13:16:21.196247922Z + ovn_v6_join_subnet_opt=
+2024-10-24T13:16:21.196332630Z + [[ '' != '' ]]
+2024-10-24T13:16:21.196366885Z + ovn_v4_masquerade_subnet_opt=
+2024-10-24T13:16:21.196405146Z + [[ 169.254.0.0/17 != '' ]]
+2024-10-24T13:16:21.196435513Z + ovn_v4_masquerade_subnet_opt='--gateway-v4-masquerade-subnet 169.254.0.0/17'
+2024-10-24T13:16:21.196464059Z + ovn_v6_masquerade_subnet_opt=
+2024-10-24T13:16:21.196496329Z + [[ fd69::/112 != '' ]]
+2024-10-24T13:16:21.196523710Z + ovn_v6_masquerade_subnet_opt='--gateway-v6-masquerade-subnet fd69::/112'
+2024-10-24T13:16:21.196808099Z + exec /usr/bin/ovnkube --init-ovnkube-controller ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz --init-node ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz --config-file=/run/ovnkube-config/ovnkube.conf --ovn-empty-lb-events --loglevel 4 --inactivity-probe=180000 --gateway-mode shared --gateway-interface br-ex --metrics-bind-address 127.0.0.1:29103 --ovn-metrics-bind-address 127.0.0.1:29105 --metrics-enable-pprof --metrics-enable-config-duration --export-ovs-metrics --disable-snat-multiple-gws --enable-multi-network --enable-admin-network-policy --enable-multicast --zone ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz --enable-interconnect --acl-logging-rate-limit 20 --disable-forwarding --bootstrap-kubeconfig=/var/lib/kubelet/kubeconfig --cert-dir=/etc/ovn/ovnkube-node-certs --cert-duration=24h --gateway-v4-masquerade-subnet 169.254.0.0/17 --gateway-v6-masquerade-subnet fd69::/112
+2024-10-24T13:16:21.231009688Z I1024 13:16:21.230885    3308 config.go:2207] Parsed config file /run/ovnkube-config/ovnkube.conf
+2024-10-24T13:16:21.231255176Z I1024 13:16:21.231086    3308 config.go:2208] Parsed config: {Default:{MTU:1360 RoutableMTU:0 ConntrackZone:64000 HostMasqConntrackZone:0 OVNMasqConntrackZone:0 HostNodePortConntrackZone:0 ReassemblyConntrackZone:0 EncapType:geneve EncapIP: EncapPort:6081 InactivityProbe:100000 OpenFlowProbe:180 OfctrlWaitBeforeClear:0 MonitorAll:true OVSDBTxnTimeout:1m40s LFlowCacheEnable:true LFlowCacheLimit:0 LFlowCacheLimitKb:1048576 RawClusterSubnets:10.128.0.0/14/23 ClusterSubnets:[] EnableUDPAggregation:true Zone:global} Logging:{File: CNIFile: LibovsdbFile:/var/log/ovnkube/libovsdb.log Level:4 LogFileMaxSize:100 LogFileMaxBackups:5 LogFileMaxAge:0 ACLLoggingRateLimit:20} Monitoring:{RawNetFlowTargets: RawSFlowTargets: RawIPFIXTargets: NetFlowTargets:[] SFlowTargets:[] IPFIXTargets:[]} IPFIX:{Sampling:400 CacheActiveTimeout:60 CacheMaxFlows:0} CNI:{ConfDir:/etc/cni/net.d Plugin:ovn-k8s-cni-overlay} OVNKubernetesFeature:{EnableAdminNetworkPolicy:true EnableEgressIP:true EgressIPReachabiltyTotalTimeout:1 EnableEgressFirewall:true EnableEgressQoS:true EnableEgressService:true EgressIPNodeHealthCheckPort:9107 EnableMultiNetwork:true EnableNetworkSegmentation:false EnableMultiNetworkPolicy:false EnableStatelessNetPol:false EnableInterconnect:false EnableMultiExternalGateway:true EnablePersistentIPs:false EnableDNSNameResolver:false EnableServiceTemplateSupport:false EnableObservability:false} Kubernetes:{BootstrapKubeconfig: CertDir: CertDuration:10m0s Kubeconfig: CACert: CAData:[] APIServer:https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443 Token: TokenFile: CompatServiceCIDR: RawServiceCIDRs:172.30.0.0/16 ServiceCIDRs:[] OVNConfigNamespace:openshift-ovn-kubernetes OVNEmptyLbEvents:false PodIP: RawNoHostSubnetNodes: NoHostSubnetNodes:<nil> HostNetworkNamespace:openshift-host-network PlatformType:GCP HealthzBindAddress:0.0.0.0:10256 CompatMetricsBindAddress: CompatOVNMetricsBindAddress: CompatMetricsEnablePprof:false DNSServiceNamespace:openshift-dns DNSServiceName:dns-default} Metrics:{BindAddress: OVNMetricsBindAddress: ExportOVSMetrics:false EnablePprof:false NodeServerPrivKey: NodeServerCert: EnableConfigDuration:false EnableScaleMetrics:false} OvnNorth:{Address: PrivKey: Cert: CACert: CertCommonName: Scheme: ElectionTimer:0 northbound:false exec:<nil>} OvnSouth:{Address: PrivKey: Cert: CACert: CertCommonName: Scheme: ElectionTimer:0 northbound:false exec:<nil>} Gateway:{Mode:shared Interface: EgressGWInterface: NextHop: VLANID:0 NodeportEnable:true DisableSNATMultipleGWs:false V4JoinSubnet:100.64.0.0/16 V6JoinSubnet:fd98::/64 V4MasqueradeSubnet:169.254.169.0/29 V6MasqueradeSubnet:fd69::/125 MasqueradeIPs:{V4OVNMasqueradeIP:169.254.169.1 V6OVNMasqueradeIP:fd69::1 V4HostMasqueradeIP:169.254.169.2 V6HostMasqueradeIP:fd69::2 V4HostETPLocalMasqueradeIP:169.254.169.3 V6HostETPLocalMasqueradeIP:fd69::3 V4DummyNextHopMasqueradeIP:169.254.169.4 V6DummyNextHopMasqueradeIP:fd69::4 V4OVNServiceHairpinMasqueradeIP:169.254.169.5 V6OVNServiceHairpinMasqueradeIP:fd69::5} DisablePacketMTUCheck:false RouterSubnet: SingleNode:false DisableForwarding:false AllowNoUplink:false} MasterHA:{ElectionLeaseDuration:137 ElectionRenewDeadline:107 ElectionRetryPeriod:26} ClusterMgrHA:{ElectionLeaseDuration:137 ElectionRenewDeadline:107 ElectionRetryPeriod:26} HybridOverlay:{Enabled:false RawClusterSubnets: ClusterSubnets:[] VXLANPort:4789} OvnKubeNode:{Mode:full DPResourceDeviceIdsMap:map[] MgmtPortNetdev: MgmtPortDPResourceName:} ClusterManager:{V4TransitSwitchSubnet:100.88.0.0/16 V6TransitSwitchSubnet:fd97::/64}}
+2024-10-24T13:16:21.235392422Z I1024 13:16:21.235333    3308 certificate_manager.go:356] kubernetes.io/kube-apiserver-client: Certificate rotation is enabled
+2024-10-24T13:16:21.235491307Z I1024 13:16:21.235478    3308 kube.go:387] Waiting for certificate
+2024-10-24T13:16:21.236365579Z I1024 13:16:21.236313    3308 certificate_manager.go:356] kubernetes.io/kube-apiserver-client: Rotating certificates
+2024-10-24T13:16:21.237672196Z I1024 13:16:21.237621    3308 cert_rotation.go:137] Starting client certificate rotation controller
+2024-10-24T13:16:28.282409323Z E1024 13:16:28.282352    3308 certificate_manager.go:562] kubernetes.io/kube-apiserver-client: Failed while requesting a signed certificate from the control plane: cannot create certificate signing request: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:16:30.391456242Z I1024 13:16:30.391398    3308 certificate_manager.go:356] kubernetes.io/kube-apiserver-client: Rotating certificates
+2024-10-24T13:16:37.399736231Z E1024 13:16:37.399685    3308 certificate_manager.go:562] kubernetes.io/kube-apiserver-client: Failed while requesting a signed certificate from the control plane: cannot create certificate signing request: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:16:41.643886686Z I1024 13:16:41.643802    3308 certificate_manager.go:356] kubernetes.io/kube-apiserver-client: Rotating certificates
+2024-10-24T13:16:48.652713394Z E1024 13:16:48.652645    3308 certificate_manager.go:562] kubernetes.io/kube-apiserver-client: Failed while requesting a signed certificate from the control plane: cannot create certificate signing request: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:16:57.053614802Z I1024 13:16:57.053513    3308 certificate_manager.go:356] kubernetes.io/kube-apiserver-client: Rotating certificates
+2024-10-24T13:17:04.062003844Z E1024 13:17:04.061934    3308 certificate_manager.go:562] kubernetes.io/kube-apiserver-client: Failed while requesting a signed certificate from the control plane: cannot create certificate signing request: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:17:20.978307794Z I1024 13:17:20.978207    3308 certificate_manager.go:356] kubernetes.io/kube-apiserver-client: Rotating certificates
+2024-10-24T13:17:27.986374620Z E1024 13:17:27.986304    3308 certificate_manager.go:562] kubernetes.io/kube-apiserver-client: Failed while requesting a signed certificate from the control plane: cannot create certificate signing request: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:17:27.986374620Z E1024 13:17:27.986351    3308 certificate_manager.go:440] kubernetes.io/kube-apiserver-client: Reached backoff limit, still unable to rotate certs: timed out waiting for the condition
+2024-10-24T13:17:59.988655267Z I1024 13:17:59.988543    3308 certificate_manager.go:356] kubernetes.io/kube-apiserver-client: Rotating certificates
+2024-10-24T13:18:06.997718771Z E1024 13:18:06.997619    3308 certificate_manager.go:562] kubernetes.io/kube-apiserver-client: Failed while requesting a signed certificate from the control plane: cannot create certificate signing request: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:18:21.235840893Z F1024 13:18:21.235756    3308 ovnkube.go:137] failed to start the node certificate manager: certificate was not signed: context deadline exceeded

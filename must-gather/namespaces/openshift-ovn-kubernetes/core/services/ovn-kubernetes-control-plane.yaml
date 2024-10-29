@@ -1,0 +1,79 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1729775010
+    service.beta.openshift.io/serving-cert-secret-name: ovn-control-plane-metrics-cert
+    service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1729775010
+  creationTimestamp: "2024-10-24T13:02:27Z"
+  labels:
+    app: ovnkube-control-plane
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.beta.openshift.io/serving-cert-secret-name: {}
+        f:labels:
+          f:app: {}
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+      f:spec:
+        f:clusterIP: {}
+        f:ports:
+          k:{"port":9108,"protocol":"TCP"}:
+            .: {}
+            f:name: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:publishNotReadyAddresses: {}
+        f:selector: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:02:27Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.alpha.openshift.io/serving-cert-signed-by: {}
+          f:service.beta.openshift.io/serving-cert-signed-by: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2024-10-24T13:03:53Z"
+  name: ovn-kubernetes-control-plane
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "8337"
+  uid: 72b44760-3861-4418-9280-18f29e8ee802
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: metrics
+    port: 9108
+    protocol: TCP
+    targetPort: 9108
+  publishNotReadyAddresses: true
+  selector:
+    app: ovnkube-control-plane
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

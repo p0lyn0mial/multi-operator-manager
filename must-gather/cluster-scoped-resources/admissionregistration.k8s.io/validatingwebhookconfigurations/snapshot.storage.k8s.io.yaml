@@ -1,0 +1,141 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2024-10-24T13:03:29Z"
+  generation: 2
+  labels:
+    app: csi-snapshot-webhook
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:labels:
+          .: {}
+          f:app: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"volumegroupsnapshotclasses.groupsnapshot.storage.k8s.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+        k:{"name":"volumesnapshotclasses.snapshot.storage.k8s.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: csi-snapshot-controller-operator
+    operation: Update
+    time: "2024-10-24T13:03:29Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"volumegroupsnapshotclasses.groupsnapshot.storage.k8s.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+        k:{"name":"volumesnapshotclasses.snapshot.storage.k8s.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2024-10-24T13:03:35Z"
+  name: snapshot.storage.k8s.io
+  resourceVersion: "6610"
+  uid: b6e2fd9f-eea5-4fed-803b-573690d654ac
+webhooks:
+- admissionReviewVersions:
+  - v1
+  - v1beta1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJSGlIQkp0dUUyamN3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjeU9UYzNOVEF4TURBZQpGdzB5TkRFd01qUXhNekF6TWpsYUZ3MHlOakV5TWpNeE16QXpNekJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNNamszTnpVd01UQXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQ28wMFhCM256RUdKODEwRkE5Q3JNT0l0MHhJUFk0ZGJnMAo0c0hOdG1hbUVlUlpFSDB4enp3M2hwNFUvZ1E5MGliOGtLdEljMEVJNFpXQnpqMXZWUERHM1FWb1BySGR3TzNvCldCYk04dWhGSUl6dmVMNWRqRmJCK1BRVzAzMEl0SWpqVko3bzk1b3Z5Mk54QzhnaUthOEpMaXdRbFdiclo2VDMKbHNmL1ZDajBYQkdRU0FqUjlLUDVnblptY3BTYVRIQlFvSzg3OXFETmFjZUtncTduT0QxSmx1Y2tkaHEwc2RYaApBKzhlY2R2a1dRQjMvK3FHV3ViMjhUM1R4My8rQWdmSjdGOVA4N0ZlNjgvZytLOS9SanlKOTA2ZW1rMnlRdWRWCkVKNHVsaGFoSXpQTWtSRmxBZExRdzZxd0VmQzhyeWdsejhVY3VDNDZ1UWlGelY1SE1CTjFBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlF2N0JleApPR2xOTDhDWkdlWGIvcXNhSnFpRkhEQWZCZ05WSFNNRUdEQVdnQlF2N0JleE9HbE5MOENaR2VYYi9xc2FKcWlGCkhEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFCTDhraElYYmlYRnYxTVRFbVlad0JaTHBzUitoNEplUFl6ZVEKQmcyTGdWV2dlcytLT2t4TGgrUUlhdi9LZk4yWWErRlhQYUIrU0VzL21kSStjUWhOR0tkV2R4ZUhCdjhkMU9qYgpRR3d3cUxmRlVsSVpPd1Zqc2xoTFhGQ3BlcXFOcThPL3JZMDFYcEUzMG9uMXpjK3RQbFd6ZTY2MjNRZWMwSnJBClRzVkJkNVhhNUhSSDVBWm1zdk1rR0laeEM4aU5SNkFPRlhGOFdHa0VtSHpnb0owU0MzVkg2bkxsczVyZXAyVGwKblRuajAya0dadFhvRm9MZTd5eWNWV1grWkJYYm5SRDlWRDcwZUw1QWZNZTZPNWRRR3Z6RERzVWxYSzVEdXRCZAorUG1pLzN4ZjFkNkpvdUk5WFo5cUVHYVRuMyt2bGM5L2phZU1heWlqRHQrbDVGUlIyUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: csi-snapshot-webhook
+      namespace: openshift-cluster-storage-operator
+      path: /volumesnapshot
+      port: 443
+  failurePolicy: Ignore
+  matchPolicy: Equivalent
+  name: volumesnapshotclasses.snapshot.storage.k8s.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - snapshot.storage.k8s.io
+    apiVersions:
+    - v1beta1
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - volumesnapshotclasses
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJSGlIQkp0dUUyamN3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjeU9UYzNOVEF4TURBZQpGdzB5TkRFd01qUXhNekF6TWpsYUZ3MHlOakV5TWpNeE16QXpNekJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNNamszTnpVd01UQXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQ28wMFhCM256RUdKODEwRkE5Q3JNT0l0MHhJUFk0ZGJnMAo0c0hOdG1hbUVlUlpFSDB4enp3M2hwNFUvZ1E5MGliOGtLdEljMEVJNFpXQnpqMXZWUERHM1FWb1BySGR3TzNvCldCYk04dWhGSUl6dmVMNWRqRmJCK1BRVzAzMEl0SWpqVko3bzk1b3Z5Mk54QzhnaUthOEpMaXdRbFdiclo2VDMKbHNmL1ZDajBYQkdRU0FqUjlLUDVnblptY3BTYVRIQlFvSzg3OXFETmFjZUtncTduT0QxSmx1Y2tkaHEwc2RYaApBKzhlY2R2a1dRQjMvK3FHV3ViMjhUM1R4My8rQWdmSjdGOVA4N0ZlNjgvZytLOS9SanlKOTA2ZW1rMnlRdWRWCkVKNHVsaGFoSXpQTWtSRmxBZExRdzZxd0VmQzhyeWdsejhVY3VDNDZ1UWlGelY1SE1CTjFBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlF2N0JleApPR2xOTDhDWkdlWGIvcXNhSnFpRkhEQWZCZ05WSFNNRUdEQVdnQlF2N0JleE9HbE5MOENaR2VYYi9xc2FKcWlGCkhEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFCTDhraElYYmlYRnYxTVRFbVlad0JaTHBzUitoNEplUFl6ZVEKQmcyTGdWV2dlcytLT2t4TGgrUUlhdi9LZk4yWWErRlhQYUIrU0VzL21kSStjUWhOR0tkV2R4ZUhCdjhkMU9qYgpRR3d3cUxmRlVsSVpPd1Zqc2xoTFhGQ3BlcXFOcThPL3JZMDFYcEUzMG9uMXpjK3RQbFd6ZTY2MjNRZWMwSnJBClRzVkJkNVhhNUhSSDVBWm1zdk1rR0laeEM4aU5SNkFPRlhGOFdHa0VtSHpnb0owU0MzVkg2bkxsczVyZXAyVGwKblRuajAya0dadFhvRm9MZTd5eWNWV1grWkJYYm5SRDlWRDcwZUw1QWZNZTZPNWRRR3Z6RERzVWxYSzVEdXRCZAorUG1pLzN4ZjFkNkpvdUk5WFo5cUVHYVRuMyt2bGM5L2phZU1heWlqRHQrbDVGUlIyUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: csi-snapshot-webhook
+      namespace: openshift-cluster-storage-operator
+      path: /volumegroupsnapshot
+      port: 443
+  failurePolicy: Ignore
+  matchPolicy: Equivalent
+  name: volumegroupsnapshotclasses.groupsnapshot.storage.k8s.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - groupsnapshot.storage.k8s.io
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - volumegroupsnapshotclasses
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

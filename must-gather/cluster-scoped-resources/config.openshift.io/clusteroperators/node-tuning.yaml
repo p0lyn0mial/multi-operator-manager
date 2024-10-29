@@ -1,0 +1,104 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: NodeTuning
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2024-10-24T12:58:39Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:21:48Z"
+  name: node-tuning
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "22584"
+  uid: decb6bc5-3a89-40fe-82a0-30560ec43261
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:21:48Z"
+    message: 3/6 Profiles failed to be applied
+    reason: ProfileDegraded
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:21:48Z"
+    message: Cluster version is "4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2024-10-24T13:07:25Z"
+    message: DaemonSet "tuned" available
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-cluster-node-tuning-operator
+    resource: namespaces
+  - group: tuned.openshift.io
+    name: ""
+    namespace: openshift-cluster-node-tuning-operator
+    resource: profiles
+  - group: tuned.openshift.io
+    name: ""
+    namespace: openshift-cluster-node-tuning-operator
+    resource: tuneds
+  - group: apps
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resource: daemonsets
+  - group: performance.openshift.io
+    name: ""
+    resource: performanceprofiles
+  versions:
+  - name: operator
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  - name: ocp-tuned
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest

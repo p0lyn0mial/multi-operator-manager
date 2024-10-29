@@ -1,0 +1,49 @@
+---
+apiVersion: migration.k8s.io/v1alpha1
+kind: StorageVersionMigration
+metadata:
+  annotations:
+    encryption.apiserver.operator.openshift.io/write-key: "1"
+  creationTimestamp: "2024-10-24T13:53:33Z"
+  generation: 1
+  managedFields:
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:encryption.apiserver.operator.openshift.io/write-key: {}
+      f:spec:
+        .: {}
+        f:resource:
+          .: {}
+          f:group: {}
+          f:resource: {}
+          f:version: {}
+    manager: authentication-operator
+    operation: Update
+    time: "2024-10-24T13:53:33Z"
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: migrator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:53:34Z"
+  name: encryption-migration-oauth.openshift.io-oauthaccesstokens
+  resourceVersion: "40307"
+  uid: 8bef3ac9-bdf7-445d-b934-a5e45a9a0921
+spec:
+  resource:
+    group: oauth.openshift.io
+    resource: oauthaccesstokens
+    version: v1
+status:
+  conditions:
+  - lastUpdateTime: "2024-10-24T13:53:34Z"
+    status: "True"
+    type: Succeeded

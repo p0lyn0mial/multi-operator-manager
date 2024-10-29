@@ -1,0 +1,373 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.130.0.15/23"],"mac_address":"0a:58:0a:82:00:0f","gateway_ips":["10.130.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.130.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.130.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.130.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.130.0.1"}],"ip_address":"10.130.0.15/23","gateway_ip":"10.130.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.130.0.15"
+          ],
+          "mac": "0a:58:0a:82:00:0f",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/required-scc: restricted-v2
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2024-10-24T13:00:17Z"
+  generateName: control-plane-machine-set-operator-7667c744f7-
+  labels:
+    k8s-app: control-plane-machine-set-operator
+    pod-template-hash: 7667c744f7
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9af31825-af2f-4f9c-951f-0c1b62cbbe33"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"control-plane-machine-set-operator"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"COMPONENT_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/tmp/k8s-webhook-server/serving-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"control-plane-machine-set-operator-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T13:00:17Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:00:17Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:03:16Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:03:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.130.0.15"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:18:59Z"
+  name: control-plane-machine-set-operator-7667c744f7-8tlf7
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: control-plane-machine-set-operator-7667c744f7
+    uid: 9af31825-af2f-4f9c-951f-0c1b62cbbe33
+  resourceVersion: "20978"
+  uid: c15e6def-0400-4a0d-ada9-72e341bfc498
+spec:
+  containers:
+  - args:
+    - -v=2
+    - --leader-elect=true
+    - --leader-elect-lease-duration=137s
+    - --leader-elect-renew-deadline=107s
+    - --leader-elect-retry-period=26s
+    - --leader-elect-resource-namespace=openshift-machine-api
+    command:
+    - /manager
+    env:
+    - name: RELEASE_VERSION
+      value: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    - name: COMPONENT_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5736327df975ce44c3d66bbea2de7ed5f172f208a31de242272c919099785f4f
+    imagePullPolicy: IfNotPresent
+    name: control-plane-machine-set-operator
+    ports:
+    - containerPort: 9443
+      name: https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: control-plane-machine-set-operator-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4z6t4
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000490000
+    seLinuxOptions:
+      level: s0:c22,c14
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: control-plane-machine-set-operator
+  serviceAccountName: control-plane-machine-set-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: control-plane-machine-set-operator-tls
+    secret:
+      defaultMode: 420
+      secretName: control-plane-machine-set-operator-tls
+  - name: kube-api-access-4z6t4
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:04:50Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:03:16Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:18:06Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:18:06Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:03:16Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://45689267b8e20f220965f0303df3a1e25f3c7cd1a4855ba29adc4414b455e0e7
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5736327df975ce44c3d66bbea2de7ed5f172f208a31de242272c919099785f4f
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:303a6bbcc2da0b949e0bf903efe1cb3400281def72ac989a221b2b3686c1bd39
+    lastState:
+      terminated:
+        containerID: cri-o://071ed68f8efe816fc47fdace1c92cc6271975712c978520d77c4530cd4c41197
+        exitCode: 1
+        finishedAt: "2024-10-24T13:18:05Z"
+        message: |
+          -machine-set-leader)
+          I1024 13:17:34.402410       1 controller.go:223] "Finished reconciling control plane machine set" controller="controlplanemachineset" reconcileID="d5bd3a59-468e-41b7-bacd-b7552b52fa07" namespace="openshift-machine-api" name="cluster"
+          E1024 13:17:34.402473       1 controller.go:316] "Reconciler error" err="[error reconciling control plane machine set: error fetching machine info: could not generate machine info for machine ci-op-2fcpj5j6-f6035-2lklf-master-0: cannot ensure that the provider config is valid: could not dry-run create the machine: Internal error occurred: resource quota evaluation timed out, error updating control plane machine set status: failed to sync status for control plane machine set object: Timeout: request did not complete within requested timeout - context deadline exceeded]" controller="controlplanemachineset" reconcileID="d5bd3a59-468e-41b7-bacd-b7552b52fa07"
+          I1024 13:17:34.402525       1 controller.go:170] "Reconciling control plane machine set" controller="controlplanemachineset" reconcileID="e234b723-0203-46e2-88a9-87aa9e92ccc6" namespace="openshift-machine-api" name="cluster"
+          E1024 13:17:51.642884       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:58.577367       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/control-plane-machine-set-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/control-plane-machine-set-leader": context deadline exceeded
+          I1024 13:17:58.577413       1 leaderelection.go:297] failed to renew lease openshift-machine-api/control-plane-machine-set-leader: timed out waiting for the condition
+          E1024 13:18:05.585399       1 leaderelection.go:322] Failed to release lock: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+          E1024 13:18:05.585486       1 main.go:233] "problem running manager" err="leader election lost" logger="setup"
+        reason: Error
+        startedAt: "2024-10-24T13:05:24Z"
+    name: control-plane-machine-set-operator
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:18:06Z"
+    volumeMounts:
+    - mountPath: /tmp/k8s-webhook-server/serving-certs
+      name: control-plane-machine-set-operator-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4z6t4
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.0.4
+  hostIPs:
+  - ip: 10.0.0.4
+  phase: Running
+  podIP: 10.130.0.15
+  podIPs:
+  - ip: 10.130.0.15
+  qosClass: Burstable
+  startTime: "2024-10-24T13:03:16Z"

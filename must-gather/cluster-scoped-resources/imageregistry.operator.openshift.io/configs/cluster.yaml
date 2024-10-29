@@ -1,0 +1,251 @@
+---
+apiVersion: imageregistry.operator.openshift.io/v1
+kind: Config
+metadata:
+  creationTimestamp: "2024-10-24T13:21:51Z"
+  finalizers:
+  - imageregistry.operator.openshift.io/finalizer
+  generation: 2
+  managedFields:
+  - apiVersion: imageregistry.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"imageregistry.operator.openshift.io/finalizer": {}
+      f:spec:
+        .: {}
+        f:httpSecret: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:operatorLogLevel: {}
+        f:proxy: {}
+        f:replicas: {}
+        f:requests: {}
+        f:rolloutStrategy: {}
+        f:storage:
+          .: {}
+          f:gcs:
+            .: {}
+            f:bucket: {}
+            f:projectID: {}
+            f:region: {}
+          f:managementState: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    time: "2024-10-24T13:21:53Z"
+  - apiVersion: imageregistry.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AzureStackCloudControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ImageConfigControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ImageRegistryCertificatesControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeCADaemonAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeCADaemonControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeCADaemonProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Removed"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StorageExists"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StorageLabeled"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StorageTagged"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:storage:
+          .: {}
+          f:gcs:
+            .: {}
+            f:bucket: {}
+            f:projectID: {}
+            f:region: {}
+          f:managementState: {}
+        f:storageManaged: {}
+    manager: cluster-image-registry-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:26:12Z"
+  name: cluster
+  resourceVersion: "28300"
+  uid: 2cc9c566-c7c1-42cd-91a5-034fad1f65b8
+spec:
+  httpSecret: ffcb82503cb7d4be3717cf7e586bb1559a78755fd8804809894a28bc29210fb4c5c8a99e9d9693babb94666bbf8e7abec1fb6019ec601117b237d5251eaced62
+  logLevel: Normal
+  managementState: Managed
+  observedConfig: null
+  operatorLogLevel: Normal
+  proxy: {}
+  replicas: 2
+  requests:
+    read:
+      maxWaitInQueue: 0s
+    write:
+      maxWaitInQueue: 0s
+  rolloutStrategy: RollingUpdate
+  storage:
+    gcs:
+      bucket: ci-op-2fcpj5j6-f6035-2lklf-image-registry-us-central1-jedemoik
+      projectID: XXXXXXXXXXXXXXXXXXXXXXXX
+      region: us-central1
+    managementState: Managed
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:21:51Z"
+    message: User supplied GCS bucket exists and is accessible
+    reason: GCS Bucket Exists
+    status: "True"
+    type: StorageExists
+  - lastTransitionTime: "2024-10-24T13:21:51Z"
+    message: Successfully added user-defined labels to ci-op-2fcpj5j6-f6035-2lklf-image-registry-us-central1-jedemoik
+      storage bucket
+    reason: Bucket Labeled Successfully
+    status: "True"
+    type: StorageLabeled
+  - lastTransitionTime: "2024-10-24T13:21:51Z"
+    message: user did not define any tags
+    reason: SuccessTaggingBucket
+    status: "False"
+    type: StorageTagged
+  - lastTransitionTime: "2024-10-24T13:22:24Z"
+    message: The registry is ready
+    reason: Ready
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:22:24Z"
+    message: The registry is ready
+    reason: Ready
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2024-10-24T13:21:53Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:21:53Z"
+    status: "False"
+    type: Removed
+  - lastTransitionTime: "2024-10-24T13:21:53Z"
+    reason: AsExpected
+    status: "False"
+    type: ImageRegistryCertificatesControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:21:58Z"
+    message: The daemon set node-ca has available replicas
+    reason: AsExpected
+    status: "True"
+    type: NodeCADaemonAvailable
+  - lastTransitionTime: "2024-10-24T13:22:02Z"
+    message: The daemon set node-ca is deployed
+    reason: AsExpected
+    status: "False"
+    type: NodeCADaemonProgressing
+  - lastTransitionTime: "2024-10-24T13:21:58Z"
+    reason: AsExpected
+    status: "False"
+    type: NodeCADaemonControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:25:20Z"
+    reason: AsExpected
+    status: "False"
+    type: ImageConfigControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:26:12Z"
+    reason: AsExpected
+    status: "False"
+    type: AzureStackCloudControllerDegraded
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: image-registry
+    namespace: openshift-image-registry
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: node-ca
+    namespace: openshift-image-registry
+    resource: daemonsets
+  observedGeneration: 2
+  readyReplicas: 2
+  storage:
+    gcs:
+      bucket: ci-op-2fcpj5j6-f6035-2lklf-image-registry-us-central1-jedemoik
+      projectID: XXXXXXXXXXXXXXXXXXXXXXXX
+      region: us-central1
+    managementState: Managed
+  storageManaged: true

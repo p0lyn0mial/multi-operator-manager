@@ -1,0 +1,108 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      operator.openshift.io/spec-hash: 86f8d0f1ae746e18d091343255dbbfc29e6d7c1dbfd3fa840287b3985fd33cfa
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1729775010
+      service.beta.openshift.io/serving-cert-secret-name: gcp-pd-csi-driver-controller-metrics-serving-cert
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1729775010
+    creationTimestamp: "2024-10-24T13:03:44Z"
+    labels:
+      app: gcp-pd-csi-driver-controller-metrics
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:operator.openshift.io/spec-hash: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":444,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":445,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":446,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: gcp-pd-csi-driver-operator
+      operation: Update
+      time: "2024-10-24T13:03:44Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2024-10-24T13:03:55Z"
+    name: gcp-pd-csi-driver-controller-metrics
+    namespace: openshift-cluster-csi-drivers
+    resourceVersion: "8500"
+    uid: 8567912f-a592-4e6e-b770-e892f92e117d
+  spec:
+    clusterIP: 172.30.169.113
+    clusterIPs:
+    - 172.30.169.113
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: provisioner-m
+      port: 443
+      protocol: TCP
+      targetPort: provisioner-m
+    - name: attacher-m
+      port: 444
+      protocol: TCP
+      targetPort: attacher-m
+    - name: resizer-m
+      port: 445
+      protocol: TCP
+      targetPort: resizer-m
+    - name: snapshotter-m
+      port: 446
+      protocol: TCP
+      targetPort: snapshotter-m
+    selector:
+      app: gcp-pd-csi-driver-controller
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "61110"

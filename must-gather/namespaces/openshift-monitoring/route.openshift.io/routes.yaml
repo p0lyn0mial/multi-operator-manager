@@ -1,0 +1,282 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/description: Expose the `/api` endpoints of the `alertmanager-main`
+        service via a router.
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2024-10-24T13:22:08Z"
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/description: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2024-10-24T13:22:08Z"
+    name: alertmanager-main
+    namespace: openshift-monitoring
+    resourceVersion: "41695"
+    uid: 6ed590e6-bbc9-4e29-9cb6-6d8c33ce9051
+  spec:
+    host: alertmanager-main-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: alertmanager-main
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2024-10-24T13:22:08Z"
+        status: "True"
+        type: Admitted
+      host: alertmanager-main-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/description: Expose the `/api` endpoints of the `prometheus-k8s`
+        service via a router.
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2024-10-24T13:22:08Z"
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/description: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2024-10-24T13:22:08Z"
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+    resourceVersion: "40718"
+    uid: 8bdb03d8-eb6d-448c-8f59-532b4749d59a
+  spec:
+    host: prometheus-k8s-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: prometheus-k8s
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2024-10-24T13:22:08Z"
+        status: "True"
+        type: Admitted
+      host: prometheus-k8s-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/description: Expose the `/federate` endpoint of the `prometheus-k8s`
+        service via a router.
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2024-10-24T13:22:09Z"
+    labels:
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/description: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/part-of: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2024-10-24T13:22:09Z"
+    name: prometheus-k8s-federate
+    namespace: openshift-monitoring
+    resourceVersion: "41703"
+    uid: 5a19057c-c959-4a4c-b96c-b4edca291ab7
+  spec:
+    host: prometheus-k8s-federate-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+    path: /federate
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: prometheus-k8s
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2024-10-24T13:22:09Z"
+        status: "True"
+        type: Admitted
+      host: prometheus-k8s-federate-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      openshift.io/description: Expose the `/api` endpoints of the `thanos-querier`
+        service via a router.
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2024-10-24T13:22:08Z"
+    labels:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/managed-by: cluster-monitoring-operator
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.36.1
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:openshift.io/description: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:path: {}
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: operator
+      operation: Update
+      time: "2024-10-24T13:22:08Z"
+    name: thanos-querier
+    namespace: openshift-monitoring
+    resourceVersion: "41696"
+    uid: 14ffb826-c701-4647-a796-dd5609aabb9a
+  spec:
+    host: thanos-querier-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+    path: /api
+    port:
+      targetPort: web
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: reencrypt
+    to:
+      kind: Service
+      name: thanos-querier
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2024-10-24T13:22:08Z"
+        status: "True"
+        type: Admitted
+      host: thanos-querier-openshift-monitoring.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerCanonicalHostname: router-default.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "60757"

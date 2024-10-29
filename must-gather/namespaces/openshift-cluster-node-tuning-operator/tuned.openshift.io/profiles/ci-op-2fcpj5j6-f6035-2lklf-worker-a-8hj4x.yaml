@@ -1,0 +1,76 @@
+---
+apiVersion: tuned.openshift.io/v1
+kind: Profile
+metadata:
+  creationTimestamp: "2024-10-24T13:15:18Z"
+  generation: 2
+  managedFields:
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:tunedProfile: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:20:17Z"
+  - apiVersion: tuned.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"f6f0bec5-002c-417a-872d-59fcb41812ed"}: {}
+      f:spec:
+        .: {}
+        f:config:
+          .: {}
+          f:debug: {}
+          f:providerName: {}
+          f:tunedConfig: {}
+          f:tunedProfile: {}
+          f:verbosity: {}
+        f:profile: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    time: "2024-10-24T13:21:47Z"
+  name: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  namespace: openshift-cluster-node-tuning-operator
+  ownerReferences:
+  - apiVersion: tuned.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Tuned
+    name: default
+    uid: f6f0bec5-002c-417a-872d-59fcb41812ed
+  resourceVersion: "22557"
+  uid: 83ad92a9-a6d9-470e-bc81-3b2721a2c326
+spec:
+  config:
+    debug: false
+    providerName: gce
+    tunedConfig: {}
+    tunedProfile: openshift-node
+    verbosity: 0
+  profile:
+  - data: |
+      [main]
+      summary=Optimize systems running OpenShift (provider specific parent profile)
+      include=-provider-${f:exec:cat:/var/lib/ocp-tuned/provider},openshift
+    name: openshift
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:20:17Z"
+    message: TuneD profile applied.
+    reason: AsExpected
+    status: "True"
+    type: Applied
+  - lastTransitionTime: "2024-10-24T13:20:17Z"
+    message: 'TuneD daemon issued one or more error message(s) during profile application.
+      TuneD stderr: '
+    reason: TunedError
+    status: "True"
+    type: Degraded
+  tunedProfile: openshift-node

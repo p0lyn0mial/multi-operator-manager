@@ -1,0 +1,94 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:22:24Z"
+    creationTimestamp: "2024-10-24T13:21:52Z"
+    labels:
+      docker-registry: default
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:docker-registry: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:22:24Z"
+    name: image-registry
+    namespace: openshift-image-registry
+    resourceVersion: "25209"
+    uid: 6e22b0b3-5de9-42d7-b2e6-f37ee7f28533
+  subsets:
+  - addresses:
+    - ip: 10.129.2.9
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+      targetRef:
+        kind: Pod
+        name: image-registry-7db6746b67-87llm
+        namespace: openshift-image-registry
+        uid: c08435e2-90c4-4435-a189-a9db99ecc130
+    - ip: 10.131.0.10
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+      targetRef:
+        kind: Pod
+        name: image-registry-7db6746b67-4gv7k
+        namespace: openshift-image-registry
+        uid: dd90f00d-d1c7-4597-920a-996f02633a88
+    ports:
+    - name: 5000-tcp
+      port: 5000
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:41Z"
+    creationTimestamp: "2024-10-24T12:59:08Z"
+    labels:
+      name: image-registry-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:41Z"
+    name: image-registry-operator
+    namespace: openshift-image-registry
+    resourceVersion: "14072"
+    uid: ffbe29dd-ff42-486f-b775-7c7ed591fe43
+  subsets:
+  - addresses:
+    - ip: 10.130.0.33
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: cluster-image-registry-operator-7c8c54f569-rsqg2
+        namespace: openshift-image-registry
+        uid: 3f33cf09-fabe-4ddb-b1d1-3425e4888f2e
+    ports:
+    - port: 60000
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60693"

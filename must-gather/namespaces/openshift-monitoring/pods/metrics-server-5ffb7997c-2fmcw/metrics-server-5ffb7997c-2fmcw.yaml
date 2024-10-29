@@ -1,0 +1,503 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.16/23"],"mac_address":"0a:58:0a:81:02:10","gateway_ips":["10.129.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.2.1"},{"dest":"169.254.0.5/32","nextHop":"10.129.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.2.1"}],"ip_address":"10.129.2.16/23","gateway_ip":"10.129.2.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.16"
+          ],
+          "mac": "0a:58:0a:81:02:10",
+          "default": true,
+          "dns": {}
+      }]
+    monitoring.openshift.io/kubelet-serving-ca-bundle-hash: 51h7285ie5e9a
+    monitoring.openshift.io/metrics-client-cert-hash: 63tg857ojmn8g
+    monitoring.openshift.io/serving-ca-secret-hash: anga7k1meg9ir
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2024-10-24T14:42:36Z"
+  generateName: metrics-server-5ffb7997c-
+  labels:
+    app.kubernetes.io/component: metrics-server
+    app.kubernetes.io/name: metrics-server
+    app.kubernetes.io/part-of: openshift-monitoring
+    pod-template-hash: 5ffb7997c
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:42:36Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:monitoring.openshift.io/kubelet-serving-ca-bundle-hash: {}
+          f:monitoring.openshift.io/metrics-client-cert-hash: {}
+          f:monitoring.openshift.io/serving-ca-secret-hash: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"e9a3b3e6-fc8f-4a92-a805-c35a7d2faa5e"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"metrics-server"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":10250,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/audit"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/client-ca-bundle"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/kubelet-serving-ca-bundle"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/metrics-client-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/log/metrics-server"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"audit-log"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"client-ca-bundle"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"configmap-kubelet-serving-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"metrics-server-audit-profiles"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"secret-metrics-client-certs"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-metrics-server-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T14:42:36Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:42:37Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.2.16"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:42:57Z"
+  name: metrics-server-5ffb7997c-2fmcw
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: metrics-server-5ffb7997c
+    uid: e9a3b3e6-fc8f-4a92-a805-c35a7d2faa5e
+  resourceVersion: "59955"
+  uid: d062c2ec-49f0-44ff-94e9-4656ed16de83
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchLabels:
+            app.kubernetes.io/component: metrics-server
+            app.kubernetes.io/name: metrics-server
+            app.kubernetes.io/part-of: openshift-monitoring
+        namespaces:
+        - openshift-monitoring
+        topologyKey: kubernetes.io/hostname
+  containers:
+  - args:
+    - --secure-port=10250
+    - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+    - --kubelet-use-node-status-port
+    - --metric-resolution=15s
+    - --kubelet-certificate-authority=/etc/tls/kubelet-serving-ca-bundle/ca-bundle.crt
+    - --kubelet-client-certificate=/etc/tls/metrics-client-certs/tls.crt
+    - --kubelet-client-key=/etc/tls/metrics-client-certs/tls.key
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --shutdown-send-retry-after=true
+    - --shutdown-delay-duration=150s
+    - --disable-http2-serving=true
+    - --tls-min-version=VersionTLS12
+    - --client-ca-file=/etc/client-ca-bundle/client-ca-file
+    - --requestheader-client-ca-file=/etc/client-ca-bundle/requestheader-client-ca-file
+    - --requestheader-allowed-names=kube-apiserver-proxy,system:kube-apiserver-proxy,system:openshift-aggregator
+    - --requestheader-extra-headers-prefix=X-Remote-Extra-
+    - --requestheader-group-headers=X-Remote-Group
+    - --requestheader-username-headers=X-Remote-User
+    - --audit-policy-file=/etc/audit/metadata-profile.yaml
+    - --audit-log-path=/var/log/metrics-server/audit.log
+    - --audit-log-maxsize=100
+    - --audit-log-maxbackup=5
+    - --audit-log-compress=true
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c5a45e83f3e8be25f8348cedcbff551e71e435742a84161872c7e020e49bcf31
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /livez
+        port: https
+        scheme: HTTPS
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: metrics-server
+    ports:
+    - containerPort: 10250
+      name: https
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 6
+      httpGet:
+        path: /readyz
+        port: https
+        scheme: HTTPS
+      initialDelaySeconds: 20
+      periodSeconds: 20
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 1m
+        memory: 40Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1000450000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-metrics-server-tls
+    - mountPath: /etc/tls/metrics-client-certs
+      name: secret-metrics-client-certs
+    - mountPath: /etc/tls/kubelet-serving-ca-bundle
+      name: configmap-kubelet-serving-ca-bundle
+    - mountPath: /etc/audit
+      name: metrics-server-audit-profiles
+      readOnly: true
+    - mountPath: /var/log/metrics-server
+      name: audit-log
+    - mountPath: /etc/client-ca-bundle
+      name: client-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-9q6wk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: metrics-server-dockercfg-cdvkr
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000450000
+    seLinuxOptions:
+      level: s0:c21,c15
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: metrics-server
+  serviceAccountName: metrics-server
+  terminationGracePeriodSeconds: 170
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: secret-metrics-client-certs
+    secret:
+      defaultMode: 420
+      secretName: metrics-client-certs
+  - name: secret-metrics-server-tls
+    secret:
+      defaultMode: 420
+      secretName: metrics-server-tls
+  - configMap:
+      defaultMode: 420
+      name: kubelet-serving-ca-bundle
+    name: configmap-kubelet-serving-ca-bundle
+  - emptyDir: {}
+    name: audit-log
+  - configMap:
+      defaultMode: 420
+      name: metrics-server-audit-profiles
+    name: metrics-server-audit-profiles
+  - name: client-ca-bundle
+    secret:
+      defaultMode: 420
+      secretName: metrics-server-3eo9et645ffii
+  - name: kube-api-access-9q6wk
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T14:42:37Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T14:42:36Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T14:42:57Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T14:42:57Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T14:42:36Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://57a5bcc6c8a4b262e864162c84dc7d37f496acf197d58e69ae38fe8b69c60ba1
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c5a45e83f3e8be25f8348cedcbff551e71e435742a84161872c7e020e49bcf31
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:a437ed77b4b98589e47b70519895201ded6188929394413330930f9c49830fb4
+    lastState: {}
+    name: metrics-server
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T14:42:37Z"
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-metrics-server-tls
+    - mountPath: /etc/tls/metrics-client-certs
+      name: secret-metrics-client-certs
+    - mountPath: /etc/tls/kubelet-serving-ca-bundle
+      name: configmap-kubelet-serving-ca-bundle
+    - mountPath: /etc/audit
+      name: metrics-server-audit-profiles
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/log/metrics-server
+      name: audit-log
+    - mountPath: /etc/client-ca-bundle
+      name: client-ca-bundle
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-9q6wk
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.128.3
+  hostIPs:
+  - ip: 10.0.128.3
+  phase: Running
+  podIP: 10.129.2.16
+  podIPs:
+  - ip: 10.129.2.16
+  qosClass: Burstable
+  startTime: "2024-10-24T14:42:36Z"

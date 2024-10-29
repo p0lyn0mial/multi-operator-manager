@@ -1,0 +1,75 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    openshift.io/image.dockerRepositoryCheck: "2024-10-24T13:23:14Z"
+  creationTimestamp: "2024-10-24T13:22:44Z"
+  generation: 2
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"v4.4"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T13:22:44Z"
+  name: oauth-proxy
+  namespace: openshift
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "26524"
+  uid: 3e32be68-26a0-4404-a92f-4f1cdf10a598
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:9ab2a125242cd3e084b9c3cf6d6020fc11a6127b1880d4d0f893f6e4726197d1
+    generation: 2
+    importPolicy:
+      importMode: PreserveOriginal
+      scheduled: true
+    name: v4.4
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/oauth-proxy
+  tags:
+  - items:
+    - created: "2024-10-24T13:23:14Z"
+      dockerImageReference: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:9ab2a125242cd3e084b9c3cf6d6020fc11a6127b1880d4d0f893f6e4726197d1
+      generation: 2
+      image: sha256:9ab2a125242cd3e084b9c3cf6d6020fc11a6127b1880d4d0f893f6e4726197d1
+    tag: v4.4

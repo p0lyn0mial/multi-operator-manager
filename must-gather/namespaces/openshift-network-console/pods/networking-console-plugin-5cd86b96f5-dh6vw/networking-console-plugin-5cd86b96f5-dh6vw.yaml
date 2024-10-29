@@ -1,0 +1,363 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.2.13/23"],"mac_address":"0a:58:0a:81:02:0d","gateway_ips":["10.129.2.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.2.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.2.1"},{"dest":"169.254.0.5/32","nextHop":"10.129.2.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.2.1"}],"ip_address":"10.129.2.13/23","gateway_ip":"10.129.2.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.2.13"
+          ],
+          "mac": "0a:58:0a:81:02:0d",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2024-10-24T13:25:51Z"
+  generateName: networking-console-plugin-5cd86b96f5-
+  labels:
+    app.kubernetes.io/component: networking-console-plugin
+    app.kubernetes.io/managed-by: cluster-network-operator
+    app.kubernetes.io/name: networking-console-plugin
+    app.kubernetes.io/part-of: cluster-network-operator
+    pod-template-hash: 5cd86b96f5
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"10b5fdc1-29aa-4bed-9975-59e9ef0960a5"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"networking-console-plugin"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/nginx/nginx.conf"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/var/cert"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:runAsNonRoot: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"networking-console-plugin-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"nginx-conf"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T13:25:51Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:25:54Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:26:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.2.13"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:26:46Z"
+  name: networking-console-plugin-5cd86b96f5-dh6vw
+  namespace: openshift-network-console
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: networking-console-plugin-5cd86b96f5
+    uid: 10b5fdc1-29aa-4bed-9975-59e9ef0960a5
+  resourceVersion: "28782"
+  uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/component: networking-console-plugin
+              app.kubernetes.io/managed-by: cluster-network-operator
+              app.kubernetes.io/name: networking-console-plugin
+              app.kubernetes.io/part-of: cluster-network-operator
+          namespaces:
+          - openshift-network-console
+          topologyKey: kubernetes.io/hostname
+        weight: 90
+  automountServiceAccountToken: false
+  containers:
+  - command:
+    - /bin/sh
+    - -c
+    - |
+      if echo "$POD_IP" | grep -qE '^([0-9]{1,3}\.){3}[0-9]{1,3}$'; then
+        LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME="9443"
+      else
+        LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME="[::]:9443"
+      fi
+      sed "s/LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME/$LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME/g" /etc/nginx/nginx.conf > /tmp/nginx.conf
+      exec nginx -c /tmp/nginx.conf -g 'daemon off;'
+    env:
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8
+    imagePullPolicy: IfNotPresent
+    name: networking-console-plugin
+    ports:
+    - containerPort: 9443
+      name: https
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsUser: 1000700000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/cert
+      name: networking-console-plugin-cert
+      readOnly: true
+    - mountPath: /etc/nginx/nginx.conf
+      name: nginx-conf
+      readOnly: true
+      subPath: nginx.conf
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000700000
+    runAsNonRoot: true
+    seLinuxOptions:
+      level: s0:c26,c25
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: networking-console-plugin
+    name: nginx-conf
+  - name: networking-console-plugin-cert
+    secret:
+      defaultMode: 420
+      secretName: networking-console-plugin-cert
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:26:46Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:25:51Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:26:46Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:26:46Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:25:51Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://dbbe81bfadc30e5d519f8b1826577a41e39b0234bb28d476d87a91dd7d0c8a72
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8
+    lastState: {}
+    name: networking-console-plugin
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:26:45Z"
+    volumeMounts:
+    - mountPath: /var/cert
+      name: networking-console-plugin-cert
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/nginx/nginx.conf
+      name: nginx-conf
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.128.3
+  hostIPs:
+  - ip: 10.0.128.3
+  phase: Running
+  podIP: 10.129.2.13
+  podIPs:
+  - ip: 10.129.2.13
+  qosClass: Burstable
+  startTime: "2024-10-24T13:25:51Z"

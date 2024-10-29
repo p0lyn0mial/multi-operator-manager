@@ -1,0 +1,643 @@
+---
+apiVersion: v1
+items:
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2024-10-24T13:02:13.285173Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "3795"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: null
+  message: '0/3 nodes are available: 3 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+    }. preemption: 0/3 nodes are available: 3 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:02:13Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:02:13Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.1801652317d68a57
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "3801"
+    uid: 8c744cfc-14e8-4f23-9797-d9481a750d05
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:03:16.846614Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "3798"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cloud-network-config-controller/cloud-network-config-controller-7699df78d5-mx8n9
+    to ci-op-2fcpj5j6-f6035-2lklf-master-1
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:16Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:03:16Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.18016531e4651f97
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5087"
+    uid: 2901b7c2-310d-4f20-906c-c27ce3312738
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:18Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5130"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:18Z"
+  message: Add eth0 [10.130.0.34/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:03:18Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.1801653235a60079
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5228"
+    uid: bf1425bd-a2fb-4df8-955f-3ec9ab4e3abe
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:35Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:6f9adb6ccf0dfed45237d3a5459f03a073c02460df59949738526c9b841d4487"
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:35Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.1801653236eb0301
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "6555"
+    uid: 467133f9-c042-4c70-a1d6-c15a57c1feb0
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:18Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:6f9adb6ccf0dfed45237d3a5459f03a073c02460df59949738526c9b841d4487":
+    pull QPS exceeded'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:18Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.1801653236eb5171
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5236"
+    uid: 21fd578c-9c9e-4a8c-ab83-e376bb212757
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:18Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:18Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.1801653236eb8047
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5237"
+    uid: 2b039749-ba90-42f7-b128-8f200a249366
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:19Z"
+  message: Back-off pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:6f9adb6ccf0dfed45237d3a5459f03a073c02460df59949738526c9b841d4487"
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:19Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.180165325dc6b9a6
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5319"
+    uid: 1fc6945f-126f-406d-b342-77c45b3bc8be
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:19Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:19Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.180165325dc6ea7a
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5322"
+    uid: 9a885edd-7301-4dd7-89f3-940733251b84
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:39Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:6f9adb6ccf0dfed45237d3a5459f03a073c02460df59949738526c9b841d4487"
+    in 3.96s (3.96s including waiting). Image size: 484450206 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:39Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.1801653719ed6c06
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "6947"
+    uid: 9c3f48ad-a8f9-4f24-a415-a1137ed076c5
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:06Z"
+  message: Created container controller
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:59Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.180165371f0e1fe8
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "21015"
+    uid: a50e9f95-2917-4cb9-a5df-bc473c36a08c
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:06Z"
+  message: Started container controller
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:59Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.180165371fa5109d
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "21022"
+    uid: 88c948a5-61b4-434b-8974-f219ca09d798
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller}
+    kind: Pod
+    name: cloud-network-config-controller-7699df78d5-mx8n9
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "5058"
+    uid: f5b025a4-e80c-41b6-a0ea-e8ba26874ced
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:05Z"
+  message: Container image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:6f9adb6ccf0dfed45237d3a5459f03a073c02460df59949738526c9b841d4487"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:59Z"
+    name: cloud-network-config-controller-7699df78d5-mx8n9.18016600e535277e
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "20994"
+    uid: f29c565d-370d-4030-a214-9aa485cfc73e
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:02:13Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cloud-network-config-controller-7699df78d5
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "3791"
+    uid: 307899be-ce2a-4114-9e05-4e2ce73e3edf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:02:13Z"
+  message: 'Created pod: cloud-network-config-controller-7699df78d5-mx8n9'
+  metadata:
+    creationTimestamp: "2024-10-24T13:02:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:02:13Z"
+    name: cloud-network-config-controller-7699df78d5.1801652317cfcc99
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "3796"
+    uid: 0ed1659f-ec6f-48cf-a44c-fb202ab08351
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:02:13Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cloud-network-config-controller
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "3790"
+    uid: 794f843d-3854-47d6-bcb1-ab56b17e00a8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:02:13Z"
+  message: Scaled up replica set cloud-network-config-controller-7699df78d5 to 1
+  metadata:
+    creationTimestamp: "2024-10-24T13:02:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:02:13Z"
+    name: cloud-network-config-controller.1801652315e193a2
+    namespace: openshift-cloud-network-config-controller
+    resourceVersion: "3792"
+    uid: a536f9cc-3b4e-4b52-8735-82152fb52a50
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "61038"

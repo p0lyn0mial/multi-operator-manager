@@ -1,0 +1,704 @@
+2024-10-24T13:17:50.784499612Z I1024 13:17:50.784278       1 main.go:130] Watching machine-api objects only in namespace "openshift-machine-api" for reconciliation.
+2024-10-24T13:17:50.786731892Z I1024 13:17:50.786649       1 main.go:140] Initializing feature gates: AllAlpha=true|false (ALPHA - default=false), AllBeta=true|false (BETA - default=false), MachineAPIMigration=true|false (ALPHA - default=false)
+2024-10-24T13:17:50.786805932Z I1024 13:17:50.786716       1 feature_gate.go:387] feature gates: {map[MachineAPIMigration:false]}
+2024-10-24T13:17:50.786805932Z I1024 13:17:50.786736       1 main.go:146] Warnings setting feature gates from flags: [Ignoring unknown FeatureGate "VSphereStaticIPs" Ignoring unknown FeatureGate "AzureWorkloadIdentity" Ignoring unknown FeatureGate "GCPLabelsTags"]
+2024-10-24T13:17:50.786805932Z I1024 13:17:50.786751       1 main.go:148] FeatureGateMachineAPIMigration initialised: false
+2024-10-24T13:17:50.787380752Z I1024 13:17:50.787350       1 server.go:208] "msg"="Starting metrics server" "logger"="controller-runtime.metrics"
+2024-10-24T13:17:50.787575682Z I1024 13:17:50.787524       1 server.go:247] "msg"="Serving metrics server" "bindAddress"=":8081" "logger"="controller-runtime.metrics" "secure"=false
+2024-10-24T13:17:50.787635892Z I1024 13:17:50.787599       1 server.go:83] "msg"="starting server" "addr"="[::]:9440" "name"="health probe"
+2024-10-24T13:17:50.787719362Z I1024 13:17:50.787664       1 leaderelection.go:254] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-gcp-leader...
+2024-10-24T13:18:50.795727668Z E1024 13:18:50.795655       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-api-provider-gcp-leader)
+2024-10-24T13:21:40.163308552Z I1024 13:21:40.163011       1 leaderelection.go:268] successfully acquired lease openshift-machine-api/cluster-api-provider-gcp-leader
+2024-10-24T13:21:40.164055442Z I1024 13:21:40.163967       1 controller.go:175] "msg"="Starting EventSource" "controller"="machine-controller" "source"="kind source: *v1beta1.Machine"
+2024-10-24T13:21:40.164227282Z I1024 13:21:40.164179       1 controller.go:175] "msg"="Starting EventSource" "controller"="machine-drain-controller" "source"="kind source: *v1beta1.Machine"
+2024-10-24T13:21:40.164227282Z I1024 13:21:40.164221       1 controller.go:183] "msg"="Starting Controller" "controller"="machine-drain-controller"
+2024-10-24T13:21:40.164486832Z I1024 13:21:40.164098       1 recorder.go:104] "msg"="machine-api-controllers-7785d897-m4jlj_a828e785-8186-48e1-8ee1-826f8c236bb9 became leader" "logger"="events" "object"={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-gcp-leader","uid":"e95ca387-52b3-432d-b34f-6b778449b55e","apiVersion":"coordination.k8s.io/v1","resourceVersion":"22460"} "reason"="LeaderElection" "type"="Normal"
+2024-10-24T13:21:40.164590822Z I1024 13:21:40.164348       1 controller.go:175] "msg"="Starting EventSource" "controller"="machineset" "controllerGroup"="machine.openshift.io" "controllerKind"="MachineSet" "source"="kind source: *v1beta1.MachineSet"
+2024-10-24T13:21:40.164715722Z I1024 13:21:40.164694       1 controller.go:183] "msg"="Starting Controller" "controller"="machineset" "controllerGroup"="machine.openshift.io" "controllerKind"="MachineSet"
+2024-10-24T13:21:40.164816252Z I1024 13:21:40.164194       1 controller.go:183] "msg"="Starting Controller" "controller"="machine-controller"
+2024-10-24T13:21:40.167244821Z I1024 13:21:40.167171       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:21:40.167244821Z I1024 13:21:40.167204       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:21:40.167338141Z I1024 13:21:40.167263       1 reflector.go:305] Starting reflector *v1beta1.Machine (10m42.985191549s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.167338141Z I1024 13:21:40.167274       1 reflector.go:305] Starting reflector *v1beta1.MachineSet (10m55.437227096s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.167338141Z I1024 13:21:40.167278       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.167338141Z I1024 13:21:40.167284       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.172824011Z I1024 13:21:40.172739       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.174058191Z I1024 13:21:40.174028       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.267498465Z I1024 13:21:40.267412       1 controller.go:217] "msg"="Starting workers" "controller"="machine-drain-controller" "worker count"=1
+2024-10-24T13:21:40.267725945Z I1024 13:21:40.267609       1 controller.go:217] "msg"="Starting workers" "controller"="machine-controller" "worker count"=1
+2024-10-24T13:21:40.267725945Z I1024 13:21:40.267491       1 controller.go:217] "msg"="Starting workers" "controller"="machineset" "controllerGroup"="machine.openshift.io" "controllerKind"="MachineSet" "worker count"=1
+2024-10-24T13:21:40.267826415Z I1024 13:21:40.267793       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T13:21:40.268526635Z I1024 13:21:40.268425       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T13:21:40.268628375Z I1024 13:21:40.268573       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T13:21:40.273815954Z I1024 13:21:40.273734       1 reflector.go:305] Starting reflector *v1.Secret (9m22.764888973s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.273815954Z I1024 13:21:40.273761       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.276655035Z I1024 13:21:40.276554       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.596687294Z I1024 13:21:40.596562       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T13:21:40.725870935Z I1024 13:21:40.725803       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T13:21:40.726009835Z I1024 13:21:40.725950       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T13:21:40.731700194Z I1024 13:21:40.731571       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T13:21:40.842688287Z I1024 13:21:40.842626       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T13:21:41.096374371Z I1024 13:21:41.096279       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T13:21:41.201698554Z I1024 13:21:41.201547       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T13:21:41.201698554Z I1024 13:21:41.201615       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T13:21:41.270228189Z I1024 13:21:41.270061       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T13:21:41.270228189Z I1024 13:21:41.270103       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T13:21:41.523765693Z I1024 13:21:41.523660       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T13:21:41.523765693Z I1024 13:21:41.523695       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T13:21:41.874445969Z I1024 13:21:41.874342       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T13:21:41.962953684Z I1024 13:21:41.962801       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T13:21:41.962953684Z I1024 13:21:41.962858       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T13:21:42.026214120Z I1024 13:21:42.026151       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T13:21:42.026214120Z I1024 13:21:42.026186       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T13:21:42.297093192Z I1024 13:21:42.297014       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T13:21:42.297093192Z I1024 13:21:42.297042       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T13:21:42.652952779Z I1024 13:21:42.652873       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T13:21:42.769992151Z I1024 13:21:42.769916       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T13:21:42.770083901Z I1024 13:21:42.769995       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T13:21:42.844773156Z I1024 13:21:42.844666       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T13:21:42.844773156Z I1024 13:21:42.844712       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T13:21:43.107965439Z I1024 13:21:43.107881       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T13:21:43.107965439Z I1024 13:21:43.107909       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T13:21:43.108450929Z I1024 13:21:43.108414       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T13:21:43.227267851Z I1024 13:21:43.226976       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T13:21:43.227267851Z I1024 13:21:43.227073       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T13:21:43.277315138Z I1024 13:21:43.277260       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:21:43.277423008Z I1024 13:21:43.277401       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:21:43.534869451Z I1024 13:21:43.534675       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:21:43.534869451Z I1024 13:21:43.534711       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:21:43.536148621Z I1024 13:21:43.535450       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:21:43.666065362Z I1024 13:21:43.665995       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:21:43.666255292Z I1024 13:21:43.666214       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:21:43.731168608Z I1024 13:21:43.728239       1 controller.go:454] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: going into phase "Running"
+2024-10-24T13:21:43.785198754Z I1024 13:21:43.776281       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:21:43.785198754Z I1024 13:21:43.782439       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:21:44.856771134Z I1024 13:21:44.856712       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:21:44.856771134Z I1024 13:21:44.856741       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:21:44.857631634Z I1024 13:21:44.857595       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:21:44.967177177Z I1024 13:21:44.967093       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:21:44.967255786Z I1024 13:21:44.967189       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T13:21:44.999453894Z I1024 13:21:44.999342       1 controller.go:454] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: going into phase "Running"
+2024-10-24T13:21:45.015321733Z I1024 13:21:45.015044       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:21:45.015321733Z I1024 13:21:45.015079       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:21:45.271097447Z I1024 13:21:45.270956       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:21:45.271097447Z I1024 13:21:45.271003       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:21:45.271741836Z I1024 13:21:45.271685       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:21:45.374026250Z I1024 13:21:45.373931       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:21:45.374026250Z I1024 13:21:45.374006       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:21:45.414899987Z I1024 13:21:45.414829       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:21:45.414899987Z I1024 13:21:45.414865       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:21:45.686149709Z I1024 13:21:45.686048       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:21:45.686149709Z I1024 13:21:45.686104       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:21:45.687720919Z I1024 13:21:45.687030       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:21:45.827865030Z I1024 13:21:45.827792       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:21:45.827943030Z I1024 13:21:45.827876       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T13:24:00.245964150Z E1024 13:24:00.245819       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:24:00.247075950Z E1024 13:24:00.246990       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:24:20.248937497Z E1024 13:24:20.248859       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:24:20.249994946Z E1024 13:24:20.249938       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:24:40.249380636Z E1024 13:24:40.249273       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:24:40.250584855Z E1024 13:24:40.250510       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:25:35.929851597Z I1024 13:25:35.929758       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:35.934822696Z I1024 13:25:35.934741       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:35.935006516Z I1024 13:25:35.934944       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T13:25:35.935045056Z I1024 13:25:35.935036       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T13:25:36.276168409Z I1024 13:25:36.275905       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T13:25:36.276168409Z I1024 13:25:36.275935       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T13:25:36.692802981Z I1024 13:25:36.692725       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T13:25:36.786814407Z I1024 13:25:36.786747       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T13:25:36.786814407Z I1024 13:25:36.786807       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T13:25:36.831695961Z I1024 13:25:36.831618       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T13:25:36.831695961Z I1024 13:25:36.831652       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T13:25:37.098941874Z I1024 13:25:37.098884       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T13:25:37.099029974Z I1024 13:25:37.098984       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T13:25:37.465939533Z I1024 13:25:37.465867       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T13:25:37.557961020Z I1024 13:25:37.557901       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T13:25:37.557961020Z I1024 13:25:37.557953       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T13:25:37.600838964Z I1024 13:25:37.600755       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T13:25:37.600838964Z I1024 13:25:37.600793       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T13:25:37.853045079Z I1024 13:25:37.852968       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T13:25:37.853045079Z I1024 13:25:37.852994       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T13:25:38.186850353Z I1024 13:25:38.186772       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T13:25:38.279466650Z I1024 13:25:38.279386       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T13:25:38.279543980Z I1024 13:25:38.279463       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T13:25:38.323266744Z I1024 13:25:38.323177       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T13:25:38.323805164Z I1024 13:25:38.323718       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T13:25:38.629401272Z I1024 13:25:38.629295       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T13:25:38.629401272Z I1024 13:25:38.629337       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T13:25:38.630624541Z I1024 13:25:38.630513       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T13:25:38.753420774Z I1024 13:25:38.753345       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T13:25:38.753516784Z I1024 13:25:38.753415       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T13:25:38.792094179Z I1024 13:25:38.792003       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:25:38.792207569Z I1024 13:25:38.792106       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:25:39.060689681Z I1024 13:25:39.060607       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:25:39.060689681Z I1024 13:25:39.060639       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:25:39.061374381Z I1024 13:25:39.061326       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:25:39.188281414Z I1024 13:25:39.188223       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:25:39.188400164Z I1024 13:25:39.188281       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:25:39.226428589Z I1024 13:25:39.226365       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:25:39.226428589Z I1024 13:25:39.226401       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:25:39.555754883Z I1024 13:25:39.555695       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:25:39.555858093Z I1024 13:25:39.555838       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:25:39.556643972Z I1024 13:25:39.556619       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:25:39.672292416Z I1024 13:25:39.672217       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:25:39.672292416Z I1024 13:25:39.672282       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T13:25:47.474853192Z I1024 13:25:47.474758       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:47.478518841Z I1024 13:25:47.478447       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:26:00.045423434Z I1024 13:26:00.045334       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:26:00.049432724Z I1024 13:26:00.049385       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:26:00.049631314Z I1024 13:26:00.049579       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T13:26:00.066368742Z I1024 13:26:00.066297       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T13:26:00.081666719Z I1024 13:26:00.081592       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T13:26:00.096786767Z I1024 13:26:00.096709       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T13:28:00.344344005Z E1024 13:28:00.344269       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:00.345391195Z E1024 13:28:00.345330       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:28:20.348023947Z E1024 13:28:20.347902       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:20.349203887Z E1024 13:28:20.349148       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:28:40.348208469Z E1024 13:28:40.348084       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:40.349143959Z E1024 13:28:40.349072       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:29:00.347826690Z E1024 13:29:00.347742       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:29:00.349156780Z E1024 13:29:00.349080       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:29:54.582347073Z I1024 13:29:54.581834       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:54.586299792Z I1024 13:29:54.586192       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:55.722205931Z I1024 13:29:55.722100       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:55.726553751Z I1024 13:29:55.726437       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:55.726873611Z I1024 13:29:55.726832       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T13:29:55.748748249Z I1024 13:29:55.748665       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T13:29:55.764577787Z I1024 13:29:55.764510       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T13:29:55.785625765Z I1024 13:29:55.785537       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T13:29:56.032349301Z I1024 13:29:56.032278       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:56.041177470Z I1024 13:29:56.040542       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:56.041177470Z I1024 13:29:56.040939       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T13:29:56.041177470Z I1024 13:29:56.040958       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T13:29:56.474872568Z I1024 13:29:56.474810       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T13:29:56.474983118Z I1024 13:29:56.474965       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T13:29:56.869903529Z I1024 13:29:56.869699       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T13:29:56.943181882Z I1024 13:29:56.941900       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T13:29:56.943181882Z I1024 13:29:56.942023       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T13:29:57.032567763Z I1024 13:29:57.032439       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T13:29:57.032791913Z I1024 13:29:57.032756       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T13:29:57.347180603Z I1024 13:29:57.347093       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T13:29:57.347340383Z I1024 13:29:57.347265       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T13:29:57.734729105Z I1024 13:29:57.734644       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T13:29:57.813453427Z I1024 13:29:57.813393       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T13:29:57.813541597Z I1024 13:29:57.813458       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T13:29:57.868332012Z I1024 13:29:57.868243       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T13:29:57.868332012Z I1024 13:29:57.868291       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T13:29:58.128417176Z I1024 13:29:58.128347       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T13:29:58.128417176Z I1024 13:29:58.128384       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T13:29:58.537169127Z I1024 13:29:58.537003       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T13:29:58.630905248Z I1024 13:29:58.630846       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T13:29:58.630974037Z I1024 13:29:58.630906       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T13:29:58.681040753Z I1024 13:29:58.680981       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T13:29:58.681040753Z I1024 13:29:58.681016       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T13:29:58.968446774Z I1024 13:29:58.967989       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T13:29:58.968446774Z I1024 13:29:58.968022       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T13:29:58.969739824Z I1024 13:29:58.969678       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T13:29:59.098332142Z I1024 13:29:59.098247       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T13:29:59.098332142Z I1024 13:29:59.098310       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T13:29:59.145671227Z I1024 13:29:59.145599       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:29:59.145774907Z I1024 13:29:59.145758       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:29:59.431732079Z I1024 13:29:59.431495       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:29:59.431732079Z I1024 13:29:59.431560       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:29:59.435164169Z I1024 13:29:59.432362       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:29:59.565094496Z I1024 13:29:59.565024       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:29:59.565200886Z I1024 13:29:59.565096       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:29:59.614355922Z I1024 13:29:59.614230       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:29:59.614355922Z I1024 13:29:59.614267       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:29:59.906179063Z I1024 13:29:59.903666       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:29:59.906179063Z I1024 13:29:59.903733       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:29:59.906179063Z I1024 13:29:59.904967       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:30:00.018840242Z I1024 13:30:00.018727       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:30:00.018840242Z I1024 13:30:00.018786       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T13:32:40.450957933Z E1024 13:32:40.450856       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:32:40.451773453Z E1024 13:32:40.451733       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-gcp-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:33:43.949193094Z I1024 13:33:43.949092       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:43.953040344Z I1024 13:33:43.952964       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:47.902578736Z I1024 13:33:47.902446       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:47.909350156Z I1024 13:33:47.909220       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:47.909684776Z I1024 13:33:47.909631       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T13:33:47.909684776Z I1024 13:33:47.909670       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T13:33:48.251983068Z I1024 13:33:48.251901       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T13:33:48.251983068Z I1024 13:33:48.251937       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T13:33:48.681882426Z I1024 13:33:48.681817       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T13:33:48.771598751Z I1024 13:33:48.771527       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T13:33:48.771747651Z I1024 13:33:48.771633       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T13:33:48.821646038Z I1024 13:33:48.821549       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T13:33:48.821646038Z I1024 13:33:48.821586       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T13:33:49.510388012Z I1024 13:33:49.510190       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T13:33:49.510388012Z I1024 13:33:49.510369       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T13:33:49.677400374Z I1024 13:33:49.677290       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:49.682238873Z I1024 13:33:49.682032       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:49.684012873Z I1024 13:33:49.682376       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T13:33:49.705588042Z I1024 13:33:49.705306       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T13:33:49.718337521Z I1024 13:33:49.718263       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T13:33:49.731605050Z I1024 13:33:49.731480       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T13:33:50.829331333Z I1024 13:33:50.829261       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T13:33:50.918970958Z I1024 13:33:50.918845       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T13:33:50.918970958Z I1024 13:33:50.918904       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T13:33:50.964523376Z I1024 13:33:50.964427       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T13:33:50.964523376Z I1024 13:33:50.964470       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T13:33:51.253204121Z I1024 13:33:51.253067       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T13:33:51.253204121Z I1024 13:33:51.253109       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T13:33:51.677649709Z I1024 13:33:51.677519       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T13:33:51.758704824Z I1024 13:33:51.758494       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T13:33:51.758704824Z I1024 13:33:51.758566       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T13:33:51.805590552Z I1024 13:33:51.805524       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T13:33:51.805590552Z I1024 13:33:51.805565       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T13:33:52.082535057Z I1024 13:33:52.082450       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T13:33:52.082535057Z I1024 13:33:52.082489       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T13:33:52.083586897Z I1024 13:33:52.083480       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T13:33:52.203680791Z I1024 13:33:52.201986       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T13:33:52.203680791Z I1024 13:33:52.202050       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T13:33:52.255171738Z I1024 13:33:52.254848       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:33:52.255171738Z I1024 13:33:52.254895       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:33:52.932253893Z I1024 13:33:52.932162       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:33:52.932253893Z I1024 13:33:52.932201       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:33:52.932880743Z I1024 13:33:52.932818       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:33:53.438512116Z I1024 13:33:53.438438       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:33:53.438586306Z I1024 13:33:53.438522       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:33:53.519177602Z I1024 13:33:53.516558       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:33:53.519177602Z I1024 13:33:53.516598       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:33:53.838875215Z I1024 13:33:53.838773       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:33:53.838875215Z I1024 13:33:53.838815       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:33:53.839852335Z I1024 13:33:53.839724       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:33:53.961485299Z I1024 13:33:53.961391       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:33:53.961566689Z I1024 13:33:53.961502       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T13:44:30.895662992Z I1024 13:44:30.895575       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T13:44:30.895662992Z I1024 13:44:30.895648       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T13:44:31.224843632Z I1024 13:44:31.224749       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T13:44:31.224843632Z I1024 13:44:31.224783       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T13:44:31.225581042Z I1024 13:44:31.225556       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T13:44:31.349576760Z I1024 13:44:31.349401       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T13:44:31.349576760Z I1024 13:44:31.349471       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T13:44:31.395364376Z I1024 13:44:31.395291       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:44:31.395364376Z I1024 13:44:31.395323       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:44:31.645050783Z I1024 13:44:31.644965       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:44:31.645050783Z I1024 13:44:31.645002       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:44:31.645808543Z I1024 13:44:31.645707       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:44:31.730915445Z I1024 13:44:31.730826       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:44:31.730915445Z I1024 13:44:31.730888       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:44:31.775273692Z I1024 13:44:31.775188       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:44:31.775273692Z I1024 13:44:31.775258       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:44:32.073596514Z I1024 13:44:32.073490       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:44:32.073596514Z I1024 13:44:32.073531       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:44:32.074243034Z I1024 13:44:32.074106       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:44:32.225196620Z I1024 13:44:32.225097       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:44:32.225280740Z I1024 13:44:32.225214       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T13:44:32.267398246Z I1024 13:44:32.267286       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T13:44:32.267398246Z I1024 13:44:32.267320       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T13:44:32.541177762Z I1024 13:44:32.541035       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T13:44:32.541177762Z I1024 13:44:32.541067       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T13:44:32.892340260Z I1024 13:44:32.892262       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T13:44:32.976792562Z I1024 13:44:32.976692       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T13:44:32.976792562Z I1024 13:44:32.976757       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T13:44:33.020338258Z I1024 13:44:33.020267       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T13:44:33.020338258Z I1024 13:44:33.020295       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T13:44:33.280532894Z I1024 13:44:33.280448       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T13:44:33.280532894Z I1024 13:44:33.280482       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T13:44:33.608730634Z I1024 13:44:33.608640       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T13:44:33.704210165Z I1024 13:44:33.703380       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T13:44:33.704210165Z I1024 13:44:33.703444       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T13:44:33.752465711Z I1024 13:44:33.752401       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T13:44:33.752465711Z I1024 13:44:33.752443       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T13:44:34.051823873Z I1024 13:44:34.051739       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T13:44:34.051823873Z I1024 13:44:34.051772       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T13:44:34.377735334Z I1024 13:44:34.377650       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T13:44:34.446211837Z I1024 13:44:34.446086       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T13:44:34.446211837Z I1024 13:44:34.446197       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T13:44:45.120001162Z I1024 13:44:45.119894       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T13:44:45.142202090Z I1024 13:44:45.142100       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T13:44:45.157395658Z I1024 13:44:45.157310       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T13:44:45.172935907Z I1024 13:44:45.172780       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T13:50:50.677713227Z I1024 13:50:50.677624       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:50.685233537Z I1024 13:50:50.685100       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:50.685464687Z I1024 13:50:50.685408       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T13:50:50.685464687Z I1024 13:50:50.685427       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T13:50:50.979708389Z I1024 13:50:50.979621       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T13:50:50.979708389Z I1024 13:50:50.979658       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T13:50:51.152587964Z I1024 13:50:51.152487       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:51.157569043Z I1024 13:50:51.157465       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:51.157859953Z I1024 13:50:51.157775       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T13:50:51.185716661Z I1024 13:50:51.185633       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T13:50:51.208595659Z I1024 13:50:51.208513       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T13:50:51.228712047Z I1024 13:50:51.228652       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T13:50:51.330665648Z I1024 13:50:51.330595       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T13:50:51.454202866Z I1024 13:50:51.454014       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T13:50:51.454202866Z I1024 13:50:51.454072       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T13:50:51.521403250Z I1024 13:50:51.521323       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T13:50:51.521403250Z I1024 13:50:51.521366       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T13:50:51.792361225Z I1024 13:50:51.792292       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T13:50:51.792361225Z I1024 13:50:51.792331       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T13:50:52.180815890Z I1024 13:50:52.180728       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T13:50:52.260732043Z I1024 13:50:52.260654       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T13:50:52.260732043Z I1024 13:50:52.260720       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T13:50:52.322004737Z I1024 13:50:52.321908       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T13:50:52.322004737Z I1024 13:50:52.321949       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T13:50:52.624841409Z I1024 13:50:52.624771       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T13:50:52.624841409Z I1024 13:50:52.624802       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T13:50:53.019150893Z I1024 13:50:53.019033       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T13:50:53.104004945Z I1024 13:50:53.103954       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T13:50:53.104146705Z I1024 13:50:53.104108       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T13:50:53.155602001Z I1024 13:50:53.155505       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T13:50:53.155602001Z I1024 13:50:53.155545       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T13:50:53.423850366Z I1024 13:50:53.423750       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T13:50:53.423850366Z I1024 13:50:53.423777       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T13:50:53.424433566Z I1024 13:50:53.424351       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T13:50:53.537785756Z I1024 13:50:53.537702       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T13:50:53.537785756Z I1024 13:50:53.537755       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T13:50:53.580188902Z I1024 13:50:53.580079       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:50:53.580188902Z I1024 13:50:53.580109       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:50:53.849926577Z I1024 13:50:53.849820       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:50:53.849926577Z I1024 13:50:53.849849       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:50:53.850770767Z I1024 13:50:53.850701       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:50:53.942336049Z I1024 13:50:53.942259       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:50:53.942336049Z I1024 13:50:53.942324       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:50:53.986260855Z I1024 13:50:53.986145       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:50:53.986260855Z I1024 13:50:53.986186       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:50:54.286163447Z I1024 13:50:54.286042       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:50:54.286163447Z I1024 13:50:54.286084       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:50:54.286993147Z I1024 13:50:54.286946       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:50:54.436164923Z I1024 13:50:54.432969       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:50:54.436164923Z I1024 13:50:54.433047       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T13:57:23.372415690Z I1024 13:57:23.372267       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.386527140Z I1024 13:57:23.386456       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.387035410Z I1024 13:57:23.387011       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T13:57:23.387321359Z I1024 13:57:23.387301       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T13:57:23.465024865Z I1024 13:57:23.464938       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.474742384Z I1024 13:57:23.474647       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.475017564Z I1024 13:57:23.474974       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T13:57:23.518187652Z I1024 13:57:23.518101       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T13:57:23.542956921Z I1024 13:57:23.542904       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T13:57:23.562842299Z I1024 13:57:23.562779       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T13:57:23.738517480Z I1024 13:57:23.738429       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T13:57:23.738517480Z I1024 13:57:23.738465       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T13:57:24.151888866Z I1024 13:57:24.150613       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T13:57:24.252006210Z I1024 13:57:24.251895       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T13:57:24.252006210Z I1024 13:57:24.251971       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T13:57:24.307995826Z I1024 13:57:24.307929       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T13:57:24.307995826Z I1024 13:57:24.307970       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T13:57:24.630527638Z I1024 13:57:24.630420       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T13:57:24.630527638Z I1024 13:57:24.630453       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T13:57:24.982648968Z I1024 13:57:24.982585       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T13:57:25.084832402Z I1024 13:57:25.084780       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T13:57:25.084974002Z I1024 13:57:25.084953       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T13:57:25.134811429Z I1024 13:57:25.134743       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T13:57:25.134811429Z I1024 13:57:25.134774       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T13:57:25.428539292Z I1024 13:57:25.428444       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T13:57:25.428539292Z I1024 13:57:25.428493       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T13:57:25.779746642Z I1024 13:57:25.779677       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T13:57:25.858618218Z I1024 13:57:25.858542       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T13:57:25.858618218Z I1024 13:57:25.858606       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T13:57:25.913195184Z I1024 13:57:25.912178       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T13:57:25.913195184Z I1024 13:57:25.912217       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T13:57:26.196644368Z I1024 13:57:26.196555       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T13:57:26.196644368Z I1024 13:57:26.196596       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T13:57:26.197386908Z I1024 13:57:26.197265       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T13:57:26.314026351Z I1024 13:57:26.313932       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T13:57:26.314026351Z I1024 13:57:26.314006       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T13:57:26.359208599Z I1024 13:57:26.359101       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T13:57:26.359208599Z I1024 13:57:26.359151       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T13:57:26.647816012Z I1024 13:57:26.647732       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T13:57:26.647816012Z I1024 13:57:26.647784       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T13:57:26.648446992Z I1024 13:57:26.648399       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T13:57:26.745904906Z I1024 13:57:26.745806       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T13:57:26.745904906Z I1024 13:57:26.745863       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T13:57:26.795225354Z I1024 13:57:26.794999       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T13:57:26.795225354Z I1024 13:57:26.795029       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T13:57:27.043836639Z I1024 13:57:27.043767       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T13:57:27.043836639Z I1024 13:57:27.043793       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T13:57:27.044589849Z I1024 13:57:27.044531       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T13:57:27.166043092Z I1024 13:57:27.165948       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T13:57:27.166043092Z I1024 13:57:27.166012       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T14:04:28.624431777Z I1024 14:04:28.624318       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:28.642250826Z I1024 14:04:28.640698       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:28.642250826Z I1024 14:04:28.641003       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T14:04:28.671325474Z I1024 14:04:28.671110       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T14:04:28.690963373Z I1024 14:04:28.690904       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T14:04:28.705996672Z I1024 14:04:28.705892       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T14:04:28.715790211Z I1024 14:04:28.715722       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:28.723314241Z I1024 14:04:28.722704       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:28.723527871Z I1024 14:04:28.722992       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T14:04:28.723639651Z I1024 14:04:28.723618       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T14:04:29.067328688Z I1024 14:04:29.067266       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T14:04:29.067478448Z I1024 14:04:29.067422       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T14:04:29.479221411Z I1024 14:04:29.479058       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T14:04:29.579022755Z I1024 14:04:29.578929       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T14:04:29.579022755Z I1024 14:04:29.578998       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T14:04:29.635401371Z I1024 14:04:29.635223       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T14:04:29.635401371Z I1024 14:04:29.635269       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T14:04:29.893594484Z I1024 14:04:29.893483       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T14:04:29.893594484Z I1024 14:04:29.893524       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T14:04:30.267601879Z I1024 14:04:30.267465       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T14:04:30.357153563Z I1024 14:04:30.357053       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T14:04:30.357225603Z I1024 14:04:30.357195       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T14:04:30.412406589Z I1024 14:04:30.412256       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T14:04:30.412406589Z I1024 14:04:30.412295       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T14:04:30.713692029Z I1024 14:04:30.713620       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T14:04:30.713692029Z I1024 14:04:30.713665       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T14:04:31.136893881Z I1024 14:04:31.136805       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T14:04:31.228401215Z I1024 14:04:31.228310       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T14:04:31.228401215Z I1024 14:04:31.228365       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T14:04:31.274199712Z I1024 14:04:31.274111       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T14:04:31.274199712Z I1024 14:04:31.274164       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T14:04:31.614863550Z I1024 14:04:31.614789       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T14:04:31.614863550Z I1024 14:04:31.614819       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T14:04:31.615598669Z I1024 14:04:31.615541       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T14:04:31.729944362Z I1024 14:04:31.729871       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T14:04:31.729944362Z I1024 14:04:31.729928       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T14:04:31.771270279Z I1024 14:04:31.771086       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T14:04:31.771270279Z I1024 14:04:31.771145       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T14:04:32.051597281Z I1024 14:04:32.051512       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T14:04:32.051597281Z I1024 14:04:32.051567       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T14:04:32.052495661Z I1024 14:04:32.052424       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T14:04:32.170409803Z I1024 14:04:32.170339       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T14:04:32.170409803Z I1024 14:04:32.170401       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T14:04:32.210407430Z I1024 14:04:32.210355       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T14:04:32.210407430Z I1024 14:04:32.210383       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T14:04:32.466105204Z I1024 14:04:32.465993       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T14:04:32.466105204Z I1024 14:04:32.466032       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T14:04:32.466971493Z I1024 14:04:32.466900       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T14:04:32.590026915Z I1024 14:04:32.589967       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T14:04:32.590221776Z I1024 14:04:32.590191       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T14:15:11.711360174Z I1024 14:15:11.711235       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T14:15:11.711360174Z I1024 14:15:11.711294       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T14:15:12.032543071Z I1024 14:15:12.032449       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T14:15:12.032543071Z I1024 14:15:12.032482       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T14:15:12.033171261Z I1024 14:15:12.033088       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T14:15:12.157038063Z I1024 14:15:12.156953       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T14:15:12.157038063Z I1024 14:15:12.157021       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T14:15:12.213660979Z I1024 14:15:12.213562       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T14:15:12.213660979Z I1024 14:15:12.213604       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T14:15:12.471688730Z I1024 14:15:12.471579       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T14:15:12.471688730Z I1024 14:15:12.471612       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T14:15:12.887952661Z I1024 14:15:12.887854       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T14:15:12.962589616Z I1024 14:15:12.962503       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T14:15:12.962589616Z I1024 14:15:12.962569       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T14:15:13.011757612Z I1024 14:15:13.011675       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T14:15:13.011757612Z I1024 14:15:13.011711       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T14:15:13.274205754Z I1024 14:15:13.274075       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T14:15:13.274252244Z I1024 14:15:13.274211       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T14:15:13.638794138Z I1024 14:15:13.638711       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T14:15:13.739324821Z I1024 14:15:13.739239       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T14:15:13.739324821Z I1024 14:15:13.739300       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T14:15:13.787839868Z I1024 14:15:13.787742       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T14:15:13.787839868Z I1024 14:15:13.787776       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T14:15:14.045959969Z I1024 14:15:14.045878       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T14:15:14.045959969Z I1024 14:15:14.045918       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T14:15:14.486984018Z I1024 14:15:14.486902       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T14:15:14.576271422Z I1024 14:15:14.576174       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T14:15:14.576271422Z I1024 14:15:14.576235       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T14:15:14.627625609Z I1024 14:15:14.627520       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T14:15:14.627625609Z I1024 14:15:14.627563       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T14:15:14.906175679Z I1024 14:15:14.906073       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T14:15:14.906243489Z I1024 14:15:14.906181       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T14:15:14.906944429Z I1024 14:15:14.906840       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T14:15:15.033925350Z I1024 14:15:15.033843       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T14:15:15.033925350Z I1024 14:15:15.033891       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T14:15:15.079425307Z I1024 14:15:15.079359       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T14:15:15.079425307Z I1024 14:15:15.079386       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T14:15:15.317226640Z I1024 14:15:15.317041       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T14:15:15.317226640Z I1024 14:15:15.317074       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T14:15:15.318678390Z I1024 14:15:15.318605       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T14:15:15.408778343Z I1024 14:15:15.408692       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T14:15:15.408778343Z I1024 14:15:15.408760       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T14:15:24.078510733Z I1024 14:15:24.078433       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T14:15:24.106470651Z I1024 14:15:24.106371       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T14:15:24.123977170Z I1024 14:15:24.123883       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T14:15:24.142937049Z I1024 14:15:24.142837       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T14:16:26.571771595Z I1024 14:16:26.571690       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:26.578925015Z I1024 14:16:26.578829       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:26.579584425Z I1024 14:16:26.579545       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T14:16:26.579692665Z I1024 14:16:26.579673       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T14:16:26.874750644Z I1024 14:16:26.874690       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T14:16:26.874857614Z I1024 14:16:26.874820       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T14:16:27.321619472Z I1024 14:16:27.321554       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T14:16:27.414997496Z I1024 14:16:27.414938       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T14:16:27.415177126Z I1024 14:16:27.415150       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T14:16:27.482050771Z I1024 14:16:27.481971       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T14:16:27.482195141Z I1024 14:16:27.482177       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T14:16:27.734701723Z I1024 14:16:27.734639       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T14:16:27.734802373Z I1024 14:16:27.734781       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T14:16:27.800087089Z I1024 14:16:27.800008       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:27.804972668Z I1024 14:16:27.804916       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:27.805187878Z I1024 14:16:27.805099       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T14:16:27.826326197Z I1024 14:16:27.826215       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T14:16:27.843559916Z I1024 14:16:27.843494       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T14:16:27.862062574Z I1024 14:16:27.862003       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T14:16:28.122084036Z I1024 14:16:28.122000       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T14:16:28.278475575Z I1024 14:16:28.278382       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T14:16:28.278582925Z I1024 14:16:28.278543       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T14:16:28.326008422Z I1024 14:16:28.325932       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T14:16:28.326008422Z I1024 14:16:28.325972       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T14:16:28.599578242Z I1024 14:16:28.599489       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T14:16:28.599578242Z I1024 14:16:28.599523       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T14:16:28.955884387Z I1024 14:16:28.955792       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T14:16:29.050194031Z I1024 14:16:29.050090       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T14:16:29.050280420Z I1024 14:16:29.050183       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T14:16:29.095498987Z I1024 14:16:29.095402       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T14:16:29.095498987Z I1024 14:16:29.095437       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T14:16:29.357839839Z I1024 14:16:29.357760       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T14:16:29.357839839Z I1024 14:16:29.357794       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T14:16:29.358499149Z I1024 14:16:29.358471       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T14:16:29.491626689Z I1024 14:16:29.491327       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T14:16:29.491626689Z I1024 14:16:29.491444       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T14:16:29.534861766Z I1024 14:16:29.534770       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T14:16:29.534861766Z I1024 14:16:29.534808       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T14:16:29.764202700Z I1024 14:16:29.764063       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T14:16:29.764202700Z I1024 14:16:29.764099       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T14:16:29.764797970Z I1024 14:16:29.764742       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T14:16:29.881661842Z I1024 14:16:29.881565       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T14:16:29.881661842Z I1024 14:16:29.881652       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T14:16:29.925962149Z I1024 14:16:29.925856       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T14:16:29.925962149Z I1024 14:16:29.925888       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T14:16:30.168393912Z I1024 14:16:30.168322       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T14:16:30.168393912Z I1024 14:16:30.168360       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T14:16:30.169246632Z I1024 14:16:30.169215       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T14:16:30.296703923Z I1024 14:16:30.296629       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T14:16:30.296783483Z I1024 14:16:30.296702       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T14:27:09.565388364Z I1024 14:27:09.565250       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T14:27:09.565388364Z I1024 14:27:09.565309       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T14:27:09.909867660Z I1024 14:27:09.909759       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T14:27:09.909867660Z I1024 14:27:09.909815       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T14:27:09.910735320Z I1024 14:27:09.910697       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T14:27:10.022774302Z I1024 14:27:10.022672       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T14:27:10.022774302Z I1024 14:27:10.022731       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T14:27:10.071142069Z I1024 14:27:10.071050       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T14:27:10.071322939Z I1024 14:27:10.071260       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T14:27:10.347729630Z I1024 14:27:10.347645       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T14:27:10.347729630Z I1024 14:27:10.347681       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T14:27:10.348610799Z I1024 14:27:10.348556       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T14:27:10.441651803Z I1024 14:27:10.441577       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T14:27:10.441651803Z I1024 14:27:10.441643       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T14:27:10.495913559Z I1024 14:27:10.495801       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T14:27:10.495913559Z I1024 14:27:10.495839       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T14:27:10.771216220Z I1024 14:27:10.771029       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T14:27:10.771216220Z I1024 14:27:10.771086       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T14:27:11.159438242Z I1024 14:27:11.159336       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T14:27:11.262781855Z I1024 14:27:11.262655       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T14:27:11.262868215Z I1024 14:27:11.262822       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T14:27:11.319195621Z I1024 14:27:11.319079       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T14:27:11.319195621Z I1024 14:27:11.319114       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T14:27:11.564640994Z I1024 14:27:11.564534       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T14:27:11.564640994Z I1024 14:27:11.564575       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T14:27:11.902509350Z I1024 14:27:11.902418       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T14:27:11.984234394Z I1024 14:27:11.984094       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T14:27:11.984234394Z I1024 14:27:11.984179       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T14:27:12.028724871Z I1024 14:27:12.028618       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T14:27:12.028724871Z I1024 14:27:12.028665       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T14:27:12.288443143Z I1024 14:27:12.288354       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T14:27:12.288443143Z I1024 14:27:12.288393       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T14:27:12.656651947Z I1024 14:27:12.656560       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T14:27:12.753432600Z I1024 14:27:12.753343       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T14:27:12.753432600Z I1024 14:27:12.753413       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T14:27:12.803472007Z I1024 14:27:12.803376       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T14:27:12.803472007Z I1024 14:27:12.803420       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T14:27:13.062180989Z I1024 14:27:13.062075       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T14:27:13.062180989Z I1024 14:27:13.062144       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T14:27:13.063650388Z I1024 14:27:13.063565       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T14:27:13.200333959Z I1024 14:27:13.200269       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T14:27:13.200407209Z I1024 14:27:13.200340       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T14:27:23.243310022Z I1024 14:27:23.243215       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T14:27:23.265674290Z I1024 14:27:23.265587       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T14:27:23.286171209Z I1024 14:27:23.286060       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T14:27:23.304609257Z I1024 14:27:23.304514       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T14:29:28.419959916Z I1024 14:29:28.419871       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:28.428741706Z I1024 14:29:28.428670       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:28.429088546Z I1024 14:29:28.429025       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T14:29:28.429088546Z I1024 14:29:28.429074       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T14:29:28.778908194Z I1024 14:29:28.778795       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T14:29:28.778908194Z I1024 14:29:28.778855       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T14:29:29.080051194Z I1024 14:29:29.079930       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:29.086312364Z I1024 14:29:29.086234       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:29.086862184Z I1024 14:29:29.086710       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T14:29:29.127716562Z I1024 14:29:29.127658       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T14:29:29.151464340Z I1024 14:29:29.151298       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T14:29:29.156946539Z I1024 14:29:29.156863       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T14:29:29.183086488Z I1024 14:29:29.183000       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T14:29:29.255667173Z I1024 14:29:29.255592       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T14:29:29.255738203Z I1024 14:29:29.255668       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T14:29:29.333888348Z I1024 14:29:29.333824       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T14:29:29.334010628Z I1024 14:29:29.333987       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T14:29:29.613502460Z I1024 14:29:29.613413       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T14:29:29.613502460Z I1024 14:29:29.613454       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T14:29:30.000312986Z I1024 14:29:30.000198       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T14:29:30.089320070Z I1024 14:29:30.089246       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T14:29:30.089427670Z I1024 14:29:30.089322       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T14:29:30.158733285Z I1024 14:29:30.157874       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T14:29:30.158733285Z I1024 14:29:30.157916       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T14:29:30.427426688Z I1024 14:29:30.427350       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T14:29:30.427426688Z I1024 14:29:30.427384       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T14:29:30.919179157Z I1024 14:29:30.919087       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T14:29:31.015712361Z I1024 14:29:31.015606       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T14:29:31.015712361Z I1024 14:29:31.015676       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T14:29:31.070318927Z I1024 14:29:31.070236       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T14:29:31.070318927Z I1024 14:29:31.070295       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T14:29:31.344452060Z I1024 14:29:31.344356       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T14:29:31.344452060Z I1024 14:29:31.344394       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T14:29:31.345291690Z I1024 14:29:31.345185       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T14:29:31.462988663Z I1024 14:29:31.462902       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T14:29:31.462988663Z I1024 14:29:31.462967       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T14:29:31.512748509Z I1024 14:29:31.512674       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T14:29:31.512748509Z I1024 14:29:31.512707       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T14:29:31.859368037Z I1024 14:29:31.859280       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T14:29:31.859368037Z I1024 14:29:31.859328       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T14:29:31.860036477Z I1024 14:29:31.859969       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T14:29:31.975213330Z I1024 14:29:31.975044       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T14:29:31.975213330Z I1024 14:29:31.975105       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T14:29:32.022806887Z I1024 14:29:32.022678       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T14:29:32.022806887Z I1024 14:29:32.022726       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T14:29:32.287053420Z I1024 14:29:32.286949       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T14:29:32.287053420Z I1024 14:29:32.286987       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T14:29:32.287770440Z I1024 14:29:32.287701       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T14:29:32.413295042Z I1024 14:29:32.413191       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T14:29:32.413295042Z I1024 14:29:32.413260       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+2024-10-24T14:36:10.316316400Z I1024 14:36:10.316102       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:10.322703469Z I1024 14:36:10.322595       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:10.322904980Z I1024 14:36:10.322852       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling Machine
+2024-10-24T14:36:10.322904980Z I1024 14:36:10.322887       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-0: Checking if machine exists
+2024-10-24T14:36:10.671865937Z I1024 14:36:10.671785       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-0: reconciling machine triggers idempotent update
+2024-10-24T14:36:10.671865937Z I1024 14:36:10.671816       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-0: Updating machine
+2024-10-24T14:36:10.673784517Z I1024 14:36:10.673676       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:10.679176157Z I1024 14:36:10.679090       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:10.679423486Z I1024 14:36:10.679357       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-a" "namespace"="openshift-machine-api"
+2024-10-24T14:36:10.713479065Z I1024 14:36:10.713337       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-b" "namespace"="openshift-machine-api"
+2024-10-24T14:36:10.735492443Z I1024 14:36:10.735409       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+2024-10-24T14:36:10.767170421Z I1024 14:36:10.766972       1 controller.go:84] "msg"="Reconciling" "logger"="controllers.MachineSet" "machineset"="ci-op-2fcpj5j6-f6035-2lklf-worker-f" "namespace"="openshift-machine-api"
+2024-10-24T14:36:11.022875675Z I1024 14:36:11.022757       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-0: Reconciling machine object with cloud state
+2024-10-24T14:36:11.138393937Z I1024 14:36:11.138311       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-0: status unchanged
+2024-10-24T14:36:11.138393937Z I1024 14:36:11.138370       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-0": patching machine
+2024-10-24T14:36:11.223955592Z I1024 14:36:11.223876       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling Machine
+2024-10-24T14:36:11.224080702Z I1024 14:36:11.224063       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-1: Checking if machine exists
+2024-10-24T14:36:11.491906055Z I1024 14:36:11.491834       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-1: reconciling machine triggers idempotent update
+2024-10-24T14:36:11.491906055Z I1024 14:36:11.491870       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-1: Updating machine
+2024-10-24T14:36:11.849765132Z I1024 14:36:11.849691       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-1: Reconciling machine object with cloud state
+2024-10-24T14:36:11.922784187Z I1024 14:36:11.922675       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-1: status unchanged
+2024-10-24T14:36:11.922784187Z I1024 14:36:11.922749       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-1": patching machine
+2024-10-24T14:36:11.974243514Z I1024 14:36:11.974052       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling Machine
+2024-10-24T14:36:11.974243514Z I1024 14:36:11.974101       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-master-2: Checking if machine exists
+2024-10-24T14:36:12.262328585Z I1024 14:36:12.262190       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-master-2: reconciling machine triggers idempotent update
+2024-10-24T14:36:12.262328585Z I1024 14:36:12.262230       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-master-2: Updating machine
+2024-10-24T14:36:12.636073332Z I1024 14:36:12.635994       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-master-2: Reconciling machine object with cloud state
+2024-10-24T14:36:12.724490846Z I1024 14:36:12.724411       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-master-2: status unchanged
+2024-10-24T14:36:12.724490846Z I1024 14:36:12.724481       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-master-2": patching machine
+2024-10-24T14:36:12.774358023Z I1024 14:36:12.774287       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling Machine
+2024-10-24T14:36:12.774358023Z I1024 14:36:12.774327       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Checking if machine exists
+2024-10-24T14:36:13.111348861Z I1024 14:36:13.111108       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: reconciling machine triggers idempotent update
+2024-10-24T14:36:13.111348861Z I1024 14:36:13.111197       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Updating machine
+2024-10-24T14:36:13.111976411Z I1024 14:36:13.111859       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: Reconciling machine object with cloud state
+2024-10-24T14:36:13.235001254Z I1024 14:36:13.234842       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x: status unchanged
+2024-10-24T14:36:13.235001254Z I1024 14:36:13.234959       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x": patching machine
+2024-10-24T14:36:13.292213260Z I1024 14:36:13.292112       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling Machine
+2024-10-24T14:36:13.292213260Z I1024 14:36:13.292180       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Checking if machine exists
+2024-10-24T14:36:13.522614495Z I1024 14:36:13.522539       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: reconciling machine triggers idempotent update
+2024-10-24T14:36:13.522614495Z I1024 14:36:13.522579       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Updating machine
+2024-10-24T14:36:13.523589605Z I1024 14:36:13.523430       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Reconciling machine object with cloud state
+2024-10-24T14:36:13.618316729Z I1024 14:36:13.618234       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: status unchanged
+2024-10-24T14:36:13.618316729Z I1024 14:36:13.618301       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": patching machine
+2024-10-24T14:36:13.665793346Z I1024 14:36:13.665696       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+2024-10-24T14:36:13.665793346Z I1024 14:36:13.665741       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+2024-10-24T14:36:13.934731649Z I1024 14:36:13.934665       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+2024-10-24T14:36:13.934731649Z I1024 14:36:13.934692       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+2024-10-24T14:36:13.935321059Z I1024 14:36:13.935295       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+2024-10-24T14:36:14.066083310Z I1024 14:36:14.065984       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+2024-10-24T14:36:14.066083310Z I1024 14:36:14.066049       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine

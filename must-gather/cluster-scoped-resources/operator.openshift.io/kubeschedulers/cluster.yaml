@@ -1,0 +1,410 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: KubeScheduler
+metadata:
+  annotations:
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2024-10-24T12:58:46Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"MissingStaticPodControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: MissingStaticPodController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:03:30Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler-ConfigObserver
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:03:31Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"InstallerPodContainerWaitingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodNetworkingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstallerPodPendingDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler-InstallerState
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:03:31Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ResourceSyncControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler-ResourceSync
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:03:31Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"BackingResourceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: BackingResourceController-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:03:32Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"RevisionControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:latestAvailableRevision: {}
+    manager: kube-scheduler-RevisionController
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:26:47Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"GuardControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: GuardController-reportDegraded
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:33:51Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"KubeControllerManagerStaticResourcesDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: KubeControllerManagerStaticResources-StaticResources
+    operation: Apply
+    subresource: status
+    time: "2024-10-24T13:33:56Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:46Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2024-10-24T13:03:31Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"InstallerControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"NodeInstallerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StaticPodsAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StaticPodsDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"TargetConfigControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"UnsupportedConfigOverridesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:nodeStatuses:
+          .: {}
+          k:{"nodeName":"ci-op-2fcpj5j6-f6035-2lklf-master-0"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFailedRevisionErrors: {}
+            f:lastFailedTime: {}
+            f:nodeName: {}
+          k:{"nodeName":"ci-op-2fcpj5j6-f6035-2lklf-master-1"}:
+            .: {}
+            f:currentRevision: {}
+            f:lastFailedCount: {}
+            f:lastFailedReason: {}
+            f:lastFailedRevision: {}
+            f:lastFailedRevisionErrors: {}
+            f:lastFailedTime: {}
+            f:nodeName: {}
+          k:{"nodeName":"ci-op-2fcpj5j6-f6035-2lklf-master-2"}:
+            .: {}
+            f:currentRevision: {}
+            f:nodeName: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:35:55Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "33317"
+  uid: 4145b158-728d-4cc4-b486-1fc0c8c76a71
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    servingInfo:
+      cipherSuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:03:29Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2024-10-24T13:03:30Z"
+    status: "False"
+    type: StaticPodsDegraded
+  - lastTransitionTime: "2024-10-24T13:03:52Z"
+    status: "False"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:23:19Z"
+    message: 3 nodes are active; 3 nodes are at revision 7
+    status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2024-10-24T13:35:55Z"
+    message: 3 nodes are at revision 7
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2024-10-24T13:32:14Z"
+    status: "False"
+    type: NodeInstallerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:30Z"
+    reason: AsExpected
+    status: "False"
+    type: MissingStaticPodControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:50Z"
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:47Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:33:51Z"
+    reason: AsExpected
+    status: "False"
+    type: GuardControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:31Z"
+    status: "False"
+    type: InstallerPodContainerWaitingDegraded
+  - lastTransitionTime: "2024-10-24T13:03:31Z"
+    status: "False"
+    type: InstallerPodNetworkingDegraded
+  - lastTransitionTime: "2024-10-24T13:03:31Z"
+    status: "False"
+    type: InstallerPodPendingDegraded
+  - lastTransitionTime: "2024-10-24T13:03:31Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:31Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2024-10-24T13:03:32Z"
+    reason: AsExpected
+    status: "False"
+    type: BackingResourceControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:33:56Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeControllerManagerStaticResourcesDegraded
+  - lastTransitionTime: "2024-10-24T13:33:53Z"
+    status: "False"
+    type: TargetConfigControllerDegraded
+  latestAvailableRevision: 7
+  nodeStatuses:
+  - currentRevision: 7
+    lastFailedCount: 2
+    lastFailedReason: InstallerFailed
+    lastFailedRevision: 6
+    lastFailedRevisionErrors:
+    - |
+      installer: refixes: ([]string) (len=1 cap=1) {
+        (string) (len=12) "serving-cert"
+       },
+       ConfigMapNamePrefixes: ([]string) (len=5 cap=8) {
+        (string) (len=18) "kube-scheduler-pod",
+        (string) (len=6) "config",
+        (string) (len=17) "serviceaccount-ca",
+        (string) (len=20) "scheduler-kubeconfig",
+        (string) (len=37) "kube-scheduler-cert-syncer-kubeconfig"
+       },
+       OptionalConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+        (string) (len=16) "policy-configmap"
+       },
+       CertSecretNames: ([]string) (len=1 cap=1) {
+        (string) (len=30) "kube-scheduler-client-cert-key"
+       },
+       OptionalCertSecretNamePrefixes: ([]string) <nil>,
+       CertConfigMapNamePrefixes: ([]string) <nil>,
+       OptionalCertConfigMapNamePrefixes: ([]string) <nil>,
+       CertDir: (string) (len=57) "/etc/kubernetes/static-pod-resources/kube-scheduler-certs",
+       ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+       PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+       Timeout: (time.Duration) 2m0s,
+       StaticPodManifestsLockFile: (string) "",
+       PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+       KubeletVersion: (string) ""
+      })
+      I1024 13:15:40.605843       1 cmd.go:409] Getting controller reference for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+      I1024 13:15:40.620880       1 cmd.go:422] Waiting for installer revisions to settle for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+      I1024 13:15:40.621111       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+      I1024 13:15:40.621191       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+      I1024 13:15:40.629965       1 cmd.go:514] Waiting additional period after revisions have settled for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+      I1024 13:16:10.632243       1 cmd.go:520] Getting installer pods for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+      F1024 13:16:24.639340       1 cmd.go:105] Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+    lastFailedTime: "2024-10-24T13:21:24Z"
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  - currentRevision: 7
+    lastFailedCount: 1
+    lastFailedReason: InstallerFailed
+    lastFailedRevision: 7
+    lastFailedRevisionErrors:
+    - |
+      installer:    1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-1: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+      W1024 13:27:16.272374       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-1: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+      W1024 13:27:26.271495       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-1: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+      W1024 13:27:36.271836       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-1: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+      W1024 13:27:46.272336       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-1: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+      W1024 13:27:56.271500       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-1: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+      W1024 13:27:56.272431       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-1: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+      F1024 13:27:56.272470       1 cmd.go:105] timed out waiting for the condition
+    lastFailedTime: "2024-10-24T13:30:24Z"
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  - currentRevision: 7
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  readyReplicas: 0

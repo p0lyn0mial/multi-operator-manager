@@ -1,0 +1,50 @@
+2024-10-24T13:09:00.901593517Z I1024 13:09:00.901269       1 cmd.go:91] &{<nil> true {false} installer true map[cert-configmaps:0xc0007cc500 cert-dir:0xc0007cc6e0 cert-secrets:0xc0007cc3c0 configmaps:0xc000ad52c0 namespace:0xc000ad50e0 pod:0xc000ad5180 pod-manifest-dir:0xc0007cc1e0 resource-dir:0xc0007cc140 revision:0xc000ad5040 secrets:0xc000ad5220 v:0xc000ad4280] [0xc000ad4280 0xc000ad5040 0xc000ad50e0 0xc000ad5180 0xc0007cc140 0xc0007cc1e0 0xc000ad52c0 0xc000ad5220 0xc0007cc6e0 0xc0007cc500 0xc0007cc3c0] [] map[cert-configmaps:0xc0007cc500 cert-dir:0xc0007cc6e0 cert-secrets:0xc0007cc3c0 configmaps:0xc000ad52c0 help:0xc000561ea0 kubeconfig:0xc000ad4fa0 log-flush-frequency:0xc000ad41e0 namespace:0xc000ad50e0 optional-cert-configmaps:0xc0007cc640 optional-cert-secrets:0xc0007cc5a0 optional-configmaps:0xc0007cc0a0 optional-secrets:0xc0007cc000 pod:0xc000ad5180 pod-manifest-dir:0xc0007cc1e0 pod-manifests-lock-file:0xc0007cc320 resource-dir:0xc0007cc140 revision:0xc000ad5040 secrets:0xc000ad5220 timeout-duration:0xc0007cc280 v:0xc000ad4280 vmodule:0xc000ad4320] [0xc000ad4fa0 0xc000ad5040 0xc000ad50e0 0xc000ad5180 0xc000ad5220 0xc000ad52c0 0xc0007cc000 0xc0007cc0a0 0xc0007cc140 0xc0007cc1e0 0xc0007cc280 0xc0007cc320 0xc0007cc3c0 0xc0007cc500 0xc0007cc5a0 0xc0007cc640 0xc0007cc6e0 0xc000ad41e0 0xc000ad4280 0xc000ad4320 0xc000561ea0] [0xc0007cc500 0xc0007cc6e0 0xc0007cc3c0 0xc000ad52c0 0xc000561ea0 0xc000ad4fa0 0xc000ad41e0 0xc000ad50e0 0xc0007cc640 0xc0007cc5a0 0xc0007cc0a0 0xc0007cc000 0xc000ad5180 0xc0007cc1e0 0xc0007cc320 0xc0007cc140 0xc000ad5040 0xc000ad5220 0xc0007cc280 0xc000ad4280 0xc000ad4320] map[104:0xc000561ea0 118:0xc000ad4280] [] -1 0 0xc000a9de60 true <nil> []}
+2024-10-24T13:09:00.901593517Z I1024 13:09:00.901514       1 cmd.go:92] (*installerpod.InstallOptions)(0xc000a781a0)({
+2024-10-24T13:09:00.901593517Z  KubeConfig: (string) "",
+2024-10-24T13:09:00.901593517Z  KubeClient: (kubernetes.Interface) <nil>,
+2024-10-24T13:09:00.901593517Z  Revision: (string) (len=1) "5",
+2024-10-24T13:09:00.901593517Z  NodeName: (string) "",
+2024-10-24T13:09:00.901593517Z  Namespace: (string) (len=14) "openshift-etcd",
+2024-10-24T13:09:00.901593517Z  PodConfigMapNamePrefix: (string) (len=8) "etcd-pod",
+2024-10-24T13:09:00.901593517Z  SecretNamePrefixes: ([]string) (len=1 cap=1) {
+2024-10-24T13:09:00.901593517Z   (string) (len=14) "etcd-all-certs"
+2024-10-24T13:09:00.901593517Z  },
+2024-10-24T13:09:00.901593517Z  OptionalSecretNamePrefixes: ([]string) <nil>,
+2024-10-24T13:09:00.901593517Z  ConfigMapNamePrefixes: ([]string) (len=3 cap=4) {
+2024-10-24T13:09:00.901593517Z   (string) (len=8) "etcd-pod",
+2024-10-24T13:09:00.901593517Z   (string) (len=14) "etcd-endpoints",
+2024-10-24T13:09:00.901593517Z   (string) (len=16) "etcd-all-bundles"
+2024-10-24T13:09:00.901593517Z  },
+2024-10-24T13:09:00.901593517Z  OptionalConfigMapNamePrefixes: ([]string) <nil>,
+2024-10-24T13:09:00.901593517Z  CertSecretNames: ([]string) (len=1 cap=1) {
+2024-10-24T13:09:00.901593517Z   (string) (len=14) "etcd-all-certs"
+2024-10-24T13:09:00.901593517Z  },
+2024-10-24T13:09:00.901593517Z  OptionalCertSecretNamePrefixes: ([]string) <nil>,
+2024-10-24T13:09:00.901593517Z  CertConfigMapNamePrefixes: ([]string) (len=3 cap=4) {
+2024-10-24T13:09:00.901593517Z   (string) (len=16) "restore-etcd-pod",
+2024-10-24T13:09:00.901593517Z   (string) (len=12) "etcd-scripts",
+2024-10-24T13:09:00.901593517Z   (string) (len=16) "etcd-all-bundles"
+2024-10-24T13:09:00.901593517Z  },
+2024-10-24T13:09:00.901593517Z  OptionalCertConfigMapNamePrefixes: ([]string) <nil>,
+2024-10-24T13:09:00.901593517Z  CertDir: (string) (len=47) "/etc/kubernetes/static-pod-resources/etcd-certs",
+2024-10-24T13:09:00.901593517Z  ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+2024-10-24T13:09:00.901593517Z  PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+2024-10-24T13:09:00.901593517Z  Timeout: (time.Duration) 2m0s,
+2024-10-24T13:09:00.901593517Z  StaticPodManifestsLockFile: (string) "",
+2024-10-24T13:09:00.901593517Z  PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+2024-10-24T13:09:00.901593517Z  KubeletVersion: (string) ""
+2024-10-24T13:09:00.901593517Z })
+2024-10-24T13:09:00.902421967Z I1024 13:09:00.902352       1 cmd.go:409] Getting controller reference for node ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:09:01.241943956Z W1024 13:09:01.241857       1 cmd.go:419] unable to get owner reference (falling back to namespace): Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods/installer-5-ci-op-2fcpj5j6-f6035-2lklf-master-2?timeout=14s": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:01.241943956Z I1024 13:09:01.241904       1 cmd.go:422] Waiting for installer revisions to settle for node ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:09:01.242029726Z I1024 13:09:01.242005       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:09:01.242029726Z I1024 13:09:01.242025       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:09:01.243455146Z W1024 13:09:01.243378       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:11.245943614Z W1024 13:09:11.245859       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:21.246478428Z W1024 13:09:21.246355       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:31.244811620Z W1024 13:09:31.244720       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:41.245091177Z W1024 13:09:41.245006       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:51.245539381Z W1024 13:09:51.245434       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:01.245074364Z W1024 13:10:01.245005       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:01.246547704Z W1024 13:10:01.246460       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-2: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-etcd/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:01.246547704Z F1024 13:10:01.246502       1 cmd.go:105] timed out waiting for the condition

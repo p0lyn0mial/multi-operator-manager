@@ -1,0 +1,212 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: ClusterCSIDriver
+metadata:
+  creationTimestamp: "2024-10-24T13:03:40Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:driverConfig:
+          .: {}
+          f:driverType: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:operatorLogLevel: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-storage-operator
+    operation: Update
+    time: "2024-10-24T13:03:40Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          f:targetcsiconfig:
+            .: {}
+            f:servingInfo:
+              .: {}
+              f:cipherSuites: {}
+              f:minTLSVersion: {}
+    manager: gcp-pd-csi-driver-operator
+    operation: Update
+    time: "2024-10-24T13:03:44Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverConditionalStaticResourcesControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverControllerServiceControllerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverControllerServiceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverControllerServiceControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverNodeServiceControllerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverNodeServiceControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverNodeServiceControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverServiceMonitorControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDDriverStaticResourcesControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"StorageClassControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          .: {}
+          k:{"group":"apps","name":"gcp-pd-csi-driver-controller","namespace":"openshift-cluster-csi-drivers","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:hash: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+          k:{"group":"apps","name":"gcp-pd-csi-driver-node","namespace":"openshift-cluster-csi-drivers","resource":"daemonsets"}:
+            .: {}
+            f:group: {}
+            f:hash: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+        f:readyReplicas: {}
+    manager: gcp-pd-csi-driver-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:25:38Z"
+  name: pd.csi.storage.gke.io
+  resourceVersion: "27733"
+  uid: 425e82b5-443c-44cd-bb07-324642b7513a
+spec:
+  driverConfig:
+    driverType: ""
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    targetcsiconfig:
+      servingInfo:
+        cipherSuites:
+        - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+        - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+        - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+        - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+        minTLSVersion: VersionTLS12
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:03:44Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2024-10-24T13:03:44Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDDriverServiceMonitorControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:04:19Z"
+    status: "True"
+    type: GCPPDDriverControllerServiceControllerAvailable
+  - lastTransitionTime: "2024-10-24T13:07:03Z"
+    status: "False"
+    type: GCPPDDriverControllerServiceControllerProgressing
+  - lastTransitionTime: "2024-10-24T13:03:44Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2024-10-24T13:03:45Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDDriverControllerServiceControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:48Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDDriverNodeServiceControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:56Z"
+    status: "True"
+    type: GCPPDDriverNodeServiceControllerAvailable
+  - lastTransitionTime: "2024-10-24T13:19:43Z"
+    status: "False"
+    type: GCPPDDriverNodeServiceControllerProgressing
+  - lastTransitionTime: "2024-10-24T13:03:48Z"
+    reason: AsExpected
+    status: "False"
+    type: StorageClassControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:25:38Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDDriverStaticResourcesControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:54Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDDriverConditionalStaticResourcesControllerDegraded
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 3
+    name: gcp-pd-csi-driver-controller
+    namespace: openshift-cluster-csi-drivers
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 2
+    name: gcp-pd-csi-driver-node
+    namespace: openshift-cluster-csi-drivers
+    resource: daemonsets
+  readyReplicas: 0

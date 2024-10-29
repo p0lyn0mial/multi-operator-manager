@@ -1,0 +1,48 @@
+---
+apiVersion: flowcontrol.apiserver.k8s.io/v1
+kind: PriorityLevelConfiguration
+metadata:
+  annotations:
+    apf.kubernetes.io/autoupdate-spec: "true"
+  creationTimestamp: "2024-10-24T12:57:15Z"
+  generation: 1
+  managedFields:
+  - apiVersion: flowcontrol.apiserver.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:apf.kubernetes.io/autoupdate-spec: {}
+      f:spec:
+        f:limited:
+          .: {}
+          f:lendablePercent: {}
+          f:limitResponse:
+            .: {}
+            f:queuing:
+              .: {}
+              f:handSize: {}
+              f:queueLengthLimit: {}
+              f:queues: {}
+            f:type: {}
+          f:nominalConcurrencyShares: {}
+        f:type: {}
+    manager: api-priority-and-fairness-config-producer-v1
+    operation: Update
+    time: "2024-10-24T12:57:15Z"
+  name: leader-election
+  resourceVersion: "17"
+  uid: 7bcc48ec-2cd6-45e6-ac4e-b382eb232dde
+spec:
+  limited:
+    lendablePercent: 0
+    limitResponse:
+      queuing:
+        handSize: 4
+        queueLengthLimit: 50
+        queues: 16
+      type: Queue
+    nominalConcurrencyShares: 10
+  type: Limited
+status: {}

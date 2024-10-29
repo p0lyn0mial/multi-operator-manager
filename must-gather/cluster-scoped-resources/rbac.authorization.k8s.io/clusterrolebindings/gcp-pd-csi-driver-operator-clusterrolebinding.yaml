@@ -1,0 +1,25 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2024-10-24T13:03:41Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:roleRef: {}
+      f:subjects: {}
+    manager: cluster-storage-operator
+    operation: Update
+    time: "2024-10-24T13:03:41Z"
+  name: gcp-pd-csi-driver-operator-clusterrolebinding
+  resourceVersion: "7204"
+  uid: 3feaf453-95d0-4334-96b6-e1c6ccb09bc4
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: gcp-pd-csi-driver-operator-clusterrole
+subjects:
+- kind: ServiceAccount
+  name: gcp-pd-csi-driver-operator
+  namespace: openshift-cluster-csi-drivers

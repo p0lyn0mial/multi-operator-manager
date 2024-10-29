@@ -1,0 +1,354 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "2"
+      operator.openshift.io/generation: "2"
+      operator.openshift.io/spec-hash: cfb67bc553dfff70a668d72f7f127b321528d363982b54345b65556e49c6c3f0
+    creationTimestamp: "2024-10-24T13:00:40Z"
+    generation: 2
+    labels:
+      infrastructure.openshift.io/cloud-controller-manager: GCP
+      k8s-app: gcp-cloud-controller-manager
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:operator.openshift.io/generation: {}
+            f:operator.openshift.io/spec-hash: {}
+          f:labels:
+            .: {}
+            f:infrastructure.openshift.io/cloud-controller-manager: {}
+            f:k8s-app: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:operator.openshift.io/config-hash: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:infrastructure.openshift.io/cloud-controller-manager: {}
+                f:k8s-app: {}
+            f:spec:
+              f:affinity:
+                .: {}
+                f:podAntiAffinity:
+                  .: {}
+                  f:requiredDuringSchedulingIgnoredDuringExecution: {}
+              f:containers:
+                k:{"name":"cloud-controller-manager"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"CLOUD_CONFIG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"GOOGLE_APPLICATION_CREDENTIALS"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"OCP_INFRASTRUCTURE_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":10258,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/cloud-sa"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/kubernetes"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/kubernetes-cloud-config"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                    k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:hostNetwork: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+              f:volumes:
+                .: {}
+                k:{"name":"cloud-sa-volume"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"config-gccm"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"host-etc-kube"}:
+                  .: {}
+                  f:hostPath:
+                    .: {}
+                    f:path: {}
+                    f:type: {}
+                  f:name: {}
+                k:{"name":"trusted-ca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:items: {}
+                    f:name: {}
+                  f:name: {}
+      manager: cluster-controller-manager-operator
+      operation: Update
+      time: "2024-10-24T13:00:59Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-24T13:20:30Z"
+    name: gcp-cloud-controller-manager
+    namespace: openshift-cloud-controller-manager
+    resourceVersion: "22009"
+    uid: c3374473-5cce-470f-95b3-b04484c7e4c7
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 2
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        infrastructure.openshift.io/cloud-controller-manager: GCP
+        k8s-app: gcp-cloud-controller-manager
+    strategy:
+      type: Recreate
+    template:
+      metadata:
+        annotations:
+          operator.openshift.io/config-hash: 6084de4913bfa45730d10f8c0437a9567cf543e362d3329a486d59c471cafadf
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          infrastructure.openshift.io/cloud-controller-manager: GCP
+          k8s-app: gcp-cloud-controller-manager
+      spec:
+        affinity:
+          podAntiAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  infrastructure.openshift.io/cloud-controller-manager: GCP
+                  k8s-app: gcp-cloud-controller-manager
+              topologyKey: kubernetes.io/hostname
+        containers:
+        - command:
+          - /bin/bash
+          - -c
+          - |
+            #!/bin/bash
+            set -o allexport
+            if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+              source /etc/kubernetes/apiserver-url.env
+            fi
+            exec /bin/gcp-cloud-controller-manager \
+              --v=3 \
+              --cloud-config=$(CLOUD_CONFIG) \
+              --cloud-provider=gce \
+              --concurrent-service-syncs=10 \
+              --controllers=*,-nodeipam \
+              --configure-cloud-routes=false \
+              --use-service-account-credentials=true \
+              --bind-address=127.0.0.1 \
+              --cluster-name=$(OCP_INFRASTRUCTURE_NAME) \
+              --leader-elect=true \
+              --leader-elect-lease-duration=137s \
+              --leader-elect-renew-deadline=107s \
+              --leader-elect-retry-period=26s \
+              --leader-elect-resource-namespace=openshift-cloud-controller-manager
+          env:
+          - name: CLOUD_CONFIG
+            value: /etc/kubernetes-cloud-config/cloud.conf
+          - name: OCP_INFRASTRUCTURE_NAME
+            value: ci-op-2fcpj5j6-f6035-2lklf
+          - name: GOOGLE_APPLICATION_CREDENTIALS
+            value: /etc/cloud-sa/service_account.json
+          image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ef3d5fbb8b8ca09ab404e00e3d616471fdef91190d13610d028995b47d24b2be
+          imagePullPolicy: IfNotPresent
+          name: cloud-controller-manager
+          ports:
+          - containerPort: 10258
+            name: https
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 200m
+              memory: 128Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /etc/kubernetes
+            name: host-etc-kube
+            readOnly: true
+          - mountPath: /etc/kubernetes-cloud-config
+            name: config-gccm
+            readOnly: true
+          - mountPath: /etc/cloud-sa
+            name: cloud-sa-volume
+            readOnly: true
+          - mountPath: /etc/pki/ca-trust/extracted/pem
+            name: trusted-ca
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        hostNetwork: true
+        nodeSelector:
+          node-role.kubernetes.io/master: ""
+        priorityClassName: system-cluster-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: cloud-controller-manager
+        serviceAccountName: cloud-controller-manager
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoSchedule
+          key: node.cloudprovider.kubernetes.io/uninitialized
+          operator: Exists
+        - effect: NoSchedule
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+        volumes:
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: cloud.conf
+              path: cloud.conf
+            name: cloud-conf
+          name: config-gccm
+        - hostPath:
+            path: /etc/kubernetes
+            type: Directory
+          name: host-etc-kube
+        - name: cloud-sa-volume
+          secret:
+            defaultMode: 420
+            secretName: gcp-ccm-cloud-credentials
+        - configMap:
+            defaultMode: 420
+            items:
+            - key: ca-bundle.crt
+              path: tls-ca-bundle.pem
+            name: ccm-trusted-ca
+          name: trusted-ca
+  status:
+    availableReplicas: 2
+    conditions:
+    - lastTransitionTime: "2024-10-24T13:00:40Z"
+      lastUpdateTime: "2024-10-24T13:01:41Z"
+      message: ReplicaSet "gcp-cloud-controller-manager-6658458d69" has successfully
+        progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2024-10-24T13:20:30Z"
+      lastUpdateTime: "2024-10-24T13:20:30Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 2
+    readyReplicas: 2
+    replicas: 2
+    updatedReplicas: 2
+kind: DeploymentList
+metadata:
+  resourceVersion: "60579"

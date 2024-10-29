@@ -1,0 +1,61 @@
+---
+apiVersion: flowcontrol.apiserver.k8s.io/v1
+kind: PriorityLevelConfiguration
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2024-10-24T13:34:06Z"
+  generation: 1
+  managedFields:
+  - apiVersion: flowcontrol.apiserver.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        f:limited:
+          .: {}
+          f:lendablePercent: {}
+          f:limitResponse:
+            .: {}
+            f:queuing:
+              .: {}
+              f:handSize: {}
+              f:queueLengthLimit: {}
+              f:queues: {}
+            f:type: {}
+          f:nominalConcurrencyShares: {}
+        f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T13:34:06Z"
+  name: openshift-control-plane-operators
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "32484"
+  uid: b5fa60b4-f8a3-41c5-9432-d96ac6321e94
+spec:
+  limited:
+    lendablePercent: 33
+    limitResponse:
+      queuing:
+        handSize: 6
+        queueLengthLimit: 50
+        queues: 128
+      type: Queue
+    nominalConcurrencyShares: 10
+  type: Limited
+status: {}

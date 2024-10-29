@@ -1,0 +1,878 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      operator.openshift.io/config-hash: 6084de4913bfa45730d10f8c0437a9567cf543e362d3329a486d59c471cafadf
+    creationTimestamp: "2024-10-24T13:01:01Z"
+    generateName: gcp-cloud-controller-manager-6658458d69-
+    labels:
+      infrastructure.openshift.io/cloud-controller-manager: GCP
+      k8s-app: gcp-cloud-controller-manager
+      pod-template-hash: 6658458d69
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:operator.openshift.io/config-hash: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:infrastructure.openshift.io/cloud-controller-manager: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a0606b6f-7b69-411b-b4c7-a43210a7a0c5"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:podAntiAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"cloud-controller-manager"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLOUD_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"GOOGLE_APPLICATION_CREDENTIALS"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OCP_INFRASTRUCTURE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":10258,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:hostPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/cloud-sa"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/etc/kubernetes"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/etc/kubernetes-cloud-config"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cloud-sa-volume"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"config-gccm"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"host-etc-kube"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"trusted-ca"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:01:01Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.0.4"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-10-24T13:20:30Z"
+    name: gcp-cloud-controller-manager-6658458d69-bwn2n
+    namespace: openshift-cloud-controller-manager
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: gcp-cloud-controller-manager-6658458d69
+      uid: a0606b6f-7b69-411b-b4c7-a43210a7a0c5
+    resourceVersion: "22004"
+    uid: 6b0450f1-79b3-4d92-b591-7658e5e7f2d6
+  spec:
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchLabels:
+              infrastructure.openshift.io/cloud-controller-manager: GCP
+              k8s-app: gcp-cloud-controller-manager
+          topologyKey: kubernetes.io/hostname
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -o allexport
+        if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+          source /etc/kubernetes/apiserver-url.env
+        fi
+        exec /bin/gcp-cloud-controller-manager \
+          --v=3 \
+          --cloud-config=$(CLOUD_CONFIG) \
+          --cloud-provider=gce \
+          --concurrent-service-syncs=10 \
+          --controllers=*,-nodeipam \
+          --configure-cloud-routes=false \
+          --use-service-account-credentials=true \
+          --bind-address=127.0.0.1 \
+          --cluster-name=$(OCP_INFRASTRUCTURE_NAME) \
+          --leader-elect=true \
+          --leader-elect-lease-duration=137s \
+          --leader-elect-renew-deadline=107s \
+          --leader-elect-retry-period=26s \
+          --leader-elect-resource-namespace=openshift-cloud-controller-manager
+      env:
+      - name: CLOUD_CONFIG
+        value: /etc/kubernetes-cloud-config/cloud.conf
+      - name: OCP_INFRASTRUCTURE_NAME
+        value: ci-op-2fcpj5j6-f6035-2lklf
+      - name: GOOGLE_APPLICATION_CREDENTIALS
+        value: /etc/cloud-sa/service_account.json
+      image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ef3d5fbb8b8ca09ab404e00e3d616471fdef91190d13610d028995b47d24b2be
+      imagePullPolicy: IfNotPresent
+      name: cloud-controller-manager
+      ports:
+      - containerPort: 10258
+        hostPort: 10258
+        name: https
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 200m
+          memory: 128Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+      - mountPath: /etc/kubernetes-cloud-config
+        name: config-gccm
+        readOnly: true
+      - mountPath: /etc/cloud-sa
+        name: cloud-sa-volume
+        readOnly: true
+      - mountPath: /etc/pki/ca-trust/extracted/pem
+        name: trusted-ca
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-j8bjt
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    nodeSelector:
+      node-role.kubernetes.io/master: ""
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000000000
+    priorityClassName: system-cluster-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: cloud-controller-manager
+    serviceAccountName: cloud-controller-manager
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoSchedule
+      key: node.cloudprovider.kubernetes.io/uninitialized
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: cloud.conf
+          path: cloud.conf
+        name: cloud-conf
+      name: config-gccm
+    - hostPath:
+        path: /etc/kubernetes
+        type: Directory
+      name: host-etc-kube
+    - name: cloud-sa-volume
+      secret:
+        defaultMode: 420
+        secretName: gcp-ccm-cloud-credentials
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: ca-bundle.crt
+          path: tls-ca-bundle.pem
+        name: ccm-trusted-ca
+      name: trusted-ca
+    - name: kube-api-access-j8bjt
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:04Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:01Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:20:30Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:20:30Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:01Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://ee299eb20082ba8779fe2ae5362ae5a130557d5e566df8bde067fccbb48cab2b
+      image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ef3d5fbb8b8ca09ab404e00e3d616471fdef91190d13610d028995b47d24b2be
+      imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:849be18f6a5432ee8c1ac61c6d9d4c4e1a7d7c4696d92ed681c020254e210e8a
+      lastState:
+        terminated:
+          containerID: cri-o://baa60983e07fe8b745e75568c84e000911e4dce367dd9461e546fccfb1029f83
+          exitCode: 1
+          finishedAt: "2024-10-24T13:19:39Z"
+          message: |2+
+                     The address of the Kubernetes API server (overrides any value in kubeconfig).
+                  --node-status-update-frequency duration   Specifies how often the controller updates nodes' status. (default 5m0s)
+
+            Global flags:
+
+              -h, --help                                 help for cloud-controller-manager
+                  --log-flush-frequency duration         Maximum number of seconds between log flushes (default 5s)
+                  --log-text-info-buffer-size quantity   [Alpha] In text format with split output streams, the info messages can be buffered for a while to increase performance. The default value of zero bytes disables buffering. The size can be specified as number of bytes (512), multiples of 1000 (1K), multiples of 1024 (2Ki), or powers of those (3M, 4G, 5Mi, 6Gi). Enable the LoggingAlphaOptions feature gate to use this.
+                  --log-text-split-stream                [Alpha] In text format, write error messages to stderr and info messages to stdout. The default is to write a single stream to stdout. Enable the LoggingAlphaOptions feature gate to use this.
+                  --logging-format string                Sets the log format. Permitted formats: "text". (default "text")
+              -v, --v Level                              number for the log level verbosity (default 0)
+                  --version version[=true]               --version, --version=raw prints version information and quits; --version=vX.Y.Z... sets the reported version
+                  --vmodule pattern=N,...                comma-separated list of pattern=N settings for file-filtered logging (only works for text log format)
+
+            Nodeipam controller flags:
+
+                  --node-cidr-mask-size int32         Mask size for node cidr in cluster. Default is 24 for IPv4 and 64 for IPv6.
+                  --node-cidr-mask-size-ipv4 int32    Mask size for IPv4 node cidr in dual-stack cluster. Default is 24.
+                  --node-cidr-mask-size-ipv6 int32    Mask size for IPv6 node cidr in dual-stack cluster. Default is 64.
+                  --service-cluster-ip-range string   CIDR Range for Services in cluster. Requires --allocate-node-cidrs to be true
+
+          reason: Error
+          startedAt: "2024-10-24T13:19:08Z"
+      name: cloud-controller-manager
+      ready: true
+      restartCount: 4
+      started: true
+      state:
+        running:
+          startedAt: "2024-10-24T13:20:30Z"
+      volumeMounts:
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/kubernetes-cloud-config
+        name: config-gccm
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/cloud-sa
+        name: cloud-sa-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/pki/ca-trust/extracted/pem
+        name: trusted-ca
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-j8bjt
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.0.4
+    hostIPs:
+    - ip: 10.0.0.4
+    phase: Running
+    podIP: 10.0.0.4
+    podIPs:
+    - ip: 10.0.0.4
+    qosClass: Burstable
+    startTime: "2024-10-24T13:01:01Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      operator.openshift.io/config-hash: 6084de4913bfa45730d10f8c0437a9567cf543e362d3329a486d59c471cafadf
+    creationTimestamp: "2024-10-24T13:01:01Z"
+    generateName: gcp-cloud-controller-manager-6658458d69-
+    labels:
+      infrastructure.openshift.io/cloud-controller-manager: GCP
+      k8s-app: gcp-cloud-controller-manager
+      pod-template-hash: 6658458d69
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:operator.openshift.io/config-hash: {}
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:infrastructure.openshift.io/cloud-controller-manager: {}
+            f:k8s-app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a0606b6f-7b69-411b-b4c7-a43210a7a0c5"}: {}
+        f:spec:
+          f:affinity:
+            .: {}
+            f:podAntiAffinity:
+              .: {}
+              f:requiredDuringSchedulingIgnoredDuringExecution: {}
+          f:containers:
+            k:{"name":"cloud-controller-manager"}:
+              .: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLOUD_CONFIG"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"GOOGLE_APPLICATION_CREDENTIALS"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OCP_INFRASTRUCTURE_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":10258,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:hostPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/etc/cloud-sa"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/etc/kubernetes"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/etc/kubernetes-cloud-config"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:hostNetwork: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"cloud-sa-volume"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:secretName: {}
+            k:{"name":"config-gccm"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"host-etc-kube"}:
+              .: {}
+              f:hostPath:
+                .: {}
+                f:path: {}
+                f:type: {}
+              f:name: {}
+            k:{"name":"trusted-ca"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:items: {}
+                f:name: {}
+              f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:01:01Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"PodScheduled"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      subresource: status
+      time: "2024-10-24T13:01:01Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"PodReadyToStartContainers"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:hostIPs: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.0.0.3"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2024-10-24T13:01:41Z"
+    name: gcp-cloud-controller-manager-6658458d69-j98j6
+    namespace: openshift-cloud-controller-manager
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: gcp-cloud-controller-manager-6658458d69
+      uid: a0606b6f-7b69-411b-b4c7-a43210a7a0c5
+    resourceVersion: "3605"
+    uid: 38fc0734-050f-4c08-8bde-adf27e281003
+  spec:
+    affinity:
+      podAntiAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchLabels:
+              infrastructure.openshift.io/cloud-controller-manager: GCP
+              k8s-app: gcp-cloud-controller-manager
+          topologyKey: kubernetes.io/hostname
+    containers:
+    - command:
+      - /bin/bash
+      - -c
+      - |
+        #!/bin/bash
+        set -o allexport
+        if [[ -f /etc/kubernetes/apiserver-url.env ]]; then
+          source /etc/kubernetes/apiserver-url.env
+        fi
+        exec /bin/gcp-cloud-controller-manager \
+          --v=3 \
+          --cloud-config=$(CLOUD_CONFIG) \
+          --cloud-provider=gce \
+          --concurrent-service-syncs=10 \
+          --controllers=*,-nodeipam \
+          --configure-cloud-routes=false \
+          --use-service-account-credentials=true \
+          --bind-address=127.0.0.1 \
+          --cluster-name=$(OCP_INFRASTRUCTURE_NAME) \
+          --leader-elect=true \
+          --leader-elect-lease-duration=137s \
+          --leader-elect-renew-deadline=107s \
+          --leader-elect-retry-period=26s \
+          --leader-elect-resource-namespace=openshift-cloud-controller-manager
+      env:
+      - name: CLOUD_CONFIG
+        value: /etc/kubernetes-cloud-config/cloud.conf
+      - name: OCP_INFRASTRUCTURE_NAME
+        value: ci-op-2fcpj5j6-f6035-2lklf
+      - name: GOOGLE_APPLICATION_CREDENTIALS
+        value: /etc/cloud-sa/service_account.json
+      image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ef3d5fbb8b8ca09ab404e00e3d616471fdef91190d13610d028995b47d24b2be
+      imagePullPolicy: IfNotPresent
+      name: cloud-controller-manager
+      ports:
+      - containerPort: 10258
+        hostPort: 10258
+        name: https
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 200m
+          memory: 128Mi
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+      - mountPath: /etc/kubernetes-cloud-config
+        name: config-gccm
+        readOnly: true
+      - mountPath: /etc/cloud-sa
+        name: cloud-sa-volume
+        readOnly: true
+      - mountPath: /etc/pki/ca-trust/extracted/pem
+        name: trusted-ca
+        readOnly: true
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-22ljx
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostNetwork: true
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    nodeSelector:
+      node-role.kubernetes.io/master: ""
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000000000
+    priorityClassName: system-cluster-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: cloud-controller-manager
+    serviceAccountName: cloud-controller-manager
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoSchedule
+      key: node.cloudprovider.kubernetes.io/uninitialized
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: cloud.conf
+          path: cloud.conf
+        name: cloud-conf
+      name: config-gccm
+    - hostPath:
+        path: /etc/kubernetes
+        type: Directory
+      name: host-etc-kube
+    - name: cloud-sa-volume
+      secret:
+        defaultMode: 420
+        secretName: gcp-ccm-cloud-credentials
+    - configMap:
+        defaultMode: 420
+        items:
+        - key: ca-bundle.crt
+          path: tls-ca-bundle.pem
+        name: ccm-trusted-ca
+      name: trusted-ca
+    - name: kube-api-access-22ljx
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+        - configMap:
+            items:
+            - key: service-ca.crt
+              path: service-ca.crt
+            name: openshift-service-ca.crt
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:41Z"
+      status: "True"
+      type: PodReadyToStartContainers
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:38Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:41Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:41Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-10-24T13:01:04Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://8b0c4bb32c7a9a07a002b72dec05698fa89c124343d27bf586011f14f18787e2
+      image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ef3d5fbb8b8ca09ab404e00e3d616471fdef91190d13610d028995b47d24b2be
+      imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:849be18f6a5432ee8c1ac61c6d9d4c4e1a7d7c4696d92ed681c020254e210e8a
+      lastState: {}
+      name: cloud-controller-manager
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-10-24T13:01:41Z"
+      volumeMounts:
+      - mountPath: /etc/kubernetes
+        name: host-etc-kube
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/kubernetes-cloud-config
+        name: config-gccm
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/cloud-sa
+        name: cloud-sa-volume
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /etc/pki/ca-trust/extracted/pem
+        name: trusted-ca
+        readOnly: true
+        recursiveReadOnly: Disabled
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-22ljx
+        readOnly: true
+        recursiveReadOnly: Disabled
+    hostIP: 10.0.0.3
+    hostIPs:
+    - ip: 10.0.0.3
+    phase: Running
+    podIP: 10.0.0.3
+    podIPs:
+    - ip: 10.0.0.3
+    qosClass: Burstable
+    startTime: "2024-10-24T13:01:38Z"
+kind: PodList
+metadata:
+  resourceVersion: "60579"

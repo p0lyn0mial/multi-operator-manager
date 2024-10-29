@@ -1,0 +1,99 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2024-10-24T12:58:39Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: dns-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:22:30Z"
+  name: dns
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "25384"
+  uid: 5abe5859-3f24-4526-ab80-254f5b91e301
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:08:53Z"
+    message: DNS "default" is available.
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:22:30Z"
+    message: Desired and current number of DNSes are equal
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2024-10-24T13:22:21Z"
+    reason: DNSNotDegraded
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:07:36Z"
+    message: 'DNS default is upgradeable: DNS Operator can be upgraded'
+    reason: DNSUpgradeable
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-dns-operator
+    resource: namespaces
+  - group: operator.openshift.io
+    name: default
+    resource: dnses
+  - group: ""
+    name: openshift-dns
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  - name: coredns
+    version: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:88e1b6af0598d25afd13127b81578a48980897973df874082b03ff8b3c7fe155
+  - name: openshift-cli
+    version: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:2281a4b71c7b7f262260cdc3e2b091d20fab875a1c81c593e1a51d7f17fa2a34
+  - name: kube-rbac-proxy
+    version: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87

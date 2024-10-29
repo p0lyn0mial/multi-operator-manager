@@ -1,0 +1,145 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.27
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    targetRef:
+      kind: Pod
+      name: cloud-credential-operator-585cd96855-j89wm
+      namespace: openshift-cloud-credential-operator
+      uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+    zone: us-central1-b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:27Z"
+    creationTimestamp: "2024-10-24T12:59:37Z"
+    generateName: cco-metrics-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: cco-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"716bc0e4-9af0-4377-8733-6c42a5f19249"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:27Z"
+    name: cco-metrics-4fgpz
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cco-metrics
+      uid: 716bc0e4-9af0-4377-8733-6c42a5f19249
+    resourceVersion: "13762"
+    uid: 9019e722-2509-4df3-9517-70efd5c8b003
+  ports:
+  - name: metrics
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.129.0.42
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    targetRef:
+      kind: Pod
+      name: pod-identity-webhook-679666b9-xh4qj
+      namespace: openshift-cloud-credential-operator
+      uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+    zone: us-central1-a
+  - addresses:
+    - 10.128.0.37
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+    targetRef:
+      kind: Pod
+      name: pod-identity-webhook-679666b9-lfgzj
+      namespace: openshift-cloud-credential-operator
+      uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+    zone: us-central1-c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:15:22Z"
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    generateName: pod-identity-webhook-
+    generation: 4
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: pod-identity-webhook
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"453bdae5-44dc-4e5d-b927-2847b96c6816"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:19:17Z"
+    name: pod-identity-webhook-z4vks
+    namespace: openshift-cloud-credential-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: pod-identity-webhook
+      uid: 453bdae5-44dc-4e5d-b927-2847b96c6816
+    resourceVersion: "21315"
+    uid: 60214dcd-e578-41fa-b5a1-7c46222bfdd9
+  ports:
+  - name: ""
+    port: 9443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "60590"

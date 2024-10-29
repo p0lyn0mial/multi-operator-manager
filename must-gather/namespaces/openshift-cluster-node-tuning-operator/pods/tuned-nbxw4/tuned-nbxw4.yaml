@@ -1,0 +1,549 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/required-scc: privileged
+    openshift.io/scc: privileged
+  creationTimestamp: "2024-10-24T13:14:05Z"
+  generateName: tuned-
+  labels:
+    controller-revision-hash: 645645cc5d
+    openshift-app: tuned
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/required-scc: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:controller-revision-hash: {}
+          f:openshift-app: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"tuned"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"CLUSTER_NODE_TUNED_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"OCP_NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RESYNC_PERIOD"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"WATCH_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/modprobe.d"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/sysconfig"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/sysctl.conf"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/sysctl.d"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/systemd"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/host"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/lib/modules"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/run"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/sys"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostIPC: {}
+        f:hostNetwork: {}
+        f:hostPID: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"etc-kubernetes"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etc-modprobe-d"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etc-sysconfig"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etc-sysctl-conf"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etc-sysctl-d"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"etc-systemd"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"host"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"lib-modules"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"run"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"sys"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"var-lib-kubelet"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T13:14:05Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.128.2"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:15:19Z"
+  name: tuned-nbxw4
+  namespace: openshift-cluster-node-tuning-operator
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: tuned
+    uid: 1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126
+  resourceVersion: "19272"
+  uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  containers:
+  - command:
+    - /usr/bin/cluster-node-tuning-operator
+    - ocp-tuned
+    - --in-cluster
+    - -v=0
+    env:
+    - name: WATCH_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: OCP_NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    - name: RESYNC_PERIOD
+      value: "600"
+    - name: RELEASE_VERSION
+      value: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    - name: CLUSTER_NODE_TUNED_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260
+    imagePullPolicy: IfNotPresent
+    name: tuned
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/modprobe.d
+      mountPropagation: HostToContainer
+      name: etc-modprobe-d
+    - mountPath: /etc/sysconfig
+      mountPropagation: HostToContainer
+      name: etc-sysconfig
+    - mountPath: /etc/kubernetes
+      mountPropagation: HostToContainer
+      name: etc-kubernetes
+      readOnly: true
+    - mountPath: /etc/sysctl.d
+      mountPropagation: HostToContainer
+      name: etc-sysctl-d
+      readOnly: true
+    - mountPath: /etc/sysctl.conf
+      mountPropagation: HostToContainer
+      name: etc-sysctl-conf
+      readOnly: true
+    - mountPath: /etc/systemd
+      mountPropagation: HostToContainer
+      name: etc-systemd
+    - mountPath: /run
+      mountPropagation: HostToContainer
+      name: run
+    - mountPath: /sys
+      mountPropagation: HostToContainer
+      name: sys
+    - mountPath: /lib/modules
+      mountPropagation: HostToContainer
+      name: lib-modules
+      readOnly: true
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: var-lib-kubelet
+      readOnly: true
+    - mountPath: /host
+      mountPropagation: HostToContainer
+      name: host
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-tx5g4
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostIPC: true
+  hostNetwork: true
+  hostPID: true
+  imagePullSecrets:
+  - name: tuned-dockercfg-lh7k6
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: tuned
+  serviceAccountName: tuned
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/modprobe.d
+      type: Directory
+    name: etc-modprobe-d
+  - hostPath:
+      path: /etc/sysconfig
+      type: Directory
+    name: etc-sysconfig
+  - hostPath:
+      path: /etc/kubernetes
+      type: Directory
+    name: etc-kubernetes
+  - hostPath:
+      path: /etc/sysctl.d
+      type: Directory
+    name: etc-sysctl-d
+  - hostPath:
+      path: /etc/sysctl.conf
+      type: File
+    name: etc-sysctl-conf
+  - hostPath:
+      path: /etc/systemd
+      type: Directory
+    name: etc-systemd
+  - hostPath:
+      path: /run
+      type: Directory
+    name: run
+  - hostPath:
+      path: /sys
+      type: Directory
+    name: sys
+  - hostPath:
+      path: /lib/modules
+      type: Directory
+    name: lib-modules
+  - hostPath:
+      path: /var/lib/kubelet
+      type: Directory
+    name: var-lib-kubelet
+  - hostPath:
+      path: /
+      type: Directory
+    name: host
+  - name: kube-api-access-tx5g4
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:14:30Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:14:05Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:14:45Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:14:45Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:14:05Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://0dd4f3b97dc82074eb4115d68cd481ca7200940b8c92c8531b6725a0988fd7c1
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260
+    lastState: {}
+    name: tuned
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:14:44Z"
+    volumeMounts:
+    - mountPath: /etc/modprobe.d
+      name: etc-modprobe-d
+    - mountPath: /etc/sysconfig
+      name: etc-sysconfig
+    - mountPath: /etc/kubernetes
+      name: etc-kubernetes
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/sysctl.d
+      name: etc-sysctl-d
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/sysctl.conf
+      name: etc-sysctl-conf
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/systemd
+      name: etc-systemd
+    - mountPath: /run
+      name: run
+    - mountPath: /sys
+      name: sys
+    - mountPath: /lib/modules
+      name: lib-modules
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/lib/kubelet
+      name: var-lib-kubelet
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /host
+      name: host
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-tx5g4
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.128.2
+  hostIPs:
+  - ip: 10.0.128.2
+  phase: Running
+  podIP: 10.0.128.2
+  podIPs:
+  - ip: 10.0.128.2
+  qosClass: Burstable
+  startTime: "2024-10-24T13:14:05Z"

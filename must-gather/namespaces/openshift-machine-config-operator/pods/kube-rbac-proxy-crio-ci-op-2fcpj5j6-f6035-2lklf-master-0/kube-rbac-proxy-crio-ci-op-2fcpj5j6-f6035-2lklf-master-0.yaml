@@ -1,0 +1,359 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: 7096de3e2ff01af47d3d10c4673f13f7
+    kubernetes.io/config.mirror: 7096de3e2ff01af47d3d10c4673f13f7
+    kubernetes.io/config.seen: "2024-10-24T13:00:23.106139698Z"
+    kubernetes.io/config.source: file
+    openshift.io/scc: privileged
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  creationTimestamp: "2024-10-24T13:01:38Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubernetes.io/config.hash: {}
+          f:kubernetes.io/config.mirror: {}
+          f:kubernetes.io/config.seen: {}
+          f:kubernetes.io/config.source: {}
+          f:target.workload.openshift.io/management: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"70cf08f3-a1d7-4bf2-aa24-f4dca7982067"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-rbac-proxy-crio"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9637,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kubernetes"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"setup"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:nodeName: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"etc-kube"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"var-lib-kubelet"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kubelet
+    operation: Update
+    time: "2024-10-24T13:01:38Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.0.3"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:02:05Z"
+  name: kube-rbac-proxy-crio-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  namespace: openshift-machine-config-operator
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    uid: 70cf08f3-a1d7-4bf2-aa24-f4dca7982067
+  resourceVersion: "3728"
+  uid: eb755e14-649a-456e-a372-0f6905a0635a
+spec:
+  containers:
+  - args:
+    - --secure-listen-address=:9637
+    - --config-file=/etc/kubernetes/crio-metrics-proxy.cfg
+    - --client-ca-file=/etc/kubernetes/kubelet-ca.crt
+    - --logtostderr=true
+    - --kubeconfig=/var/lib/kubelet/kubeconfig
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --tls-min-version=VersionTLS12
+    - --upstream=http://127.0.0.1:9537
+    - --tls-cert-file=/var/lib/kubelet/pki/kubelet-server-current.pem
+    - --tls-private-key-file=/var/lib/kubelet/pki/kubelet-server-current.pem
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-crio
+    ports:
+    - containerPort: 9637
+      hostPort: 9637
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kubernetes
+      mountPropagation: HostToContainer
+      name: etc-kube
+    - mountPath: /var/lib/kubelet
+      mountPropagation: HostToContainer
+      name: var-lib-kubelet
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  initContainers:
+  - args:
+    - |
+      echo -n "Waiting for kubelet key and certificate to be available"
+      while [ -n "$(test -e /var/lib/kubelet/pki/kubelet-server-current.pem)" ] ; do
+        echo -n "."
+        sleep 1
+        (( tries += 1 ))
+        if [[ "${tries}" -gt 10 ]]; then
+          echo "Timed out waiting for kubelet key and cert."
+          exit 1
+        fi
+      done
+    command:
+    - /bin/bash
+    - -ec
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: setup
+    resources:
+      requests:
+        cpu: 5m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var
+      mountPropagation: HostToContainer
+      name: var-lib-kubelet
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/kubernetes
+      type: ""
+    name: etc-kube
+  - hostPath:
+      path: /var/lib/kubelet
+      type: ""
+    name: var-lib-kubelet
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:00:30Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:00:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:02:05Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:02:05Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:00:23Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://1d34673150aa5a645252ac14dd9c6cc06505b7e24e76ba0c2f02f4f33835a103
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState:
+      terminated:
+        containerID: cri-o://3924a6e05e466ef3e56c573cf398c11401a4a844b00786e4c885f4d8782cabe2
+        exitCode: 1
+        finishedAt: "2024-10-24T13:01:11Z"
+        message: "W1024 13:01:11.308456       1 deprecated.go:66] \n==== Removed Flag
+          Warning ======================\n\nlogtostderr is removed in the k8s upstream
+          and has no effect any more.\n\n===============================================\n\t\t\nI1024
+          13:01:11.308622       1 kube-rbac-proxy.go:530] Reading config file: /etc/kubernetes/crio-metrics-proxy.cfg\nI1024
+          13:01:11.310199       1 kube-rbac-proxy.go:233] Valid token audiences: \nI1024
+          13:01:11.310490       1 dynamic_cafile_content.go:160] \"Starting controller\"
+          name=\"client-ca::/etc/kubernetes/kubelet-ca.crt\"\nI1024 13:01:11.311489
+          \      1 kube-rbac-proxy.go:347] Reading certificate files\nE1024 13:01:11.311578
+          \      1 run.go:72] \"command failed\" err=\"failed to initialize certificate
+          reloader: error loading certificates: error loading certificate: open /var/lib/kubelet/pki/kubelet-server-current.pem:
+          no such file or directory\"\n"
+        reason: Error
+        startedAt: "2024-10-24T13:01:11Z"
+    name: kube-rbac-proxy-crio
+    ready: true
+    restartCount: 4
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:02:05Z"
+    volumeMounts:
+    - mountPath: /etc/kubernetes
+      name: etc-kube
+    - mountPath: /var/lib/kubelet
+      name: var-lib-kubelet
+  hostIP: 10.0.0.3
+  hostIPs:
+  - ip: 10.0.0.3
+  initContainerStatuses:
+  - containerID: cri-o://671702c16615bbc8eebe5c3f4d84dc2dc6d1fbe4297abfb79b531b1d42439974
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: setup
+    ready: true
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: cri-o://671702c16615bbc8eebe5c3f4d84dc2dc6d1fbe4297abfb79b531b1d42439974
+        exitCode: 0
+        finishedAt: "2024-10-24T13:00:29Z"
+        reason: Completed
+        startedAt: "2024-10-24T13:00:29Z"
+    volumeMounts:
+    - mountPath: /var
+      name: var-lib-kubelet
+  phase: Running
+  podIP: 10.0.0.3
+  podIPs:
+  - ip: 10.0.0.3
+  qosClass: Burstable
+  startTime: "2024-10-24T13:00:23Z"

@@ -1,0 +1,2154 @@
+---
+apiVersion: v1
+items:
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2024-10-24T13:00:21.596036Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "3113"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: null
+  message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.cloudprovider.kubernetes.io/uninitialized:
+    true}. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:00:21Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:00:21Z"
+    name: cloud-credential-operator-585cd96855-j89wm.1801650916a60325
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "3114"
+    uid: 2a69395e-a2bb-465e-8ca0-09550b2ede2f
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:03:16.838732Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "3116"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cloud-credential-operator/cloud-credential-operator-585cd96855-j89wm
+    to ci-op-2fcpj5j6-f6035-2lklf-master-1
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:16Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:03:16Z"
+    name: cloud-credential-operator-585cd96855-j89wm.18016531e3ece26b
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5065"
+    uid: 88748159-0571-46e0-95d0-708017619ea5
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:17Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:32Z"
+  message: 'MountVolume.SetUp failed for volume "cloud-credential-operator-serving-cert"
+    : secret "cloud-credential-operator-serving-cert" not found'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:32Z"
+    name: cloud-credential-operator-585cd96855-j89wm.18016531f0b90c6b
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6272"
+    uid: 9687013d-12b8-4b24-bf3e-e0ed3122dfc4
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5286"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:48Z"
+  message: Add eth0 [10.130.0.27/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:03:48Z"
+    name: cloud-credential-operator-585cd96855-j89wm.180165396062cdaf
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "7946"
+    uid: 8e8b394d-e7f3-4b58-aa71-36c65ce3fe96
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:49Z"
+  message: Container image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:49Z"
+    name: cloud-credential-operator-585cd96855-j89wm.1801653962ad1774
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "7950"
+    uid: b7126bf9-3106-4192-83e3-4613d807ffee
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:49Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:49Z"
+    name: cloud-credential-operator-585cd96855-j89wm.180165396c5bee8d
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "7966"
+    uid: 1baa149f-60dc-463a-98f6-dcae08316613
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:49Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:49Z"
+    name: cloud-credential-operator-585cd96855-j89wm.180165396ef90853
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "7972"
+    uid: 28f1f02f-0eec-4f6a-a61c-c3e20fc10e45
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:06:01Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:534f588669e06fbc4ece2277ff400d1a3bfd9af5b5efd80d422226fb1316b15e"
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:06:01Z"
+    name: cloud-credential-operator-585cd96855-j89wm.1801653971fac182
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "12300"
+    uid: 730a43a2-c6c9-4d2e-8e73-cda86977d808
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:49Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:534f588669e06fbc4ece2277ff400d1a3bfd9af5b5efd80d422226fb1316b15e":
+    initializing source docker://registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:534f588669e06fbc4ece2277ff400d1a3bfd9af5b5efd80d422226fb1316b15e:
+    pinging container registry registry.build02.ci.openshift.org: Get "https://registry.build02.ci.openshift.org/v2/":
+    dial tcp 34.74.144.21:443: i/o timeout'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:49Z"
+    name: cloud-credential-operator-585cd96855-j89wm.180165476b8d87f1
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "10305"
+    uid: 615a1d7b-52ff-44c4-a041-f7f6da3a95e1
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:06:38Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:06:38Z"
+    name: cloud-credential-operator-585cd96855-j89wm.180165476b8dcce3
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "12835"
+    uid: 4b51954d-20c4-49b2-86dd-57c7ec257afd
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:07Z"
+  message: Back-off pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:534f588669e06fbc4ece2277ff400d1a3bfd9af5b5efd80d422226fb1316b15e"
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:07Z"
+    name: cloud-credential-operator-585cd96855-j89wm.180165476f2374b1
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "13484"
+    uid: 786a1eb8-a220-4558-bb69-68c904d0f9c2
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:06:53Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:06:53Z"
+    name: cloud-credential-operator-585cd96855-j89wm.180165476f23933d
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "13218"
+    uid: 5b49286f-ed7e-43fb-9047-28908276aefd
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:05:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-585cd96855-j89wm
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "5044"
+    uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+  kind: Event
+  lastTimestamp: "2024-10-24T13:06:38Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:534f588669e06fbc4ece2277ff400d1a3bfd9af5b5efd80d422226fb1316b15e":
+    rpc error: code = DeadlineExceeded desc = initializing source docker://registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:534f588669e06fbc4ece2277ff400d1a3bfd9af5b5efd80d422226fb1316b15e:
+    pinging container registry registry.build02.ci.openshift.org: Get "https://registry.build02.ci.openshift.org/v2/":
+    dial tcp 34.74.144.21:443: i/o timeout'
+  metadata:
+    creationTimestamp: "2024-10-24T13:05:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:06:38Z"
+    name: cloud-credential-operator-585cd96855-j89wm.18016551729419dd
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "12834"
+    uid: 88a4104f-fc55-4a5d-a58e-938ed8fcc5cd
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 13
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:59:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cloud-credential-operator-585cd96855
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "2621"
+    uid: 053fbf07-b287-4631-9721-9500b93101fa
+  kind: Event
+  lastTimestamp: "2024-10-24T13:00:01Z"
+  message: 'Error creating: pods "cloud-credential-operator-585cd96855-" is forbidden:
+    autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
+    nodes'
+  metadata:
+    creationTimestamp: "2024-10-24T12:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:00:01Z"
+    name: cloud-credential-operator-585cd96855.180164ff89074802
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "2797"
+    uid: eb0e9033-b315-4695-9ebf-00a98358833b
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:00:21Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cloud-credential-operator-585cd96855
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "2625"
+    uid: 053fbf07-b287-4631-9721-9500b93101fa
+  kind: Event
+  lastTimestamp: "2024-10-24T13:00:21Z"
+  message: 'Created pod: cloud-credential-operator-585cd96855-j89wm'
+  metadata:
+    creationTimestamp: "2024-10-24T13:00:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:00:21Z"
+    name: cloud-credential-operator-585cd96855.1801650916b1caf7
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "3115"
+    uid: 772f7ba0-5e84-435e-9e97-a187d8837429
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:59:40Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "2620"
+    uid: a5882fdb-e209-4763-8000-79f93a2834f4
+  kind: Event
+  lastTimestamp: "2024-10-24T12:59:40Z"
+  message: Scaled up replica set cloud-credential-operator-585cd96855 to 1
+  metadata:
+    creationTimestamp: "2024-10-24T12:59:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:59:40Z"
+    name: cloud-credential-operator.180164ff88a9e266
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "2622"
+    uid: f665f6ed-7d3f-475d-b073-8c23efc56d5f
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:21Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:21Z"
+  message: Created ServiceAccount/pod-identity-webhook -n openshift-cloud-credential-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:21Z"
+    name: cloud-credential-operator.180165da95480fa3
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19469"
+    uid: 7db0e9ea-18cc-4a14-b78e-39c34d866ec5
+  reason: ServiceAccountCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:21Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:21Z"
+  message: Created ClusterRole.rbac.authorization.k8s.io/pod-identity-webhook because
+    it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:21Z"
+    name: cloud-credential-operator.180165daa323080d
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19481"
+    uid: 64e17a24-fc54-4312-9bca-514d795d0b35
+  reason: ClusterRoleCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:21Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:21Z"
+  message: Created Role.rbac.authorization.k8s.io/pod-identity-webhook -n openshift-cloud-credential-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:21Z"
+    name: cloud-credential-operator.180165daaa40bbb2
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19487"
+    uid: 71278421-7aca-41cd-b8ad-8b17fc3cb2eb
+  reason: RoleCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:21Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:21Z"
+  message: Created ClusterRoleBinding.rbac.authorization.k8s.io/pod-identity-webhook
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:21Z"
+    name: cloud-credential-operator.180165dab9a16c1d
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19496"
+    uid: 9f6ec881-dc25-4150-b02a-724e58ae9989
+  reason: ClusterRoleBindingCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:22Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:22Z"
+  message: Created RoleBinding.rbac.authorization.k8s.io/pod-identity-webhook -n openshift-cloud-credential-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: cloud-credential-operator.180165dac54eb92c
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19507"
+    uid: 68408281-5cbc-4bda-97bb-cccffd7296c7
+  reason: RoleBindingCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:22Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:22Z"
+  message: Created Service/pod-identity-webhook -n openshift-cloud-credential-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: cloud-credential-operator.180165dad11fdb84
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19525"
+    uid: 2356cc5e-204e-4597-a753-45ca0c287883
+  reason: ServiceCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:22Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:22Z"
+  message: Created Deployment.apps/pod-identity-webhook -n openshift-cloud-credential-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: cloud-credential-operator.180165dadb3c86aa
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19543"
+    uid: 21bca829-74a3-4e7b-b5a6-57813814f015
+  reason: DeploymentCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:22Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:22Z"
+  message: Created MutatingWebhookConfiguration.admissionregistration.k8s.io/pod-identity-webhook
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: cloud-credential-operator.180165dae6fd73c0
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19553"
+    uid: 346e84ea-d11f-4ca1-b1e0-e12eef3a3424
+  reason: MutatingWebhookConfigurationCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:22Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:22Z"
+  message: Created PodDisruptionBudget.policy/pod-identity-webhook -n openshift-cloud-credential-operator
+    because it was missing
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: cloud-credential-operator.180165daec055ad2
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19563"
+    uid: 11c111e7-cdb2-44de-84c8-eba90a33fbd1
+  reason: PodDisruptionBudgetCreated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:23Z"
+  involvedObject:
+    kind: deployment
+    name: cloud-credential-operator
+    namespace: openshift-cloud-credential-operator
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:23Z"
+  message: Updated MutatingWebhookConfiguration.admissionregistration.k8s.io/pod-identity-webhook
+    because it changed
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cloud-credential-operator
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: cloud-credential-operator.180165dafc5c717b
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19614"
+    uid: c7e7a023-1317-4b0f-ada7-1688e7b4b276
+  reason: MutatingWebhookConfigurationUpdated
+  reportingComponent: cloud-credential-operator
+  reportingInstance: ""
+  source:
+    component: cloud-credential-operator
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:15:23.253448Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19634"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj
+    to ci-op-2fcpj5j6-f6035-2lklf-master-2
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: pod-identity-webhook-679666b9-lfgzj.180165db059deabd
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20111"
+    uid: 63a1d5ff-fa6c-45ee-a6e1-c13a7a119cbf
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19654"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:55Z"
+  message: Add eth0 [10.128.0.37/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: pod-identity-webhook-679666b9-lfgzj.180165e0e08526fb
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20705"
+    uid: b411fd92-4f50-476b-a64b-70276e713b61
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:48Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_pod-identity-webhook-679666b9-lfgzj_openshift-cloud-credential-operator_5afa0922-af54-418e-9ab8-db641c23d4d8_0(1f867f0dc44879be751ed55ff6eb0abd72357bb19567c527cf9e9d2041cc4be1): error adding pod openshift-cloud-credential-operator_pod-identity-webhook-679666b9-lfgzj to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"1f867f0dc44879be751ed55ff6eb0abd72357bb19567c527cf9e9d2041cc4be1" Netns:"/var/run/netns/a6f2de42-61a1-41f4-827c-3f989b42ea85" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-cloud-credential-operator;K8S_POD_NAME=pod-identity-webhook-679666b9-lfgzj;K8S_POD_INFRA_CONTAINER_ID=1f867f0dc44879be751ed55ff6eb0abd72357bb19567c527cf9e9d2041cc4be1;K8S_POD_UID=5afa0922-af54-418e-9ab8-db641c23d4d8" Path:"" ERRORED: error configuring pod [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj] networking: Multus: [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj/5afa0922-af54-418e-9ab8-db641c23d4d8]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod pod-identity-webhook-679666b9-lfgzj in out of cluster comm: pod "pod-identity-webhook-679666b9-lfgzj" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:48Z"
+    name: pod-identity-webhook-679666b9-lfgzj.180165e0efed797c
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20427"
+    uid: 3810d585-34d9-40cb-b3d9-1725f1796eb1
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:16:52Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:16:52Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_pod-identity-webhook-679666b9-lfgzj_openshift-cloud-credential-operator_5afa0922-af54-418e-9ab8-db641c23d4d8_0(ca15d8b2d88eca5cf65f36c8eadc70db9d6b8887064df8ac8799320047601bd5): error adding pod openshift-cloud-credential-operator_pod-identity-webhook-679666b9-lfgzj to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"ca15d8b2d88eca5cf65f36c8eadc70db9d6b8887064df8ac8799320047601bd5" Netns:"/var/run/netns/c7c723c1-3c86-4898-a826-e1074c4f65c4" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-cloud-credential-operator;K8S_POD_NAME=pod-identity-webhook-679666b9-lfgzj;K8S_POD_INFRA_CONTAINER_ID=ca15d8b2d88eca5cf65f36c8eadc70db9d6b8887064df8ac8799320047601bd5;K8S_POD_UID=5afa0922-af54-418e-9ab8-db641c23d4d8" Path:"" ERRORED: error configuring pod [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj] networking: Multus: [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj/5afa0922-af54-418e-9ab8-db641c23d4d8]: error waiting for pod: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/namespaces/openshift-cloud-credential-operator/pods/pod-identity-webhook-679666b9-lfgzj?timeout=1m0s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: pod-identity-webhook-679666b9-lfgzj.180165efbaaa3dd5
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20631"
+    uid: 752432f3-9b64-4ac5-9067-bdd4ebffc2cd
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:17:53Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:17:53Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_pod-identity-webhook-679666b9-lfgzj_openshift-cloud-credential-operator_5afa0922-af54-418e-9ab8-db641c23d4d8_0(62822439b5492c6ba450c066418deba68f7a6660fb31d412dd102b8f341d4e1c): error adding pod openshift-cloud-credential-operator_pod-identity-webhook-679666b9-lfgzj to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"62822439b5492c6ba450c066418deba68f7a6660fb31d412dd102b8f341d4e1c" Netns:"/var/run/netns/2bd61d02-839b-42ad-81b4-0b8c36b24e9e" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-cloud-credential-operator;K8S_POD_NAME=pod-identity-webhook-679666b9-lfgzj;K8S_POD_INFRA_CONTAINER_ID=62822439b5492c6ba450c066418deba68f7a6660fb31d412dd102b8f341d4e1c;K8S_POD_UID=5afa0922-af54-418e-9ab8-db641c23d4d8" Path:"" ERRORED: error configuring pod [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj] networking: Multus: [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj/5afa0922-af54-418e-9ab8-db641c23d4d8]: error setting the networks status: SetPodNetworkStatusAnnotation: failed to update the pod pod-identity-webhook-679666b9-lfgzj in out of cluster comm: SetNetworkStatus: failed to update the pod pod-identity-webhook-679666b9-lfgzj in out of cluster comm: status update failed for pod /: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/namespaces/openshift-cloud-credential-operator/pods/pod-identity-webhook-679666b9-lfgzj?timeout=1m0s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: pod-identity-webhook-679666b9-lfgzj.180165fe0ae1d10f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20708"
+    uid: 095b9006-9b24-4d0c-81dd-a17350f1c5d3
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:54Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:54Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_pod-identity-webhook-679666b9-lfgzj_openshift-cloud-credential-operator_5afa0922-af54-418e-9ab8-db641c23d4d8_0(f2d10249e7c2904ff44fcf88d58b74cd96c4a7365adb470f122c2c2b330f1a43): error adding pod openshift-cloud-credential-operator_pod-identity-webhook-679666b9-lfgzj to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"f2d10249e7c2904ff44fcf88d58b74cd96c4a7365adb470f122c2c2b330f1a43" Netns:"/var/run/netns/21758395-ff5e-4be8-bcd1-4ee75eb1e1fa" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-cloud-credential-operator;K8S_POD_NAME=pod-identity-webhook-679666b9-lfgzj;K8S_POD_INFRA_CONTAINER_ID=f2d10249e7c2904ff44fcf88d58b74cd96c4a7365adb470f122c2c2b330f1a43;K8S_POD_UID=5afa0922-af54-418e-9ab8-db641c23d4d8" Path:"" ERRORED: error configuring pod [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj] networking: Multus: [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-lfgzj/5afa0922-af54-418e-9ab8-db641c23d4d8]: error setting the networks status: SetPodNetworkStatusAnnotation: failed to update the pod pod-identity-webhook-679666b9-lfgzj in out of cluster comm: SetNetworkStatus: failed to update the pod pod-identity-webhook-679666b9-lfgzj in out of cluster comm: status update failed for pod /: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/api/v1/namespaces/openshift-cloud-credential-operator/pods/pod-identity-webhook-679666b9-lfgzj?timeout=1m0s": net/http: request canceled (Client.Timeout exceeded while awaiting headers)
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:59Z"
+    name: pod-identity-webhook-679666b9-lfgzj.1801660c51316959
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20878"
+    uid: ba4bbbf1-c723-4412-a51b-20a313136dfc
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:58Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:73be5ac2f0ac40f28ee7f3e9e2c72c9be7bd72d86150b4f94115af21f40122aa"
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:59Z"
+    name: pod-identity-webhook-679666b9-lfgzj.1801660d0cae97a4
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20891"
+    uid: 7aee3da2-9bf2-46fb-8955-6385ec9a7e35
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:01Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:73be5ac2f0ac40f28ee7f3e9e2c72c9be7bd72d86150b4f94115af21f40122aa"
+    in 3.113s (3.113s including waiting). Image size: 423225411 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:01Z"
+    name: pod-identity-webhook-679666b9-lfgzj.1801660dc64625bc
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "21178"
+    uid: 35650082-e6d4-45e0-a0d1-72200455e459
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:01Z"
+  message: Created container pod-identity-webhook
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:01Z"
+    name: pod-identity-webhook-679666b9-lfgzj.1801660dcb7af9f2
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "21181"
+    uid: e8f22be9-e3cc-488b-a47f-10c2a8b1b6bf
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-lfgzj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19641"
+    uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:01Z"
+  message: Started container pod-identity-webhook
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:01Z"
+    name: pod-identity-webhook-679666b9-lfgzj.1801660dcc25dd5d
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "21182"
+    uid: e8fddcc8-1977-4052-93b5-1bedf0742f9d
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:15:23.280315Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19642"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cloud-credential-operator/pod-identity-webhook-679666b9-xh4qj
+    to ci-op-2fcpj5j6-f6035-2lklf-master-0
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165db0737d054
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20112"
+    uid: 95e80c2f-280c-4be3-9feb-5198eda4a96a
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:24Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19650"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:24Z"
+  message: 'MountVolume.SetUp failed for volume "webhook-certs" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:24Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165db4c02a66f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19805"
+    uid: e41f96f5-0ae7-44a7-8633-c80d84ac0ca4
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:27Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19659"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:30Z"
+  message: Add eth0 [10.129.0.42/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:15:30Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165dc1f573944
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20100"
+    uid: 5729cb66-561f-4032-ada7-de62cc636ceb
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19650"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:28Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_pod-identity-webhook-679666b9-xh4qj_openshift-cloud-credential-operator_a8378eee-6540-4794-a1e5-7ad82217a21c_0(77df8bd5ae81916196374ee92dd1e7ced54f0aa5ab50db4d7eb5acf82ddfc375): error adding pod openshift-cloud-credential-operator_pod-identity-webhook-679666b9-xh4qj to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"77df8bd5ae81916196374ee92dd1e7ced54f0aa5ab50db4d7eb5acf82ddfc375" Netns:"/var/run/netns/526e1a49-591e-43ab-8a20-cb1d5c2de1a6" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-cloud-credential-operator;K8S_POD_NAME=pod-identity-webhook-679666b9-xh4qj;K8S_POD_INFRA_CONTAINER_ID=77df8bd5ae81916196374ee92dd1e7ced54f0aa5ab50db4d7eb5acf82ddfc375;K8S_POD_UID=a8378eee-6540-4794-a1e5-7ad82217a21c" Path:"" ERRORED: error configuring pod [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-xh4qj] networking: Multus: [openshift-cloud-credential-operator/pod-identity-webhook-679666b9-xh4qj/a8378eee-6540-4794-a1e5-7ad82217a21c]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod pod-identity-webhook-679666b9-xh4qj in out of cluster comm: pod "pod-identity-webhook-679666b9-xh4qj" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:28Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165dc2f700000
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20016"
+    uid: c92da433-2c5e-44d4-a28d-dbbbba6084a4
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19650"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:30Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:73be5ac2f0ac40f28ee7f3e9e2c72c9be7bd72d86150b4f94115af21f40122aa"
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:30Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165dca747702a
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20102"
+    uid: 063928ef-132a-458e-b72a-424ca7ebb515
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19650"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:33Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:73be5ac2f0ac40f28ee7f3e9e2c72c9be7bd72d86150b4f94115af21f40122aa"
+    in 3.618s (3.618s including waiting). Image size: 423225411 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:33Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165dd7ef8b88f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20225"
+    uid: bcb7cdb1-8f9c-4fce-ab37-06b5daa6252f
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19650"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:33Z"
+  message: Created container pod-identity-webhook
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:33Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165dd849cd6a4
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20227"
+    uid: 3d1cb39b-8ebe-4b74-93d3-95efe4d3c6d1
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{pod-identity-webhook}
+    kind: Pod
+    name: pod-identity-webhook-679666b9-xh4qj
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19650"
+    uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:33Z"
+  message: Started container pod-identity-webhook
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:33Z"
+    name: pod-identity-webhook-679666b9-xh4qj.180165dd856d18f0
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "20228"
+    uid: f273d05b-4a3a-4972-a2fb-ad57d3ae0fda
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: pod-identity-webhook-679666b9
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19602"
+    uid: eb7906d2-975d-4e0d-93f1-786f7cd78515
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:23Z"
+  message: 'Created pod: pod-identity-webhook-679666b9-lfgzj'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: pod-identity-webhook-679666b9.180165db036392d8
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19638"
+    uid: 8e344227-ee5b-4e47-815e-ec016689ec24
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: pod-identity-webhook-679666b9
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19602"
+    uid: eb7906d2-975d-4e0d-93f1-786f7cd78515
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:23Z"
+  message: 'Created pod: pod-identity-webhook-679666b9-xh4qj'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: pod-identity-webhook-679666b9.180165db05aadfb8
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19649"
+    uid: d6e28abe-4428-4d49-8eb3-334c8d219593
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:22Z"
+  involvedObject:
+    apiVersion: policy/v1
+    kind: PodDisruptionBudget
+    name: pod-identity-webhook
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19558"
+    uid: e0664a8b-2361-4678-9b30-4877b061bb14
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:23Z"
+  message: No matching pods found
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: pod-identity-webhook.180165daf3a567f5
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19613"
+    uid: 3e08dc84-6be7-4891-8a91-a4cd2df1eda8
+  reason: NoPods
+  reportingComponent: controllermanager
+  reportingInstance: ""
+  source:
+    component: controllermanager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: pod-identity-webhook
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19539"
+    uid: ca5c41d1-0ae5-419c-a7b6-4baaffb9d3a6
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:23Z"
+  message: Scaled up replica set pod-identity-webhook-679666b9 to 2
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: pod-identity-webhook.180165dafaeb1243
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "19612"
+    uid: 4678553a-8308-4dfd-9632-f6a1148e4b89
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "60590"

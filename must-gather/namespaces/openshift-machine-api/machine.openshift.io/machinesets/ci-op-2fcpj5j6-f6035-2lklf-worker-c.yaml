@@ -1,0 +1,161 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  annotations:
+    capacity.cluster-autoscaler.kubernetes.io/labels: kubernetes.io/arch=amd64
+    machine.openshift.io/GPU: "0"
+    machine.openshift.io/memoryMb: "16384"
+    machine.openshift.io/vCPU: "4"
+  creationTimestamp: "2024-10-24T12:59:10Z"
+  generation: 1
+  labels:
+    machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+      f:spec:
+        .: {}
+        f:replicas: {}
+        f:selector: {}
+        f:template:
+          .: {}
+          f:metadata:
+            .: {}
+            f:labels:
+              .: {}
+              f:machine.openshift.io/cluster-api-cluster: {}
+              f:machine.openshift.io/cluster-api-machine-role: {}
+              f:machine.openshift.io/cluster-api-machine-type: {}
+              f:machine.openshift.io/cluster-api-machineset: {}
+          f:spec:
+            .: {}
+            f:lifecycleHooks: {}
+            f:metadata: {}
+            f:providerSpec:
+              .: {}
+              f:value:
+                .: {}
+                f:apiVersion: {}
+                f:canIPForward: {}
+                f:credentialsSecret:
+                  .: {}
+                  f:name: {}
+                f:deletionProtection: {}
+                f:disks: {}
+                f:kind: {}
+                f:machineType: {}
+                f:metadata:
+                  .: {}
+                  f:creationTimestamp: {}
+                f:networkInterfaces: {}
+                f:projectID: {}
+                f:region: {}
+                f:serviceAccounts: {}
+                f:shieldedInstanceConfig: {}
+                f:tags: {}
+                f:userDataSecret:
+                  .: {}
+                  f:name: {}
+                f:zone: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2024-10-24T12:59:10Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:59:11Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capacity.cluster-autoscaler.kubernetes.io/labels: {}
+          f:machine.openshift.io/GPU: {}
+          f:machine.openshift.io/memoryMb: {}
+          f:machine.openshift.io/vCPU: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2024-10-24T13:11:31Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:availableReplicas: {}
+        f:fullyLabeledReplicas: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+    manager: machineset-controller
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:21:30Z"
+  name: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+  namespace: openshift-machine-api
+  resourceVersion: "22378"
+  uid: 0a9505d1-f3b9-496c-9b32-375c94a4b5d6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+      machine.openshift.io/cluster-api-machineset: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+        machine.openshift.io/cluster-api-machine-role: worker
+        machine.openshift.io/cluster-api-machine-type: worker
+        machine.openshift.io/cluster-api-machineset: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+    spec:
+      lifecycleHooks: {}
+      metadata: {}
+      providerSpec:
+        value:
+          apiVersion: machine.openshift.io/v1beta1
+          canIPForward: false
+          credentialsSecret:
+            name: gcp-cloud-credentials
+          deletionProtection: false
+          disks:
+          - autoDelete: true
+            boot: true
+            image: projects/rhcos-cloud/global/images/rhcos-418-94-202410090804-0-gcp-x86-64
+            labels: {}
+            sizeGb: 128
+            type: pd-ssd
+          kind: GCPMachineProviderSpec
+          machineType: e2-standard-4
+          metadata:
+            creationTimestamp: null
+          networkInterfaces:
+          - network: ci-op-2fcpj5j6-f6035-2lklf-network
+            subnetwork: ci-op-2fcpj5j6-f6035-2lklf-worker-subnet
+          projectID: XXXXXXXXXXXXXXXXXXXXXXXX
+          region: us-central1
+          serviceAccounts:
+          - email: ci-op-2fcpj5j6-f6035-2lklf-w@XXXXXXXXXXXXXXXXXXXXXXXX.iam.gserviceaccount.com
+            scopes:
+            - https://www.googleapis.com/auth/cloud-platform
+          shieldedInstanceConfig: {}
+          tags:
+          - ci-op-2fcpj5j6-f6035-2lklf-worker
+          userDataSecret:
+            name: worker-user-data
+          zone: us-central1-c
+status:
+  availableReplicas: 1
+  fullyLabeledReplicas: 1
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1

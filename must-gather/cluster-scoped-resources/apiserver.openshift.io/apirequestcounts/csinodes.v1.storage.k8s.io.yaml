@@ -1,0 +1,548 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2024-10-24T13:04:30Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2024-10-24T13:04:30Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:42:56Z"
+  name: csinodes.v1.storage.k8s.io
+  resourceVersion: "59952"
+  uid: c5462a44-5ab1-4933-ba61-7f107b3b214f
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: csi-attacher/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 2
+          verb: watch
+        requestCount: 2
+        userAgent: csi-provisioner/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      nodeName: 10.0.0.3
+      requestCount: 17
+    - byUser:
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: csi-provisioner/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: csi-attacher/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      nodeName: 10.0.0.4
+      requestCount: 9
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 2
+          verb: watch
+        requestCount: 2
+        userAgent: csi-provisioner/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: csi-attacher/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      nodeName: 10.0.0.6
+      requestCount: 8
+    requestCount: 34
+  last24h:
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - byUser:
+      - byVerb:
+        - requestCount: 14
+          verb: get
+        requestCount: 14
+        userAgent: kubelet/v1.31.1
+        username: system:node:ci-op-2fcpj5j6-f6035-2lklf-master-1
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-scheduler/v1.31.1
+        username: system:admin
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: watch
+        requestCount: 2
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:admin
+      nodeName: 10.0.0.5
+      requestCount: 18
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 18
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 22
+          verb: get
+        requestCount: 23
+        userAgent: kubelet/v1.31.1
+        username: system:node:ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+      - byVerb:
+        - requestCount: 6
+          verb: list
+        - requestCount: 15
+          verb: watch
+        requestCount: 21
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 18
+          verb: get
+        requestCount: 19
+        userAgent: kubelet/v1.31.1
+        username: system:node:ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 12
+        userAgent: csi-provisioner/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 3
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 11
+        userAgent: csi-attacher/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 5
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 11
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 3
+          verb: get
+        - requestCount: 1
+          verb: update
+        requestCount: 5
+        userAgent: kubelet/v1.31.1
+        username: system:node:ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+      - byVerb:
+        - requestCount: 4
+          verb: get
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      nodeName: 10.0.0.3
+      requestCount: 106
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      nodeName: 10.0.0.4
+      requestCount: 1
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 18
+          verb: get
+        requestCount: 19
+        userAgent: kubelet/v1.31.1
+        username: system:node:ci-op-2fcpj5j6-f6035-2lklf-master-0
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 4
+          verb: get
+        requestCount: 5
+        userAgent: kubelet/v1.31.1
+        username: system:node:ci-op-2fcpj5j6-f6035-2lklf-master-1
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 2
+          verb: get
+        requestCount: 3
+        userAgent: kubelet/v1.31.1
+        username: system:node:ci-op-2fcpj5j6-f6035-2lklf-master-2
+      nodeName: 10.0.0.5
+      requestCount: 27
+    - byUser:
+      - byVerb:
+        - requestCount: 2
+          verb: watch
+        requestCount: 2
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:kube-controller-manager
+      nodeName: 10.0.0.6
+      requestCount: 3
+    requestCount: 137
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: csi-attacher/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 2
+          verb: watch
+        requestCount: 2
+        userAgent: csi-provisioner/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      nodeName: 10.0.0.3
+      requestCount: 17
+    - byUser:
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: csi-provisioner/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: kube-controller-manager/v1.31.1
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: csi-attacher/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      nodeName: 10.0.0.4
+      requestCount: 9
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-scheduler/v1.31.1
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 2
+          verb: watch
+        requestCount: 2
+        userAgent: csi-provisioner/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      - byVerb:
+        - requestCount: 1
+          verb: watch
+        requestCount: 1
+        userAgent: csi-attacher/v0.0.0
+        username: system:serviceaccount:openshift-cluster-csi-drivers:gcp-pd-csi-driver-controller-sa
+      nodeName: 10.0.0.6
+      requestCount: 8
+    requestCount: 34
+  - requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 10.0.0.3
+      requestCount: 0
+    - nodeName: 10.0.0.4
+      requestCount: 0
+    - nodeName: 10.0.0.5
+      requestCount: 0
+    - nodeName: 10.0.0.6
+      requestCount: 0
+    requestCount: 0
+  requestCount: 189

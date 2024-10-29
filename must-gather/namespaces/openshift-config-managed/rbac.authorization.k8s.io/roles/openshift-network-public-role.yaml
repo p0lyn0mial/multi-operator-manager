@@ -1,0 +1,40 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  annotations:
+    openshift.io/description: Can read the openshift-network-features ConfigMap values
+  creationTimestamp: "2024-10-24T13:02:32Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/description: {}
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+      f:rules: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:02:32Z"
+  name: openshift-network-public-role
+  namespace: openshift-config-managed
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "4288"
+  uid: 3650b137-f6ec-4c83-9431-f0d78faccbf3
+rules:
+- apiGroups:
+  - ""
+  resourceNames:
+  - openshift-network-features
+  resources:
+  - configmaps
+  verbs:
+  - get

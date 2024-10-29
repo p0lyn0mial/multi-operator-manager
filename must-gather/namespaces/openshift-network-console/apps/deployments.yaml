@@ -1,0 +1,297 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubernetes.io/description: |
+        This deployment deploys the Networking console plugin pod which serves
+        the contents of the Networking section in OpenShift Console
+      networkoperator.openshift.io/non-critical: ""
+      openshift.io/required-scc: restricted-v2
+      release.openshift.io/version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    generation: 1
+    labels:
+      app.kubernetes.io/component: networking-console-plugin
+      app.kubernetes.io/managed-by: cluster-network-operator
+      app.kubernetes.io/name: networking-console-plugin
+      app.kubernetes.io/part-of: cluster-network-operator
+      networkoperator.openshift.io/generates-operator-status: stand-alone
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:kubernetes.io/description: {}
+            f:networkoperator.openshift.io/non-critical: {}
+            f:openshift.io/required-scc: {}
+            f:release.openshift.io/version: {}
+          f:labels:
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:networkoperator.openshift.io/generates-operator-status: {}
+          f:ownerReferences:
+            k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                f:app.kubernetes.io/component: {}
+                f:app.kubernetes.io/managed-by: {}
+                f:app.kubernetes.io/name: {}
+                f:app.kubernetes.io/part-of: {}
+            f:spec:
+              f:affinity:
+                f:podAntiAffinity:
+                  f:preferredDuringSchedulingIgnoredDuringExecution: {}
+              f:automountServiceAccountToken: {}
+              f:containers:
+                k:{"name":"networking-console-plugin"}:
+                  .: {}
+                  f:command: {}
+                  f:env:
+                    k:{"name":"POD_IP"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        f:fieldRef: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    k:{"containerPort":9443,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                  f:resources:
+                    f:requests:
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      f:drop: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    k:{"mountPath":"/etc/nginx/nginx.conf"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+                      f:subPath: {}
+                    k:{"mountPath":"/var/cert"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:nodeSelector: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:securityContext:
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  f:type: {}
+              f:volumes:
+                k:{"name":"networking-console-plugin-cert"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    f:defaultMode: {}
+                    f:secretName: {}
+                k:{"name":"nginx-conf"}:
+                  .: {}
+                  f:configMap:
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+      manager: cluster-network-operator/operconfig
+      operation: Apply
+      time: "2024-10-24T13:25:51Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-24T13:26:47Z"
+    name: networking-console-plugin
+    namespace: openshift-network-console
+    ownerReferences:
+    - apiVersion: operator.openshift.io/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Network
+      name: cluster
+      uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+    resourceVersion: "28803"
+    uid: cb2c387c-d852-459f-9044-5090832d0933
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 2
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: networking-console-plugin
+        app.kubernetes.io/managed-by: cluster-network-operator
+        app.kubernetes.io/name: networking-console-plugin
+        app.kubernetes.io/part-of: cluster-network-operator
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 1
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          app.kubernetes.io/component: networking-console-plugin
+          app.kubernetes.io/managed-by: cluster-network-operator
+          app.kubernetes.io/name: networking-console-plugin
+          app.kubernetes.io/part-of: cluster-network-operator
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/component: networking-console-plugin
+                    app.kubernetes.io/managed-by: cluster-network-operator
+                    app.kubernetes.io/name: networking-console-plugin
+                    app.kubernetes.io/part-of: cluster-network-operator
+                namespaces:
+                - openshift-network-console
+                topologyKey: kubernetes.io/hostname
+              weight: 90
+        automountServiceAccountToken: false
+        containers:
+        - command:
+          - /bin/sh
+          - -c
+          - |
+            if echo "$POD_IP" | grep -qE '^([0-9]{1,3}\.){3}[0-9]{1,3}$'; then
+              LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME="9443"
+            else
+              LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME="[::]:9443"
+            fi
+            sed "s/LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME/$LISTEN_ADDRESS_PORT_REPLACED_AT_RUNTIME/g" /etc/nginx/nginx.conf > /tmp/nginx.conf
+            exec nginx -c /tmp/nginx.conf -g 'daemon off;'
+          env:
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8
+          imagePullPolicy: IfNotPresent
+          name: networking-console-plugin
+          ports:
+          - containerPort: 9443
+            name: https
+            protocol: TCP
+          resources:
+            requests:
+              cpu: 10m
+              memory: 50Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /var/cert
+            name: networking-console-plugin-cert
+            readOnly: true
+          - mountPath: /etc/nginx/nginx.conf
+            name: nginx-conf
+            readOnly: true
+            subPath: nginx.conf
+        dnsPolicy: ClusterFirst
+        nodeSelector:
+          kubernetes.io/os: linux
+        priorityClassName: system-cluster-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: networking-console-plugin
+          name: nginx-conf
+        - name: networking-console-plugin-cert
+          secret:
+            defaultMode: 420
+            secretName: networking-console-plugin-cert
+  status:
+    availableReplicas: 2
+    conditions:
+    - lastTransitionTime: "2024-10-24T13:26:46Z"
+      lastUpdateTime: "2024-10-24T13:26:46Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-10-24T13:25:51Z"
+      lastUpdateTime: "2024-10-24T13:26:47Z"
+      message: ReplicaSet "networking-console-plugin-5cd86b96f5" has successfully
+        progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 2
+    replicas: 2
+    updatedReplicas: 2
+kind: DeploymentList
+metadata:
+  resourceVersion: "61005"

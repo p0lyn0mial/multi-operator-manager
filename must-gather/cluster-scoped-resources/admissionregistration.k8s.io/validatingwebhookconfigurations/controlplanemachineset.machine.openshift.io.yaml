@@ -1,0 +1,96 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    capability.openshift.io/name: MachineAPI
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2024-10-24T13:13:21Z"
+  generation: 2
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"controlplanemachineset.machine.openshift.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T13:13:21Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"controlplanemachineset.machine.openshift.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2024-10-24T13:15:13Z"
+  name: controlplanemachineset.machine.openshift.io
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "19162"
+  uid: fd8c80b1-28fb-4894-9c43-083041dfb134
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJSGlIQkp0dUUyamN3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRjeU9UYzNOVEF4TURBZQpGdzB5TkRFd01qUXhNekF6TWpsYUZ3MHlOakV5TWpNeE16QXpNekJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTNNamszTnpVd01UQXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQ28wMFhCM256RUdKODEwRkE5Q3JNT0l0MHhJUFk0ZGJnMAo0c0hOdG1hbUVlUlpFSDB4enp3M2hwNFUvZ1E5MGliOGtLdEljMEVJNFpXQnpqMXZWUERHM1FWb1BySGR3TzNvCldCYk04dWhGSUl6dmVMNWRqRmJCK1BRVzAzMEl0SWpqVko3bzk1b3Z5Mk54QzhnaUthOEpMaXdRbFdiclo2VDMKbHNmL1ZDajBYQkdRU0FqUjlLUDVnblptY3BTYVRIQlFvSzg3OXFETmFjZUtncTduT0QxSmx1Y2tkaHEwc2RYaApBKzhlY2R2a1dRQjMvK3FHV3ViMjhUM1R4My8rQWdmSjdGOVA4N0ZlNjgvZytLOS9SanlKOTA2ZW1rMnlRdWRWCkVKNHVsaGFoSXpQTWtSRmxBZExRdzZxd0VmQzhyeWdsejhVY3VDNDZ1UWlGelY1SE1CTjFBZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlF2N0JleApPR2xOTDhDWkdlWGIvcXNhSnFpRkhEQWZCZ05WSFNNRUdEQVdnQlF2N0JleE9HbE5MOENaR2VYYi9xc2FKcWlGCkhEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFCTDhraElYYmlYRnYxTVRFbVlad0JaTHBzUitoNEplUFl6ZVEKQmcyTGdWV2dlcytLT2t4TGgrUUlhdi9LZk4yWWErRlhQYUIrU0VzL21kSStjUWhOR0tkV2R4ZUhCdjhkMU9qYgpRR3d3cUxmRlVsSVpPd1Zqc2xoTFhGQ3BlcXFOcThPL3JZMDFYcEUzMG9uMXpjK3RQbFd6ZTY2MjNRZWMwSnJBClRzVkJkNVhhNUhSSDVBWm1zdk1rR0laeEM4aU5SNkFPRlhGOFdHa0VtSHpnb0owU0MzVkg2bkxsczVyZXAyVGwKblRuajAya0dadFhvRm9MZTd5eWNWV1grWkJYYm5SRDlWRDcwZUw1QWZNZTZPNWRRR3Z6RERzVWxYSzVEdXRCZAorUG1pLzN4ZjFkNkpvdUk5WFo5cUVHYVRuMyt2bGM5L2phZU1heWlqRHQrbDVGUlIyUT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: control-plane-machine-set-operator
+      namespace: openshift-machine-api
+      path: /validate-machine-openshift-io-v1-controlplanemachineset
+      port: 9443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: controlplanemachineset.machine.openshift.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - machine.openshift.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - controlplanemachinesets
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

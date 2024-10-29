@@ -1,0 +1,82 @@
+---
+apiVersion: ingress.operator.openshift.io/v1
+kind: DNSRecord
+metadata:
+  creationTimestamp: "2024-10-24T13:07:09Z"
+  finalizers:
+  - operator.openshift.io/ingress-dns
+  generation: 1
+  labels:
+    ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+  managedFields:
+  - apiVersion: ingress.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"operator.openshift.io/ingress-dns": {}
+        f:labels:
+          .: {}
+          f:ingresscontroller.operator.openshift.io/owning-ingresscontroller: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"993d52ec-1b53-4e6a-862f-b499d8c4bdea"}: {}
+      f:spec:
+        .: {}
+        f:dnsManagementPolicy: {}
+        f:dnsName: {}
+        f:recordTTL: {}
+        f:recordType: {}
+        f:targets: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2024-10-24T13:07:09Z"
+  - apiVersion: ingress.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:observedGeneration: {}
+        f:zones: {}
+    manager: ingress-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:08:09Z"
+  name: default-wildcard
+  namespace: openshift-ingress-operator
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: IngressController
+    name: default
+    uid: 993d52ec-1b53-4e6a-862f-b499d8c4bdea
+  resourceVersion: "15851"
+  uid: 0687a049-efc1-4e0c-8972-51e3b2093f81
+spec:
+  dnsManagementPolicy: Managed
+  dnsName: '*.apps.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX.'
+  recordTTL: 30
+  recordType: A
+  targets:
+  - 35.184.254.253
+status:
+  observedGeneration: 1
+  zones:
+  - conditions:
+    - lastTransitionTime: "2024-10-24T13:08:09Z"
+      message: The DNS provider succeeded in ensuring the record
+      reason: ProviderSuccess
+      status: "True"
+      type: Published
+    dnsZone:
+      id: ci-op-2fcpj5j6-f6035-2lklf-private-zone
+  - conditions:
+    - lastTransitionTime: "2024-10-24T13:08:09Z"
+      message: The DNS provider succeeded in ensuring the record
+      reason: ProviderSuccess
+      status: "True"
+      type: Published
+    dnsZone:
+      id: gcp-3

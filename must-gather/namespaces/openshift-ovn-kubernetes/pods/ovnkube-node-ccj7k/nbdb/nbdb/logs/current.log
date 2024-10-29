@@ -1,0 +1,26 @@
+2024-10-24T13:02:57.640379837Z + [[ -f /env/_master ]]
+2024-10-24T13:02:57.640379837Z + . /ovnkube-lib/ovnkube-lib.sh
+2024-10-24T13:02:57.640379837Z ++ set -x
+2024-10-24T13:02:57.640488917Z ++ K8S_NODE=ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:02:57.640488917Z ++ [[ -n ci-op-2fcpj5j6-f6035-2lklf-master-2 ]]
+2024-10-24T13:02:57.640488917Z ++ [[ -f /env/ci-op-2fcpj5j6-f6035-2lklf-master-2 ]]
+2024-10-24T13:02:57.640488917Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2024-10-24T13:02:57.640488917Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2024-10-24T13:02:57.640488917Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2024-10-24T13:02:57.640488917Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2024-10-24T13:02:57.640488917Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2024-10-24T13:02:57.640488917Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2024-10-24T13:02:57.640488917Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2024-10-24T13:02:57.640488917Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2024-10-24T13:02:57.640488917Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2024-10-24T13:02:57.640488917Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2024-10-24T13:02:57.641611387Z + trap quit-nbdb TERM INT
+2024-10-24T13:02:57.641611387Z + start-nbdb info
+2024-10-24T13:02:57.641611387Z + local log_level=info
+2024-10-24T13:02:57.641611387Z + [[ 1 -ne 1 ]]
+2024-10-24T13:02:57.641789918Z + wait 5425
+2024-10-24T13:02:57.641917098Z + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor --db-nb-sock=/var/run/ovn/ovnnb_db.sock '--ovn-nb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_nb_ovsdb
+2024-10-24T13:02:57.736601192Z 2024-10-24T13:02:57.736Z|00001|vlog|INFO|opened log file /var/log/ovn/ovsdb-server-nb.log
+2024-10-24T13:02:57.742928098Z 2024-10-24T13:02:57.742Z|00002|ovsdb_server|INFO|ovsdb-server (Open vSwitch) 3.4.0-1.el9fdp
+2024-10-24T13:03:07.749406075Z 2024-10-24T13:03:07.749Z|00003|memory|INFO|12032 kB peak resident set size after 10.0 seconds
+2024-10-24T13:03:07.749458966Z 2024-10-24T13:03:07.749Z|00004|memory|INFO|atoms:2956 cells:1866 json-caches:2 monitors:3 n-weak-refs:46 sessions:2

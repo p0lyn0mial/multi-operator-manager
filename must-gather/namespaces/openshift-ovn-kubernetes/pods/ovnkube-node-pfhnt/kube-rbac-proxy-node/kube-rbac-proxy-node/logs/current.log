@@ -1,0 +1,59 @@
+2024-10-24T13:16:16.601523169Z ++ K8S_NODE=
+2024-10-24T13:16:16.601523169Z ++ [[ -n '' ]]
+2024-10-24T13:16:16.601523169Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2024-10-24T13:16:16.601523169Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2024-10-24T13:16:16.601650489Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2024-10-24T13:16:16.601650489Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2024-10-24T13:16:16.601650489Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2024-10-24T13:16:16.601650489Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2024-10-24T13:16:16.601650489Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2024-10-24T13:16:16.601650489Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2024-10-24T13:16:16.601650489Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2024-10-24T13:16:16.601650489Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2024-10-24T13:16:16.602990626Z + start-rbac-proxy-node ovn-node-metrics 9103 29103 /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:16:16.602990626Z + local detail=ovn-node-metrics
+2024-10-24T13:16:16.602990626Z + local listen_port=9103
+2024-10-24T13:16:16.603027532Z + local upstream_port=29103
+2024-10-24T13:16:16.603027532Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2024-10-24T13:16:16.603027532Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:16:16.603027532Z + [[ 5 -ne 5 ]]
+2024-10-24T13:16:16.603615754Z ++ date -Iseconds
+2024-10-24T13:16:16.606243748Z + echo '2024-10-24T13:16:16+00:00 INFO: waiting for ovn-node-metrics certs to be mounted'
+2024-10-24T13:16:16.606280940Z 2024-10-24T13:16:16+00:00 INFO: waiting for ovn-node-metrics certs to be mounted
+2024-10-24T13:16:16.606289499Z + wait-for-certs ovn-node-metrics /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:16:16.606320503Z + local detail=ovn-node-metrics
+2024-10-24T13:16:16.606332667Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2024-10-24T13:16:16.606343986Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:16:16.606354729Z + [[ 3 -ne 3 ]]
+2024-10-24T13:16:16.606368500Z + retries=0
+2024-10-24T13:16:16.606978283Z ++ date +%s
+2024-10-24T13:16:16.609847407Z + TS=1729775776
+2024-10-24T13:16:16.609948016Z + WARN_TS=1729776976
+2024-10-24T13:16:16.609987273Z + HAS_LOGGED_INFO=0
+2024-10-24T13:16:16.610033343Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:16:16.610200035Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.crt ]]
+2024-10-24T13:16:16.610879471Z ++ date -Iseconds
+2024-10-24T13:16:16.613229216Z + echo '2024-10-24T13:16:16+00:00 INFO: ovn-node-metrics certs mounted, starting kube-rbac-proxy'
+2024-10-24T13:16:16.613276829Z 2024-10-24T13:16:16+00:00 INFO: ovn-node-metrics certs mounted, starting kube-rbac-proxy
+2024-10-24T13:16:16.613345285Z + exec /usr/bin/kube-rbac-proxy --logtostderr --secure-listen-address=:9103 --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 --upstream=http://127.0.0.1:29103/ --tls-private-key-file=/etc/pki/tls/metrics-cert/tls.key --tls-cert-file=/etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:16:16.661053850Z W1024 13:16:16.660913    3100 deprecated.go:66] 
+2024-10-24T13:16:16.661053850Z ==== Removed Flag Warning ======================
+2024-10-24T13:16:16.661053850Z 
+2024-10-24T13:16:16.661053850Z logtostderr is removed in the k8s upstream and has no effect any more.
+2024-10-24T13:16:16.661053850Z 
+2024-10-24T13:16:16.661053850Z ===============================================
+2024-10-24T13:16:16.661053850Z 		
+2024-10-24T13:16:16.661605386Z I1024 13:16:16.661515    3100 kube-rbac-proxy.go:233] Valid token audiences: 
+2024-10-24T13:16:16.665377630Z I1024 13:16:16.665306    3100 kube-rbac-proxy.go:347] Reading certificate files
+2024-10-24T13:16:16.665811835Z I1024 13:16:16.665760    3100 kube-rbac-proxy.go:395] Starting TCP socket on :9103
+2024-10-24T13:16:16.666577040Z I1024 13:16:16.666543    3100 kube-rbac-proxy.go:402] Listening securely on :9103
+2024-10-24T13:31:46.264041900Z E1024 13:31:46.263700    3100 auth.go:47] Unable to authenticate the request due to an error: context canceled
+2024-10-24T13:32:01.874085043Z E1024 13:32:01.873998    3100 auth.go:47] Unable to authenticate the request due to an error: context canceled
+2024-10-24T13:32:06.269748345Z E1024 13:32:06.269621    3100 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:32:06.269854650Z E1024 13:32:06.269741    3100 auth.go:47] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:32:21.879373640Z E1024 13:32:21.879264    3100 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:32:21.879373640Z E1024 13:32:21.879355    3100 auth.go:47] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:32:46.263829095Z E1024 13:32:46.263716    3100 auth.go:47] Unable to authenticate the request due to an error: context canceled
+2024-10-24T13:33:01.873970852Z E1024 13:33:01.873863    3100 auth.go:47] Unable to authenticate the request due to an error: context canceled
+2024-10-24T13:33:06.265010551Z E1024 13:33:06.264934    3100 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:33:06.265096562Z E1024 13:33:06.265001    3100 auth.go:47] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded

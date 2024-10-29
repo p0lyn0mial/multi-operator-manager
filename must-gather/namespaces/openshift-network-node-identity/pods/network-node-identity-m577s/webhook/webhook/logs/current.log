@@ -1,0 +1,22 @@
+2024-10-24T13:02:46.023536765Z + [[ -f /env/_master ]]
+2024-10-24T13:02:46.023536765Z + ho_enable=--enable-hybrid-overlay
+2024-10-24T13:02:46.023945185Z ++ date '+%m%d %H:%M:%S.%N'
+2024-10-24T13:02:46.025782457Z I1024 13:02:46.025432237 - network-node-identity - start webhook
+2024-10-24T13:02:46.025797827Z + echo 'I1024 13:02:46.025432237 - network-node-identity - start webhook'
+2024-10-24T13:02:46.025877967Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443 --webhook-cert-dir=/etc/webhook-cert --webhook-host=127.0.0.1 --webhook-port=9743 --enable-hybrid-overlay --enable-interconnect --disable-approver --extra-allowed-user=system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane --wait-for-kubernetes-api=200s --pod-admission-conditions=/var/run/ovnkube-identity-config/additional-pod-admission-cond.json --loglevel=2
+2024-10-24T13:02:46.047522721Z I1024 13:02:46.047429       1 ovnkubeidentity.go:132] Config: {kubeconfig: apiServer:https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:2 port:9743 host:127.0.0.1 certDir:/etc/webhook-cert metricsAddress:0 leaseNamespace: enableInterconnect:true enableHybridOverlay:true disableWebhook:false disableApprover:true waitForKAPIDuration:200000000000 localKAPIPort:6443 extraAllowedUsers:{slice:[system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-control-plane] hasBeenSet:true} csrAcceptanceConditionFile: csrAcceptanceConditions:[] podAdmissionConditionFile:/var/run/ovnkube-identity-config/additional-pod-admission-cond.json podAdmissionConditions:[]}
+2024-10-24T13:02:46.047522721Z W1024 13:02:46.047498       1 client_config.go:659] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2024-10-24T13:02:46.048517302Z I1024 13:02:46.048481       1 ovnkubeidentity.go:351] Waiting for caches to sync
+2024-10-24T13:02:46.063228708Z I1024 13:02:46.063175       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:02:46.149909943Z I1024 13:02:46.149830       1 certwatcher.go:161] "Updated current TLS certificate" logger="controller-runtime.certwatcher"
+2024-10-24T13:02:46.150065312Z I1024 13:02:46.150013       1 certwatcher.go:115] "Starting certificate watcher" logger="controller-runtime.certwatcher"
+2024-10-24T13:02:46.150237783Z I1024 13:02:46.150196       1 ovnkubeidentity.go:430] Starting the webhook server
+2024-10-24T13:08:37.432163606Z W1024 13:08:37.431953       1 reflector.go:470] k8s.io/client-go/informers/factory.go:160: watch of *v1.Node ended with: an error on the server ("unable to decode an event from the watch stream: http2: client connection lost") has prevented the request from succeeding
+2024-10-24T13:08:38.356583813Z I1024 13:08:38.356511       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:11:11.787711245Z I1024 13:11:11.787632       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:14:31.765213671Z I1024 13:14:31.765136       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:15:55.181585113Z I1024 13:15:55.181540       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:19:03.665201671Z I1024 13:19:03.665134       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:25:58.386365578Z I1024 13:25:58.386305       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:30:12.810582113Z I1024 13:30:12.810529       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:33:46.969474338Z I1024 13:33:46.969405       1 reflector.go:359] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160

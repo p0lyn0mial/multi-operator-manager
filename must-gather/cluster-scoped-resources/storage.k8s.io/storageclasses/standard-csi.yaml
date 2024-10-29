@@ -1,0 +1,36 @@
+---
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+  creationTimestamp: "2024-10-24T13:03:44Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:allowVolumeExpansion: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:storageclass.kubernetes.io/is-default-class: {}
+      f:parameters:
+        .: {}
+        f:replication-type: {}
+        f:type: {}
+      f:provisioner: {}
+      f:reclaimPolicy: {}
+      f:volumeBindingMode: {}
+    manager: gcp-pd-csi-driver-operator
+    operation: Update
+    time: "2024-10-24T13:03:44Z"
+  name: standard-csi
+  resourceVersion: "7485"
+  uid: 172feeca-3f57-4cbd-8dd0-4988b3849e9a
+parameters:
+  replication-type: none
+  type: pd-standard
+provisioner: pd.csi.storage.gke.io
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer

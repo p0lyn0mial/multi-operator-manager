@@ -1,0 +1,53 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: VolumeAttachment
+metadata:
+  annotations:
+    csi.alpha.kubernetes.io/node-id: projects/XXXXXXXXXXXXXXXXXXXXXXXX/zones/us-central1-c/instances/ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  creationTimestamp: "2024-10-24T13:27:25Z"
+  finalizers:
+  - external-attacher/pd-csi-storage-gke-io
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:csi.alpha.kubernetes.io/node-id: {}
+        f:finalizers:
+          .: {}
+          v:"external-attacher/pd-csi-storage-gke-io": {}
+    manager: csi-attacher
+    operation: Update
+    time: "2024-10-24T13:27:25Z"
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:attacher: {}
+        f:nodeName: {}
+        f:source:
+          f:persistentVolumeName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T13:27:25Z"
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:attached: {}
+    manager: csi-attacher
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:27:32Z"
+  name: csi-26bc09ea2208d28c04f8cf4552fe1299de05b408e87d6b3b7ba8f45448f5b885
+  resourceVersion: "29459"
+  uid: c5828261-93b6-49e2-ae87-597a3767ec69
+spec:
+  attacher: pd.csi.storage.gke.io
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    persistentVolumeName: pvc-bebd8955-95af-4a81-ab58-31a7f16c6c0b
+status:
+  attached: true

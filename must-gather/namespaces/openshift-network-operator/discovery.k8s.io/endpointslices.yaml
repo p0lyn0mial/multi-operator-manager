@@ -1,0 +1,73 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.0.3
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    targetRef:
+      kind: Pod
+      name: network-operator-69d4947f66-6pwvp
+      namespace: openshift-network-operator
+      uid: 4cf1cbab-9459-4759-880c-2daffa673113
+    zone: us-central1-a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:04:05Z"
+    creationTimestamp: "2024-10-24T12:58:57Z"
+    generateName: metrics-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+      name: network-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9f5b8621-5357-401e-93e2-6600c4af3437"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:04:05Z"
+    name: metrics-g7k92
+    namespace: openshift-network-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: 9f5b8621-5357-401e-93e2-6600c4af3437
+    resourceVersion: "9130"
+    uid: 6d41a827-e3f1-4ee6-81e3-e7058603b988
+  ports:
+  - name: metrics
+    port: 9104
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "61035"

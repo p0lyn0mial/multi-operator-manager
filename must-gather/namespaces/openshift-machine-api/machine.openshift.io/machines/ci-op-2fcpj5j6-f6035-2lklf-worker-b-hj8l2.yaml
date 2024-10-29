@@ -1,0 +1,214 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  annotations:
+    machine.openshift.io/instance-state: RUNNING
+  creationTimestamp: "2024-10-24T13:05:36Z"
+  finalizers:
+  - machine.machine.openshift.io
+  generateName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-
+  generation: 2
+  labels:
+    machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+    machine.openshift.io/cluster-api-machine-role: worker
+    machine.openshift.io/cluster-api-machine-type: worker
+    machine.openshift.io/cluster-api-machineset: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+    machine.openshift.io/instance-type: e2-standard-4
+    machine.openshift.io/region: us-central1
+    machine.openshift.io/zone: us-central1-b
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+          f:machine.openshift.io/cluster-api-machineset: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"396d5e7b-149a-4d21-ba97-6bf160149c44"}: {}
+      f:spec:
+        .: {}
+        f:lifecycleHooks: {}
+        f:metadata: {}
+        f:providerSpec:
+          .: {}
+          f:value:
+            .: {}
+            f:apiVersion: {}
+            f:canIPForward: {}
+            f:credentialsSecret:
+              .: {}
+              f:name: {}
+            f:deletionProtection: {}
+            f:disks: {}
+            f:kind: {}
+            f:machineType: {}
+            f:metadata:
+              .: {}
+              f:creationTimestamp: {}
+            f:networkInterfaces: {}
+            f:projectID: {}
+            f:region: {}
+            f:serviceAccounts: {}
+            f:shieldedInstanceConfig: {}
+            f:tags: {}
+            f:userDataSecret:
+              .: {}
+              f:name: {}
+            f:zone: {}
+    manager: machineset-controller
+    operation: Update
+    time: "2024-10-24T13:05:36Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/instance-state: {}
+        f:finalizers:
+          .: {}
+          v:"machine.machine.openshift.io": {}
+        f:labels:
+          f:machine.openshift.io/instance-type: {}
+          f:machine.openshift.io/region: {}
+          f:machine.openshift.io/zone: {}
+      f:spec:
+        f:providerID: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2024-10-24T13:09:16Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:nodeRef: {}
+    manager: nodelink-controller
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:21:06Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:addresses: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Drainable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstanceExists"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Terminable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:lastUpdated: {}
+        f:phase: {}
+        f:providerStatus:
+          .: {}
+          f:conditions: {}
+          f:instanceId: {}
+          f:instanceState: {}
+          f:metadata: {}
+    manager: machine-controller-manager
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:21:43Z"
+  name: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: machine.openshift.io/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: MachineSet
+    name: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+    uid: 396d5e7b-149a-4d21-ba97-6bf160149c44
+  resourceVersion: "22515"
+  uid: d0e85449-c4cf-4fd9-a13f-697cae3e7d82
+spec:
+  lifecycleHooks: {}
+  metadata: {}
+  providerID: gce://XXXXXXXXXXXXXXXXXXXXXXXX/us-central1-b/ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  providerSpec:
+    value:
+      apiVersion: machine.openshift.io/v1beta1
+      canIPForward: false
+      credentialsSecret:
+        name: gcp-cloud-credentials
+      deletionProtection: false
+      disks:
+      - autoDelete: true
+        boot: true
+        image: projects/rhcos-cloud/global/images/rhcos-418-94-202410090804-0-gcp-x86-64
+        labels: {}
+        sizeGb: 128
+        type: pd-ssd
+      kind: GCPMachineProviderSpec
+      machineType: e2-standard-4
+      metadata:
+        creationTimestamp: null
+      networkInterfaces:
+      - network: ci-op-2fcpj5j6-f6035-2lklf-network
+        subnetwork: ci-op-2fcpj5j6-f6035-2lklf-worker-subnet
+      projectID: XXXXXXXXXXXXXXXXXXXXXXXX
+      region: us-central1
+      serviceAccounts:
+      - email: ci-op-2fcpj5j6-f6035-2lklf-w@XXXXXXXXXXXXXXXXXXXXXXXX.iam.gserviceaccount.com
+        scopes:
+        - https://www.googleapis.com/auth/cloud-platform
+      shieldedInstanceConfig: {}
+      tags:
+      - ci-op-2fcpj5j6-f6035-2lklf-worker
+      userDataSecret:
+        name: worker-user-data
+      zone: us-central1-b
+status:
+  addresses:
+  - address: 10.0.128.3
+    type: InternalIP
+  - address: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2.us-central1-b.c.XXXXXXXXXXXXXXXXXXXXXXXX.internal
+    type: InternalDNS
+  - address: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2.c.XXXXXXXXXXXXXXXXXXXXXXXX.internal
+    type: InternalDNS
+  - address: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+    type: InternalDNS
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:07:41Z"
+    status: "True"
+    type: Drainable
+  - lastTransitionTime: "2024-10-24T13:09:16Z"
+    status: "True"
+    type: InstanceExists
+  - lastTransitionTime: "2024-10-24T13:07:41Z"
+    status: "True"
+    type: Terminable
+  lastUpdated: "2024-10-24T13:21:43Z"
+  nodeRef:
+    kind: Node
+    name: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+    uid: 51d242d2-2dde-4a52-9c72-a758966f4b8f
+  phase: Running
+  providerStatus:
+    conditions:
+    - lastTransitionTime: "2024-10-24T13:09:05Z"
+      message: machine successfully created
+      reason: MachineCreationSucceeded
+      status: "True"
+      type: MachineCreated
+    instanceId: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+    instanceState: RUNNING
+    metadata: {}

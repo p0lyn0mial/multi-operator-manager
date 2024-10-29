@@ -1,0 +1,346 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.15/23"],"mac_address":"0a:58:0a:80:00:0f","gateway_ips":["10.128.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.128.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.128.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.128.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.128.0.1"}],"ip_address":"10.128.0.15/23","gateway_ip":"10.128.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.15"
+          ],
+          "mac": "0a:58:0a:80:00:0f",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2024-10-24T13:03:40Z"
+  generateName: gcp-pd-csi-driver-operator-7ddb788594-
+  labels:
+    name: gcp-pd-csi-driver-operator
+    pod-template-hash: 7ddb788594
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ci-op-2fcpj5j6-f6035-2lklf-master-2
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:03:40Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:name: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"cbf4995b-e756-47b0-9927-cf4080c1713d"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"gcp-pd-csi-driver-operator"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ATTACHER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"DRIVER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"KUBE_RBAC_PROXY_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"LIVENESS_PROBE_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NODE_DRIVER_REGISTRAR_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"PROVISIONER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"RESIZER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"SNAPSHOTTER_IMAGE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T13:03:40Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:03:41Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.15"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:15:20Z"
+  name: gcp-pd-csi-driver-operator-7ddb788594-zjfz2
+  namespace: openshift-cluster-csi-drivers
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: gcp-pd-csi-driver-operator-7ddb788594
+    uid: cbf4995b-e756-47b0-9927-cf4080c1713d
+  resourceVersion: "19371"
+  uid: 62fc2e55-6ba1-47da-9cac-e4edfbcff053
+spec:
+  containers:
+  - args:
+    - start
+    - -v=2
+    env:
+    - name: DRIVER_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:468a46c732664716f4b81ce3a23401278190f1edd19c90daa3ab5dba7fbdb7e2
+    - name: PROVISIONER_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:96b42bbafd9e46a37021c4ed3a565dce80f369546a57a6573bcf89a827d0366f
+    - name: ATTACHER_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16da45916745bbc9992c5dd8987d939db995f1f48b4f320911ccff9e3639d194
+    - name: RESIZER_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:51d084be99ab25e6f1ce93612798a543842d3ac1c0644abd8a69e495e91be5fa
+    - name: SNAPSHOTTER_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16066fbd55fd9fb04fb075ce1829ef5787d8155fdbe86e51f9e5cefdb0d8aafd
+    - name: NODE_DRIVER_REGISTRAR_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:aad1f78848feb211ade49ba7f56c32e9af371d72d62bf2fa64e79d3016d3ec2f
+    - name: LIVENESS_PROBE_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:9caefe481d8fe0d508a97fa090ea0c3d94fc39381e3c41f6a42bc8c174ff03db
+    - name: KUBE_RBAC_PROXY_IMAGE
+      value: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:11cfe62fc07450292261dab71b3eb1ef1fc615a24e05c282044403264b567db6
+    imagePullPolicy: IfNotPresent
+    name: gcp-pd-csi-driver-operator
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000230000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8j6tr
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000230000
+    seLinuxOptions:
+      level: s0:c15,c10
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: gcp-pd-csi-driver-operator
+  serviceAccountName: gcp-pd-csi-driver-operator
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-8j6tr
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:03:44Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:03:40Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:14:46Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:14:46Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:03:40Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://13d1f16faeb72bbdda526b316488b736c91b7c3f6d5b04541457085a3daf711b
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:11cfe62fc07450292261dab71b3eb1ef1fc615a24e05c282044403264b567db6
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:11cfe62fc07450292261dab71b3eb1ef1fc615a24e05c282044403264b567db6
+    lastState:
+      terminated:
+        containerID: cri-o://611efa40dadf6feed91e6599fc9f08588b4dbc354ad744841fce10195ecad732
+        exitCode: 0
+        finishedAt: "2024-10-24T13:14:44Z"
+        reason: Completed
+        startedAt: "2024-10-24T13:03:43Z"
+    name: gcp-pd-csi-driver-operator
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:14:45Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8j6tr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.0.6
+  hostIPs:
+  - ip: 10.0.0.6
+  phase: Running
+  podIP: 10.128.0.15
+  podIPs:
+  - ip: 10.128.0.15
+  qosClass: Burstable
+  startTime: "2024-10-24T13:03:40Z"

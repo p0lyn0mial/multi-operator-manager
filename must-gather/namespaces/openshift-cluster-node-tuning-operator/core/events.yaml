@@ -1,0 +1,3317 @@
+---
+apiVersion: v1
+items:
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2024-10-24T13:00:28.215302Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "3149"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: null
+  message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.cloudprovider.kubernetes.io/uninitialized:
+    true}. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:00:28Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:00:28Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.1801650aa12f883d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "3150"
+    uid: ebe14f26-1ac2-4cc4-9afc-a8524c652689
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:03:16.847340Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "3153"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-node-tuning-operator/cluster-node-tuning-operator-5b66777f7c-9pqmc
+    to ci-op-2fcpj5j6-f6035-2lklf-master-1
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:16Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:03:16Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.18016531e47032de
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5083"
+    uid: 70dd5d74-cafd-4371-a3b0-4fba0fc6a35a
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:17Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:32Z"
+  message: 'MountVolume.SetUp failed for volume "node-tuning-operator-tls" : secret
+    "node-tuning-operator-tls" not found'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:32Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.18016531f0a4b960
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "6270"
+    uid: 07a973b6-1227-4d8c-9f16-7a093e5d4e26
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 6
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:17Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:32Z"
+  message: 'MountVolume.SetUp failed for volume "apiservice-cert" : secret "performance-addon-operator-webhook-cert"
+    not found'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:32Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.18016531f0bd3a7f
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "6271"
+    uid: 022db6ee-92d5-4e96-a14e-788292712250
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:49Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5226"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:49Z"
+  message: Add eth0 [10.130.0.9/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:03:49Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.180165396d9822ea
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "7969"
+    uid: 28eb73ce-c514-4397-be7a-463cb2085d9a
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:05:55Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:05:55Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.18016539732183de
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "12184"
+    uid: 38ef220e-57bb-4e26-9edb-3217e2ddeefe
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:05:32Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260":
+    rpc error: code = DeadlineExceeded desc = initializing source docker://registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260:
+    pinging container registry registry.build02.ci.openshift.org: Get "https://registry.build02.ci.openshift.org/v2/":
+    dial tcp 34.74.144.21:443: i/o timeout'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:05:32Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.180165476bf40ff3
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "11715"
+    uid: 82f6ab8b-f9b2-4c55-ac02-003642a6779b
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 3
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:06:28Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:06:28Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.180165476bf4659d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "12728"
+    uid: a5872314-d877-4c7a-925d-1b4702876f36
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:05:43Z"
+  message: Back-off pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:05:43Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.180165476f20c3fb
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "11989"
+    uid: dc966e08-2ccb-4582-96df-5094a9d9cd25
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:05:43Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:05:43Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.180165476f20dc15
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "11990"
+    uid: bb2e95c9-ff3a-40e4-8ede-eef2d037ac88
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:06:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:06:28Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260":
+    initializing source docker://registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260:
+    pinging container registry registry.build02.ci.openshift.org: Get "https://registry.build02.ci.openshift.org/v2/":
+    dial tcp 34.74.144.21:443: i/o timeout'
+  metadata:
+    creationTimestamp: "2024-10-24T13:06:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:06:28Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.1801655e81d5bfde
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "12727"
+    uid: d675d3f6-9ad5-4b89-8e02-1331cfb557fa
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:10:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:19Z"
+  message: Container image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-10-24T13:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:00Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.1801659cec98c44c
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21105"
+    uid: 2c43b2fd-9990-4fb7-8799-c6af2da1280e
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:04Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-node-tuning-operator}
+    kind: Pod
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "5032"
+    uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:04Z"
+  message: Back-off restarting failed container cluster-node-tuning-operator in pod
+    cluster-node-tuning-operator-5b66777f7c-9pqmc_openshift-cluster-node-tuning-operator(5bacb661-a5ed-4083-8539-df289aaabb11)
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:59Z"
+    name: cluster-node-tuning-operator-5b66777f7c-9pqmc.18016600a5f1a823
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20854"
+    uid: 25b8dea6-26a8-4af2-ab63-62c2d28b07be
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Warning
+- apiVersion: v1
+  count: 14
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:59:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-node-tuning-operator-5b66777f7c
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "1914"
+    uid: 4940d5b4-9d55-41d1-a8e9-00b1c54cc928
+  kind: Event
+  lastTimestamp: "2024-10-24T12:59:47Z"
+  message: 'Error creating: pods "cluster-node-tuning-operator-5b66777f7c-" is forbidden:
+    autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
+    nodes'
+  metadata:
+    creationTimestamp: "2024-10-24T12:59:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:59:47Z"
+    name: cluster-node-tuning-operator-5b66777f7c.180164f789e585c7
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "2739"
+    uid: 0c8d1aa8-99df-4054-82d8-ad8f1cfc599d
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:00:28Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-node-tuning-operator-5b66777f7c
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "1919"
+    uid: 4940d5b4-9d55-41d1-a8e9-00b1c54cc928
+  kind: Event
+  lastTimestamp: "2024-10-24T13:00:28Z"
+  message: 'Created pod: cluster-node-tuning-operator-5b66777f7c-9pqmc'
+  metadata:
+    creationTimestamp: "2024-10-24T13:00:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:00:28Z"
+    name: cluster-node-tuning-operator-5b66777f7c.1801650aa134be6b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "3151"
+    uid: f24c17f1-a615-44c2-a0f1-e7a3d23d230e
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:59:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-node-tuning-operator
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "1913"
+    uid: 8fef9e4a-69e8-46ed-a0f1-a0bd7bb9c924
+  kind: Event
+  lastTimestamp: "2024-10-24T12:59:06Z"
+  message: Scaled up replica set cluster-node-tuning-operator-5b66777f7c to 1
+  metadata:
+    creationTimestamp: "2024-10-24T12:59:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:59:06Z"
+    name: cluster-node-tuning-operator.180164f7895f9ba1
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "1915"
+    uid: 2171e019-267d-442c-81d7-619bb0392ae5
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:24Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-node-tuning-operator
+    namespace: openshift-cluster-node-tuning-operator
+    uid: 8fef9e4a-69e8-46ed-a0f1-a0bd7bb9c924
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:24Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AWSEFSDriverVolumeMetrics",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BareMetalLoadBalancer",
+    "BuildCSIVolumes", "ChunkSizeMiB", "CloudDualStackNodeIPs", "DisableKubeletCloudCredentialProviders",
+    "GCPLabelsTags", "HardwareSpeed", "IngressControllerLBSubnetsAWS", "KMSv1", "ManagedBootImages",
+    "MetricsServer", "MultiArchInstallAWS", "MultiArchInstallGCP", "NetworkDiagnosticsConfig",
+    "NetworkLiveMigration", "NodeDisruptionPolicy", "OpenShiftPodSecurityAdmission",
+    "PrivateHostedZoneAWS", "SetEIPForNLBIngressController", "VSphereControlPlaneMachineSet",
+    "VSphereDriverConfiguration", "VSphereStaticIPs", "ValidatingAdmissionPolicy"},
+    Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS", "AdditionalRoutingCapabilities",
+    "AutomatedEtcdBackup", "BootcNodeManagement", "CSIDriverSharedResource", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "DNSNameResolver", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "ExternalOIDC", "GCPClusterHostedDNS",
+    "GatewayAPI", "ImageStreamImportMode", "IngressControllerDynamicConfigurationManager",
+    "InsightsConfig", "InsightsConfigAPI", "InsightsOnDemandDataGather", "InsightsRuntimeExtractor",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "MachineAPIProviderOpenStack", "MachineConfigNodes", "ManagedBootImagesAWS", "MaxUnavailableStatefulSet",
+    "MetricsCollectionProfiles", "MixedCPUsAllocation", "MultiArchInstallAzure", "NetworkSegmentation",
+    "NewOLM", "NodeSwap", "OVNObservability", "OnClusterBuild", "PersistentIPsForVirtualization",
+    "PinnedImages", "PlatformOperators", "ProcMountType", "RouteAdvertisements", "RouteExternalCertificate",
+    "ServiceAccountTokenNodeBinding", "SignatureStores", "SigstoreImageVerification",
+    "TranslateStreamCloseWebsocketRequests", "UpgradeStatus", "UserNamespacesPodSecurityStandards",
+    "UserNamespacesSupport", "VSphereMultiNetworks", "VSphereMultiVCenters", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-node-tuning-operator
+      operation: Update
+      time: "2024-10-24T13:07:24Z"
+    name: cluster-node-tuning-operator.1801656ba313c969
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13675"
+    uid: 67eab466-7cdc-4cc0-ad5e-595fe65bb096
+  reason: FeatureGatesInitialized
+  reportingComponent: performance-profile-controller
+  reportingInstance: ""
+  source:
+    component: performance-profile-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:10:56Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-node-tuning-operator
+    namespace: openshift-cluster-node-tuning-operator
+    uid: 8fef9e4a-69e8-46ed-a0f1-a0bd7bb9c924
+  kind: Event
+  lastTimestamp: "2024-10-24T13:10:56Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AWSEFSDriverVolumeMetrics",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BareMetalLoadBalancer",
+    "BuildCSIVolumes", "ChunkSizeMiB", "CloudDualStackNodeIPs", "DisableKubeletCloudCredentialProviders",
+    "GCPLabelsTags", "HardwareSpeed", "IngressControllerLBSubnetsAWS", "KMSv1", "ManagedBootImages",
+    "MetricsServer", "MultiArchInstallAWS", "MultiArchInstallGCP", "NetworkDiagnosticsConfig",
+    "NetworkLiveMigration", "NodeDisruptionPolicy", "OpenShiftPodSecurityAdmission",
+    "PrivateHostedZoneAWS", "SetEIPForNLBIngressController", "VSphereControlPlaneMachineSet",
+    "VSphereDriverConfiguration", "VSphereStaticIPs", "ValidatingAdmissionPolicy"},
+    Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS", "AdditionalRoutingCapabilities",
+    "AutomatedEtcdBackup", "BootcNodeManagement", "CSIDriverSharedResource", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "DNSNameResolver", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "ExternalOIDC", "GCPClusterHostedDNS",
+    "GatewayAPI", "ImageStreamImportMode", "IngressControllerDynamicConfigurationManager",
+    "InsightsConfig", "InsightsConfigAPI", "InsightsOnDemandDataGather", "InsightsRuntimeExtractor",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "MachineAPIProviderOpenStack", "MachineConfigNodes", "ManagedBootImagesAWS", "MaxUnavailableStatefulSet",
+    "MetricsCollectionProfiles", "MixedCPUsAllocation", "MultiArchInstallAzure", "NetworkSegmentation",
+    "NewOLM", "NodeSwap", "OVNObservability", "OnClusterBuild", "PersistentIPsForVirtualization",
+    "PinnedImages", "PlatformOperators", "ProcMountType", "RouteAdvertisements", "RouteExternalCertificate",
+    "ServiceAccountTokenNodeBinding", "SignatureStores", "SigstoreImageVerification",
+    "TranslateStreamCloseWebsocketRequests", "UpgradeStatus", "UserNamespacesPodSecurityStandards",
+    "UserNamespacesSupport", "VSphereMultiNetworks", "VSphereMultiVCenters", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2024-10-24T13:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-node-tuning-operator
+      operation: Update
+      time: "2024-10-24T13:10:56Z"
+    name: cluster-node-tuning-operator.1801659cf597920b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "17185"
+    uid: 6e192769-59f3-4cf9-bf0b-4ceebc422bc3
+  reason: FeatureGatesInitialized
+  reportingComponent: performance-profile-controller
+  reportingInstance: ""
+  source:
+    component: performance-profile-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:59Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-node-tuning-operator
+    namespace: openshift-cluster-node-tuning-operator
+    uid: 8fef9e4a-69e8-46ed-a0f1-a0bd7bb9c924
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:59Z"
+  message: FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AWSEFSDriverVolumeMetrics",
+    "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BareMetalLoadBalancer",
+    "BuildCSIVolumes", "ChunkSizeMiB", "CloudDualStackNodeIPs", "DisableKubeletCloudCredentialProviders",
+    "GCPLabelsTags", "HardwareSpeed", "IngressControllerLBSubnetsAWS", "KMSv1", "ManagedBootImages",
+    "MetricsServer", "MultiArchInstallAWS", "MultiArchInstallGCP", "NetworkDiagnosticsConfig",
+    "NetworkLiveMigration", "NodeDisruptionPolicy", "OpenShiftPodSecurityAdmission",
+    "PrivateHostedZoneAWS", "SetEIPForNLBIngressController", "VSphereControlPlaneMachineSet",
+    "VSphereDriverConfiguration", "VSphereStaticIPs", "ValidatingAdmissionPolicy"},
+    Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS", "AdditionalRoutingCapabilities",
+    "AutomatedEtcdBackup", "BootcNodeManagement", "CSIDriverSharedResource", "ClusterAPIInstall",
+    "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "DNSNameResolver", "DynamicResourceAllocation",
+    "EtcdBackendQuota", "EventedPLEG", "Example", "ExternalOIDC", "GCPClusterHostedDNS",
+    "GatewayAPI", "ImageStreamImportMode", "IngressControllerDynamicConfigurationManager",
+    "InsightsConfig", "InsightsConfigAPI", "InsightsOnDemandDataGather", "InsightsRuntimeExtractor",
+    "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController",
+    "MachineAPIProviderOpenStack", "MachineConfigNodes", "ManagedBootImagesAWS", "MaxUnavailableStatefulSet",
+    "MetricsCollectionProfiles", "MixedCPUsAllocation", "MultiArchInstallAzure", "NetworkSegmentation",
+    "NewOLM", "NodeSwap", "OVNObservability", "OnClusterBuild", "PersistentIPsForVirtualization",
+    "PinnedImages", "PlatformOperators", "ProcMountType", "RouteAdvertisements", "RouteExternalCertificate",
+    "ServiceAccountTokenNodeBinding", "SignatureStores", "SigstoreImageVerification",
+    "TranslateStreamCloseWebsocketRequests", "UpgradeStatus", "UserNamespacesPodSecurityStandards",
+    "UserNamespacesSupport", "VSphereMultiNetworks", "VSphereMultiVCenters", "VolumeGroupSnapshot"}}
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-node-tuning-operator
+      operation: Update
+      time: "2024-10-24T13:18:59Z"
+    name: cluster-node-tuning-operator.1801660d4cdda18d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20843"
+    uid: 39b7d7a0-4227-40e5-ac8e-4ba9bf8fa3b7
+  reason: FeatureGatesInitialized
+  reportingComponent: performance-profile-controller
+  reportingInstance: ""
+  source:
+    component: performance-profile-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:24Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: node-tuning-operator-lock
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13677"
+    uid: b165b86f-02bd-44b5-aa38-703039d48049
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:24Z"
+  message: cluster-node-tuning-operator-5b66777f7c-9pqmc_3dcd62a5-b46c-4681-a26d-e15d6d7167a0
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-node-tuning-operator
+      operation: Update
+      time: "2024-10-24T13:07:24Z"
+    name: node-tuning-operator-lock.1801656ba44b4dc4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13679"
+    uid: 5b9f1521-a624-4be5-aae9-c5b6156d4ff6
+  reason: LeaderElection
+  reportingComponent: cluster-node-tuning-operator-5b66777f7c-9pqmc_3dcd62a5-b46c-4681-a26d-e15d6d7167a0
+  reportingInstance: ""
+  source:
+    component: cluster-node-tuning-operator-5b66777f7c-9pqmc_3dcd62a5-b46c-4681-a26d-e15d6d7167a0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:10:56Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: node-tuning-operator-lock
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "17186"
+    uid: b165b86f-02bd-44b5-aa38-703039d48049
+  kind: Event
+  lastTimestamp: "2024-10-24T13:10:56Z"
+  message: cluster-node-tuning-operator-5b66777f7c-9pqmc_033b2984-90b9-4a1f-888b-bc101f28455c
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T13:10:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-node-tuning-operator
+      operation: Update
+      time: "2024-10-24T13:10:56Z"
+    name: node-tuning-operator-lock.1801659cf6bf823d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "17187"
+    uid: bcb022bb-15dc-4cca-8d7d-6292d839741a
+  reason: LeaderElection
+  reportingComponent: cluster-node-tuning-operator-5b66777f7c-9pqmc_033b2984-90b9-4a1f-888b-bc101f28455c
+  reportingInstance: ""
+  source:
+    component: cluster-node-tuning-operator-5b66777f7c-9pqmc_033b2984-90b9-4a1f-888b-bc101f28455c
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:21:47Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: node-tuning-operator-lock
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "22552"
+    uid: b165b86f-02bd-44b5-aa38-703039d48049
+  kind: Event
+  lastTimestamp: "2024-10-24T13:21:47Z"
+  message: cluster-node-tuning-operator-5b66777f7c-9pqmc_bb2ca6a6-560c-42d9-b8d5-a0e25fbdf939
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T13:21:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-node-tuning-operator
+      operation: Update
+      time: "2024-10-24T13:21:47Z"
+    name: node-tuning-operator-lock.18016634750d3f9d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "22553"
+    uid: 0ef31cde-a0f1-4c9c-ac8a-c67b05da86ff
+  reason: LeaderElection
+  reportingComponent: cluster-node-tuning-operator-5b66777f7c-9pqmc_bb2ca6a6-560c-42d9-b8d5-a0e25fbdf939
+  reportingInstance: ""
+  source:
+    component: cluster-node-tuning-operator-5b66777f7c-9pqmc_bb2ca6a6-560c-42d9-b8d5-a0e25fbdf939
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:07:25.048872Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-8bh59
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13687"
+    uid: d9b4cea7-9a71-427a-b6a5-291426ba7e40
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-node-tuning-operator/tuned-8bh59
+    to ci-op-2fcpj5j6-f6035-2lklf-master-1
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned-8bh59.1801656bae672825
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13694"
+    uid: ea2c52c6-18db-447b-9ce7-75ac23f8ce97
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-8bh59
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13690"
+    uid: d9b4cea7-9a71-427a-b6a5-291426ba7e40
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:27Z"
+  message: Container image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:27Z"
+    name: tuned-8bh59.1801656c2be1707a
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13744"
+    uid: 53d94059-2dc1-4da7-9ee2-623872c88155
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-8bh59
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13690"
+    uid: d9b4cea7-9a71-427a-b6a5-291426ba7e40
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:27Z"
+  message: Created container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:27Z"
+    name: tuned-8bh59.1801656c32792aac
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13750"
+    uid: 9e130ea6-1126-418b-ae7c-2ae275233441
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-8bh59
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13690"
+    uid: d9b4cea7-9a71-427a-b6a5-291426ba7e40
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:27Z"
+  message: Started container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:27Z"
+    name: tuned-8bh59.1801656c33160d9a
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13751"
+    uid: 7c4b7dcd-5f27-482d-9612-e5c9b31eefd1
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:15:28.599749Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20038"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-node-tuning-operator/tuned-9nnhr
+    to ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:28Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:15:28Z"
+    name: tuned-9nnhr.180165dc4447f07b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20125"
+    uid: 65fefda9-0eb2-41c1-a042-92fa702fc90a
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 4
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:16:43Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:29Z"
+  message: 'MountVolume.SetUp failed for volume "kube-api-access-wqrtv" : failed to
+    fetch token: Timeout: request did not complete within requested timeout - context
+    deadline exceeded'
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:00Z"
+    name: tuned-9nnhr.180165edc3768957
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21085"
+    uid: 8958b576-ee21-4c01-abd0-d593c9329c8e
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:59Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:59Z"
+  message: Unable to retrieve some image pull secrets (tuned-dockercfg-lh7k6); attempting
+    to pull the image may not succeed.
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:00Z"
+    name: tuned-9nnhr.1801660d74982b3b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21140"
+    uid: 98aae379-edcb-430b-bbe8-7243ad952b77
+  reason: FailedToRetrieveImagePullSecret
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:37Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:37Z"
+    name: tuned-9nnhr.1801660d7593eb73
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21595"
+    uid: 36ff3baf-96d8-43ce-9baa-8a3054821555
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:22Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260":
+    rpc error: code = Canceled desc = copying system image from manifest list: copying
+    config: context canceled'
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:22Z"
+    name: tuned-9nnhr.180166129c8d1943
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21460"
+    uid: 32b089a9-a367-44a5-9f5f-110cdcc8a0a5
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:22Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:22Z"
+    name: tuned-9nnhr.180166129c8d957c
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21461"
+    uid: ca901902-2417-4272-b7bf-a18a00dd03fa
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:22Z"
+  message: Back-off pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:22Z"
+    name: tuned-9nnhr.18016612b7066b34
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21463"
+    uid: deecf53e-37e2-4b7b-beb1-c512cf0d9b30
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:22Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:22Z"
+    name: tuned-9nnhr.18016612b706acab
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21464"
+    uid: 4c34d275-32c0-4b9a-be25-0dd2847f330f
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:39Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+    in 2.325s (2.325s including waiting). Image size: 680556885 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:39Z"
+    name: tuned-9nnhr.18016616ba730745
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21619"
+    uid: 7dad2cfb-67bc-4988-8f42-182f72a3bb78
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:39Z"
+  message: Created container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:39Z"
+    name: tuned-9nnhr.18016616beac4893
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21621"
+    uid: 162d9c89-20d7-4084-8ab2-4031f902b68d
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:39Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-9nnhr
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20045"
+    uid: e902fdb4-8227-448d-9c1e-afc315e3f4fe
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:39Z"
+  message: Started container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:39Z"
+    name: tuned-9nnhr.18016616bf9e63e0
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "21622"
+    uid: 1897015c-c110-4c8d-adaf-62a0e87e17ca
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:15:23.177833Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19616"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-node-tuning-operator/tuned-kzgnx
+    to ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: tuned-kzgnx.180165db011c24a9
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20108"
+    uid: 50be6e4a-b825-48f8-a734-ccd1b811334b
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:16:00Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: tuned-kzgnx.180165db179b655a
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20608"
+    uid: b3557d7b-f698-4e08-8435-f25355fd2e75
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:47Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:47Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260":
+    rpc error: code = Canceled desc = copying system image from manifest list: copying
+    config: context canceled'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:47Z"
+    name: tuned-kzgnx.180165e09948976b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20401"
+    uid: 853990ae-e3d8-48f8-b4d8-50f31b0ba8bf
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:47Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:47Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:47Z"
+    name: tuned-kzgnx.180165e099491b50
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20402"
+    uid: 79507b64-5063-42f7-9460-f398251391ba
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:48Z"
+  message: Back-off pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:48Z"
+    name: tuned-kzgnx.180165e0d50c930a
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20415"
+    uid: 0d36d110-be20-4174-930d-3a8879350274
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:48Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:48Z"
+    name: tuned-kzgnx.180165e0d50cdf0b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20416"
+    uid: 6806af2b-18ff-42f3-8d66-6d5786e74f03
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:16:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:16:03Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+    in 2.71s (2.71s including waiting). Image size: 680556885 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: tuned-kzgnx.180165e45747cd5f
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20702"
+    uid: bfbe41d4-c15c-477e-8364-06cb2676f73c
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:16:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:16:03Z"
+  message: Created container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: tuned-kzgnx.180165e45b88ebe6
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20707"
+    uid: c0d7e600-0106-4bc6-ab3f-e45e7b628c03
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:16:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-kzgnx
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19623"
+    uid: 32f1ea61-03b9-440c-89f9-39749edd8229
+  kind: Event
+  lastTimestamp: "2024-10-24T13:16:03Z"
+  message: Started container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: tuned-kzgnx.180165e45c2a889d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20715"
+    uid: 121b9c57-009d-4a41-958f-a4a950322f56
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:07:25.063856Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-lc926
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13691"
+    uid: d0541053-ac20-4a54-8b0b-73745459ec76
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-node-tuning-operator/tuned-lc926
+    to ci-op-2fcpj5j6-f6035-2lklf-master-0
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned-lc926.1801656baf4bd1c2
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13700"
+    uid: 5ed3e7b4-bded-4847-acfb-2bda3cfea568
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-lc926
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13696"
+    uid: d0541053-ac20-4a54-8b0b-73745459ec76
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:25Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned-lc926.1801656bc3a9a96e
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13717"
+    uid: b2f05638-ed82-49ca-91d2-d5aa5fd5c512
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-lc926
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13696"
+    uid: d0541053-ac20-4a54-8b0b-73745459ec76
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:30Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+    in 4.842s (4.842s including waiting). Image size: 680556885 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:30Z"
+    name: tuned-lc926.1801656ce44c378b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13809"
+    uid: ac7107a8-314e-41b5-8a3d-928ce38af0f8
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-lc926
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13696"
+    uid: d0541053-ac20-4a54-8b0b-73745459ec76
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:30Z"
+  message: Created container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:30Z"
+    name: tuned-lc926.1801656ce9a1272b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13810"
+    uid: df703f85-bced-48b6-a63e-15b50e8005ea
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-lc926
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13696"
+    uid: d0541053-ac20-4a54-8b0b-73745459ec76
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:30Z"
+  message: Started container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:30Z"
+    name: tuned-lc926.1801656cea4e17de
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13811"
+    uid: 15925479-c033-40e2-a188-cca295853fe0
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:14:05.559992Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19019"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-node-tuning-operator/tuned-nbxw4
+    to ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  metadata:
+    creationTimestamp: "2024-10-24T13:14:05Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:14:05Z"
+    name: tuned-nbxw4.180165c8eeb9cd9d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19030"
+    uid: 7bf4fe07-3c5a-4701-9811-56ce55c50616
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:42Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:14:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: tuned-nbxw4.180165c9117502b4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19711"
+    uid: 8c3f1ae7-6dd4-43e2-bf7d-526036bd67b7
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:29Z"
+  message: 'Failed to pull image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260":
+    rpc error: code = Canceled desc = copying system image from manifest list: copying
+    config: context canceled'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: tuned-nbxw4.180165ce73f373d8
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19552"
+    uid: 80806399-417e-40fb-a157-b7da0310e357
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:29Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: tuned-nbxw4.180165ce73f3f800
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19554"
+    uid: faec160c-72f4-4f10-82ac-3fcc7d3b9837
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:30Z"
+  message: Back-off pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: tuned-nbxw4.180165ceafbc3740
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19568"
+    uid: 1efc15c5-32e1-49f1-bcd8-fb107e0bf95b
+  reason: BackOff
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:30Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:22Z"
+    name: tuned-nbxw4.180165ceafbc87d9
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19570"
+    uid: 6548679f-1c91-44d6-9d2d-61d8c3847944
+  reason: Failed
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:44Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+    in 1.62s (1.62s including waiting). Image size: 680556885 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:24Z"
+    name: tuned-nbxw4.180165d1f545d5b3
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19787"
+    uid: 375b7cf4-8f71-404c-a985-66f2a330fa34
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:44Z"
+  message: Created container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:24Z"
+    name: tuned-nbxw4.180165d1f904f6d3
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19791"
+    uid: 3217fcf3-6f09-453c-8f41-2ab0eb3a45e5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:44Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-nbxw4
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19022"
+    uid: 1f3f4032-d541-4b74-b129-2f8ced1160bf
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:44Z"
+  message: Started container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:15:24Z"
+    name: tuned-nbxw4.180165d1f9abd48b
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19792"
+    uid: 322a1f84-dbc3-4acb-b8fd-54643fbf7c09
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:07:25.066691Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: tuned-p8rhd
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13692"
+    uid: a45aa4a0-f296-4a8e-9459-ea37f11bac16
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-node-tuning-operator/tuned-p8rhd
+    to ci-op-2fcpj5j6-f6035-2lklf-master-2
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned-p8rhd.1801656baf76f7e5
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13703"
+    uid: bd187c97-5adc-4221-8d81-836b5b694b17
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:25Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-p8rhd
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13697"
+    uid: a45aa4a0-f296-4a8e-9459-ea37f11bac16
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:25Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned-p8rhd.1801656bc406e90f
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13718"
+    uid: 84252c4f-0c6b-4768-ad87-448c2bce413d
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-p8rhd
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13697"
+    uid: a45aa4a0-f296-4a8e-9459-ea37f11bac16
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:30Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:0f6079161de18da55f3189bddcfde1a22348b78a579b190465bda31a59e6b260"
+    in 5.093s (5.093s including waiting). Image size: 680556885 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:30Z"
+    name: tuned-p8rhd.1801656cf39cd28e
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13812"
+    uid: da9f913c-4f74-43fb-bb75-2ec80cabc415
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-p8rhd
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13697"
+    uid: a45aa4a0-f296-4a8e-9459-ea37f11bac16
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:30Z"
+  message: Created container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:30Z"
+    name: tuned-p8rhd.1801656cf911c621
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13813"
+    uid: 441e05c1-80f7-41ae-9670-837dcc6ac5fc
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{tuned}
+    kind: Pod
+    name: tuned-p8rhd
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13697"
+    uid: a45aa4a0-f296-4a8e-9459-ea37f11bac16
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:30Z"
+  message: Started container tuned
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:07:30Z"
+    name: tuned-p8rhd.1801656cf9d4a35d
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13814"
+    uid: 01282f48-b43f-4f1e-8b92-fa3534972b96
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:25Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13683"
+    uid: 1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:25Z"
+  message: 'Created pod: tuned-8bh59'
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned.1801656bad962ee1
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13689"
+    uid: 4bb3ba31-6dc6-4f56-a311-75a5c00852cb
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:25Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13683"
+    uid: 1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:25Z"
+  message: 'Created pod: tuned-lc926'
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned.1801656bae9a141f
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13695"
+    uid: 625db57f-4be3-4800-afc1-a197b7b7d0f2
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:25Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13683"
+    uid: 1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:25Z"
+  message: 'Created pod: tuned-p8rhd'
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: tuned.1801656baeaf9259
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13702"
+    uid: 2dc70a64-6fb9-4ee9-9c50-8e02dbecc618
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:14:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "13822"
+    uid: 1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126
+  kind: Event
+  lastTimestamp: "2024-10-24T13:14:05Z"
+  message: 'Created pod: tuned-nbxw4'
+  metadata:
+    creationTimestamp: "2024-10-24T13:14:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:14:05Z"
+    name: tuned.180165c8eded8cad
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19031"
+    uid: bd5fcb04-ef03-4fd6-9a7c-1f79935e2a01
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19024"
+    uid: 1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:23Z"
+  message: 'Created pod: tuned-kzgnx'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:15:23Z"
+    name: tuned.180165daff5b6f1f
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19628"
+    uid: 389242cf-8327-43d2-8af9-52eda1f1024d
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:15:28Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "19624"
+    uid: 1942a3bb-d5f9-46b9-b2a8-3c11c3cdc126
+  kind: Event
+  lastTimestamp: "2024-10-24T13:15:28Z"
+  message: 'Created pod: tuned-9nnhr'
+  metadata:
+    creationTimestamp: "2024-10-24T13:15:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:15:28Z"
+    name: tuned.180165dc41e41e28
+    namespace: openshift-cluster-node-tuning-operator
+    resourceVersion: "20043"
+    uid: aa3acf5e-eaa0-4cdd-807d-968681e18994
+  reason: SuccessfulCreate
+  reportingComponent: daemonset-controller
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "60771"

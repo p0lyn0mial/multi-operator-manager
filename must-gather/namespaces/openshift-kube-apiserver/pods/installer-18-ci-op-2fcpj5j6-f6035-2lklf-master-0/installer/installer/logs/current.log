@@ -1,0 +1,79 @@
+2024-10-24T14:43:54.207230700Z I1024 14:43:54.206939       1 cmd.go:91] &{<nil> true {false} installer true map[cert-configmaps:0xc0006f19a0 cert-dir:0xc0006f1b80 cert-secrets:0xc0006f1900 configmaps:0xc0006f14a0 namespace:0xc0006f12c0 optional-cert-configmaps:0xc0006f1ae0 optional-cert-secrets:0xc0006f1a40 optional-configmaps:0xc0006f15e0 optional-secrets:0xc0006f1540 pod:0xc0006f1360 pod-manifest-dir:0xc0006f1720 resource-dir:0xc0006f1680 revision:0xc0006f1220 secrets:0xc0006f1400 v:0xc000803040] [0xc000803040 0xc0006f1220 0xc0006f12c0 0xc0006f1360 0xc0006f1680 0xc0006f1720 0xc0006f14a0 0xc0006f15e0 0xc0006f1400 0xc0006f1540 0xc0006f1b80 0xc0006f19a0 0xc0006f1ae0 0xc0006f1900 0xc0006f1a40] [] map[cert-configmaps:0xc0006f19a0 cert-dir:0xc0006f1b80 cert-secrets:0xc0006f1900 configmaps:0xc0006f14a0 help:0xc000803400 kubeconfig:0xc0006f1180 log-flush-frequency:0xc000802fa0 namespace:0xc0006f12c0 optional-cert-configmaps:0xc0006f1ae0 optional-cert-secrets:0xc0006f1a40 optional-configmaps:0xc0006f15e0 optional-secrets:0xc0006f1540 pod:0xc0006f1360 pod-manifest-dir:0xc0006f1720 pod-manifests-lock-file:0xc0006f1860 resource-dir:0xc0006f1680 revision:0xc0006f1220 secrets:0xc0006f1400 timeout-duration:0xc0006f17c0 v:0xc000803040 vmodule:0xc0008030e0] [0xc0006f1180 0xc0006f1220 0xc0006f12c0 0xc0006f1360 0xc0006f1400 0xc0006f14a0 0xc0006f1540 0xc0006f15e0 0xc0006f1680 0xc0006f1720 0xc0006f17c0 0xc0006f1860 0xc0006f1900 0xc0006f19a0 0xc0006f1a40 0xc0006f1ae0 0xc0006f1b80 0xc000802fa0 0xc000803040 0xc0008030e0 0xc000803400] [0xc0006f19a0 0xc0006f1b80 0xc0006f1900 0xc0006f14a0 0xc000803400 0xc0006f1180 0xc000802fa0 0xc0006f12c0 0xc0006f1ae0 0xc0006f1a40 0xc0006f15e0 0xc0006f1540 0xc0006f1360 0xc0006f1720 0xc0006f1860 0xc0006f1680 0xc0006f1220 0xc0006f1400 0xc0006f17c0 0xc000803040 0xc0008030e0] map[104:0xc000803400 118:0xc000803040] [] -1 0 0xc0006ec390 true 0xae1ae0 []}
+2024-10-24T14:43:54.207388030Z I1024 14:43:54.207226       1 cmd.go:92] (*installerpod.InstallOptions)(0xc00051a340)({
+2024-10-24T14:43:54.207388030Z  KubeConfig: (string) "",
+2024-10-24T14:43:54.207388030Z  KubeClient: (kubernetes.Interface) <nil>,
+2024-10-24T14:43:54.207388030Z  Revision: (string) (len=2) "18",
+2024-10-24T14:43:54.207388030Z  NodeName: (string) "",
+2024-10-24T14:43:54.207388030Z  Namespace: (string) (len=24) "openshift-kube-apiserver",
+2024-10-24T14:43:54.207388030Z  PodConfigMapNamePrefix: (string) (len=18) "kube-apiserver-pod",
+2024-10-24T14:43:54.207388030Z  SecretNamePrefixes: ([]string) (len=3 cap=4) {
+2024-10-24T14:43:54.207388030Z   (string) (len=11) "etcd-client",
+2024-10-24T14:43:54.207388030Z   (string) (len=34) "localhost-recovery-serving-certkey",
+2024-10-24T14:43:54.207388030Z   (string) (len=31) "localhost-recovery-client-token"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  OptionalSecretNamePrefixes: ([]string) (len=2 cap=2) {
+2024-10-24T14:43:54.207388030Z   (string) (len=17) "encryption-config",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "webhook-authenticator"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  ConfigMapNamePrefixes: ([]string) (len=8 cap=8) {
+2024-10-24T14:43:54.207388030Z   (string) (len=18) "kube-apiserver-pod",
+2024-10-24T14:43:54.207388030Z   (string) (len=6) "config",
+2024-10-24T14:43:54.207388030Z   (string) (len=37) "kube-apiserver-cert-syncer-kubeconfig",
+2024-10-24T14:43:54.207388030Z   (string) (len=28) "bound-sa-token-signing-certs",
+2024-10-24T14:43:54.207388030Z   (string) (len=15) "etcd-serving-ca",
+2024-10-24T14:43:54.207388030Z   (string) (len=18) "kubelet-serving-ca",
+2024-10-24T14:43:54.207388030Z   (string) (len=22) "sa-token-signing-certs",
+2024-10-24T14:43:54.207388030Z   (string) (len=29) "kube-apiserver-audit-policies"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  OptionalConfigMapNamePrefixes: ([]string) (len=3 cap=4) {
+2024-10-24T14:43:54.207388030Z   (string) (len=14) "oauth-metadata",
+2024-10-24T14:43:54.207388030Z   (string) (len=12) "cloud-config",
+2024-10-24T14:43:54.207388030Z   (string) (len=24) "kube-apiserver-server-ca"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  CertSecretNames: ([]string) (len=10 cap=16) {
+2024-10-24T14:43:54.207388030Z   (string) (len=17) "aggregator-client",
+2024-10-24T14:43:54.207388030Z   (string) (len=30) "localhost-serving-cert-certkey",
+2024-10-24T14:43:54.207388030Z   (string) (len=31) "service-network-serving-certkey",
+2024-10-24T14:43:54.207388030Z   (string) (len=37) "external-loadbalancer-serving-certkey",
+2024-10-24T14:43:54.207388030Z   (string) (len=37) "internal-loadbalancer-serving-certkey",
+2024-10-24T14:43:54.207388030Z   (string) (len=33) "bound-service-account-signing-key",
+2024-10-24T14:43:54.207388030Z   (string) (len=40) "control-plane-node-admin-client-cert-key",
+2024-10-24T14:43:54.207388030Z   (string) (len=31) "check-endpoints-client-cert-key",
+2024-10-24T14:43:54.207388030Z   (string) (len=14) "kubelet-client",
+2024-10-24T14:43:54.207388030Z   (string) (len=16) "node-kubeconfigs"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  OptionalCertSecretNamePrefixes: ([]string) (len=11 cap=16) {
+2024-10-24T14:43:54.207388030Z   (string) (len=17) "user-serving-cert",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-000",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-001",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-002",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-003",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-004",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-005",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-006",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-007",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-008",
+2024-10-24T14:43:54.207388030Z   (string) (len=21) "user-serving-cert-009"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  CertConfigMapNamePrefixes: ([]string) (len=4 cap=4) {
+2024-10-24T14:43:54.207388030Z   (string) (len=20) "aggregator-client-ca",
+2024-10-24T14:43:54.207388030Z   (string) (len=9) "client-ca",
+2024-10-24T14:43:54.207388030Z   (string) (len=29) "control-plane-node-kubeconfig",
+2024-10-24T14:43:54.207388030Z   (string) (len=26) "check-endpoints-kubeconfig"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  OptionalCertConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+2024-10-24T14:43:54.207388030Z   (string) (len=17) "trusted-ca-bundle"
+2024-10-24T14:43:54.207388030Z  },
+2024-10-24T14:43:54.207388030Z  CertDir: (string) (len=57) "/etc/kubernetes/static-pod-resources/kube-apiserver-certs",
+2024-10-24T14:43:54.207388030Z  ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+2024-10-24T14:43:54.207388030Z  PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+2024-10-24T14:43:54.207388030Z  Timeout: (time.Duration) 2m0s,
+2024-10-24T14:43:54.207388030Z  StaticPodManifestsLockFile: (string) "",
+2024-10-24T14:43:54.207388030Z  PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+2024-10-24T14:43:54.207388030Z  KubeletVersion: (string) ""
+2024-10-24T14:43:54.207388030Z })
+2024-10-24T14:43:54.208619040Z I1024 14:43:54.208570       1 cmd.go:409] Getting controller reference for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:43:54.228183389Z I1024 14:43:54.228042       1 cmd.go:422] Waiting for installer revisions to settle for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:43:54.228183389Z I1024 14:43:54.228154       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T14:43:54.228183389Z I1024 14:43:54.228173       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T14:43:54.306037414Z I1024 14:43:54.305901       1 cmd.go:514] Waiting additional period after revisions have settled for node ci-op-2fcpj5j6-f6035-2lklf-master-0

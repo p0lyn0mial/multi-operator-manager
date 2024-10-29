@@ -1,0 +1,291 @@
+2024-10-24T13:18:19.394317161Z I1024 13:18:19.393951       1 main.go:82] Go Version: go1.22.7 (Red Hat 1.22.7-1.el9_5) X:strictfipsruntime
+2024-10-24T13:18:19.394317161Z I1024 13:18:19.394205       1 main.go:83] Go OS/Arch: linux/amd64
+2024-10-24T13:18:19.394317161Z I1024 13:18:19.394212       1 main.go:84] node-tuning Version: 6d2e1ede-dirty
+2024-10-24T13:18:19.394517291Z I1024 13:18:19.394481       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2024-10-24T13:18:59.177894690Z I1024 13:18:59.177833       1 simple_featuregate_reader.go:171] Starting feature-gate-detector
+2024-10-24T13:18:59.197385349Z I1024 13:18:59.197278       1 event.go:377] Event(v1.ObjectReference{Kind:"Deployment", Namespace:"openshift-cluster-node-tuning-operator", Name:"cluster-node-tuning-operator", UID:"8fef9e4a-69e8-46ed-a0f1-a0bd7bb9c924", APIVersion:"apps/v1", ResourceVersion:"", FieldPath:""}): type: 'Normal' reason: 'FeatureGatesInitialized' FeatureGates updated to featuregates.Features{Enabled:[]v1.FeatureGateName{"AWSEFSDriverVolumeMetrics", "AdminNetworkPolicy", "AlibabaPlatform", "AzureWorkloadIdentity", "BareMetalLoadBalancer", "BuildCSIVolumes", "ChunkSizeMiB", "CloudDualStackNodeIPs", "DisableKubeletCloudCredentialProviders", "GCPLabelsTags", "HardwareSpeed", "IngressControllerLBSubnetsAWS", "KMSv1", "ManagedBootImages", "MetricsServer", "MultiArchInstallAWS", "MultiArchInstallGCP", "NetworkDiagnosticsConfig", "NetworkLiveMigration", "NodeDisruptionPolicy", "OpenShiftPodSecurityAdmission", "PrivateHostedZoneAWS", "SetEIPForNLBIngressController", "VSphereControlPlaneMachineSet", "VSphereDriverConfiguration", "VSphereStaticIPs", "ValidatingAdmissionPolicy"}, Disabled:[]v1.FeatureGateName{"AWSClusterHostedDNS", "AdditionalRoutingCapabilities", "AutomatedEtcdBackup", "BootcNodeManagement", "CSIDriverSharedResource", "ClusterAPIInstall", "ClusterAPIInstallIBMCloud", "ClusterMonitoringConfig", "DNSNameResolver", "DynamicResourceAllocation", "EtcdBackendQuota", "EventedPLEG", "Example", "ExternalOIDC", "GCPClusterHostedDNS", "GatewayAPI", "ImageStreamImportMode", "IngressControllerDynamicConfigurationManager", "InsightsConfig", "InsightsConfigAPI", "InsightsOnDemandDataGather", "InsightsRuntimeExtractor", "MachineAPIMigration", "MachineAPIOperatorDisableMachineHealthCheckController", "MachineAPIProviderOpenStack", "MachineConfigNodes", "ManagedBootImagesAWS", "MaxUnavailableStatefulSet", "MetricsCollectionProfiles", "MixedCPUsAllocation", "MultiArchInstallAzure", "NetworkSegmentation", "NewOLM", "NodeSwap", "OVNObservability", "OnClusterBuild", "PersistentIPsForVirtualization", "PinnedImages", "PlatformOperators", "ProcMountType", "RouteAdvertisements", "RouteExternalCertificate", "ServiceAccountTokenNodeBinding", "SignatureStores", "SigstoreImageVerification", "TranslateStreamCloseWebsocketRequests", "UpgradeStatus", "UserNamespacesPodSecurityStandards", "UserNamespacesSupport", "VSphereMultiNetworks", "VSphereMultiVCenters", "VolumeGroupSnapshot"}}
+2024-10-24T13:18:59.197456029Z I1024 13:18:59.197373       1 main.go:280] FeatureGates initialized: knownFeatureGates=[AWSClusterHostedDNS AWSEFSDriverVolumeMetrics AdditionalRoutingCapabilities AdminNetworkPolicy AlibabaPlatform AutomatedEtcdBackup AzureWorkloadIdentity BareMetalLoadBalancer BootcNodeManagement BuildCSIVolumes CSIDriverSharedResource ChunkSizeMiB CloudDualStackNodeIPs ClusterAPIInstall ClusterAPIInstallIBMCloud ClusterMonitoringConfig DNSNameResolver DisableKubeletCloudCredentialProviders DynamicResourceAllocation EtcdBackendQuota EventedPLEG Example ExternalOIDC GCPClusterHostedDNS GCPLabelsTags GatewayAPI HardwareSpeed ImageStreamImportMode IngressControllerDynamicConfigurationManager IngressControllerLBSubnetsAWS InsightsConfig InsightsConfigAPI InsightsOnDemandDataGather InsightsRuntimeExtractor KMSv1 MachineAPIMigration MachineAPIOperatorDisableMachineHealthCheckController MachineAPIProviderOpenStack MachineConfigNodes ManagedBootImages ManagedBootImagesAWS MaxUnavailableStatefulSet MetricsCollectionProfiles MetricsServer MixedCPUsAllocation MultiArchInstallAWS MultiArchInstallAzure MultiArchInstallGCP NetworkDiagnosticsConfig NetworkLiveMigration NetworkSegmentation NewOLM NodeDisruptionPolicy NodeSwap OVNObservability OnClusterBuild OpenShiftPodSecurityAdmission PersistentIPsForVirtualization PinnedImages PlatformOperators PrivateHostedZoneAWS ProcMountType RouteAdvertisements RouteExternalCertificate ServiceAccountTokenNodeBinding SetEIPForNLBIngressController SignatureStores SigstoreImageVerification TranslateStreamCloseWebsocketRequests UpgradeStatus UserNamespacesPodSecurityStandards UserNamespacesSupport VSphereControlPlaneMachineSet VSphereDriverConfiguration VSphereMultiNetworks VSphereMultiVCenters VSphereStaticIPs ValidatingAdmissionPolicy VolumeGroupSnapshot]
+2024-10-24T13:18:59.197609209Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.builder","msg":"skip registering a mutating webhook, object does not implement admission.Defaulter or WithDefaulter wasn't called","GVK":"performance.openshift.io/v1, Kind=PerformanceProfile"}
+2024-10-24T13:18:59.197609209Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.builder","msg":"skip registering a validating webhook, object does not implement admission.Validator or WithValidator wasn't called","GVK":"performance.openshift.io/v1, Kind=PerformanceProfile"}
+2024-10-24T13:18:59.197835229Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/convert"}
+2024-10-24T13:18:59.197835229Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.builder","msg":"Conversion webhook enabled","GVK":"performance.openshift.io/v1, Kind=PerformanceProfile"}
+2024-10-24T13:18:59.197866709Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.builder","msg":"skip registering a mutating webhook, object does not implement admission.Defaulter or WithDefaulter wasn't called","GVK":"performance.openshift.io/v2, Kind=PerformanceProfile"}
+2024-10-24T13:18:59.197946239Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.builder","msg":"Registering a validating webhook","GVK":"performance.openshift.io/v2, Kind=PerformanceProfile","path":"/validate-performance-openshift-io-v2-performanceprofile"}
+2024-10-24T13:18:59.198098869Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.webhook","msg":"Registering webhook","path":"/validate-performance-openshift-io-v2-performanceprofile"}
+2024-10-24T13:18:59.198120049Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.builder","msg":"Conversion webhook enabled","GVK":"performance.openshift.io/v2, Kind=PerformanceProfile"}
+2024-10-24T13:18:59.198358139Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.metrics","msg":"Starting metrics server"}
+2024-10-24T13:18:59.198455539Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.webhook","msg":"Starting webhook server"}
+2024-10-24T13:18:59.198628599Z I1024 13:18:59.198609       1 leaderelection.go:254] attempting to acquire leader lease openshift-cluster-node-tuning-operator/node-tuning-operator-lock...
+2024-10-24T13:18:59.198803669Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.metrics","msg":"Serving metrics server","bindAddress":":8080","secure":false}
+2024-10-24T13:18:59.198803669Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.certwatcher","msg":"Updated current TLS certificate"}
+2024-10-24T13:18:59.198897609Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.webhook","msg":"Serving webhook server","host":"","port":4343}
+2024-10-24T13:18:59.199021409Z {"level":"info","ts":"2024-10-24T13:18:59Z","logger":"controller-runtime.certwatcher","msg":"Starting certificate watcher"}
+2024-10-24T13:21:47.375203698Z I1024 13:21:47.375139       1 leaderelection.go:268] successfully acquired lease openshift-cluster-node-tuning-operator/node-tuning-operator-lock
+2024-10-24T13:21:47.375379948Z I1024 13:21:47.375349       1 controller.go:1322] starting Tuned controller
+2024-10-24T13:21:47.375541669Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v2.PerformanceProfile"}
+2024-10-24T13:21:47.375541669Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v1.MachineConfig"}
+2024-10-24T13:21:47.375541669Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v1.KubeletConfig"}
+2024-10-24T13:21:47.375541669Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v1.Tuned"}
+2024-10-24T13:21:47.375563609Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v1.RuntimeClass"}
+2024-10-24T13:21:47.375563609Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v1.MachineConfigPool"}
+2024-10-24T13:21:47.375563609Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v1.Profile"}
+2024-10-24T13:21:47.375575589Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting EventSource","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","source":"kind source: *v1.ContainerRuntimeConfig"}
+2024-10-24T13:21:47.375575589Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting Controller","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile"}
+2024-10-24T13:21:47.476765532Z I1024 13:21:47.476667       1 controller.go:1443] started events processor/controller
+2024-10-24T13:21:47.480849893Z I1024 13:21:47.480794       1 server.go:104] starting metrics server
+2024-10-24T13:21:47.482173492Z I1024 13:21:47.482115       1 status.go:306] 1/4 Profiles failed to be applied
+2024-10-24T13:21:47.501564843Z I1024 13:21:47.501515       1 status.go:306] 1/4 Profiles failed to be applied
+2024-10-24T13:21:47.510355324Z I1024 13:21:47.510297       1 status.go:306] 1/4 Profiles failed to be applied
+2024-10-24T13:21:47.512650454Z I1024 13:21:47.512607       1 status.go:306] 1/4 Profiles failed to be applied
+2024-10-24T13:21:47.514762024Z I1024 13:21:47.514709       1 status.go:306] 1/4 Profiles failed to be applied
+2024-10-24T13:21:47.516791534Z I1024 13:21:47.516709       1 status.go:306] 1/4 Profiles failed to be applied
+2024-10-24T13:21:47.531507955Z I1024 13:21:47.531440       1 controller.go:731] updated profile ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x [openshift-node] (deferred=never)
+2024-10-24T13:21:47.562514446Z I1024 13:21:47.562471       1 controller.go:653] created profile ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 [openshift-node]
+2024-10-24T13:21:47.575628826Z I1024 13:21:47.575549       1 controller.go:653] created profile ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz [openshift-node]
+2024-10-24T13:21:47.576901436Z I1024 13:21:47.576871       1 status.go:306] 1/6 Profiles failed to be applied
+2024-10-24T13:21:47.596945877Z I1024 13:21:47.596897       1 status.go:306] 1/6 Profiles failed to be applied
+2024-10-24T13:21:47.597220477Z {"level":"info","ts":"2024-10-24T13:21:47Z","msg":"Starting workers","controller":"performanceprofile","controllerGroup":"performance.openshift.io","controllerKind":"PerformanceProfile","worker count":1}
+2024-10-24T13:21:47.611947738Z I1024 13:21:47.611887       1 controller.go:731] updated profile ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 [openshift-node] (deferred=never)
+2024-10-24T13:21:47.612938988Z I1024 13:21:47.612903       1 status.go:306] 1/6 Profiles failed to be applied
+2024-10-24T13:21:47.625578518Z I1024 13:21:47.625518       1 controller.go:731] updated profile ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz [openshift-node] (deferred=never)
+2024-10-24T13:21:47.627320218Z I1024 13:21:47.627259       1 status.go:306] 1/6 Profiles failed to be applied
+2024-10-24T13:21:47.629305378Z I1024 13:21:47.629267       1 status.go:306] 1/6 Profiles failed to be applied
+2024-10-24T13:21:47.631832728Z I1024 13:21:47.631722       1 status.go:306] 1/6 Profiles failed to be applied
+2024-10-24T13:21:48.432821419Z I1024 13:21:48.432744       1 status.go:306] 2/6 Profiles failed to be applied
+2024-10-24T13:21:48.450189410Z I1024 13:21:48.450117       1 status.go:306] 2/6 Profiles failed to be applied
+2024-10-24T13:21:48.506713442Z I1024 13:21:48.506671       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:21:48.524136653Z I1024 13:21:48.524107       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:23:57.449903311Z E1024 13:23:57.449811       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:23:57.450699271Z E1024 13:23:57.450663       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-node-tuning-operator/node-tuning-operator-lock: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:24:23.451960452Z E1024 13:24:23.451876       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:24:23.452564452Z E1024 13:24:23.452522       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-node-tuning-operator/node-tuning-operator-lock: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:25:38.645772158Z I1024 13:25:38.645683       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:39.853559233Z I1024 13:25:39.853483       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:39.855615453Z I1024 13:25:39.855558       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:39.856976503Z I1024 13:25:39.856920       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:39.858428163Z I1024 13:25:39.858382       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:39.859767823Z I1024 13:25:39.859726       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:39.861476013Z I1024 13:25:39.861431       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:43.054795712Z I1024 13:25:43.054714       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:43.056078412Z I1024 13:25:43.056059       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:43.057970252Z I1024 13:25:43.057940       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:43.059789682Z I1024 13:25:43.059724       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:43.061455212Z I1024 13:25:43.061425       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:43.064209912Z I1024 13:25:43.064170       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:53.858531785Z I1024 13:25:53.858466       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:53.860568774Z I1024 13:25:53.860537       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:53.862198565Z I1024 13:25:53.862153       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:53.863662124Z I1024 13:25:53.863624       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:53.865123895Z I1024 13:25:53.865084       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:53.867640774Z I1024 13:25:53.867600       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:25:54.339521833Z I1024 13:25:54.339459       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:27:51.527160126Z E1024 13:27:51.527079       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:27:51.527856586Z E1024 13:27:51.527789       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-node-tuning-operator/node-tuning-operator-lock: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:28:17.529662456Z E1024 13:28:17.529597       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:17.530608146Z E1024 13:28:17.530534       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-node-tuning-operator/node-tuning-operator-lock: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:28:43.529779175Z E1024 13:28:43.529688       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:43.530456065Z E1024 13:28:43.530396       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-node-tuning-operator/node-tuning-operator-lock: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:29:48.825691996Z I1024 13:29:48.825631       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:29:52.857870900Z I1024 13:29:52.857808       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:29:52.860215280Z I1024 13:29:52.860167       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:29:52.862372940Z I1024 13:29:52.862343       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:29:52.864496440Z I1024 13:29:52.864459       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:29:52.866638240Z I1024 13:29:52.866608       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:29:52.868859980Z I1024 13:29:52.868803       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:11.182509923Z I1024 13:30:11.182391       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:11.184417323Z I1024 13:30:11.184392       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:11.186329473Z I1024 13:30:11.186271       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:11.190063843Z I1024 13:30:11.190029       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:11.191581493Z I1024 13:30:11.191547       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:11.193272743Z I1024 13:30:11.193239       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:15.748551464Z I1024 13:30:15.747622       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:27.485872450Z I1024 13:30:27.485824       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:27.487660289Z I1024 13:30:27.487626       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:27.488909660Z I1024 13:30:27.488879       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:27.492489450Z I1024 13:30:27.492431       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:27.494444039Z I1024 13:30:27.494408       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:30:27.495943360Z I1024 13:30:27.495913       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:32:37.612405654Z E1024 13:32:37.612340       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:32:37.612915224Z E1024 13:32:37.612867       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-node-tuning-operator/node-tuning-operator-lock: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-node-tuning-operator/leases/node-tuning-operator-lock": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:33:03.751719902Z I1024 13:33:03.751641       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:03.753350242Z I1024 13:33:03.753300       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:03.757287592Z I1024 13:33:03.757244       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:03.758833563Z I1024 13:33:03.758798       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:03.760335942Z I1024 13:33:03.760299       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:03.762135092Z I1024 13:33:03.762096       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:04.052423119Z I1024 13:33:04.052360       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:39.363240517Z I1024 13:33:39.363191       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:39.365903257Z I1024 13:33:39.365864       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:39.368424917Z I1024 13:33:39.368360       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:39.370690357Z I1024 13:33:39.370627       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:39.372689467Z I1024 13:33:39.372627       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:39.375591526Z I1024 13:33:39.375553       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:44.899005078Z I1024 13:33:44.898957       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:44.901261888Z I1024 13:33:44.901236       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:44.904255908Z I1024 13:33:44.904212       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:44.912826268Z I1024 13:33:44.912745       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:44.914462668Z I1024 13:33:44.914425       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:44.915864678Z I1024 13:33:44.915831       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:33:52.717557987Z I1024 13:33:52.717484       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:03.753040605Z I1024 13:43:03.752975       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:03.754805005Z I1024 13:43:03.754771       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:03.756304345Z I1024 13:43:03.756265       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:03.757687805Z I1024 13:43:03.757654       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:03.759328165Z I1024 13:43:03.759296       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:03.761657694Z I1024 13:43:03.761611       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:04.053071521Z I1024 13:43:04.053006       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:39.363569909Z I1024 13:43:39.363504       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:39.367250510Z I1024 13:43:39.367214       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:39.368768030Z I1024 13:43:39.368726       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:39.370109539Z I1024 13:43:39.370077       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:39.371459649Z I1024 13:43:39.371431       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:39.372976940Z I1024 13:43:39.372945       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:44.899156335Z I1024 13:43:44.899087       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:44.900735765Z I1024 13:43:44.900697       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:44.902105465Z I1024 13:43:44.902057       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:44.903606035Z I1024 13:43:44.903565       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:44.904976135Z I1024 13:43:44.904928       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:44.906369095Z I1024 13:43:44.906330       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:43:52.718357504Z I1024 13:43:52.718295       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.668336312Z I1024 13:50:51.668256       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.670479982Z I1024 13:50:51.670451       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.675094932Z I1024 13:50:51.675035       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.679623282Z I1024 13:50:51.679584       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.682671822Z I1024 13:50:51.682628       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.687062242Z I1024 13:50:51.686983       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.897171290Z I1024 13:50:51.897112       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.900821640Z I1024 13:50:51.900781       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.904463740Z I1024 13:50:51.902960       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.906459320Z I1024 13:50:51.906410       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.908632280Z I1024 13:50:51.908590       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.910938920Z I1024 13:50:51.910886       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.929287880Z I1024 13:50:51.929207       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.932033429Z I1024 13:50:51.931870       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.934484030Z I1024 13:50:51.934368       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.938549669Z I1024 13:50:51.937036       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.941543659Z I1024 13:50:51.941479       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:50:51.946036519Z I1024 13:50:51.945950       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:53:04.054426363Z I1024 13:53:04.054341       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:53:52.719017540Z I1024 13:53:52.718955       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:22.974159747Z I1024 13:57:22.974116       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:22.975959407Z I1024 13:57:22.975933       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:22.977888177Z I1024 13:57:22.977862       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:22.983151367Z I1024 13:57:22.983101       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:22.985556548Z I1024 13:57:22.985518       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:22.987958968Z I1024 13:57:22.987697       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.244873235Z I1024 13:57:23.244714       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.247086344Z I1024 13:57:23.247027       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.250276204Z I1024 13:57:23.249644       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.252579724Z I1024 13:57:23.252547       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.255537765Z I1024 13:57:23.255492       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.258520255Z I1024 13:57:23.258489       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.326799547Z I1024 13:57:23.318586       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.456326960Z I1024 13:57:23.454705       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.471161460Z I1024 13:57:23.471086       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.479306880Z I1024 13:57:23.479258       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.492008651Z I1024 13:57:23.491957       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.496353301Z I1024 13:57:23.496299       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T13:57:23.500199521Z I1024 13:57:23.499793       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:03:04.053771168Z I1024 14:03:04.053649       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:22.974408686Z I1024 14:07:22.974337       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:22.976131536Z I1024 14:07:22.976090       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:22.978000807Z I1024 14:07:22.977946       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:22.979558556Z I1024 14:07:22.979506       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:22.981466637Z I1024 14:07:22.981423       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:22.983576526Z I1024 14:07:22.983528       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.241165316Z I1024 14:07:23.241101       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.244215555Z I1024 14:07:23.244153       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.248101976Z I1024 14:07:23.248055       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.250464796Z I1024 14:07:23.250422       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.252105736Z I1024 14:07:23.252061       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.253558166Z I1024 14:07:23.253522       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.314668965Z I1024 14:07:23.314608       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.455023225Z I1024 14:07:23.454951       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.456684435Z I1024 14:07:23.456635       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.458237015Z I1024 14:07:23.458190       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.459728855Z I1024 14:07:23.459655       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.461403085Z I1024 14:07:23.461341       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:07:23.462837605Z I1024 14:07:23.462803       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:13:04.054817228Z I1024 14:13:04.054739       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:26.214664101Z I1024 14:16:26.214597       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:26.217225451Z I1024 14:16:26.217158       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:26.219592141Z I1024 14:16:26.219529       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:26.221574071Z I1024 14:16:26.221521       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:26.223828011Z I1024 14:16:26.223781       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:26.226144731Z I1024 14:16:26.226090       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:26.594684079Z I1024 14:16:26.594625       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.640155505Z I1024 14:16:27.640067       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.642187325Z I1024 14:16:27.642099       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.644075995Z I1024 14:16:27.644015       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.649328705Z I1024 14:16:27.649238       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.651600205Z I1024 14:16:27.651514       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.653430995Z I1024 14:16:27.653364       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.900031944Z I1024 14:16:27.899962       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.901515384Z I1024 14:16:27.901471       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.902983194Z I1024 14:16:27.902947       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.905128794Z I1024 14:16:27.905060       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.906577864Z I1024 14:16:27.906544       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:16:27.908005494Z I1024 14:16:27.907945       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:23:04.056499610Z I1024 14:23:04.056416       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:26.215710698Z I1024 14:26:26.215517       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:26.217430427Z I1024 14:26:26.217346       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:26.218911328Z I1024 14:26:26.218857       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:26.220686378Z I1024 14:26:26.220611       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:26.222319098Z I1024 14:26:26.222266       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:26.223921918Z I1024 14:26:26.223878       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:26.594886966Z I1024 14:26:26.594647       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.640821853Z I1024 14:26:27.640733       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.645934452Z I1024 14:26:27.645872       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.647573162Z I1024 14:26:27.647524       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.649431722Z I1024 14:26:27.649371       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.651504802Z I1024 14:26:27.651449       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.653182672Z I1024 14:26:27.653142       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.900607461Z I1024 14:26:27.900519       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.902278161Z I1024 14:26:27.902220       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.904562071Z I1024 14:26:27.904507       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.906644481Z I1024 14:26:27.906591       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.911156871Z I1024 14:26:27.911084       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:26:27.912964711Z I1024 14:26:27.912925       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.528633395Z I1024 14:29:28.528524       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.752776463Z I1024 14:29:28.748417       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.752776463Z I1024 14:29:28.750790       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.755990283Z I1024 14:29:28.755819       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.762234943Z I1024 14:29:28.759102       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.763627573Z I1024 14:29:28.762616       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.771928463Z I1024 14:29:28.769253       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.849801303Z I1024 14:29:28.848579       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.855971932Z I1024 14:29:28.853353       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.857964633Z I1024 14:29:28.857176       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.860880682Z I1024 14:29:28.860815       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.864205862Z I1024 14:29:28.864148       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:28.867878972Z I1024 14:29:28.867834       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:29.242689260Z I1024 14:29:29.242568       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:29.255072810Z I1024 14:29:29.255020       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:29.257984310Z I1024 14:29:29.257832       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:29.263187190Z I1024 14:29:29.261357       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:29.269017090Z I1024 14:29:29.268353       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:29:29.273244680Z I1024 14:29:29.273078       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:33:04.055905677Z I1024 14:33:04.055722       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.529433748Z I1024 14:39:28.529306       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.748873807Z I1024 14:39:28.748809       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.750964507Z I1024 14:39:28.750900       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.752602547Z I1024 14:39:28.752555       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.754360426Z I1024 14:39:28.754306       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.755929697Z I1024 14:39:28.755838       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.757462057Z I1024 14:39:28.757409       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.851721276Z I1024 14:39:28.851639       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.853704916Z I1024 14:39:28.853679       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.855255596Z I1024 14:39:28.855210       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.856613756Z I1024 14:39:28.856573       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.858126566Z I1024 14:39:28.858089       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:28.859805276Z I1024 14:39:28.859781       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:29.242240674Z I1024 14:39:29.242139       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:29.243889054Z I1024 14:39:29.243811       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:29.245454894Z I1024 14:39:29.245399       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:29.246846384Z I1024 14:39:29.246806       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:29.248222664Z I1024 14:39:29.248189       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:39:29.249990034Z I1024 14:39:29.249950       1 status.go:306] 3/6 Profiles failed to be applied
+2024-10-24T14:42:19.789093054Z I1024 14:42:19.788606       1 server.go:181] restarting metrics server to rotate certificates
+2024-10-24T14:42:19.954761773Z I1024 14:42:19.788809       1 server.go:113] stopping metrics server
+2024-10-24T14:42:20.219811032Z I1024 14:42:20.219710       1 server.go:104] starting metrics server
+2024-10-24T14:43:04.055918701Z I1024 14:43:04.055835       1 status.go:306] 3/6 Profiles failed to be applied

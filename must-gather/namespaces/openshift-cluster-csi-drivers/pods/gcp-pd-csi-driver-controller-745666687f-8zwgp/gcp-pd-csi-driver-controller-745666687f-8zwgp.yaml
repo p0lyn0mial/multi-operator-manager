@@ -1,0 +1,1098 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    openshift.io/scc: privileged
+    operator.openshift.io/dep-9b2ad69e0e161cab32acb7d6e6b381665a89a: ElMHxA==
+    operator.openshift.io/dep-3003c66d1e7cfab0b092cf87127145aa0f888: pjdzzA==
+    operator.openshift.io/dep-d227b2c1222d04406f604fc9bce845050ae07: PhW9Kw==
+  creationTimestamp: "2024-10-24T13:03:55Z"
+  generateName: gcp-pd-csi-driver-controller-745666687f-
+  labels:
+    app: gcp-pd-csi-driver-controller
+    pod-template-hash: 745666687f
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/dep-9b2ad69e0e161cab32acb7d6e6b381665a89a: {}
+          f:operator.openshift.io/dep-3003c66d1e7cfab0b092cf87127145aa0f888: {}
+          f:operator.openshift.io/dep-d227b2c1222d04406f604fc9bce845050ae07: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"a1d52e4e-0d82-427b-a269-b16696c02f21"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:podAntiAffinity:
+            .: {}
+            f:preferredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"attacher-kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9203,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-attacher"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-driver"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"CSI_ENDPOINT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"GOOGLE_APPLICATION_CREDENTIALS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":10301,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/cloud-sa"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/run/secrets/openshift/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"csi-liveness-probe"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/csi"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-provisioner"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-resizer"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-snapshotter"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"ADDRESS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/lib/csi/sockets/pluginproxy/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"provisioner-kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9202,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"resizer-kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9204,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"snapshotter-kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9205,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:hostPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostNetwork: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"bound-sa-token"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"cloud-sa-volume"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"metrics-serving-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"non-standard-root-system-trust-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"socket-dir"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T13:03:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.0.0.4"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:18:59Z"
+  name: gcp-pd-csi-driver-controller-745666687f-8zwgp
+  namespace: openshift-cluster-csi-drivers
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: gcp-pd-csi-driver-controller-745666687f
+    uid: a1d52e4e-0d82-427b-a269-b16696c02f21
+  resourceVersion: "20993"
+  uid: 269a35fb-6456-4ad7-99d4-2045a7f2c37c
+spec:
+  affinity:
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app: gcp-pd-csi-driver-controller
+          topologyKey: kubernetes.io/hostname
+        weight: 100
+  containers:
+  - args:
+    - --endpoint=$(CSI_ENDPOINT)
+    - --logtostderr
+    - --v=2
+    - --enable-storage-pools=true
+    - --extra-labels=kubernetes-io-cluster-ci-op-2fcpj5j6-f6035-2lklf=owned
+    env:
+    - name: GOOGLE_APPLICATION_CREDENTIALS
+      value: /etc/cloud-sa/service_account.json
+    - name: CSI_ENDPOINT
+      value: unix:///var/lib/csi/sockets/pluginproxy/csi.sock
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:468a46c732664716f4b81ce3a23401278190f1edd19c90daa3ab5dba7fbdb7e2
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 5
+      httpGet:
+        path: /healthz
+        port: healthz
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 3
+    name: csi-driver
+    ports:
+    - containerPort: 10301
+      hostPort: 10301
+      name: healthz
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /etc/cloud-sa
+      name: cloud-sa-volume
+      readOnly: true
+    - mountPath: /var/run/secrets/openshift/serviceaccount
+      name: bound-sa-token
+      readOnly: true
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: non-standard-root-system-trust-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --csi-address=$(ADDRESS)
+    - --default-fstype=ext4
+    - --feature-gates=Topology=true
+    - --extra-create-metadata=true
+    - --http-endpoint=localhost:8202
+    - --timeout=250s
+    - --leader-election
+    - --leader-election-lease-duration=137s
+    - --leader-election-renew-deadline=107s
+    - --leader-election-retry-period=26s
+    - --controller-publish-readonly
+    - --v=2
+    env:
+    - name: ADDRESS
+      value: /var/lib/csi/sockets/pluginproxy/csi.sock
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:96b42bbafd9e46a37021c4ed3a565dce80f369546a57a6573bcf89a827d0366f
+    imagePullPolicy: IfNotPresent
+    name: csi-provisioner
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9202
+    - --upstream=http://127.0.0.1:8202/
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --tls-min-version=VersionTLS12
+    - --logtostderr=true
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: provisioner-kube-rbac-proxy
+    ports:
+    - containerPort: 9202
+      hostPort: 9202
+      name: provisioner-m
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --csi-address=$(ADDRESS)
+    - --http-endpoint=localhost:8203
+    - --leader-election
+    - --timeout=250s
+    - --leader-election-lease-duration=137s
+    - --leader-election-renew-deadline=107s
+    - --leader-election-retry-period=26s
+    - --v=2
+    env:
+    - name: ADDRESS
+      value: /var/lib/csi/sockets/pluginproxy/csi.sock
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16da45916745bbc9992c5dd8987d939db995f1f48b4f320911ccff9e3639d194
+    imagePullPolicy: IfNotPresent
+    name: csi-attacher
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9203
+    - --upstream=http://127.0.0.1:8203/
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --tls-min-version=VersionTLS12
+    - --logtostderr=true
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: attacher-kube-rbac-proxy
+    ports:
+    - containerPort: 9203
+      hostPort: 9203
+      name: attacher-m
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --csi-address=$(ADDRESS)
+    - --http-endpoint=localhost:8204
+    - --leader-election
+    - --leader-election-lease-duration=137s
+    - --leader-election-renew-deadline=107s
+    - --leader-election-retry-period=26s
+    - --v=2
+    env:
+    - name: ADDRESS
+      value: /var/lib/csi/sockets/pluginproxy/csi.sock
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:51d084be99ab25e6f1ce93612798a543842d3ac1c0644abd8a69e495e91be5fa
+    imagePullPolicy: IfNotPresent
+    name: csi-resizer
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9204
+    - --upstream=http://127.0.0.1:8204/
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --tls-min-version=VersionTLS12
+    - --logtostderr=true
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: resizer-kube-rbac-proxy
+    ports:
+    - containerPort: 9204
+      hostPort: 9204
+      name: resizer-m
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --csi-address=$(ADDRESS)
+    - --metrics-address=localhost:8205
+    - --leader-election
+    - --timeout=300s
+    - --leader-election-lease-duration=137s
+    - --leader-election-renew-deadline=107s
+    - --leader-election-retry-period=26s
+    - --v=2
+    env:
+    - name: ADDRESS
+      value: /var/lib/csi/sockets/pluginproxy/csi.sock
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16066fbd55fd9fb04fb075ce1829ef5787d8155fdbe86e51f9e5cefdb0d8aafd
+    imagePullPolicy: IfNotPresent
+    name: csi-snapshotter
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9205
+    - --upstream=http://127.0.0.1:8205/
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --tls-min-version=VersionTLS12
+    - --logtostderr=true
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: snapshotter-kube-rbac-proxy
+    ports:
+    - containerPort: 9205
+      hostPort: 9205
+      name: snapshotter-m
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  - args:
+    - --csi-address=/csi/csi.sock
+    - --probe-timeout=3s
+    - --health-port=10301
+    - --v=2
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:9caefe481d8fe0d508a97fa090ea0c3d94fc39381e3c41f6a42bc8c174ff03db
+    imagePullPolicy: IfNotPresent
+    name: csi-liveness-probe
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: gcp-pd-csi-driver-controller-sa
+  serviceAccountName: gcp-pd-csi-driver-controller-sa
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: socket-dir
+  - name: cloud-sa-volume
+    secret:
+      defaultMode: 420
+      secretName: gcp-pd-cloud-credentials
+  - name: metrics-serving-cert
+    secret:
+      defaultMode: 420
+      secretName: gcp-pd-csi-driver-controller-metrics-serving-cert
+  - name: bound-sa-token
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          audience: openshift
+          expirationSeconds: 3600
+          path: token
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: gcp-pd-csi-driver-trusted-ca-bundle
+    name: non-standard-root-system-trust-ca-bundle
+  - name: kube-api-access-8jfwr
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:05:43Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:03:55Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:18:01Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:18:01Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:03:55Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://0779a1b1e7a46a458a60652fe3ab481e97f7435a94c89c0f70afd669d0c9ffb8
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: attacher-kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:04:52Z"
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://19aa98a48196a20f0a95d4ebe3abc8978c1769b899d571c45bc5c2b64432a548
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16da45916745bbc9992c5dd8987d939db995f1f48b4f320911ccff9e3639d194
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16da45916745bbc9992c5dd8987d939db995f1f48b4f320911ccff9e3639d194
+    lastState:
+      terminated:
+        containerID: cri-o://61b03c41c99da19f46273bbea56d7cf0445aee9b88a5d0e9aa47bff9e9111545
+        exitCode: 1
+        finishedAt: "2024-10-24T13:18:00Z"
+        message: |-
+          actory.go:160
+          I1024 13:13:30.703243       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+          I1024 13:13:30.713312       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+          E1024 13:14:28.771979       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          I1024 13:15:20.908312       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+          I1024 13:15:21.151042       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+          E1024 13:16:20.484037       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:20.497043       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-attacher-leader-pd-csi-storage-gke-io: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io external-attach
+        reason: Error
+        startedAt: "2024-10-24T13:05:44Z"
+    name: csi-attacher
+    ready: true
+    restartCount: 2
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:18:00Z"
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://6817ee920810d383e8033dc0643bec433d8a5a198cf43268d0edd42b8f7c99a1
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:468a46c732664716f4b81ce3a23401278190f1edd19c90daa3ab5dba7fbdb7e2
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:468a46c732664716f4b81ce3a23401278190f1edd19c90daa3ab5dba7fbdb7e2
+    lastState: {}
+    name: csi-driver
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:05:44Z"
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /etc/cloud-sa
+      name: cloud-sa-volume
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/openshift/serviceaccount
+      name: bound-sa-token
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: non-standard-root-system-trust-ca-bundle
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://5849a32f27f7c91c2517dd75f9fdd502278ce6cc790fae8b2adaa7dfad01b73d
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:9caefe481d8fe0d508a97fa090ea0c3d94fc39381e3c41f6a42bc8c174ff03db
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:9caefe481d8fe0d508a97fa090ea0c3d94fc39381e3c41f6a42bc8c174ff03db
+    lastState: {}
+    name: csi-liveness-probe
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:05:43Z"
+    volumeMounts:
+    - mountPath: /csi
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://7cc3067defb7e8b404556e6fc2f3459cd8abdd7c660abaa3df347c6db55ba38c
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:96b42bbafd9e46a37021c4ed3a565dce80f369546a57a6573bcf89a827d0366f
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:96b42bbafd9e46a37021c4ed3a565dce80f369546a57a6573bcf89a827d0366f
+    lastState:
+      terminated:
+        containerID: cri-o://e08f6fd52e2297c8242b9ace81380a6f6d444e1193779ab59a273ea9d9c115ca
+        exitCode: 1
+        finishedAt: "2024-10-24T13:17:57Z"
+        message: |2-
+              1 reflector.go:368] Caches populated for *v1.PersistentVolume from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:858
+          I1024 13:15:20.270504       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+          I1024 13:15:20.548107       1 reflector.go:368] Caches populated for *v1.PersistentVolumeClaim from k8s.io/client-go/informers/factory.go:160
+          I1024 13:15:20.698815       1 reflector.go:368] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+          I1024 13:15:21.434607       1 reflector.go:368] Caches populated for *v1.StorageClass from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:861
+          I1024 13:15:21.435339       1 reflector.go:368] Caches populated for *v1.StorageClass from k8s.io/client-go/informers/factory.go:160
+          E1024 13:16:17.578007       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:17.584181       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/pd-csi-storage-gke-io: the server was unable to return a response in the ti
+        reason: Error
+        startedAt: "2024-10-24T13:05:44Z"
+    name: csi-provisioner
+    ready: true
+    restartCount: 2
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:17:57Z"
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://f42e36c907b152adbbb02d7a23c4a99f04fc36f779370e65c2c07881d0171d67
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:51d084be99ab25e6f1ce93612798a543842d3ac1c0644abd8a69e495e91be5fa
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:51d084be99ab25e6f1ce93612798a543842d3ac1c0644abd8a69e495e91be5fa
+    lastState: {}
+    name: csi-resizer
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:06:48Z"
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://b7606ed8c4c52fa97e9373f54a36a0c207a134cc05baff4228e3082f8152895c
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16066fbd55fd9fb04fb075ce1829ef5787d8155fdbe86e51f9e5cefdb0d8aafd
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:16066fbd55fd9fb04fb075ce1829ef5787d8155fdbe86e51f9e5cefdb0d8aafd
+    lastState:
+      terminated:
+        containerID: cri-o://b849a33f9cd4d68ffece89897abfffa9b1c346018e936bc7daba52d99fecf500
+        exitCode: 1
+        finishedAt: "2024-10-24T13:17:59Z"
+        message: |2-
+           for *v1.VolumeSnapshotClass from github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142
+          E1024 13:14:24.630056       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          I1024 13:15:20.108407       1 reflector.go:368] Caches populated for *v1.VolumeSnapshotContent from github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142
+          I1024 13:15:21.009025       1 reflector.go:368] Caches populated for *v1.VolumeSnapshotClass from github.com/kubernetes-csi/external-snapshotter/client/v8/informers/externalversions/factory.go:142
+          E1024 13:16:19.747636       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:19.766342       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-snapshotter-leader-pd-csi-storage-gke-io: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io external-snapshotter-leader
+        reason: Error
+        startedAt: "2024-10-24T13:05:39Z"
+    name: csi-snapshotter
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:17:59Z"
+    volumeMounts:
+    - mountPath: /var/lib/csi/sockets/pluginproxy/
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://d8a57cd2dcdef79cdf12a9d12653139cb4763a1778be358a965ead2badc4a0cd
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: provisioner-kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:04:48Z"
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://5a87e746bce7fd87445b81467d1b709e250b53790b1e425c82b938bd7f29f93b
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: resizer-kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:05:29Z"
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://23b6c0286b0bc0ce33f72390c6d4b3f38eb8bf955a4458edce6d9d96a0d6d082
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: snapshotter-kube-rbac-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:05:40Z"
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: metrics-serving-cert
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8jfwr
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.0.4
+  hostIPs:
+  - ip: 10.0.0.4
+  phase: Running
+  podIP: 10.0.0.4
+  podIPs:
+  - ip: 10.0.0.4
+  qosClass: Burstable
+  startTime: "2024-10-24T13:03:55Z"

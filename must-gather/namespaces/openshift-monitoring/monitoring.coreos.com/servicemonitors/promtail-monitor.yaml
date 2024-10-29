@@ -1,0 +1,43 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2024-10-24T12:59:04Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:namespaceSelector:
+          .: {}
+          f:matchNames: {}
+        f:selector: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2024-10-24T12:59:04Z"
+  name: promtail-monitor
+  namespace: openshift-monitoring
+  resourceVersion: "1866"
+  uid: a07a69fb-534d-428f-8a09-5a2ca5036cec
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    bearerTokenSecret:
+      key: ""
+      name: ""
+    interval: 30s
+    port: metrics
+    scheme: https
+    targetPort: 9001
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      serverName: promtail.openshift-e2e-loki.svc
+  namespaceSelector:
+    matchNames:
+    - openshift-e2e-loki
+  selector: {}

@@ -1,0 +1,67 @@
+---
+apiVersion: v1
+data:
+  nginx.conf: |
+    error_log /dev/stdout info;
+    events {}
+    http {
+      include            /etc/nginx/mime.types;
+      default_type       application/octet-stream;
+      keepalive_timeout  65;
+      server {
+        listen              9443 ssl;
+        ssl_certificate     /var/cert/tls.crt;
+        ssl_certificate_key /var/cert/tls.key;
+        root                /opt/app-root/src;
+
+        # Prevent caching for plugin-manifest.json
+        location = /plugin-manifest.json {
+          add_header Cache-Control 'no-cache, no-store, must-revalidate, proxy-revalidate, max-age=0';
+          add_header Pragma 'no-cache';
+          add_header Expires '0';
+        }
+
+        # Prevent caching for plugin-entry.js
+        location = /plugin-entry.js {
+          add_header Cache-Control 'no-cache, no-store, must-revalidate, proxy-revalidate, max-age=0';
+          add_header Pragma 'no-cache';
+          add_header Expires '0';
+        }
+      }
+    }
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-10-24T13:25:51Z"
+  labels:
+    app.kubernetes.io/component: networking-console-plugin
+    app.kubernetes.io/managed-by: cluster-network-operator
+    app.kubernetes.io/name: networking-console-plugin
+    app.kubernetes.io/part-of: cluster-network-operator
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:nginx.conf: {}
+      f:metadata:
+        f:labels:
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:25:51Z"
+  name: networking-console-plugin
+  namespace: openshift-network-console
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "46368"
+  uid: 938b91b7-0184-40e2-84db-8fc683560e17

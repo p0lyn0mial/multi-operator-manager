@@ -1,0 +1,112 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: MachineAPI
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2024-10-24T12:58:39Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: machine-api-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:22:12Z"
+  name: machine-api
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "24568"
+  uid: 195920a7-79d0-4da7-a8c5-11c7bc216384
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:22:12Z"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2024-10-24T13:22:12Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:22:12Z"
+    message: 'Cluster Machine API Operator is available at operator: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest'
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:05:28Z"
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-machine-api
+    resource: namespaces
+  - group: machine.openshift.io
+    name: ""
+    namespace: openshift-machine-api
+    resource: machines
+  - group: machine.openshift.io
+    name: ""
+    namespace: openshift-machine-api
+    resource: machinesets
+  - group: machine.openshift.io
+    name: ""
+    namespace: openshift-machine-api
+    resource: machinehealthchecks
+  - group: rbac.authorization.k8s.io
+    name: ""
+    namespace: openshift-machine-api
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: machine-api-operator
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: machine-api-controllers
+    resource: clusterroles
+  - group: metal3.io
+    name: ""
+    namespace: openshift-machine-api
+    resource: baremetalhosts
+  versions:
+  - name: operator
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest

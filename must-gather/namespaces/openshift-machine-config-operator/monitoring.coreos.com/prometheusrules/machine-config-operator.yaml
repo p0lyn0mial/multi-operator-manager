@@ -1,0 +1,66 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2024-10-24T12:59:04Z"
+  generation: 1
+  labels:
+    k8s-app: machine-config-operator
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        .: {}
+        f:groups:
+          .: {}
+          k:{"name":"drain-override-configmap-present"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:59:04Z"
+  name: machine-config-operator
+  namespace: openshift-machine-config-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "1863"
+  uid: cfab651b-7038-4b15-8816-aa5b761379a9
+spec:
+  groups:
+  - name: drain-override-configmap-present
+    rules:
+    - alert: MCODrainOverrideConfigMapAlert
+      annotations:
+        description: Image Registry Drain Override configmap has been detected. Please
+          use the Node Disruption Policy feature to control the cluster's drain behavior
+          as the configmap method is currently deprecated and will be removed in a
+          future release.
+        summary: Alerts the user to the presence of a drain override configmap that
+          is being deprecated and removed in a future release.
+      expr: |
+        mco_image_registry_drain_override_exists > 0
+      labels:
+        namespace: openshift-machine-config-operator
+        severity: warning

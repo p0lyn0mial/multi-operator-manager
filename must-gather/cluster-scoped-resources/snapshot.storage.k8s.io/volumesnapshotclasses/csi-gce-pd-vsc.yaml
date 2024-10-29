@@ -1,0 +1,26 @@
+---
+apiVersion: snapshot.storage.k8s.io/v1
+deletionPolicy: Delete
+driver: pd.csi.storage.gke.io
+kind: VolumeSnapshotClass
+metadata:
+  annotations:
+    snapshot.storage.kubernetes.io/is-default-class: "true"
+  creationTimestamp: "2024-10-24T13:03:44Z"
+  generation: 1
+  managedFields:
+  - apiVersion: snapshot.storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:deletionPolicy: {}
+      f:driver: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:snapshot.storage.kubernetes.io/is-default-class: {}
+    manager: gcp-pd-csi-driver-operator
+    operation: Update
+    time: "2024-10-24T13:03:44Z"
+  name: csi-gce-pd-vsc
+  resourceVersion: "8408"
+  uid: dfc5685a-871f-4c55-bbf0-c62c5069dee0

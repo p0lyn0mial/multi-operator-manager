@@ -1,0 +1,76 @@
+2024-10-24T13:34:04.049184670Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 9443 \))" ]; do sleep 1; done'
+2024-10-24T13:34:04.056650589Z ++ ss -Htanop '(' sport = 9443 ')'
+2024-10-24T13:34:04.068594169Z + '[' -n '' ']'
+2024-10-24T13:34:04.069552429Z + exec cluster-kube-controller-manager-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-controller-cert-syncer-kubeconfig/kubeconfig --namespace=openshift-kube-controller-manager --listen=0.0.0.0:9443 -v=2
+2024-10-24T13:34:04.133487586Z W1024 13:34:04.133268       1 cmd.go:254] Using insecure, self-signed certificates
+2024-10-24T13:34:04.133642125Z I1024 13:34:04.133597       1 crypto.go:601] Generating new CA for cert-recovery-controller-signer@1729776844 cert, and key in /tmp/serving-cert-4252785428/serving-signer.crt, /tmp/serving-cert-4252785428/serving-signer.key
+2024-10-24T13:34:04.333690055Z I1024 13:34:04.333571       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2024-10-24T13:34:04.334691845Z I1024 13:34:04.334603       1 observer_polling.go:159] Starting file observer
+2024-10-24T13:34:04.334988615Z I1024 13:34:04.334895       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:34:04.334988615Z I1024 13:34:04.334925       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:34:04.358982364Z I1024 13:34:04.358891       1 builder.go:298] cert-recovery-controller version v0.0.0-alpha.0-1368-ge3e3ce7-e3e3ce7ab
+2024-10-24T13:34:04.365580473Z I1024 13:34:04.365354       1 leaderelection.go:254] attempting to acquire leader lease openshift-kube-controller-manager/cert-recovery-controller-lock...
+2024-10-24T13:34:04.377713103Z I1024 13:34:04.377612       1 leaderelection.go:268] successfully acquired lease openshift-kube-controller-manager/cert-recovery-controller-lock
+2024-10-24T13:34:04.377893773Z I1024 13:34:04.377802       1 event.go:377] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-kube-controller-manager", Name:"cert-recovery-controller-lock", UID:"9bff1721-9062-4479-8c4d-c66efce5ebde", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"32463", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' ci-op-2fcpj5j6-f6035-2lklf-master-0_40ef1018-f1da-4ed0-8159-5ac131df6d2d became leader
+2024-10-24T13:34:04.385503802Z I1024 13:34:04.385449       1 csrcontroller.go:103] Starting CSR controller
+2024-10-24T13:34:04.385589642Z I1024 13:34:04.385574       1 shared_informer.go:313] Waiting for caches to sync for CSRController
+2024-10-24T13:34:04.386386122Z I1024 13:34:04.386362       1 base_controller.go:68] Waiting for caches to sync for CertRotationController
+2024-10-24T13:34:04.392386482Z I1024 13:34:04.392172       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.396081502Z I1024 13:34:04.395110       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.396081502Z I1024 13:34:04.395430       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.405450661Z I1024 13:34:04.405372       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.405783381Z I1024 13:34:04.405693       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.406594951Z I1024 13:34:04.406471       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.406793981Z I1024 13:34:04.406768       1 reflector.go:368] Caches populated for operator.openshift.io/v1, Resource=kubecontrollermanagers from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.417112310Z I1024 13:34:04.417013       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.419317301Z I1024 13:34:04.419242       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:34:04.486863087Z I1024 13:34:04.486747       1 base_controller.go:74] Caches are synced for CertRotationController 
+2024-10-24T13:34:04.486863087Z I1024 13:34:04.486813       1 base_controller.go:111] Starting #1 worker of CertRotationController controller ...
+2024-10-24T13:34:04.486929857Z I1024 13:34:04.486877       1 shared_informer.go:320] Caches are synced for CSRController
+2024-10-24T13:34:04.486929857Z I1024 13:34:04.486911       1 base_controller.go:68] Waiting for caches to sync for kube-controller-manager
+2024-10-24T13:34:04.486929857Z I1024 13:34:04.486919       1 base_controller.go:74] Caches are synced for kube-controller-manager 
+2024-10-24T13:34:04.486942587Z I1024 13:34:04.486931       1 base_controller.go:111] Starting #1 worker of kube-controller-manager controller ...
+2024-10-24T13:50:58.771027997Z E1024 13:50:58.770895       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-controller-manager/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused, falling back to slow path
+2024-10-24T13:50:58.772176407Z E1024 13:50:58.772088       1 leaderelection.go:436] error retrieving resource lock openshift-kube-controller-manager/cert-recovery-controller-lock: Get "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-controller-manager/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused
+2024-10-24T13:51:23.860176145Z I1024 13:51:23.860085       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:26.038843376Z I1024 13:51:26.038779       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:27.256774365Z I1024 13:51:27.256691       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:27.695252824Z I1024 13:51:27.695183       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:29.312910107Z I1024 13:51:29.312801       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:29.386917050Z I1024 13:51:29.386831       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:31.871056903Z I1024 13:51:31.870936       1 reflector.go:368] Caches populated for operator.openshift.io/v1, Resource=kubecontrollermanagers from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:34.597398583Z I1024 13:51:34.597312       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T13:51:47.119143189Z I1024 13:51:47.119029       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:20.548895744Z E1024 14:01:20.548795       1 reflector.go:158] "Unhandled Error" err="k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243: Failed to watch *v1.ConfigMap: unknown (get configmaps)"
+2024-10-24T14:01:20.549274034Z E1024 14:01:20.549114       1 reflector.go:158] "Unhandled Error" err="k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243: Failed to watch *v1.ConfigMap: unknown (get configmaps)"
+2024-10-24T14:01:27.551980532Z I1024 14:01:27.551900       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:29.487901701Z I1024 14:01:29.487821       1 reflector.go:368] Caches populated for operator.openshift.io/v1, Resource=kubecontrollermanagers from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:29.877028109Z I1024 14:01:29.876964       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:30.311793624Z I1024 14:01:30.311679       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:30.570774909Z I1024 14:01:30.570672       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:31.397825251Z I1024 14:01:31.397756       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:31.473898147Z I1024 14:01:31.473819       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:32.666870018Z I1024 14:01:32.666789       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:01:34.584908078Z I1024 14:01:34.584840       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:13:31.301573809Z E1024 14:13:31.301485       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-controller-manager/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused, falling back to slow path
+2024-10-24T14:13:31.302471169Z E1024 14:13:31.302407       1 leaderelection.go:436] error retrieving resource lock openshift-kube-controller-manager/cert-recovery-controller-lock: Get "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-controller-manager/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused
+2024-10-24T14:13:54.320867689Z I1024 14:13:54.320777       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:13:57.347214037Z I1024 14:13:57.347098       1 reflector.go:368] Caches populated for operator.openshift.io/v1, Resource=kubecontrollermanagers from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:14:03.664874842Z I1024 14:14:03.664783       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:14:05.089811302Z I1024 14:14:05.089722       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:14:05.768194374Z I1024 14:14:05.768108       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:14:05.917051654Z I1024 14:14:05.916961       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:14:06.781832643Z I1024 14:14:06.781756       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:14:06.965191371Z I1024 14:14:06.965021       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:14:11.972049238Z I1024 14:14:11.971974       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:29:33.671387861Z E1024 14:29:33.671288       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-controller-manager/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused, falling back to slow path
+2024-10-24T14:29:33.672320281Z E1024 14:29:33.672251       1 leaderelection.go:436] error retrieving resource lock openshift-kube-controller-manager/cert-recovery-controller-lock: Get "https://localhost:6443/apis/coordination.k8s.io/v1/namespaces/openshift-kube-controller-manager/leases/cert-recovery-controller-lock?timeout=1m47s": dial tcp [::1]:6443: connect: connection refused
+2024-10-24T14:29:55.141103181Z I1024 14:29:55.141022       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:29:56.487587425Z I1024 14:29:56.487417       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:29:59.737919137Z I1024 14:29:59.737835       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:30:02.471935973Z I1024 14:30:02.471860       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:30:02.856979168Z I1024 14:30:02.856893       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:30:04.372239342Z I1024 14:30:04.372018       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:30:07.087000119Z I1024 14:30:07.086909       1 reflector.go:368] Caches populated for operator.openshift.io/v1, Resource=kubecontrollermanagers from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:30:08.453524061Z I1024 14:30:08.453444       1 reflector.go:368] Caches populated for *v1.Secret from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243
+2024-10-24T14:30:11.133417310Z I1024 14:30:11.133257       1 reflector.go:368] Caches populated for *v1.ConfigMap from k8s.io/client-go@v0.31.1/tools/cache/reflector.go:243

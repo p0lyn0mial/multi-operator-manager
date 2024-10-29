@@ -1,0 +1,47 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: CSINode
+metadata:
+  annotations:
+    storage.alpha.kubernetes.io/migrated-plugins: kubernetes.io/aws-ebs,kubernetes.io/azure-disk,kubernetes.io/azure-file,kubernetes.io/cinder,kubernetes.io/gce-pd,kubernetes.io/portworx-volume,kubernetes.io/vsphere-volume
+  creationTimestamp: "2024-10-24T13:01:18Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:storage.alpha.kubernetes.io/migrated-plugins: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"91fdf654-c8bd-472e-993a-1c998ef66831"}: {}
+      f:spec:
+        f:drivers:
+          k:{"name":"pd.csi.storage.gke.io"}:
+            .: {}
+            f:allocatable:
+              .: {}
+              f:count: {}
+            f:name: {}
+            f:nodeID: {}
+            f:topologyKeys: {}
+    manager: kubelet
+    operation: Update
+    time: "2024-10-24T13:03:56Z"
+  name: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: ci-op-2fcpj5j6-f6035-2lklf-master-2
+    uid: 91fdf654-c8bd-472e-993a-1c998ef66831
+  resourceVersion: "8557"
+  uid: d939a878-e75a-4368-b417-fce5ab77067b
+spec:
+  drivers:
+  - allocatable:
+      count: 127
+    name: pd.csi.storage.gke.io
+    nodeID: projects/XXXXXXXXXXXXXXXXXXXXXXXX/zones/us-central1-c/instances/ci-op-2fcpj5j6-f6035-2lklf-master-2
+    topologyKeys:
+    - topology.gke.io/zone

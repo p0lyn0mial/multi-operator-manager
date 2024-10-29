@@ -1,0 +1,71 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c25,c20
+    openshift.io/sa.scc.supplemental-groups: 1000640000/10000
+    openshift.io/sa.scc.uid-range: 1000640000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2024-10-24T13:06:25Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-ingress
+    name: openshift-ingress
+    network.openshift.io/policy-group: ingress
+    olm.operatorgroup.uid/ef9fb4ff-a719-4fda-beb0-3b1fea871d36: ""
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+    policy-group.network.openshift.io/ingress: ""
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2024-10-24T13:06:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:name: {}
+          f:network.openshift.io/policy-group: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:policy-group.network.openshift.io/ingress: {}
+    manager: ingress-operator
+    operation: Update
+    time: "2024-10-24T13:06:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/ef9fb4ff-a719-4fda-beb0-3b1fea871d36: {}
+    manager: olm
+    operation: Update
+    time: "2024-10-24T13:11:44Z"
+  name: openshift-ingress
+  resourceVersion: "17909"
+  uid: 9d66de79-c7df-4e97-8582-73e78a8cac3d
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

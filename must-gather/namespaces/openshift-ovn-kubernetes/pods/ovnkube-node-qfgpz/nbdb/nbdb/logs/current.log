@@ -1,0 +1,28 @@
+2024-10-24T13:19:49.979532757Z + [[ -f /env/_master ]]
+2024-10-24T13:19:49.979532757Z + . /ovnkube-lib/ovnkube-lib.sh
+2024-10-24T13:19:49.979532757Z ++ set -x
+2024-10-24T13:19:49.979645325Z ++ K8S_NODE=ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:19:49.979645325Z ++ [[ -n ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 ]]
+2024-10-24T13:19:49.979645325Z ++ [[ -f /env/ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 ]]
+2024-10-24T13:19:49.979645325Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2024-10-24T13:19:49.979645325Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2024-10-24T13:19:49.979645325Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2024-10-24T13:19:49.979645325Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2024-10-24T13:19:49.979645325Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2024-10-24T13:19:49.979645325Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2024-10-24T13:19:49.979645325Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2024-10-24T13:19:49.979645325Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2024-10-24T13:19:49.979645325Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2024-10-24T13:19:49.979645325Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2024-10-24T13:19:49.981165450Z + trap quit-nbdb TERM INT
+2024-10-24T13:19:49.981165450Z + start-nbdb info
+2024-10-24T13:19:49.981165450Z + local log_level=info
+2024-10-24T13:19:49.981202137Z + [[ 1 -ne 1 ]]
+2024-10-24T13:19:49.981538712Z + wait 3247
+2024-10-24T13:19:49.981651006Z + exec /usr/share/ovn/scripts/ovn-ctl --no-monitor --db-nb-sock=/var/run/ovn/ovnnb_db.sock '--ovn-nb-log=-vconsole:info -vfile:off -vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' run_nb_ovsdb
+2024-10-24T13:19:50.050634234Z /etc/ovn/ovnnb_db.db does not exist ... (warning).
+2024-10-24T13:19:50.068302092Z Creating empty database /etc/ovn/ovnnb_db.db.
+2024-10-24T13:19:50.088368412Z 2024-10-24T13:19:50.088Z|00001|vlog|INFO|opened log file /var/log/ovn/ovsdb-server-nb.log
+2024-10-24T13:19:50.094855678Z 2024-10-24T13:19:50.094Z|00002|ovsdb_server|INFO|ovsdb-server (Open vSwitch) 3.4.0-1.el9fdp
+2024-10-24T13:20:00.098434102Z 2024-10-24T13:20:00.098Z|00003|memory|INFO|12160 kB peak resident set size after 10.0 seconds
+2024-10-24T13:20:00.098525337Z 2024-10-24T13:20:00.098Z|00004|memory|INFO|atoms:3983 cells:2362 json-caches:2 monitors:3 n-weak-refs:79 sessions:2

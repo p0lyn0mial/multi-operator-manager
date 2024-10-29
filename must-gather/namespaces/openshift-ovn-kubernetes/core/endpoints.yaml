@@ -1,0 +1,135 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:02:28Z"
+    creationTimestamp: "2024-10-24T13:02:27Z"
+    labels:
+      app: ovnkube-control-plane
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:02:29Z"
+    name: ovn-kubernetes-control-plane
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "4163"
+    uid: a549a777-31d3-4233-8dc2-f34bdcc13310
+  subsets:
+  - addresses:
+    - ip: 10.0.0.3
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+      targetRef:
+        kind: Pod
+        name: ovnkube-control-plane-54656c84bd-zpzjn
+        namespace: openshift-ovn-kubernetes
+        uid: aef2360e-1427-4bf7-93dd-e648f30cd931
+    - ip: 10.0.0.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: ovnkube-control-plane-54656c84bd-cn29j
+        namespace: openshift-ovn-kubernetes
+        uid: 1e99ad31-46f5-41f7-a787-bd546b79cb1b
+    ports:
+    - name: metrics
+      port: 9108
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:02:27Z"
+    creationTimestamp: "2024-10-24T13:02:27Z"
+    labels:
+      app: ovnkube-node
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:19:18Z"
+    name: ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "21351"
+    uid: 0203b2ea-6c88-4cee-ad7c-6485251d11eb
+  subsets:
+  - addresses:
+    - ip: 10.0.0.3
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-m7hdx
+        namespace: openshift-ovn-kubernetes
+        uid: 0646a1b8-e341-4f5a-9e6e-2ae0b6f6f0b4
+    - ip: 10.0.0.4
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-n6p6d
+        namespace: openshift-ovn-kubernetes
+        uid: 80456863-af33-4349-8846-0621b2f0fe42
+    - ip: 10.0.0.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-ccj7k
+        namespace: openshift-ovn-kubernetes
+        uid: 2305cb84-ab4a-40d2-884e-da01c83989b4
+    - ip: 10.0.128.2
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-ts5rk
+        namespace: openshift-ovn-kubernetes
+        uid: a53ab09b-be65-4038-b3ff-6d2ad3baf529
+    - ip: 10.0.128.3
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-qfgpz
+        namespace: openshift-ovn-kubernetes
+        uid: 9ff892ef-1e7a-4f1c-a632-aa8cbc19cfdd
+    - ip: 10.0.128.4
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-pfhnt
+        namespace: openshift-ovn-kubernetes
+        uid: 4841066c-e6ef-4314-9b78-f376dedd461e
+    ports:
+    - name: ovn-metrics
+      port: 9105
+      protocol: TCP
+    - name: metrics
+      port: 9103
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60984"

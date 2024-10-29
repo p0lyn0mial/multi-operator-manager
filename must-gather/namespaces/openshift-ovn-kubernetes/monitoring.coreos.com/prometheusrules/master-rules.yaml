@@ -1,0 +1,110 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  annotations:
+    networkoperator.openshift.io/ignore-errors: ""
+  creationTimestamp: "2024-10-24T13:02:26Z"
+  generation: 1
+  labels:
+    prometheus: k8s
+    role: alert-rules
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:networkoperator.openshift.io/ignore-errors: {}
+        f:labels:
+          f:prometheus: {}
+          f:role: {}
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+      f:spec:
+        f:groups:
+          k:{"name":"cluster-network-operator-master.rules"}:
+            .: {}
+            f:name: {}
+            f:rules: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:02:26Z"
+  name: master-rules
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "4102"
+  uid: baba27b4-1586-42c2-ab5a-fe73ae973762
+spec:
+  groups:
+  - name: cluster-network-operator-master.rules
+    rules:
+    - expr: max(ovnkube_controller_egress_routing_via_host)
+      record: cluster:ovnkube_controller_egress_routing_via_host:max
+    - expr: max by(table_name)(ovnkube_controller_admin_network_policies_db_objects)
+      record: cluster:ovnkube_controller_admin_network_policies_db_objects:max
+    - expr: max by(table_name)(ovnkube_controller_baseline_admin_network_policies_db_objects)
+      record: cluster:ovnkube_controller_baseline_admin_network_policies_db_objects:max
+    - expr: max by(direction, action)(ovnkube_controller_admin_network_policies_rules)
+      record: cluster:ovnkube_controller_admin_network_policies_rules:max
+    - expr: max by(direction, action)(ovnkube_controller_baseline_admin_network_policies_rules)
+      record: cluster:ovnkube_controller_baseline_admin_network_policies_rules:max
+    - alert: V4SubnetAllocationThresholdExceeded
+      annotations:
+        description: More than 80% of IPv4 subnets are used. Insufficient IPv4 subnets
+          could degrade provisioning of workloads.
+        runbook_url: https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/V4SubnetAllocationThresholdExceeded.md
+        summary: More than 80% of v4 subnets available to assign to the nodes are
+          allocated. Current v4 subnet allocation percentage is {{ $value | humanizePercentage
+          }}.
+      expr: ovnkube_clustermanager_allocated_v4_host_subnets / ovnkube_clustermanager_num_v4_host_subnets
+        > 0.8
+      for: 10m
+      labels:
+        severity: warning
+    - alert: V6SubnetAllocationThresholdExceeded
+      annotations:
+        description: More than 80% of IPv6 subnets are used. Insufficient IPv6 subnets
+          could degrade provisioning of workloads.
+        summary: More than 80% of the v6 subnets available to assign to the nodes
+          are allocated. Current v6 subnet allocation percentage is {{ $value | humanizePercentage
+          }}.
+      expr: ovnkube_clustermanager_allocated_v6_host_subnets / ovnkube_clustermanager_num_v6_host_subnets
+        > 0.8
+      for: 10m
+      labels:
+        severity: warning
+    - alert: NoRunningOvnControlPlane
+      annotations:
+        description: |
+          Networking control plane is degraded. Networking configuration updates applied to the cluster will not be
+          implemented while there are no OVN Kubernetes control plane pods.
+        runbook_url: https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/NoRunningOvnControlPlane.md
+        summary: There is no running ovn-kubernetes control plane.
+      expr: |
+        absent(up{job="ovnkube-control-plane", namespace="openshift-ovn-kubernetes"} == 1)
+      for: 5m
+      labels:
+        namespace: openshift-ovn-kubernetes
+        severity: critical
+    - alert: NoOvnClusterManagerLeader
+      annotations:
+        description: |
+          Networking control plane is degraded. Networking configuration updates applied to the cluster will not be
+          implemented while there is no OVN Kubernetes cluster manager leader. Existing workloads should continue to have connectivity.
+          OVN-Kubernetes control plane is not functional.
+        runbook_url: https://github.com/openshift/runbooks/blob/master/alerts/cluster-network-operator/NoOvnClusterManagerLeader.md
+        summary: There is no ovn-kubernetes cluster manager leader.
+      expr: |
+        # Without max_over_time, failed scrapes could create false negatives, see
+        # https://www.robustperception.io/alerting-on-gauges-in-prometheus-2-0 for details.
+        max by (namespace) (max_over_time(ovnkube_clustermanager_leader[5m])) == 0
+      for: 5m
+      labels:
+        severity: critical

@@ -1,0 +1,46 @@
+2024-10-24T13:19:39.828338296Z I1024 13:19:39.828137    3054 controller.go:1681] starting in-cluster ocp-tuned 6d2e1ede-dirty
+2024-10-24T13:19:39.829353672Z I1024 13:19:39.829295    3054 controller.go:686] writing /var/lib/ocp-tuned/image.env
+2024-10-24T13:19:39.834704805Z E1024 13:19:39.834652    3054 controller.go:1710] error repacking the profile: open /etc/tuned/recommend.d/50-openshift.conf: no such file or directory
+2024-10-24T13:19:39.834766216Z I1024 13:19:39.834753    3054 controller.go:1711] deferred updates likely broken
+2024-10-24T13:19:39.834807275Z I1024 13:19:39.834793    3054 controller.go:1727] starting: profile unpacked is "" fingerprint "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+2024-10-24T13:19:39.834853999Z I1024 13:19:39.834843    3054 controller.go:1439] recover: no pending deferred change
+2024-10-24T13:19:39.834920620Z I1024 13:19:39.834905    3054 controller.go:1733] starting: no pending deferred update
+2024-10-24T13:20:09.836154395Z W1024 13:20:09.836037    3054 reflector.go:561] github.com/openshift/cluster-node-tuning-operator/pkg/generated/informers/externalversions/factory.go:140: failed to list *v1.Profile: Get "https://172.30.0.1:443/apis/tuned.openshift.io/v1/namespaces/openshift-cluster-node-tuning-operator/profiles?limit=500&resourceVersion=0": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:20:09.836206753Z E1024 13:20:09.836174    3054 reflector.go:158] "Unhandled Error" err="github.com/openshift/cluster-node-tuning-operator/pkg/generated/informers/externalversions/factory.go:140: Failed to watch *v1.Profile: failed to list *v1.Profile: Get \"https://172.30.0.1:443/apis/tuned.openshift.io/v1/namespaces/openshift-cluster-node-tuning-operator/profiles?limit=500&resourceVersion=0\": dial tcp 172.30.0.1:443: i/o timeout" logger="UnhandledError"
+2024-10-24T13:20:11.535950563Z I1024 13:20:11.535545    3054 controller.go:1561] started events processors
+2024-10-24T13:20:11.536998508Z I1024 13:20:11.536679    3054 controller.go:1582] monitoring filesystem events on "/etc/tuned/bootcmdline"
+2024-10-24T13:20:11.536998508Z I1024 13:20:11.536936    3054 controller.go:1585] started controller
+2024-10-24T13:21:47.562885913Z I1024 13:21:47.562675    3054 controller.go:376] disabling system tuned...
+2024-10-24T13:21:47.637444500Z I1024 13:21:47.637377    3054 controller.go:353] set log level 0
+2024-10-24T13:21:47.637808535Z I1024 13:21:47.637770    3054 controller.go:608] providerExtract(): extracting cloud provider name to /var/lib/ocp-tuned/provider
+2024-10-24T13:21:47.638274033Z I1024 13:21:47.638219    3054 controller.go:707] tunedRecommendFileWrite(): written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-node
+2024-10-24T13:21:47.638274033Z I1024 13:21:47.638253    3054 controller.go:411] profilesExtract(): extracting 1 TuneD profiles (recommended=openshift-node)
+2024-10-24T13:21:47.716231783Z I1024 13:21:47.716164    3054 controller.go:456] profilesExtract(): recommended TuneD profile openshift-node content changed [openshift]
+2024-10-24T13:21:47.716382603Z I1024 13:21:47.716307    3054 controller.go:472] profilesExtract(): fingerprint of extracted profiles: "caa493f132cc24114a421e5a3d0bc5b4874608c4f2897f3f55aac18a2f3513d6"
+2024-10-24T13:21:47.716436949Z I1024 13:21:47.716417    3054 controller.go:833] tunedReload()
+2024-10-24T13:21:47.716587415Z I1024 13:21:47.716472    3054 controller.go:760] starting tuned...
+2024-10-24T13:21:47.716587415Z I1024 13:21:47.716500    3054 run.go:103] running cmd...
+2024-10-24T13:21:48.168256073Z 2024-10-24 13:21:48,167 INFO     tuned.daemon.application: TuneD: 2.24.0, kernel: 5.14.0-427.42.1.el9_4.x86_64
+2024-10-24T13:21:48.168396420Z 2024-10-24 13:21:48,168 INFO     tuned.daemon.application: dynamic tuning is globally disabled
+2024-10-24T13:21:48.195226160Z 2024-10-24 13:21:48,194 INFO     tuned.daemon.daemon: using sleep interval of 1 second(s)
+2024-10-24T13:21:48.198039525Z 2024-10-24 13:21:48,197 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2024-10-24T13:21:48.199159207Z 2024-10-24 13:21:48,198 INFO     tuned.daemon.daemon: Using 'openshift-node' profile
+2024-10-24T13:21:48.200747723Z 2024-10-24 13:21:48,200 INFO     tuned.profiles.loader: loading profile: openshift-node
+2024-10-24T13:21:48.274967482Z 2024-10-24 13:21:48,274 INFO     tuned.daemon.controller: starting controller
+2024-10-24T13:21:48.274967482Z 2024-10-24 13:21:48,274 INFO     tuned.daemon.daemon: starting tuning
+2024-10-24T13:21:48.306479091Z 2024-10-24 13:21:48,305 INFO     tuned.plugins.base: instance cpu: assigning devices cpu0, cpu3, cpu2, cpu1
+2024-10-24T13:21:48.306871993Z 2024-10-24 13:21:48,306 INFO     tuned.plugins.plugin_cpu: We are running on an x86 GenuineIntel platform
+2024-10-24T13:21:48.317233693Z 2024-10-24 13:21:48,316 ERROR    tuned.utils.commands: Executing 'x86_energy_perf_policy -r' error: x86_energy_perf_policy: not supported on this virtual machine: Input/output error
+2024-10-24T13:21:48.317300378Z 2024-10-24 13:21:48,317 WARNING  tuned.plugins.plugin_cpu: your CPU doesn't support MSR_IA32_ENERGY_PERF_BIAS, ignoring CPU energy performance bias
+2024-10-24T13:21:48.321534238Z 2024-10-24 13:21:48,321 INFO     tuned.plugins.base: instance disk: assigning devices sda
+2024-10-24T13:21:48.321907970Z 2024-10-24 13:21:48,321 WARNING  tuned.plugins.base: instance video: no matching devices available
+2024-10-24T13:21:48.324312794Z 2024-10-24 13:21:48,324 INFO     tuned.plugins.base: instance net: assigning devices ens4
+2024-10-24T13:21:48.329715542Z 2024-10-24 13:21:48,329 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2024-10-24T13:21:48.380770295Z 2024-10-24 13:21:48,380 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-node' applied
+2024-10-24T13:21:48.380930750Z I1024 13:21:48.380840    3054 controller.go:717] tunedRecommendFileRead(): read "openshift-node" from "/etc/tuned/recommend.d/50-openshift.conf"
+2024-10-24T13:21:48.431268452Z I1024 13:21:48.431202    3054 controller.go:353] set log level 0
+2024-10-24T13:21:48.443004360Z I1024 13:21:48.442924    3054 controller.go:411] profilesExtract(): extracting 1 TuneD profiles (recommended=openshift-node)
+2024-10-24T13:21:48.506079666Z I1024 13:21:48.506016    3054 controller.go:456] profilesExtract(): recommended TuneD profile openshift-node content unchanged [openshift]
+2024-10-24T13:21:48.527688156Z I1024 13:21:48.527574    3054 controller.go:472] profilesExtract(): fingerprint of extracted profiles: "caa493f132cc24114a421e5a3d0bc5b4874608c4f2897f3f55aac18a2f3513d6"
+2024-10-24T13:27:27.681947020Z 2024-10-24 13:27:27,681 INFO     tuned.plugins.hotplug: device 'sdb' added
+2024-10-24T13:27:27.682182819Z 2024-10-24 13:27:27,681 INFO     tuned.plugins.hotplug: instance disk: adding new device sdb

@@ -1,0 +1,109 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+    volume.kubernetes.io/provisioner-deletion-secret-name: ""
+    volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+  creationTimestamp: "2024-10-24T13:27:24Z"
+  finalizers:
+  - external-provisioner.volume.kubernetes.io/finalizer
+  - kubernetes.io/pv-protection
+  - external-attacher/pd-csi-storage-gke-io
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:pv.kubernetes.io/provisioned-by: {}
+          f:volume.kubernetes.io/provisioner-deletion-secret-name: {}
+          f:volume.kubernetes.io/provisioner-deletion-secret-namespace: {}
+        f:finalizers:
+          .: {}
+          v:"external-provisioner.volume.kubernetes.io/finalizer": {}
+      f:spec:
+        f:accessModes: {}
+        f:capacity:
+          .: {}
+          f:storage: {}
+        f:claimRef:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:name: {}
+          f:namespace: {}
+          f:resourceVersion: {}
+          f:uid: {}
+        f:csi:
+          .: {}
+          f:driver: {}
+          f:fsType: {}
+          f:volumeAttributes:
+            .: {}
+            f:storage.kubernetes.io/csiProvisionerIdentity: {}
+          f:volumeHandle: {}
+        f:nodeAffinity:
+          .: {}
+          f:required: {}
+        f:persistentVolumeReclaimPolicy: {}
+        f:storageClassName: {}
+        f:volumeMode: {}
+    manager: csi-provisioner
+    operation: Update
+    time: "2024-10-24T13:27:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:phase: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:27:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          v:"external-attacher/pd-csi-storage-gke-io": {}
+    manager: csi-attacher
+    operation: Update
+    time: "2024-10-24T13:27:25Z"
+  name: pvc-bebd8955-95af-4a81-ab58-31a7f16c6c0b
+  resourceVersion: "29396"
+  uid: 127f3e96-0ba4-482f-8a73-aaa29f7c0824
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 20Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: prometheus-data-prometheus-k8s-0
+    namespace: openshift-monitoring
+    resourceVersion: "29329"
+    uid: bebd8955-95af-4a81-ab58-31a7f16c6c0b
+  csi:
+    driver: pd.csi.storage.gke.io
+    fsType: ext4
+    volumeAttributes:
+      storage.kubernetes.io/csiProvisionerIdentity: 1729775212845-9483-pd.csi.storage.gke.io
+    volumeHandle: projects/XXXXXXXXXXXXXXXXXXXXXXXX/zones/us-central1-c/disks/pvc-bebd8955-95af-4a81-ab58-31a7f16c6c0b
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: topology.gke.io/zone
+          operator: In
+          values:
+          - us-central1-c
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: standard-csi
+  volumeMode: Filesystem
+status:
+  lastPhaseTransitionTime: "2024-10-24T13:27:24Z"
+  phase: Bound

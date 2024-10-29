@@ -1,0 +1,47 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c24,c14
+    openshift.io/sa.scc.supplemental-groups: 1000580000/10000
+    openshift.io/sa.scc.uid-range: 1000580000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2024-10-24T13:03:29Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-service-ca
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2024-10-24T13:03:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2024-10-24T13:03:29Z"
+  name: openshift-service-ca
+  resourceVersion: "5772"
+  uid: 7000ccb2-e773-4e3f-9dfc-d82cb1776fe5
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

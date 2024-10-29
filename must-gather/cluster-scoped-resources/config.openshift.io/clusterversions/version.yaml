@@ -1,0 +1,159 @@
+apiVersion: config.openshift.io/v1
+kind: ClusterVersion
+metadata:
+  creationTimestamp: "2024-10-24T12:58:16Z"
+  generation: 2
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:clusterID: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2024-10-24T12:58:16Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:availableUpdates: {}
+        f:capabilities:
+          .: {}
+          f:enabledCapabilities: {}
+          f:knownCapabilities: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Failing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ImplicitlyEnabledCapabilities"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ReleaseAccepted"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"RetrievedUpdates"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:desired:
+          .: {}
+          f:image: {}
+          f:version: {}
+        f:history: {}
+        f:observedGeneration: {}
+        f:versionHash: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:36:58Z"
+  name: version
+  resourceVersion: "33798"
+  uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+spec:
+  clusterID: c4a7cc45-a233-44e0-bdc9-a2b0ea596a9c
+status:
+  availableUpdates: null
+  capabilities:
+    enabledCapabilities:
+    - Build
+    - CSISnapshot
+    - CloudControllerManager
+    - CloudCredential
+    - Console
+    - DeploymentConfig
+    - ImageRegistry
+    - Ingress
+    - Insights
+    - MachineAPI
+    - NodeTuning
+    - OperatorLifecycleManager
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+    knownCapabilities:
+    - Build
+    - CSISnapshot
+    - CloudControllerManager
+    - CloudCredential
+    - Console
+    - DeploymentConfig
+    - ImageRegistry
+    - Ingress
+    - Insights
+    - MachineAPI
+    - NodeTuning
+    - OperatorLifecycleManager
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+  conditions:
+  - lastTransitionTime: "2024-10-24T12:58:39Z"
+    message: The update channel has not been configured.
+    reason: NoChannel
+    status: "False"
+    type: RetrievedUpdates
+  - lastTransitionTime: "2024-10-24T12:58:39Z"
+    message: Capabilities match configured spec
+    reason: AsExpected
+    status: "False"
+    type: ImplicitlyEnabledCapabilities
+  - lastTransitionTime: "2024-10-24T12:58:39Z"
+    message: Payload loaded version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+      image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+      architecture="amd64"
+    reason: PayloadLoaded
+    status: "True"
+    type: ReleaseAccepted
+  - lastTransitionTime: "2024-10-24T13:36:58Z"
+    message: Done applying 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:36:58Z"
+    status: "False"
+    type: Failing
+  - lastTransitionTime: "2024-10-24T13:36:58Z"
+    message: Cluster version is 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    status: "False"
+    type: Progressing
+  desired:
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  history:
+  - completionTime: "2024-10-24T13:36:58Z"
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141
+    startedTime: "2024-10-24T12:58:39Z"
+    state: Completed
+    verified: false
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  observedGeneration: 2
+  versionHash: YViSz5GpqGA=

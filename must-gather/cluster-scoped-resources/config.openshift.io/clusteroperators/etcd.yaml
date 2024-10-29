@@ -1,0 +1,114 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2024-10-24T12:58:39Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:58:40Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:37:09Z"
+  name: etcd
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "33903"
+  uid: 3a2b637b-5cb4-4746-a5e7-aec1cce512d0
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:22:18Z"
+    message: |-
+      NodeControllerDegraded: All master nodes are ready
+      EtcdMembersDegraded: No unhealthy members found
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:37:05Z"
+    message: |-
+      NodeInstallerProgressing: 3 nodes are at revision 13
+      EtcdMembersProgressing: No unstarted etcd members found
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2024-10-24T13:04:53Z"
+    message: |-
+      StaticPodsAvailable: 3 nodes are active; 3 nodes are at revision 13
+      EtcdMembersAvailable: 3 members are available
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:03:29Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2024-10-24T13:03:29Z"
+    reason: NoData
+    status: Unknown
+    type: EvaluationConditionsDetected
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: etcds
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-etcd-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-etcd
+    resource: namespaces
+  versions:
+  - name: raw-internal
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  - name: etcd
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  - name: operator
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest

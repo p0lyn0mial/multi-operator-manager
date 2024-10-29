@@ -1,0 +1,251 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: MySQL
+    openshift.io/image.dockerRepositoryCheck: "2024-10-24T13:23:18Z"
+    samples.operator.openshift.io/version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  creationTimestamp: "2024-10-24T13:22:31Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"8.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"8.0-el7"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"8.0-el8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"8.0-el9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:tags: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2024-10-24T13:22:31Z"
+  name: mysql
+  namespace: openshift
+  resourceVersion: "26588"
+  uid: ca9b6182-d40d-47dc-8f23-f915af418d7c
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Provides a MySQL 8.0 database on RHEL 7. For more information about
+        using this database image, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/README.md.
+      iconClass: icon-mysql-database
+      openshift.io/display-name: MySQL 8.0
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: mysql,hidden
+      version: "8.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhscl/mysql-80-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: "8.0"
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MySQL 8.0 database on RHEL 7. For more information about
+        using this database image, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/README.md.
+      iconClass: icon-mysql-database
+      openshift.io/display-name: MySQL 8.0 (RHEL 7)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: mysql
+      version: "8.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhscl/mysql-80-rhel7:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 8.0-el7
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MySQL 8.0 database on RHEL 8. For more information about
+        using this database image, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/README.md.
+      iconClass: icon-mysql-database
+      openshift.io/display-name: MySQL 8.0 (RHEL 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: mysql
+      version: "8.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhel8/mysql-80:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 8.0-el8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Provides a MySQL 8.0 database on RHEL 9. For more information about
+        using this database image, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/README.md.
+      iconClass: icon-mysql-database
+      openshift.io/display-name: MySQL 8.0 (RHEL 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: mysql
+      version: "8.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/rhel9/mysql-80:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 8.0-el9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: |-
+        Provides a MySQL database on RHEL. For more information about using this database image, including OpenShift considerations, see https://github.com/sclorg/mysql-container/blob/master/README.md.
+
+        WARNING: By selecting this tag, your application will automatically update to use the latest version of MySQL available on OpenShift, including major version updates.
+      iconClass: icon-mysql-database
+      openshift.io/display-name: MySQL (Latest)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      tags: mysql
+    from:
+      kind: ImageStreamTag
+      name: 8.0-el8
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/mysql
+  tags:
+  - items:
+    - created: "2024-10-24T13:23:18Z"
+      dockerImageReference: registry.redhat.io/rhscl/mysql-80-rhel7@sha256:c6edc9920c6038890d77d1daa135b7ae4a5a7fe2213b168dbc12311de0445791
+      generation: 2
+      image: sha256:c6edc9920c6038890d77d1daa135b7ae4a5a7fe2213b168dbc12311de0445791
+    tag: "8.0"
+  - items:
+    - created: "2024-10-24T13:23:18Z"
+      dockerImageReference: registry.redhat.io/rhscl/mysql-80-rhel7@sha256:c6edc9920c6038890d77d1daa135b7ae4a5a7fe2213b168dbc12311de0445791
+      generation: 2
+      image: sha256:c6edc9920c6038890d77d1daa135b7ae4a5a7fe2213b168dbc12311de0445791
+    tag: 8.0-el7
+  - items:
+    - created: "2024-10-24T13:23:18Z"
+      dockerImageReference: registry.redhat.io/rhel8/mysql-80@sha256:a682a764607a583b6aeb7901503e2109333375b63e48fd8385a4555b6c9ce349
+      generation: 2
+      image: sha256:a682a764607a583b6aeb7901503e2109333375b63e48fd8385a4555b6c9ce349
+    tag: 8.0-el8
+  - items:
+    - created: "2024-10-24T13:23:18Z"
+      dockerImageReference: registry.redhat.io/rhel9/mysql-80@sha256:f34b58bd1bb3006a625e2f77600b08da069b4696377923bc8f414b44aea41023
+      generation: 2
+      image: sha256:f34b58bd1bb3006a625e2f77600b08da069b4696377923bc8f414b44aea41023
+    tag: 8.0-el9
+  - items:
+    - created: "2024-10-24T13:23:18Z"
+      dockerImageReference: registry.redhat.io/rhel8/mysql-80@sha256:a682a764607a583b6aeb7901503e2109333375b63e48fd8385a4555b6c9ce349
+      generation: 2
+      image: sha256:a682a764607a583b6aeb7901503e2109333375b63e48fd8385a4555b6c9ce349
+    tag: latest

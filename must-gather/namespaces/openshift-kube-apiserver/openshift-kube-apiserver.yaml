@@ -1,0 +1,67 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c8,c7
+    openshift.io/sa.scc.supplemental-groups: 1000070000/10000
+    openshift.io/sa.scc.uid-range: 1000070000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2024-10-24T12:57:54Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-kube-apiserver
+    olm.operatorgroup.uid/ef9fb4ff-a719-4fda-beb0-3b1fea871d36: ""
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: "0"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2024-10-24T12:57:54Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2024-10-24T12:58:04Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/ef9fb4ff-a719-4fda-beb0-3b1fea871d36: {}
+    manager: olm
+    operation: Update
+    time: "2024-10-24T13:05:22Z"
+  name: openshift-kube-apiserver
+  resourceVersion: "11293"
+  uid: 19b76d59-63d5-469c-85ed-74b7d859277f
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

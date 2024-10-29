@@ -1,0 +1,62 @@
+2024-10-24T13:31:17.701094718Z I1024 13:31:17.616312       1 cmd.go:91] &{<nil> true {false} installer true map[cert-configmaps:0xc0009d7e00 cert-dir:0xc0009fa0a0 cert-secrets:0xc0009d7d60 configmaps:0xc0009d7900 namespace:0xc0009d7720 optional-cert-configmaps:0xc0009fa000 optional-configmaps:0xc0009d7a40 optional-secrets:0xc0009d79a0 pod:0xc0009d77c0 pod-manifest-dir:0xc0009d7b80 resource-dir:0xc0009d7ae0 revision:0xc0009d7680 secrets:0xc0009d7860 v:0xc0009faaa0] [0xc0009faaa0 0xc0009d7680 0xc0009d7720 0xc0009d77c0 0xc0009d7ae0 0xc0009d7b80 0xc0009d7900 0xc0009d7a40 0xc0009d7860 0xc0009d79a0 0xc0009fa0a0 0xc0009d7e00 0xc0009fa000 0xc0009d7d60] [] map[cert-configmaps:0xc0009d7e00 cert-dir:0xc0009fa0a0 cert-secrets:0xc0009d7d60 configmaps:0xc0009d7900 help:0xc0009fae60 kubeconfig:0xc0009d75e0 log-flush-frequency:0xc0009faa00 namespace:0xc0009d7720 optional-cert-configmaps:0xc0009fa000 optional-cert-secrets:0xc0009d7ea0 optional-configmaps:0xc0009d7a40 optional-secrets:0xc0009d79a0 pod:0xc0009d77c0 pod-manifest-dir:0xc0009d7b80 pod-manifests-lock-file:0xc0009d7cc0 resource-dir:0xc0009d7ae0 revision:0xc0009d7680 secrets:0xc0009d7860 timeout-duration:0xc0009d7c20 v:0xc0009faaa0 vmodule:0xc0009fab40] [0xc0009d75e0 0xc0009d7680 0xc0009d7720 0xc0009d77c0 0xc0009d7860 0xc0009d7900 0xc0009d79a0 0xc0009d7a40 0xc0009d7ae0 0xc0009d7b80 0xc0009d7c20 0xc0009d7cc0 0xc0009d7d60 0xc0009d7e00 0xc0009d7ea0 0xc0009fa000 0xc0009fa0a0 0xc0009faa00 0xc0009faaa0 0xc0009fab40 0xc0009fae60] [0xc0009d7e00 0xc0009fa0a0 0xc0009d7d60 0xc0009d7900 0xc0009fae60 0xc0009d75e0 0xc0009faa00 0xc0009d7720 0xc0009fa000 0xc0009d7ea0 0xc0009d7a40 0xc0009d79a0 0xc0009d77c0 0xc0009d7b80 0xc0009d7cc0 0xc0009d7ae0 0xc0009d7680 0xc0009d7860 0xc0009d7c20 0xc0009faaa0 0xc0009fab40] map[104:0xc0009fae60 118:0xc0009faaa0] [] -1 0 0xc0009ec8d0 true 0x77b500 []}
+2024-10-24T13:31:17.701094718Z I1024 13:31:17.616808       1 cmd.go:92] (*installerpod.InstallOptions)(0xc0005fd860)({
+2024-10-24T13:31:17.701094718Z  KubeConfig: (string) "",
+2024-10-24T13:31:17.701094718Z  KubeClient: (kubernetes.Interface) <nil>,
+2024-10-24T13:31:17.701094718Z  Revision: (string) (len=2) "11",
+2024-10-24T13:31:17.701094718Z  NodeName: (string) "",
+2024-10-24T13:31:17.701094718Z  Namespace: (string) (len=33) "openshift-kube-controller-manager",
+2024-10-24T13:31:17.701094718Z  PodConfigMapNamePrefix: (string) (len=27) "kube-controller-manager-pod",
+2024-10-24T13:31:17.701094718Z  SecretNamePrefixes: ([]string) (len=2 cap=2) {
+2024-10-24T13:31:17.701094718Z   (string) (len=27) "service-account-private-key",
+2024-10-24T13:31:17.701094718Z   (string) (len=31) "localhost-recovery-client-token"
+2024-10-24T13:31:17.701094718Z  },
+2024-10-24T13:31:17.701094718Z  OptionalSecretNamePrefixes: ([]string) (len=1 cap=1) {
+2024-10-24T13:31:17.701094718Z   (string) (len=12) "serving-cert"
+2024-10-24T13:31:17.701094718Z  },
+2024-10-24T13:31:17.701094718Z  ConfigMapNamePrefixes: ([]string) (len=8 cap=8) {
+2024-10-24T13:31:17.701094718Z   (string) (len=27) "kube-controller-manager-pod",
+2024-10-24T13:31:17.701094718Z   (string) (len=6) "config",
+2024-10-24T13:31:17.701094718Z   (string) (len=32) "cluster-policy-controller-config",
+2024-10-24T13:31:17.701094718Z   (string) (len=29) "controller-manager-kubeconfig",
+2024-10-24T13:31:17.701094718Z   (string) (len=38) "kube-controller-cert-syncer-kubeconfig",
+2024-10-24T13:31:17.701094718Z   (string) (len=17) "serviceaccount-ca",
+2024-10-24T13:31:17.701094718Z   (string) (len=10) "service-ca",
+2024-10-24T13:31:17.701094718Z   (string) (len=15) "recycler-config"
+2024-10-24T13:31:17.701094718Z  },
+2024-10-24T13:31:17.701094718Z  OptionalConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+2024-10-24T13:31:17.701094718Z   (string) (len=12) "cloud-config"
+2024-10-24T13:31:17.701094718Z  },
+2024-10-24T13:31:17.701094718Z  CertSecretNames: ([]string) (len=2 cap=2) {
+2024-10-24T13:31:17.701094718Z   (string) (len=39) "kube-controller-manager-client-cert-key",
+2024-10-24T13:31:17.701094718Z   (string) (len=10) "csr-signer"
+2024-10-24T13:31:17.701094718Z  },
+2024-10-24T13:31:17.701094718Z  OptionalCertSecretNamePrefixes: ([]string) <nil>,
+2024-10-24T13:31:17.701094718Z  CertConfigMapNamePrefixes: ([]string) (len=2 cap=2) {
+2024-10-24T13:31:17.701094718Z   (string) (len=20) "aggregator-client-ca",
+2024-10-24T13:31:17.701094718Z   (string) (len=9) "client-ca"
+2024-10-24T13:31:17.701094718Z  },
+2024-10-24T13:31:17.701094718Z  OptionalCertConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+2024-10-24T13:31:17.701094718Z   (string) (len=17) "trusted-ca-bundle"
+2024-10-24T13:31:17.701094718Z  },
+2024-10-24T13:31:17.701094718Z  CertDir: (string) (len=66) "/etc/kubernetes/static-pod-resources/kube-controller-manager-certs",
+2024-10-24T13:31:17.701094718Z  ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+2024-10-24T13:31:17.701094718Z  PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+2024-10-24T13:31:17.701094718Z  Timeout: (time.Duration) 2m0s,
+2024-10-24T13:31:17.701094718Z  StaticPodManifestsLockFile: (string) "",
+2024-10-24T13:31:17.701094718Z  PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+2024-10-24T13:31:17.701094718Z  KubeletVersion: (string) ""
+2024-10-24T13:31:17.701094718Z })
+2024-10-24T13:31:17.702992318Z I1024 13:31:17.702936       1 cmd.go:409] Getting controller reference for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:31:18.035204495Z W1024 13:31:18.035046       1 cmd.go:419] unable to get owner reference (falling back to namespace): Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods/installer-11-ci-op-2fcpj5j6-f6035-2lklf-master-0?timeout=14s": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:31:18.035204495Z I1024 13:31:18.035104       1 cmd.go:422] Waiting for installer revisions to settle for node ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:31:18.035268215Z I1024 13:31:18.035197       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:31:18.035268215Z I1024 13:31:18.035211       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:31:18.036956315Z W1024 13:31:18.036866       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:31:28.039160599Z W1024 13:31:28.039054       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:31:38.039535365Z W1024 13:31:38.039435       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:31:48.040243681Z W1024 13:31:48.040152       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:31:58.039493526Z W1024 13:31:58.039382       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:32:08.039897913Z W1024 13:32:08.039785       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:32:18.039232328Z W1024 13:32:18.039110       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:32:18.040271398Z W1024 13:32:18.040214       1 cmd.go:466] Error getting installer pods on current node ci-op-2fcpj5j6-f6035-2lklf-master-0: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-controller-manager/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:32:18.040331378Z F1024 13:32:18.040256       1 cmd.go:105] timed out waiting for the condition

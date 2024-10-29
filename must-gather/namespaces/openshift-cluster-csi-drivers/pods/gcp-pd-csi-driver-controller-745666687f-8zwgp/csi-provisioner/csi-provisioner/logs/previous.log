@@ -1,0 +1,50 @@
+2024-10-24T13:05:44.239726909Z W1024 13:05:44.239490       1 feature_gate.go:354] Setting GA feature gate Topology=true. It will be removed in a future release.
+2024-10-24T13:05:44.239726909Z I1024 13:05:44.239639       1 feature_gate.go:387] feature gates: {map[Topology:true]}
+2024-10-24T13:05:44.239726909Z I1024 13:05:44.239675       1 csi-provisioner.go:154] Version: v0.4.1-1537-g376f0ea04-dirty
+2024-10-24T13:05:44.239726909Z I1024 13:05:44.239683       1 csi-provisioner.go:177] Building kube configs for running in cluster...
+2024-10-24T13:05:44.242818368Z I1024 13:05:44.242739       1 common.go:143] "Probing CSI driver for readiness"
+2024-10-24T13:05:44.247245688Z I1024 13:05:44.247192       1 csi-provisioner.go:230] Detected CSI driver pd.csi.storage.gke.io
+2024-10-24T13:05:44.247245688Z I1024 13:05:44.247227       1 csi-provisioner.go:240] Supports migration from in-tree plugin: kubernetes.io/gce-pd
+2024-10-24T13:05:44.250480128Z I1024 13:05:44.248246       1 common.go:143] "Probing CSI driver for readiness"
+2024-10-24T13:05:44.253304358Z I1024 13:05:44.253247       1 csi-provisioner.go:299] CSI driver supports PUBLISH_UNPUBLISH_VOLUME, watching VolumeAttachments
+2024-10-24T13:05:44.253896148Z I1024 13:05:44.253866       1 controller.go:744] "Using saving PVs to API server in background"
+2024-10-24T13:05:44.254267387Z I1024 13:05:44.254241       1 leaderelection.go:254] attempting to acquire leader lease openshift-cluster-csi-drivers/pd-csi-storage-gke-io...
+2024-10-24T13:05:44.254928708Z I1024 13:05:44.254908       1 csi-provisioner.go:592] ServeMux listening at "localhost:8202"
+2024-10-24T13:09:51.005481260Z E1024 13:09:51.005368       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/pd-csi-storage-gke-io: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/pd-csi-storage-gke-io": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:10:39.586850387Z I1024 13:10:39.586796       1 leaderelection.go:268] successfully acquired lease openshift-cluster-csi-drivers/pd-csi-storage-gke-io
+2024-10-24T13:10:39.587029887Z I1024 13:10:39.586990       1 leader_election.go:184] "became leader, starting"
+2024-10-24T13:10:39.587424697Z I1024 13:10:39.587323       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:10:39.587424697Z I1024 13:10:39.587342       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:10:39.594703487Z I1024 13:10:39.594631       1 reflector.go:368] Caches populated for *v1.StorageClass from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:10:39.595408917Z I1024 13:10:39.595296       1 reflector.go:368] Caches populated for *v1.PersistentVolumeClaim from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:10:39.597840017Z I1024 13:10:39.597799       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:10:39.599016357Z I1024 13:10:39.598934       1 reflector.go:368] Caches populated for *v1.VolumeAttachment from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:10:39.600332327Z I1024 13:10:39.600289       1 reflector.go:368] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:10:39.687558079Z I1024 13:10:39.687475       1 volume_store.go:98] "Starting save volume queue"
+2024-10-24T13:10:39.687612089Z I1024 13:10:39.687553       1 controller.go:824] "Starting provisioner controller" component="pd.csi.storage.gke.io_ci-op-2fcpj5j6-f6035-2lklf-master-1_52eaaa8d-7494-48eb-93ac-3b00b5947c7b"
+2024-10-24T13:10:39.687612089Z I1024 13:10:39.687583       1 clone_controller.go:66] Starting CloningProtection controller
+2024-10-24T13:10:39.687991799Z I1024 13:10:39.687952       1 clone_controller.go:82] Started CloningProtection controller
+2024-10-24T13:10:39.692102139Z I1024 13:10:39.692053       1 reflector.go:368] Caches populated for *v1.PersistentVolume from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:858
+2024-10-24T13:10:39.692123229Z I1024 13:10:39.692082       1 reflector.go:368] Caches populated for *v1.StorageClass from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:861
+2024-10-24T13:10:39.789296651Z I1024 13:10:39.789224       1 controller.go:873] "Started provisioner controller" component="pd.csi.storage.gke.io_ci-op-2fcpj5j6-f6035-2lklf-master-1_52eaaa8d-7494-48eb-93ac-3b00b5947c7b"
+2024-10-24T13:13:19.647719657Z E1024 13:13:19.647639       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/pd-csi-storage-gke-io": dial tcp 172.30.0.1:443: i/o timeout, falling back to slow path
+2024-10-24T13:13:23.583321409Z I1024 13:13:23.583260       1 reflector.go:368] Caches populated for *v1.StorageClass from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:861
+2024-10-24T13:13:23.593353398Z I1024 13:13:23.593310       1 reflector.go:368] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:23.760180075Z I1024 13:13:23.760130       1 reflector.go:368] Caches populated for *v1.VolumeAttachment from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:23.888227925Z I1024 13:13:23.888154       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:24.084860260Z I1024 13:13:24.084791       1 reflector.go:368] Caches populated for *v1.PersistentVolumeClaim from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:24.168976383Z I1024 13:13:24.168883       1 reflector.go:368] Caches populated for *v1.PersistentVolume from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:858
+2024-10-24T13:13:24.283868334Z I1024 13:13:24.283745       1 reflector.go:368] Caches populated for *v1.StorageClass from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:14:21.807602945Z E1024 13:14:21.807542       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:15:20.182816445Z I1024 13:15:20.182312       1 reflector.go:368] Caches populated for *v1.PersistentVolume from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:858
+2024-10-24T13:15:20.270584780Z I1024 13:15:20.270504       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:15:20.548166585Z I1024 13:15:20.548107       1 reflector.go:368] Caches populated for *v1.PersistentVolumeClaim from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:15:20.698881786Z I1024 13:15:20.698815       1 reflector.go:368] Caches populated for *v1.Node from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:15:21.434663740Z I1024 13:15:21.434607       1 reflector.go:368] Caches populated for *v1.StorageClass from sigs.k8s.io/sig-storage-lib-external-provisioner/v10/controller/controller.go:861
+2024-10-24T13:15:21.435408700Z I1024 13:15:21.435339       1 reflector.go:368] Caches populated for *v1.StorageClass from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:16:17.578080412Z E1024 13:16:17.578007       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:17.584239391Z E1024 13:17:17.584181       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/pd-csi-storage-gke-io: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io pd-csi-storage-gke-io)
+2024-10-24T13:17:50.591589596Z E1024 13:17:50.591542       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:57.538880623Z E1024 13:17:57.538794       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/pd-csi-storage-gke-io: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/pd-csi-storage-gke-io": context deadline exceeded
+2024-10-24T13:17:57.538880623Z I1024 13:17:57.538861       1 leaderelection.go:297] failed to renew lease openshift-cluster-csi-drivers/pd-csi-storage-gke-io: timed out waiting for the condition
+2024-10-24T13:17:57.538943093Z E1024 13:17:57.538911       1 leader_election.go:188] "Stopped leading"

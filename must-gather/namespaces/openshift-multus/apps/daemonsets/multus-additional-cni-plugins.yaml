@@ -1,0 +1,695 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "1"
+    kubernetes.io/description: |
+      This daemon installs and configures auxiliary CNI plugins on each node.
+    release.openshift.io/version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  creationTimestamp: "2024-10-24T13:02:17Z"
+  generation: 1
+  labels:
+    networkoperator.openshift.io/generates-operator-status: stand-alone
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:kubernetes.io/description: {}
+          f:release.openshift.io/version: {}
+        f:labels:
+          f:networkoperator.openshift.io/generates-operator-status: {}
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+      f:spec:
+        f:selector: {}
+        f:template:
+          f:metadata:
+            f:annotations:
+              f:cluster-autoscaler.kubernetes.io/enable-ds-eviction: {}
+              f:target.workload.openshift.io/management: {}
+            f:labels:
+              f:app: {}
+              f:component: {}
+              f:openshift.io/component: {}
+              f:type: {}
+          f:spec:
+            f:containers:
+              k:{"name":"kube-multus-additional-cni-plugins"}:
+                .: {}
+                f:args: {}
+                f:command: {}
+                f:image: {}
+                f:name: {}
+                f:resources:
+                  f:requests:
+                    f:cpu: {}
+                    f:memory: {}
+                f:securityContext:
+                  f:privileged: {}
+                f:terminationMessagePolicy: {}
+            f:hostNetwork: {}
+            f:initContainers:
+              k:{"name":"bond-cni-plugin"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:name: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  k:{"mountPath":"/entrypoint"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/host/etc/os-release"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/opt/cni/bin"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"cni-plugins"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:name: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  k:{"mountPath":"/entrypoint"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/host/etc/cni/tuning/"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/etc/os-release"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/opt/cni/bin"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/sysctls"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"egress-router-binary-copy"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:name: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  k:{"mountPath":"/entrypoint"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/host/etc/os-release"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/opt/cni/bin"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"routeoverride-cni"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:name: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  k:{"mountPath":"/entrypoint"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/host/etc/os-release"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/opt/cni/bin"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"whereabouts-cni"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  k:{"name":"CNI_BIN_DIR"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"CNI_CONF_DIR"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"KUBERNETES_SERVICE_HOST"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"KUBERNETES_SERVICE_PORT"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"SLEEP"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"WHEREABOUTS_NAMESPACE"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:name: {}
+                f:resources:
+                  f:requests:
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  k:{"mountPath":"/host/etc/cni/net.d"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/host/opt/cni/bin"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+              k:{"name":"whereabouts-cni-bincopy"}:
+                .: {}
+                f:command: {}
+                f:env:
+                  k:{"name":"DEFAULT_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL8_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                  k:{"name":"RHEL9_SOURCE_DIRECTORY"}:
+                    .: {}
+                    f:name: {}
+                    f:value: {}
+                f:image: {}
+                f:name: {}
+                f:resources:
+                  f:requests:
+                    f:cpu: {}
+                    f:memory: {}
+                f:terminationMessagePolicy: {}
+                f:volumeMounts:
+                  k:{"mountPath":"/entrypoint"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                  k:{"mountPath":"/host/etc/os-release"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+                    f:readOnly: {}
+                  k:{"mountPath":"/host/opt/cni/bin"}:
+                    .: {}
+                    f:mountPath: {}
+                    f:name: {}
+            f:nodeSelector: {}
+            f:priorityClassName: {}
+            f:serviceAccountName: {}
+            f:terminationGracePeriodSeconds: {}
+            f:tolerations: {}
+            f:volumes:
+              k:{"name":"cni-binary-copy"}:
+                .: {}
+                f:configMap:
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"cni-sysctl-allowlist"}:
+                .: {}
+                f:configMap:
+                  f:defaultMode: {}
+                  f:name: {}
+                f:name: {}
+              k:{"name":"cnibin"}:
+                .: {}
+                f:hostPath:
+                  f:path: {}
+                f:name: {}
+              k:{"name":"multus-cni-dir"}:
+                .: {}
+                f:hostPath:
+                  f:path: {}
+                f:name: {}
+              k:{"name":"os-release"}:
+                .: {}
+                f:hostPath:
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+              k:{"name":"system-cni-dir"}:
+                .: {}
+                f:hostPath:
+                  f:path: {}
+                f:name: {}
+              k:{"name":"tuning-conf-dir"}:
+                .: {}
+                f:hostPath:
+                  f:path: {}
+                  f:type: {}
+                f:name: {}
+        f:updateStrategy:
+          f:rollingUpdate:
+            f:maxUnavailable: {}
+          f:type: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:02:17Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:currentNumberScheduled: {}
+        f:desiredNumberScheduled: {}
+        f:numberAvailable: {}
+        f:numberReady: {}
+        f:observedGeneration: {}
+        f:updatedNumberScheduled: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:20:22Z"
+  name: multus-additional-cni-plugins
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "21952"
+  uid: 6639bfb6-04ce-4e19-993b-511b48e2d3fb
+spec:
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: multus-additional-cni-plugins
+  template:
+    metadata:
+      annotations:
+        cluster-autoscaler.kubernetes.io/enable-ds-eviction: "false"
+        target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+      creationTimestamp: null
+      labels:
+        app: multus-additional-cni-plugins
+        component: network
+        openshift.io/component: network
+        type: infra
+    spec:
+      containers:
+      - args:
+        - |
+          trap : TERM INT; sleep infinity & wait
+        command:
+        - /bin/bash
+        - -ec
+        - --
+        image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:e518fa7811c999ddcd42118e54e5c509cead66f831b08157bfe30f3330a86a95
+        imagePullPolicy: IfNotPresent
+        name: kube-multus-additional-cni-plugins
+        resources:
+          requests:
+            cpu: 10m
+            memory: 10Mi
+        securityContext:
+          privileged: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+      dnsPolicy: ClusterFirst
+      hostNetwork: true
+      initContainers:
+      - command:
+        - /entrypoint/cnibincopy.sh
+        env:
+        - name: RHEL8_SOURCE_DIRECTORY
+          value: /usr/src/egress-router-cni/rhel8/bin/
+        - name: RHEL9_SOURCE_DIRECTORY
+          value: /usr/src/egress-router-cni/rhel9/bin/
+        - name: DEFAULT_SOURCE_DIRECTORY
+          value: /usr/src/egress-router-cni/bin/
+        image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:08b1ec5a8e7a81d7bfe9d0649a7b3a3892d53ce3cc6ae3c82c51e81f20b62e96
+        imagePullPolicy: IfNotPresent
+        name: egress-router-binary-copy
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /entrypoint
+          name: cni-binary-copy
+        - mountPath: /host/opt/cni/bin
+          name: cnibin
+        - mountPath: /host/etc/os-release
+          name: os-release
+          readOnly: true
+      - command:
+        - /bin/bash
+        - -c
+        - /entrypoint/cnibincopy.sh && cp -n /sysctls/allowlist.conf /host/etc/cni/tuning/
+        env:
+        - name: RHEL8_SOURCE_DIRECTORY
+          value: /usr/src/plugins/rhel8/bin/
+        - name: RHEL9_SOURCE_DIRECTORY
+          value: /usr/src/plugins/rhel9/bin/
+        - name: DEFAULT_SOURCE_DIRECTORY
+          value: /usr/src/plugins/bin/
+        image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ab5384c3fd93b40d299eb1ac0e115ffc0e96a14a88d2367d4c21ca4179a35a1d
+        imagePullPolicy: IfNotPresent
+        name: cni-plugins
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /entrypoint
+          name: cni-binary-copy
+        - mountPath: /host/opt/cni/bin
+          name: cnibin
+        - mountPath: /host/etc/os-release
+          name: os-release
+          readOnly: true
+        - mountPath: /host/etc/cni/tuning/
+          name: tuning-conf-dir
+        - mountPath: /sysctls
+          name: cni-sysctl-allowlist
+      - command:
+        - /entrypoint/cnibincopy.sh
+        env:
+        - name: RHEL8_SOURCE_DIRECTORY
+          value: /bondcni/rhel8/
+        - name: RHEL9_SOURCE_DIRECTORY
+          value: /bondcni/rhel9/
+        - name: DEFAULT_SOURCE_DIRECTORY
+          value: /bondcni/rhel9/
+        image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:225334ac4eacee6b93b19fa939b565b0e177d0da9d49e701ab4db7309253fcaa
+        imagePullPolicy: IfNotPresent
+        name: bond-cni-plugin
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /entrypoint
+          name: cni-binary-copy
+        - mountPath: /host/opt/cni/bin
+          name: cnibin
+        - mountPath: /host/etc/os-release
+          name: os-release
+          readOnly: true
+      - command:
+        - /entrypoint/cnibincopy.sh
+        env:
+        - name: RHEL8_SOURCE_DIRECTORY
+          value: /usr/src/route-override/rhel8/bin/
+        - name: RHEL9_SOURCE_DIRECTORY
+          value: /usr/src/route-override/rhel9/bin/
+        - name: DEFAULT_SOURCE_DIRECTORY
+          value: /usr/src/route-override/bin/
+        image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:bb11b8d7f3699b6ca202deb5c5139690eb865df1fe778f37f3a88af35ba65225
+        imagePullPolicy: IfNotPresent
+        name: routeoverride-cni
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /entrypoint
+          name: cni-binary-copy
+        - mountPath: /host/opt/cni/bin
+          name: cnibin
+        - mountPath: /host/etc/os-release
+          name: os-release
+          readOnly: true
+      - command:
+        - /entrypoint/cnibincopy.sh
+        env:
+        - name: RHEL8_SOURCE_DIRECTORY
+          value: /usr/src/whereabouts/rhel8/bin/
+        - name: RHEL9_SOURCE_DIRECTORY
+          value: /usr/src/whereabouts/rhel9/bin/
+        - name: DEFAULT_SOURCE_DIRECTORY
+          value: /usr/src/whereabouts/bin/
+        image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:785b30a0f466a3a4581f68f36dd9de13a5700b48fe6b0e32f01541d4ae611010
+        imagePullPolicy: IfNotPresent
+        name: whereabouts-cni-bincopy
+        resources:
+          requests:
+            cpu: 10m
+            memory: 10Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /entrypoint
+          name: cni-binary-copy
+        - mountPath: /host/opt/cni/bin
+          name: cnibin
+        - mountPath: /host/etc/os-release
+          name: os-release
+          readOnly: true
+      - command:
+        - /bin/sh
+        - -c
+        - |
+          #!/bin/sh
+
+          set -u -e
+
+          CNI_BIN_DIR=${CNI_BIN_DIR:-"/host/opt/cni/bin/"}
+          WHEREABOUTS_KUBECONFIG_FILE_HOST=${WHEREABOUTS_KUBECONFIG_FILE_HOST:-"/etc/cni/net.d/whereabouts.d/whereabouts.kubeconfig"}
+          CNI_CONF_DIR=${CNI_CONF_DIR:-"/host/etc/cni/net.d"}
+
+          # Make a whereabouts.d directory (for our kubeconfig)
+
+          mkdir -p $CNI_CONF_DIR/whereabouts.d
+          WHEREABOUTS_KUBECONFIG=$CNI_CONF_DIR/whereabouts.d/whereabouts.kubeconfig
+          WHEREABOUTS_GLOBALCONFIG=$CNI_CONF_DIR/whereabouts.d/whereabouts.conf
+
+          # ------------------------------- Generate a "kube-config"
+          SERVICE_ACCOUNT_PATH=/var/run/secrets/kubernetes.io/serviceaccount
+          KUBE_CA_FILE=${KUBE_CA_FILE:-$SERVICE_ACCOUNT_PATH/ca.crt}
+          SERVICEACCOUNT_TOKEN=$(cat $SERVICE_ACCOUNT_PATH/token)
+          SKIP_TLS_VERIFY=${SKIP_TLS_VERIFY:-false}
+
+
+          # Check if we're running as a k8s pod.
+          if [ -f "$SERVICE_ACCOUNT_PATH/token" ]; then
+            # We're running as a k8d pod - expect some variables.
+            if [ -z ${KUBERNETES_SERVICE_HOST} ]; then
+              error "KUBERNETES_SERVICE_HOST not set"; exit 1;
+            fi
+            if [ -z ${KUBERNETES_SERVICE_PORT} ]; then
+              error "KUBERNETES_SERVICE_PORT not set"; exit 1;
+            fi
+
+            if [ "$SKIP_TLS_VERIFY" == "true" ]; then
+              TLS_CFG="insecure-skip-tls-verify: true"
+            elif [ -f "$KUBE_CA_FILE" ]; then
+              TLS_CFG="certificate-authority-data: $(cat $KUBE_CA_FILE | base64 | tr -d '\n')"
+            fi
+
+            # Write a kubeconfig file for the CNI plugin.  Do this
+            # to skip TLS verification for now.  We should eventually support
+            # writing more complete kubeconfig files. This is only used
+            # if the provided CNI network config references it.
+            touch $WHEREABOUTS_KUBECONFIG
+            chmod ${KUBECONFIG_MODE:-600} $WHEREABOUTS_KUBECONFIG
+            cat > $WHEREABOUTS_KUBECONFIG <<EOF
+          # Kubeconfig file for Multus CNI plugin.
+          apiVersion: v1
+          kind: Config
+          clusters:
+          - name: local
+            cluster:
+              server: ${KUBERNETES_SERVICE_PROTOCOL:-https}://${KUBERNETES_SERVICE_HOST}:${KUBERNETES_SERVICE_PORT}
+              $TLS_CFG
+          users:
+          - name: whereabouts
+            user:
+              token: "${SERVICEACCOUNT_TOKEN}"
+          contexts:
+          - name: whereabouts-context
+            context:
+              cluster: local
+              user: whereabouts
+              namespace: ${WHEREABOUTS_NAMESPACE}
+          current-context: whereabouts-context
+          EOF
+
+          # Kubeconfig file for Whereabouts CNI plugin.
+          cat > $WHEREABOUTS_GLOBALCONFIG <<EOF
+          {
+            "datastore": "kubernetes",
+            "kubernetes": {
+              "kubeconfig": "/etc/kubernetes/cni/net.d/whereabouts.d/whereabouts.kubeconfig"
+            },
+            "reconciler_cron_expression": "30 4 * * *",
+            "log_level": "debug"
+          }
+          EOF
+          chmod 600 $WHEREABOUTS_GLOBALCONFIG
+
+          else
+            warn "Doesn't look like we're running in a kubernetes environment (no serviceaccount token)"
+          fi
+
+          # copy whereabouts to the cni bin dir
+          # SKIPPED DUE TO FIPS COPY.
+          # cp -f /whereabouts $CNI_BIN_DIR
+
+          # ---------------------- end Generate a "kube-config".
+
+          # Unless told otherwise, sleep forever.
+          # This prevents Kubernetes from restarting the pod repeatedly.
+          should_sleep=${SLEEP:-"true"}
+          echo "Done configuring CNI.  Sleep=$should_sleep"
+          while [ "$should_sleep" == "true"  ]; do
+              sleep 1000000000000
+          done
+        env:
+        - name: KUBERNETES_SERVICE_PORT
+          value: "6443"
+        - name: KUBERNETES_SERVICE_HOST
+          value: api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX
+        - name: CNI_BIN_DIR
+          value: /host/opt/cni/bin/
+        - name: CNI_CONF_DIR
+          value: /host/etc/cni/net.d
+        - name: SLEEP
+          value: "false"
+        - name: WHEREABOUTS_NAMESPACE
+          value: openshift-multus
+        image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:785b30a0f466a3a4581f68f36dd9de13a5700b48fe6b0e32f01541d4ae611010
+        imagePullPolicy: IfNotPresent
+        name: whereabouts-cni
+        resources:
+          requests:
+            cpu: 10m
+            memory: 10Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /host/opt/cni/bin
+          name: cnibin
+        - mountPath: /host/etc/cni/net.d
+          name: system-cni-dir
+      nodeSelector:
+        kubernetes.io/os: linux
+      priorityClassName: system-node-critical
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: multus-ancillary-tools
+      serviceAccountName: multus-ancillary-tools
+      terminationGracePeriodSeconds: 10
+      tolerations:
+      - operator: Exists
+      volumes:
+      - hostPath:
+          path: /etc/kubernetes/cni/net.d
+          type: ""
+        name: system-cni-dir
+      - hostPath:
+          path: /var/run/multus/cni/net.d
+          type: ""
+        name: multus-cni-dir
+      - hostPath:
+          path: /var/lib/cni/bin
+          type: ""
+        name: cnibin
+      - hostPath:
+          path: /etc/os-release
+          type: File
+        name: os-release
+      - configMap:
+          defaultMode: 484
+          name: cni-copy-resources
+        name: cni-binary-copy
+      - hostPath:
+          path: /etc/cni/tuning/
+          type: DirectoryOrCreate
+        name: tuning-conf-dir
+      - configMap:
+          defaultMode: 484
+          name: default-cni-sysctl-allowlist
+        name: cni-sysctl-allowlist
+  updateStrategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 10%
+    type: RollingUpdate
+status:
+  currentNumberScheduled: 6
+  desiredNumberScheduled: 6
+  numberAvailable: 6
+  numberMisscheduled: 0
+  numberReady: 6
+  observedGeneration: 1
+  updatedNumberScheduled: 6

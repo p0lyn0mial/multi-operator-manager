@@ -1,0 +1,46 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:36Z"
+    creationTimestamp: "2024-10-24T12:58:52Z"
+    labels:
+      name: dns-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:name: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:36Z"
+    name: metrics
+    namespace: openshift-dns-operator
+    resourceVersion: "13900"
+    uid: f8bab660-abee-457a-8a4a-4bc8a87d9a33
+  subsets:
+  - addresses:
+    - ip: 10.130.0.14
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: dns-operator-79c9668d4f-5xbr8
+        namespace: openshift-dns-operator
+        uid: 32d9a960-4db0-45f2-91fa-b5c688e37a3c
+    ports:
+    - name: metrics
+      port: 9393
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60644"

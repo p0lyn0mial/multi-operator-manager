@@ -1,0 +1,548 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:04:09.696973Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9355"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-samples-operator/cluster-samples-operator-68ff7cdcb6-z7zcl
+    to ci-op-2fcpj5j6-f6035-2lklf-master-0
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:09Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:04:09Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.1801653e3285bf80
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9360"
+    uid: 474b91da-343c-44a1-aee7-6eb0bcd47141
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:10Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9364"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:10Z"
+  message: Add eth0 [10.129.0.12/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:04:10Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.1801653e4f26f95d
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9380"
+    uid: e7d27c5d-b242-4191-b422-905994e36091
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-samples-operator}
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9356"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:10Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:53185d3f82a587bd8a1361322ade3b5f9c20368772319eb823b233a7896e765f"
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:10Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.1801653e6a87bb8f
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9392"
+    uid: 0b792508-6396-4b86-a149-249998abf78c
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-samples-operator}
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9356"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:18Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:53185d3f82a587bd8a1361322ade3b5f9c20368772319eb823b233a7896e765f"
+    in 7.77s (7.77s including waiting). Image size: 432306176 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:18Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.1801654039ab941e
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9567"
+    uid: 70f71c4a-7686-4275-8d30-a6d4386a45c4
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-samples-operator}
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9356"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:18Z"
+  message: Created container cluster-samples-operator
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:18Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.180165403ede6a2b
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9569"
+    uid: a4060147-cece-4156-8eb5-ea3dae372849
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-samples-operator}
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9356"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:18Z"
+  message: Started container cluster-samples-operator
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:18Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.180165404050a922
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9570"
+    uid: e31c19a2-7535-4c7a-8380-24d096f1385b
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-samples-operator-watch}
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9356"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:18Z"
+  message: Container image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:53185d3f82a587bd8a1361322ade3b5f9c20368772319eb823b233a7896e765f"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:18Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.18016540408d929c
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9571"
+    uid: 67a01e30-9689-46b9-941e-734f838dcb39
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-samples-operator-watch}
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9356"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:18Z"
+  message: Created container cluster-samples-operator-watch
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:18Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.180165404623bf52
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9577"
+    uid: 25ff7031-d660-4131-b535-3aaf09c7498e
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-samples-operator-watch}
+    kind: Pod
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9356"
+    uid: 467b66a9-3d1b-4091-9f68-fae5ee45e6be
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:18Z"
+  message: Started container cluster-samples-operator-watch
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:18Z"
+    name: cluster-samples-operator-68ff7cdcb6-z7zcl.1801654046e609fd
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9578"
+    uid: dca74682-5bad-4661-99fa-86838ef0155e
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:09Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-samples-operator-68ff7cdcb6
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9352"
+    uid: e0d1efaf-72b6-45e3-a76b-e1c324c3eca3
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:09Z"
+  message: 'Created pod: cluster-samples-operator-68ff7cdcb6-z7zcl'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:04:09Z"
+    name: cluster-samples-operator-68ff7cdcb6.1801653e322c196c
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9357"
+    uid: 771a3ac6-9295-40f4-a0df-3d190848ccde
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:09Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-samples-operator
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9351"
+    uid: 181c2d96-5473-4d4c-9624-f71ab3323330
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:09Z"
+  message: Scaled up replica set cluster-samples-operator-68ff7cdcb6 to 1
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:04:09Z"
+    name: cluster-samples-operator.1801653e3152de4b
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9353"
+    uid: d35f04cd-7570-41ca-808b-fa42c194252f
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:18Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-samples-operator
+    namespace: openshift-cluster-samples-operator
+    uid: 181c2d96-5473-4d4c-9624-f71ab3323330
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:18Z"
+  message: Started watching files for process cluster-samples-operator[2]
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-samples-operator-watch
+      operation: Update
+      time: "2024-10-24T13:04:18Z"
+    name: cluster-samples-operator.180165404aa47b95
+    namespace: openshift-cluster-samples-operator
+    resourceVersion: "9584"
+    uid: 82f7f2ec-1355-47f1-b0f2-a6f596a0cc40
+  reason: FileChangeWatchdogStarted
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: file-change-watchdog
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "61077"

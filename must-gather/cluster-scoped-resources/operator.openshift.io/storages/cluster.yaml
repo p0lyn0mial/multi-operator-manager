@@ -1,0 +1,241 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Storage
+metadata:
+  annotations:
+    capability.openshift.io/name: Storage
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2024-10-24T12:59:06Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:59:06Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"CSIDriverStarterDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConfigObservationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DefaultStorageClassControllerAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DefaultStorageClassControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DefaultStorageClassControllerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDCSIDriverOperatorCRAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDCSIDriverOperatorCRDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDCSIDriverOperatorCRProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDCSIDriverOperatorCRUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDCSIDriverOperatorDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDCSIDriverOperatorDeploymentDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDCSIDriverOperatorStaticControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"GCPPDProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"VSphereProblemDetectorStarterDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations:
+          .: {}
+          k:{"group":"apps","name":"gcp-pd-csi-driver-operator","namespace":"openshift-cluster-csi-drivers","resource":"deployments"}:
+            .: {}
+            f:group: {}
+            f:hash: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+          k:{"group":"operator.openshift.io","name":"pd.csi.storage.gke.io","namespace":"","resource":"clustercsidrivers"}:
+            .: {}
+            f:group: {}
+            f:hash: {}
+            f:lastGeneration: {}
+            f:name: {}
+            f:namespace: {}
+            f:resource: {}
+        f:readyReplicas: {}
+    manager: cluster-storage-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:25:52Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "27952"
+  uid: e2e5688d-36d6-4590-ba81-64ae46c5f999
+spec:
+  logLevel: Normal
+  managementState: Managed
+  operatorLogLevel: Normal
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:03:40Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2024-10-24T13:03:40Z"
+    reason: AsExpected
+    status: "False"
+    type: CSIDriverStarterDegraded
+  - lastTransitionTime: "2024-10-24T13:03:45Z"
+    status: "False"
+    type: GCPPDProgressing
+  - lastTransitionTime: "2024-10-24T13:03:42Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDCSIDriverOperatorDeploymentDegraded
+  - lastTransitionTime: "2024-10-24T13:03:45Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2024-10-24T13:03:45Z"
+    message: StorageClass provided by supplied CSI Driver instead of the cluster-storage-operator
+    status: "True"
+    type: DefaultStorageClassControllerAvailable
+  - lastTransitionTime: "2024-10-24T13:03:45Z"
+    status: "False"
+    type: DefaultStorageClassControllerProgressing
+  - lastTransitionTime: "2024-10-24T13:03:45Z"
+    reason: AsExpected
+    status: "False"
+    type: VSphereProblemDetectorStarterDegraded
+  - lastTransitionTime: "2024-10-24T13:21:32Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDCSIDriverOperatorStaticControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:47Z"
+    reason: AsExpected
+    status: "False"
+    type: DefaultStorageClassControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:03:48Z"
+    reason: AsExpected
+    status: "False"
+    type: GCPPDCSIDriverOperatorDegraded
+  - lastTransitionTime: "2024-10-24T13:04:19Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: GCPPDCSIDriverOperatorCRAvailable
+  - lastTransitionTime: "2024-10-24T13:07:03Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: GCPPDCSIDriverOperatorCRProgressing
+  - lastTransitionTime: "2024-10-24T13:25:52Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: GCPPDCSIDriverOperatorCRDegraded
+  - lastTransitionTime: "2024-10-24T13:03:48Z"
+    status: "True"
+    type: GCPPDCSIDriverOperatorCRUpgradeable
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: gcp-pd-csi-driver-operator
+    namespace: openshift-cluster-csi-drivers
+    resource: deployments
+  - group: operator.openshift.io
+    hash: ""
+    lastGeneration: 2
+    name: pd.csi.storage.gke.io
+    namespace: ""
+    resource: clustercsidrivers
+  readyReplicas: 0

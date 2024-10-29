@@ -1,0 +1,38 @@
+---
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2024-10-24T12:57:16Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: "true"
+  managedFields:
+  - apiVersion: apiregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kube-aggregator.kubernetes.io/automanaged: {}
+      f:spec:
+        f:group: {}
+        f:groupPriorityMinimum: {}
+        f:version: {}
+        f:versionPriority: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2024-10-24T12:57:16Z"
+  name: v1.config.openshift.io
+  resourceVersion: "75"
+  uid: a564630b-fe04-4cce-a08e-9c0d470d97bb
+spec:
+  group: config.openshift.io
+  groupPriorityMinimum: 1100
+  version: v1
+  versionPriority: 100
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T12:57:16Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

@@ -1,0 +1,161 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: MachineAPI+CloudCredential
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2024-10-24T12:58:58Z"
+  finalizers:
+  - cloudcredential.openshift.io/deprovision
+  generation: 1
+  labels:
+    controller-tools.k8s.io: "1.0"
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:labels:
+          .: {}
+          f:controller-tools.k8s.io: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:permissions: {}
+        f:secretRef: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:58Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cloudcredential.openshift.io/deprovision": {}
+    manager: cloud-credential-operator
+    operation: Update
+    time: "2024-10-24T12:59:24Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncCloudCredsSecretResourceVersion: {}
+        f:lastSyncGeneration: {}
+        f:lastSyncInfrastructureResourceVersion: {}
+        f:lastSyncTimestamp: {}
+        f:providerStatus:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:roleID: {}
+          f:serviceAccountID: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:04:31Z"
+  name: openshift-machine-api-gcp
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "44217"
+  uid: 7eb6a481-44a2-4ad1-8ce7-fcfa0133c505
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderSpec
+    permissions:
+    - iam.serviceAccounts.actAs
+    - iam.serviceAccounts.get
+    - iam.serviceAccounts.list
+    - compute.acceleratorTypes.get
+    - compute.acceleratorTypes.list
+    - compute.disks.create
+    - compute.disks.createTagBinding
+    - compute.disks.setLabels
+    - compute.globalOperations.get
+    - compute.globalOperations.list
+    - compute.healthChecks.useReadOnly
+    - compute.instanceGroups.create
+    - compute.instanceGroups.delete
+    - compute.instanceGroups.get
+    - compute.instanceGroups.list
+    - compute.instanceGroups.update
+    - compute.instances.create
+    - compute.instances.createTagBinding
+    - compute.instances.delete
+    - compute.instances.get
+    - compute.instances.list
+    - compute.instances.use
+    - compute.instances.setLabels
+    - compute.instances.setMetadata
+    - compute.instances.setTags
+    - compute.instances.setServiceAccount
+    - compute.instances.update
+    - compute.machineTypes.get
+    - compute.machineTypes.list
+    - compute.projects.get
+    - compute.regionBackendServices.get
+    - compute.regionBackendServices.create
+    - compute.regionBackendServices.update
+    - compute.regions.get
+    - compute.regions.list
+    - compute.subnetworks.use
+    - compute.subnetworks.useExternalIp
+    - compute.targetPools.addInstance
+    - compute.targetPools.delete
+    - compute.targetPools.get
+    - compute.targetPools.removeInstance
+    - compute.zoneOperations.get
+    - compute.zoneOperations.list
+    - compute.zones.get
+    - compute.zones.list
+    - resourcemanager.tagValues.get
+    - resourcemanager.tagValues.list
+    - serviceusage.quotas.get
+    - serviceusage.services.get
+    - serviceusage.services.list
+  secretRef:
+    name: gcp-cloud-credentials
+    namespace: openshift-machine-api
+  serviceAccountNames:
+  - machine-api-controllers
+status:
+  conditions:
+  - lastProbeTime: "2024-10-24T12:59:59Z"
+    lastTransitionTime: "2024-10-24T12:59:59Z"
+    message: successfully granted credentials request
+    reason: CredentialsProvisionSuccess
+    status: "False"
+    type: CredentialsProvisionFailure
+  lastSyncCloudCredsSecretResourceVersion: "44193"
+  lastSyncGeneration: 1
+  lastSyncInfrastructureResourceVersion: "526"
+  lastSyncTimestamp: "2024-10-24T14:04:31Z"
+  providerStatus:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderStatus
+    roleID: openshiftgcedevelci3_openshiftmachineapigcp
+    serviceAccountID: ci-op-2fcpj5-openshift-m-qmwt6
+  provisioned: true

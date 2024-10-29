@@ -1,0 +1,33 @@
+---
+apiVersion: network.operator.openshift.io/v1
+kind: OperatorPKI
+metadata:
+  creationTimestamp: "2024-10-24T13:02:34Z"
+  generation: 1
+  managedFields:
+  - apiVersion: network.operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+      f:spec:
+        f:targetCert:
+          f:commonName: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:02:34Z"
+  name: network-node-identity
+  namespace: openshift-network-node-identity
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "4335"
+  uid: e16361c5-df41-4a61-b018-32404c271081
+spec:
+  targetCert:
+    commonName: 127.0.0.1

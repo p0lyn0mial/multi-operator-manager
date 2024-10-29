@@ -1,0 +1,323 @@
+2024-10-24T13:16:36.871112472Z + [[ -f /env/_master ]]
+2024-10-24T13:16:36.871460332Z ++ date '+%m%d %H:%M:%S.%N'
+2024-10-24T13:16:36.874082162Z I1024 13:16:36.873465343 - network-node-identity - start approver
+2024-10-24T13:16:36.874154693Z + echo 'I1024 13:16:36.873465343 - network-node-identity - start approver'
+2024-10-24T13:16:36.874154693Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443 --disable-webhook --csr-acceptance-conditions=/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json --loglevel=4
+2024-10-24T13:16:36.920956472Z I1024 13:16:36.920702       1 ovnkubeidentity.go:132] Config: {kubeconfig: apiServer:https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:4 port:9443 host:localhost certDir: metricsAddress:0 leaseNamespace: enableInterconnect:false enableHybridOverlay:false disableWebhook:true disableApprover:false waitForKAPIDuration:0 localKAPIPort:6443 extraAllowedUsers:{slice:[] hasBeenSet:false} csrAcceptanceConditionFile:/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json csrAcceptanceConditions:[] podAdmissionConditionFile: podAdmissionConditions:[]}
+2024-10-24T13:16:36.920956472Z W1024 13:16:36.920897       1 client_config.go:659] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2024-10-24T13:16:36.922867662Z I1024 13:16:36.922775       1 ovnkubeidentity.go:471] Starting certificate signing request approver
+2024-10-24T13:16:36.923643943Z I1024 13:16:36.923536       1 leaderelection.go:250] attempting to acquire leader lease openshift-network-node-identity/ovnkube-identity...
+2024-10-24T13:17:06.945071282Z E1024 13:17:06.944980       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: i/o timeout
+2024-10-24T13:17:06.945071282Z I1024 13:17:06.945026       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:18:03.350636235Z E1024 13:18:03.350539       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: i/o timeout
+2024-10-24T13:18:03.350636235Z I1024 13:18:03.350577       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:19:00.158678152Z E1024 13:19:00.158475       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: i/o timeout
+2024-10-24T13:19:00.158678152Z I1024 13:19:00.158618       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:19:23.225182972Z E1024 13:19:23.225006       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: connect: connection refused
+2024-10-24T13:19:23.225182972Z I1024 13:19:23.225057       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:19:53.816805591Z I1024 13:19:53.816726       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:19:53.816805591Z I1024 13:19:53.816757       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:20:25.691564655Z I1024 13:20:25.691484       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:20:25.691564655Z I1024 13:20:25.691513       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:20:49.894382096Z I1024 13:20:49.894299       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:20:49.894382096Z I1024 13:20:49.894328       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:21:33.123731416Z I1024 13:21:33.123608       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:21:33.123731416Z I1024 13:21:33.123644       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:21:54.934178686Z I1024 13:21:54.934035       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:21:54.934178686Z I1024 13:21:54.934064       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:22:28.298385424Z I1024 13:22:28.298293       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:22:28.298385424Z I1024 13:22:28.298323       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:22:54.652174395Z I1024 13:22:54.651999       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:22:54.652174395Z I1024 13:22:54.652025       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:23:17.794058583Z I1024 13:23:17.793971       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_55890177-8789-4855-a703-0fcc0cbabb12 and has not yet expired
+2024-10-24T13:23:17.794058583Z I1024 13:23:17.794000       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:24:19.568041178Z E1024 13:24:19.567908       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: i/o timeout
+2024-10-24T13:24:19.568041178Z I1024 13:24:19.567974       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:25:21.786312134Z E1024 13:25:21.786137       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: i/o timeout
+2024-10-24T13:25:21.786312134Z I1024 13:25:21.786175       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:25:43.118527035Z I1024 13:25:43.118444       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:25:43.118527035Z I1024 13:25:43.118477       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:26:09.050782256Z I1024 13:26:09.050643       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:26:09.050782256Z I1024 13:26:09.050672       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:26:52.760349111Z I1024 13:26:52.760258       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:26:52.760349111Z I1024 13:26:52.760283       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:27:21.473343182Z I1024 13:27:21.473261       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:27:21.473343182Z I1024 13:27:21.473304       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:28:22.391128047Z E1024 13:28:22.391039       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: i/o timeout
+2024-10-24T13:28:22.391128047Z I1024 13:28:22.391084       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:29:00.604342131Z I1024 13:29:00.604270       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:29:00.604342131Z I1024 13:29:00.604297       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:29:36.616996168Z I1024 13:29:36.616813       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:29:36.616996168Z I1024 13:29:36.616903       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:30:13.888714858Z I1024 13:30:13.888632       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:30:13.888714858Z I1024 13:30:13.888654       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:30:46.907622897Z I1024 13:30:46.907549       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:30:46.907622897Z I1024 13:30:46.907575       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:31:13.151208911Z I1024 13:31:13.151146       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:31:13.151208911Z I1024 13:31:13.151169       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:31:50.967137882Z I1024 13:31:50.967023       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:31:50.967137882Z I1024 13:31:50.967070       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:32:16.055019751Z I1024 13:32:16.054904       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:32:16.055019751Z I1024 13:32:16.054936       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:32:43.706528565Z E1024 13:32:43.706394       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: connect: connection refused
+2024-10-24T13:32:43.706528565Z I1024 13:32:43.706444       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:33:20.101690971Z E1024 13:33:20.101580       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: connect: connection refused
+2024-10-24T13:33:20.101690971Z I1024 13:33:20.101628       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:33:49.780060876Z I1024 13:33:49.779937       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:33:49.780060876Z I1024 13:33:49.779978       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:34:25.739599911Z I1024 13:34:25.739517       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:34:25.739599911Z I1024 13:34:25.739541       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:34:54.852298529Z I1024 13:34:54.852199       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:34:54.852298529Z I1024 13:34:54.852228       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:35:38.107376417Z I1024 13:35:38.107223       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:35:38.107376417Z I1024 13:35:38.107264       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:36:09.579895205Z I1024 13:36:09.579809       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:36:09.579895205Z I1024 13:36:09.579857       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:36:31.921561032Z I1024 13:36:31.921485       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:36:31.921561032Z I1024 13:36:31.921516       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:37:08.831412422Z I1024 13:37:08.831327       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:37:08.831412422Z I1024 13:37:08.831363       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:37:41.743713066Z I1024 13:37:41.743581       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:37:41.743713066Z I1024 13:37:41.743609       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:38:15.116090001Z I1024 13:38:15.116025       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:38:15.116166401Z I1024 13:38:15.116120       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:38:56.255875441Z I1024 13:38:56.255719       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:38:56.255875441Z I1024 13:38:56.255790       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:39:25.396122183Z I1024 13:39:25.396035       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:39:25.396122183Z I1024 13:39:25.396071       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:40:02.361139313Z I1024 13:40:02.361034       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:40:02.361139313Z I1024 13:40:02.361079       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:40:46.265346978Z I1024 13:40:46.265250       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:40:46.265346978Z I1024 13:40:46.265283       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:41:07.750954350Z I1024 13:41:07.750881       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:41:07.750954350Z I1024 13:41:07.750906       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:41:45.683800309Z I1024 13:41:45.683715       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:41:45.683800309Z I1024 13:41:45.683751       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:42:06.040514152Z I1024 13:42:06.040440       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:42:06.040514152Z I1024 13:42:06.040470       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:42:50.018190859Z I1024 13:42:50.018086       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:42:50.018190859Z I1024 13:42:50.018116       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:43:12.153035994Z I1024 13:43:12.152964       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:43:12.153035994Z I1024 13:43:12.152989       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:43:50.661540635Z I1024 13:43:50.661461       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:43:50.661540635Z I1024 13:43:50.661491       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:44:17.347776536Z I1024 13:44:17.347695       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:44:17.347776536Z I1024 13:44:17.347728       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:44:44.630632140Z I1024 13:44:44.630540       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:44:44.630632140Z I1024 13:44:44.630581       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:45:21.029761190Z I1024 13:45:21.029631       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:45:21.029761190Z I1024 13:45:21.029681       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:45:57.977502407Z I1024 13:45:57.977406       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:45:57.977502407Z I1024 13:45:57.977452       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:46:31.974388943Z I1024 13:46:31.974297       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:46:31.974388943Z I1024 13:46:31.974326       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:47:07.266737836Z I1024 13:47:07.266632       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:47:07.266737836Z I1024 13:47:07.266662       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:47:40.777829811Z I1024 13:47:40.777750       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:47:40.777829811Z I1024 13:47:40.777776       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:48:17.167110416Z I1024 13:48:17.167050       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:48:17.167110416Z I1024 13:48:17.167076       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:48:42.045474548Z I1024 13:48:42.045339       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:48:42.045474548Z I1024 13:48:42.045367       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:49:10.247131967Z I1024 13:49:10.247053       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:49:10.247131967Z I1024 13:49:10.247077       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:49:32.766790850Z I1024 13:49:32.766725       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:49:32.766790850Z I1024 13:49:32.766756       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:50:16.066802842Z I1024 13:50:16.066698       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:50:16.066802842Z I1024 13:50:16.066731       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:50:44.037400621Z I1024 13:50:44.037299       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:50:44.037400621Z I1024 13:50:44.037327       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:51:13.484962043Z I1024 13:51:13.484887       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:51:13.484962043Z I1024 13:51:13.484910       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:51:54.192755529Z I1024 13:51:54.192629       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:51:54.192755529Z I1024 13:51:54.192656       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:52:33.204314446Z I1024 13:52:33.204238       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:52:33.204314446Z I1024 13:52:33.204264       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:53:09.614651519Z I1024 13:53:09.614568       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:53:09.614651519Z I1024 13:53:09.614606       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:53:44.283029726Z I1024 13:53:44.282940       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:53:44.283029726Z I1024 13:53:44.282971       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:54:14.375497158Z I1024 13:54:14.375379       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:54:14.375497158Z I1024 13:54:14.375425       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:54:52.140305803Z I1024 13:54:52.140233       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:54:52.140305803Z I1024 13:54:52.140260       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:55:23.043026559Z I1024 13:55:23.042959       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:55:23.043026559Z I1024 13:55:23.042989       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:55:55.736242078Z I1024 13:55:55.736167       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:55:55.736242078Z I1024 13:55:55.736196       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:56:38.483148164Z I1024 13:56:38.483075       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:56:38.483148164Z I1024 13:56:38.483108       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:57:11.676301754Z I1024 13:57:11.676230       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:57:11.676301754Z I1024 13:57:11.676263       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:57:44.380282715Z I1024 13:57:44.380210       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:57:44.380282715Z I1024 13:57:44.380237       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:58:16.244836283Z I1024 13:58:16.244738       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:58:16.244836283Z I1024 13:58:16.244765       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:58:44.689784694Z I1024 13:58:44.689703       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:58:44.689784694Z I1024 13:58:44.689734       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:59:18.473800780Z I1024 13:59:18.473716       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T13:59:18.473800780Z I1024 13:59:18.473744       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:00:01.792271247Z I1024 14:00:01.792214       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:00:01.792368207Z I1024 14:00:01.792350       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:00:42.558890466Z I1024 14:00:42.558774       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:00:42.558890466Z I1024 14:00:42.558805       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:01:25.744350368Z I1024 14:01:25.744274       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:01:25.744350368Z I1024 14:01:25.744305       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:01:47.290588427Z I1024 14:01:47.290518       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:01:47.290588427Z I1024 14:01:47.290541       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:02:10.125890521Z I1024 14:02:10.125797       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:02:10.125890521Z I1024 14:02:10.125864       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:02:50.983875475Z I1024 14:02:50.983750       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:02:50.983875475Z I1024 14:02:50.983778       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:03:25.677248231Z I1024 14:03:25.677092       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:03:25.677248231Z I1024 14:03:25.677124       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:04:07.406581913Z I1024 14:04:07.406466       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:04:07.406581913Z I1024 14:04:07.406498       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:04:42.832766286Z I1024 14:04:42.832645       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:04:42.832766286Z I1024 14:04:42.832672       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:05:06.205163887Z I1024 14:05:06.205056       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:05:06.205163887Z I1024 14:05:06.205094       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:05:41.961861594Z I1024 14:05:41.961768       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:05:41.961861594Z I1024 14:05:41.961801       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:06:23.400972552Z I1024 14:06:23.400881       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:06:23.400972552Z I1024 14:06:23.400907       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:06:50.124585646Z I1024 14:06:50.124453       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:06:50.124585646Z I1024 14:06:50.124491       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:07:33.605147991Z I1024 14:07:33.605086       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:07:33.605147991Z I1024 14:07:33.605117       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:08:09.503461234Z I1024 14:08:09.503362       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:08:09.503578425Z I1024 14:08:09.503560       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:08:49.385156904Z I1024 14:08:49.385080       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:08:49.385156904Z I1024 14:08:49.385112       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:09:26.011356087Z I1024 14:09:26.011246       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:09:26.011356087Z I1024 14:09:26.011279       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:10:04.965047170Z I1024 14:10:04.964968       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:10:04.965047170Z I1024 14:10:04.964995       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:10:44.352624895Z I1024 14:10:44.352502       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:10:44.352624895Z I1024 14:10:44.352528       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:11:24.414834085Z I1024 14:11:24.414741       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:11:24.414834085Z I1024 14:11:24.414780       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:11:59.975347786Z I1024 14:11:59.975287       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:11:59.975347786Z I1024 14:11:59.975315       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:12:20.731310476Z I1024 14:12:20.731230       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:12:20.731310476Z I1024 14:12:20.731252       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:13:00.137989594Z I1024 14:13:00.137811       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:13:00.137989594Z I1024 14:13:00.137947       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:13:32.777400325Z I1024 14:13:32.777323       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:13:32.777400325Z I1024 14:13:32.777352       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:14:05.154489522Z I1024 14:14:05.154415       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:14:05.154489522Z I1024 14:14:05.154443       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:14:42.887033399Z I1024 14:14:42.886926       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:14:42.887033399Z I1024 14:14:42.886958       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:15:21.627639098Z I1024 14:15:21.627561       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:15:21.627639098Z I1024 14:15:21.627589       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:15:44.359566029Z I1024 14:15:44.359502       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:15:44.359566029Z I1024 14:15:44.359533       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:16:13.063313706Z I1024 14:16:13.063239       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:16:13.063313706Z I1024 14:16:13.063266       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:16:40.470174929Z I1024 14:16:40.470078       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:16:40.470174929Z I1024 14:16:40.470103       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:17:06.447084825Z I1024 14:17:06.446647       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:17:06.447084825Z I1024 14:17:06.446678       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:17:48.498926766Z I1024 14:17:48.498845       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:17:48.498926766Z I1024 14:17:48.498882       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:18:16.390842893Z I1024 14:18:16.390747       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:18:16.390842893Z I1024 14:18:16.390778       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:18:59.069949774Z I1024 14:18:59.069741       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:18:59.069949774Z I1024 14:18:59.069772       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:19:33.182472010Z I1024 14:19:33.182413       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:19:33.183226710Z I1024 14:19:33.183194       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:20:01.322634738Z I1024 14:20:01.322554       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:20:01.322634738Z I1024 14:20:01.322585       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:20:26.197610967Z I1024 14:20:26.197471       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:20:26.197610967Z I1024 14:20:26.197504       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:21:00.953433124Z I1024 14:21:00.953362       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:21:00.953433124Z I1024 14:21:00.953420       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:21:35.540961085Z I1024 14:21:35.540850       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:21:35.540961085Z I1024 14:21:35.540883       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:21:55.870170291Z I1024 14:21:55.870055       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:21:55.870170291Z I1024 14:21:55.870094       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:22:26.512755034Z I1024 14:22:26.512631       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:22:26.512755034Z I1024 14:22:26.512662       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:22:48.596690909Z I1024 14:22:48.596598       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:22:48.596690909Z I1024 14:22:48.596629       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:23:09.050471815Z I1024 14:23:09.050392       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:23:09.050471815Z I1024 14:23:09.050427       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:23:44.681538880Z I1024 14:23:44.681461       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:23:44.681538880Z I1024 14:23:44.681491       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:24:26.101695848Z I1024 14:24:26.101600       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:24:26.101695848Z I1024 14:24:26.101632       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:24:48.479609302Z I1024 14:24:48.479525       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:24:48.479609302Z I1024 14:24:48.479553       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:25:27.556959336Z I1024 14:25:27.556886       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:25:27.556959336Z I1024 14:25:27.556916       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:25:58.486189342Z I1024 14:25:58.486069       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:25:58.486189342Z I1024 14:25:58.486112       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:26:19.960727584Z I1024 14:26:19.960648       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:26:19.960727584Z I1024 14:26:19.960677       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:26:40.200331227Z I1024 14:26:40.200218       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:26:40.200331227Z I1024 14:26:40.200265       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:27:22.039756072Z I1024 14:27:22.039616       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:27:22.039756072Z I1024 14:27:22.039648       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:27:47.990669431Z I1024 14:27:47.990569       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:27:47.990669431Z I1024 14:27:47.990600       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:28:14.555537609Z I1024 14:28:14.555407       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:28:14.555537609Z I1024 14:28:14.555451       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:28:47.650462075Z I1024 14:28:47.650335       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:28:47.650462075Z I1024 14:28:47.650362       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:29:25.877774325Z I1024 14:29:25.877697       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:29:25.877774325Z I1024 14:29:25.877729       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:30:09.704533155Z I1024 14:30:09.704433       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:30:09.704533155Z I1024 14:30:09.704473       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:30:47.445869036Z I1024 14:30:47.445762       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:30:47.445869036Z I1024 14:30:47.445789       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:31:10.267958451Z I1024 14:31:10.267784       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:31:10.267958451Z I1024 14:31:10.267851       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:31:31.852493187Z I1024 14:31:31.852420       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:31:31.852493187Z I1024 14:31:31.852454       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:32:12.441732097Z I1024 14:32:12.441632       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:32:12.441732097Z I1024 14:32:12.441663       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:32:45.216727575Z I1024 14:32:45.216620       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:32:45.216727575Z I1024 14:32:45.216649       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:33:10.312053638Z I1024 14:33:10.311978       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:33:10.312053638Z I1024 14:33:10.312002       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:33:48.961654329Z I1024 14:33:48.961589       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:33:48.961654329Z I1024 14:33:48.961618       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:34:20.481535740Z I1024 14:34:20.481463       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:34:20.481535740Z I1024 14:34:20.481490       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:34:48.368865765Z I1024 14:34:48.368735       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:34:48.368865765Z I1024 14:34:48.368767       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:35:25.517196664Z I1024 14:35:25.517122       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:35:25.517196664Z I1024 14:35:25.517150       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:35:58.037803027Z I1024 14:35:58.037726       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:35:58.037803027Z I1024 14:35:58.037759       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:36:36.775108337Z I1024 14:36:36.775039       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:36:36.775108337Z I1024 14:36:36.775064       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:37:00.703736495Z I1024 14:37:00.703682       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:37:00.703736495Z I1024 14:37:00.703725       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:37:42.426751115Z I1024 14:37:42.426672       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:37:42.426751115Z I1024 14:37:42.426699       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:38:11.481048996Z I1024 14:38:11.480953       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:38:11.481048996Z I1024 14:38:11.480986       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:38:52.860941239Z I1024 14:38:52.860802       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:38:52.860941239Z I1024 14:38:52.860855       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:39:34.098574404Z I1024 14:39:34.098516       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:39:34.098574404Z I1024 14:39:34.098540       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:40:16.522975987Z I1024 14:40:16.522888       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:40:16.522975987Z I1024 14:40:16.522918       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:40:42.517362114Z I1024 14:40:42.517280       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:40:42.517362114Z I1024 14:40:42.517307       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:41:22.031942119Z I1024 14:41:22.031881       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:41:22.032243149Z I1024 14:41:22.032041       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:41:56.012719920Z I1024 14:41:56.012608       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:41:56.012719920Z I1024 14:41:56.012643       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:42:27.674605896Z I1024 14:42:27.674527       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:42:27.674605896Z I1024 14:42:27.674555       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:42:53.536960015Z I1024 14:42:53.536879       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:42:53.536960015Z I1024 14:42:53.536906       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:43:15.618872464Z I1024 14:43:15.618771       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:43:15.618872464Z I1024 14:43:15.618796       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:43:47.830382565Z I1024 14:43:47.830298       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:43:47.830382565Z I1024 14:43:47.830325       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T14:44:18.419970404Z I1024 14:44:18.419808       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 and has not yet expired
+2024-10-24T14:44:18.419970404Z I1024 14:44:18.419884       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity

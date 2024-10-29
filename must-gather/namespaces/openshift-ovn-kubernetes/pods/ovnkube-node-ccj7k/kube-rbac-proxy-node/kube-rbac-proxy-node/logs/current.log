@@ -1,0 +1,186 @@
+2024-10-24T13:02:57.442658491Z ++ K8S_NODE=
+2024-10-24T13:02:57.442658491Z ++ [[ -n '' ]]
+2024-10-24T13:02:57.442658491Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2024-10-24T13:02:57.442658491Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2024-10-24T13:02:57.442658491Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2024-10-24T13:02:57.442658491Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2024-10-24T13:02:57.442658491Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2024-10-24T13:02:57.442801340Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2024-10-24T13:02:57.442801340Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2024-10-24T13:02:57.442801340Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2024-10-24T13:02:57.442801340Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2024-10-24T13:02:57.442801340Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2024-10-24T13:02:57.443617361Z + start-rbac-proxy-node ovn-node-metrics 9103 29103 /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:02:57.443617361Z + local detail=ovn-node-metrics
+2024-10-24T13:02:57.443617361Z + local listen_port=9103
+2024-10-24T13:02:57.443637612Z + local upstream_port=29103
+2024-10-24T13:02:57.443637612Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2024-10-24T13:02:57.443637612Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:02:57.443637612Z + [[ 5 -ne 5 ]]
+2024-10-24T13:02:57.444139222Z ++ date -Iseconds
+2024-10-24T13:02:57.446012783Z + echo '2024-10-24T13:02:57+00:00 INFO: waiting for ovn-node-metrics certs to be mounted'
+2024-10-24T13:02:57.446064534Z 2024-10-24T13:02:57+00:00 INFO: waiting for ovn-node-metrics certs to be mounted
+2024-10-24T13:02:57.446072854Z + wait-for-certs ovn-node-metrics /etc/pki/tls/metrics-cert/tls.key /etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:02:57.446072854Z + local detail=ovn-node-metrics
+2024-10-24T13:02:57.446085543Z + local privkey=/etc/pki/tls/metrics-cert/tls.key
+2024-10-24T13:02:57.446085543Z + local clientcert=/etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:02:57.446095023Z + [[ 3 -ne 3 ]]
+2024-10-24T13:02:57.446104694Z + retries=0
+2024-10-24T13:02:57.446541934Z ++ date +%s
+2024-10-24T13:02:57.448771476Z + TS=1729774977
+2024-10-24T13:02:57.448771476Z + WARN_TS=1729776177
+2024-10-24T13:02:57.448771476Z + HAS_LOGGED_INFO=0
+2024-10-24T13:02:57.448851536Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:02:57.449402156Z ++ date +%s
+2024-10-24T13:02:57.451882159Z + CUR_TS=1729774977
+2024-10-24T13:02:57.451882159Z + [[ 1729774977 -gt WARN_TS ]]
+2024-10-24T13:02:57.451882159Z + [[ 0 -eq 0 ]]
+2024-10-24T13:02:57.452325199Z ++ date -Iseconds
+2024-10-24T13:02:57.454269421Z 2024-10-24T13:02:57+00:00 INFO: ovn-node-metrics certs not mounted. Waiting one hour.
+2024-10-24T13:02:57.454289591Z + echo '2024-10-24T13:02:57+00:00 INFO: ovn-node-metrics certs not mounted. Waiting one hour.'
+2024-10-24T13:02:57.454289591Z + HAS_LOGGED_INFO=1
+2024-10-24T13:02:57.454289591Z + sleep 5
+2024-10-24T13:03:02.456607924Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:02.457362204Z ++ date +%s
+2024-10-24T13:03:02.460074417Z + CUR_TS=1729774982
+2024-10-24T13:03:02.460104517Z + [[ 1729774982 -gt WARN_TS ]]
+2024-10-24T13:03:02.460117597Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:02.460126577Z + sleep 5
+2024-10-24T13:03:07.462307660Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:07.462920030Z ++ date +%s
+2024-10-24T13:03:07.464602962Z + CUR_TS=1729774987
+2024-10-24T13:03:07.464602962Z + [[ 1729774987 -gt WARN_TS ]]
+2024-10-24T13:03:07.464602962Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:07.464602962Z + sleep 5
+2024-10-24T13:03:12.466865727Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:12.467458187Z ++ date +%s
+2024-10-24T13:03:12.469544109Z + CUR_TS=1729774992
+2024-10-24T13:03:12.469544109Z + [[ 1729774992 -gt WARN_TS ]]
+2024-10-24T13:03:12.469544109Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:12.469544109Z + sleep 5
+2024-10-24T13:03:17.471990072Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:17.472419662Z ++ date +%s
+2024-10-24T13:03:17.474305584Z + CUR_TS=1729774997
+2024-10-24T13:03:17.474305584Z + [[ 1729774997 -gt WARN_TS ]]
+2024-10-24T13:03:17.474305584Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:17.474305584Z + sleep 5
+2024-10-24T13:03:22.476585700Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:22.477145339Z ++ date +%s
+2024-10-24T13:03:22.479349179Z + CUR_TS=1729775002
+2024-10-24T13:03:22.479349179Z + [[ 1729775002 -gt WARN_TS ]]
+2024-10-24T13:03:22.479349179Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:22.479349179Z + sleep 5
+2024-10-24T13:03:27.482064972Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:27.482682771Z ++ date +%s
+2024-10-24T13:03:27.484449481Z + CUR_TS=1729775007
+2024-10-24T13:03:27.484449481Z + [[ 1729775007 -gt WARN_TS ]]
+2024-10-24T13:03:27.484449481Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:27.484449481Z + sleep 5
+2024-10-24T13:03:32.486223003Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:32.487005223Z ++ date +%s
+2024-10-24T13:03:32.489605673Z + CUR_TS=1729775012
+2024-10-24T13:03:32.489629073Z + [[ 1729775012 -gt WARN_TS ]]
+2024-10-24T13:03:32.489629073Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:32.489640863Z + sleep 5
+2024-10-24T13:03:37.492678724Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:37.493378364Z ++ date +%s
+2024-10-24T13:03:37.495299404Z + CUR_TS=1729775017
+2024-10-24T13:03:37.495299404Z + [[ 1729775017 -gt WARN_TS ]]
+2024-10-24T13:03:37.495321613Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:37.495321613Z + sleep 5
+2024-10-24T13:03:42.497409184Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:42.498112064Z ++ date +%s
+2024-10-24T13:03:42.499997675Z + CUR_TS=1729775022
+2024-10-24T13:03:42.499997675Z + [[ 1729775022 -gt WARN_TS ]]
+2024-10-24T13:03:42.499997675Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:42.499997675Z + sleep 5
+2024-10-24T13:03:47.502272000Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:47.502811660Z ++ date +%s
+2024-10-24T13:03:47.504726670Z + CUR_TS=1729775027
+2024-10-24T13:03:47.504726670Z + [[ 1729775027 -gt WARN_TS ]]
+2024-10-24T13:03:47.504726670Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:47.504747850Z + sleep 5
+2024-10-24T13:03:52.507095114Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:52.507898864Z ++ date +%s
+2024-10-24T13:03:52.510089844Z + CUR_TS=1729775032
+2024-10-24T13:03:52.510089844Z + [[ 1729775032 -gt WARN_TS ]]
+2024-10-24T13:03:52.510089844Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:52.510089844Z + sleep 5
+2024-10-24T13:03:57.512282309Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:03:57.513185799Z ++ date +%s
+2024-10-24T13:03:57.515919510Z + CUR_TS=1729775037
+2024-10-24T13:03:57.515919510Z + [[ 1729775037 -gt WARN_TS ]]
+2024-10-24T13:03:57.515957710Z + [[ 1 -eq 0 ]]
+2024-10-24T13:03:57.515957710Z + sleep 5
+2024-10-24T13:04:02.518335784Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:02.519090145Z ++ date +%s
+2024-10-24T13:04:02.521134685Z + CUR_TS=1729775042
+2024-10-24T13:04:02.521134685Z + [[ 1729775042 -gt WARN_TS ]]
+2024-10-24T13:04:02.521134685Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:02.521134685Z + sleep 5
+2024-10-24T13:04:07.523081490Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:07.523740941Z ++ date +%s
+2024-10-24T13:04:07.525935661Z + CUR_TS=1729775047
+2024-10-24T13:04:07.525935661Z + [[ 1729775047 -gt WARN_TS ]]
+2024-10-24T13:04:07.525992461Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:07.525992461Z + sleep 5
+2024-10-24T13:04:12.528266805Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:12.528982315Z ++ date +%s
+2024-10-24T13:04:12.531109945Z + CUR_TS=1729775052
+2024-10-24T13:04:12.531109945Z + [[ 1729775052 -gt WARN_TS ]]
+2024-10-24T13:04:12.531109945Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:12.531109945Z + sleep 5
+2024-10-24T13:04:17.533394719Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:17.533984759Z ++ date +%s
+2024-10-24T13:04:17.535993220Z + CUR_TS=1729775057
+2024-10-24T13:04:17.535993220Z + [[ 1729775057 -gt WARN_TS ]]
+2024-10-24T13:04:17.536014849Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:17.536014849Z + sleep 5
+2024-10-24T13:04:22.538012936Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:22.538877706Z ++ date +%s
+2024-10-24T13:04:22.542363946Z + CUR_TS=1729775062
+2024-10-24T13:04:22.542449586Z + [[ 1729775062 -gt WARN_TS ]]
+2024-10-24T13:04:22.542495536Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:22.542540596Z + sleep 5
+2024-10-24T13:04:27.544676580Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:27.545539391Z ++ date +%s
+2024-10-24T13:04:27.548545571Z + CUR_TS=1729775067
+2024-10-24T13:04:27.548668661Z + [[ 1729775067 -gt WARN_TS ]]
+2024-10-24T13:04:27.548668661Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:27.548697541Z + sleep 5
+2024-10-24T13:04:32.551753975Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:32.552676405Z ++ date +%s
+2024-10-24T13:04:32.555300935Z + CUR_TS=1729775072
+2024-10-24T13:04:32.555452215Z + [[ 1729775072 -gt WARN_TS ]]
+2024-10-24T13:04:32.555452215Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:32.555452215Z + sleep 5
+2024-10-24T13:04:37.557715990Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:37.558137890Z ++ date +%s
+2024-10-24T13:04:37.559945160Z + CUR_TS=1729775077
+2024-10-24T13:04:37.559945160Z + [[ 1729775077 -gt WARN_TS ]]
+2024-10-24T13:04:37.559945160Z + [[ 1 -eq 0 ]]
+2024-10-24T13:04:37.559945160Z + sleep 5
+2024-10-24T13:04:42.562285315Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.key ]]
+2024-10-24T13:04:42.562633845Z + [[ ! -f /etc/pki/tls/metrics-cert/tls.crt ]]
+2024-10-24T13:04:42.563525835Z ++ date -Iseconds
+2024-10-24T13:04:42.567147875Z 2024-10-24T13:04:42+00:00 INFO: ovn-node-metrics certs mounted, starting kube-rbac-proxy
+2024-10-24T13:04:42.567209515Z + echo '2024-10-24T13:04:42+00:00 INFO: ovn-node-metrics certs mounted, starting kube-rbac-proxy'
+2024-10-24T13:04:42.567209515Z + exec /usr/bin/kube-rbac-proxy --logtostderr --secure-listen-address=:9103 --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 --upstream=http://127.0.0.1:29103/ --tls-private-key-file=/etc/pki/tls/metrics-cert/tls.key --tls-cert-file=/etc/pki/tls/metrics-cert/tls.crt
+2024-10-24T13:04:42.602474570Z W1024 13:04:42.602347    5386 deprecated.go:66] 
+2024-10-24T13:04:42.602474570Z ==== Removed Flag Warning ======================
+2024-10-24T13:04:42.602474570Z 
+2024-10-24T13:04:42.602474570Z logtostderr is removed in the k8s upstream and has no effect any more.
+2024-10-24T13:04:42.602474570Z 
+2024-10-24T13:04:42.602474570Z ===============================================
+2024-10-24T13:04:42.602474570Z 		
+2024-10-24T13:04:42.603045350Z I1024 13:04:42.602810    5386 kube-rbac-proxy.go:233] Valid token audiences: 
+2024-10-24T13:04:42.604144700Z I1024 13:04:42.604040    5386 kube-rbac-proxy.go:347] Reading certificate files
+2024-10-24T13:04:42.604672911Z I1024 13:04:42.604595    5386 kube-rbac-proxy.go:395] Starting TCP socket on :9103
+2024-10-24T13:04:42.605515280Z I1024 13:04:42.605389    5386 kube-rbac-proxy.go:402] Listening securely on :9103
+2024-10-24T13:31:38.813888175Z E1024 13:31:38.813526    5386 auth.go:47] Unable to authenticate the request due to an error: context canceled
+2024-10-24T13:31:58.818799529Z E1024 13:31:58.818725    5386 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:31:58.818883880Z E1024 13:31:58.818864    5386 auth.go:47] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:31:59.277349712Z E1024 13:31:59.277243    5386 auth.go:47] Unable to authenticate the request due to an error: context canceled
+2024-10-24T13:32:19.282140151Z E1024 13:32:19.282038    5386 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:32:19.282140151Z E1024 13:32:19.282126    5386 auth.go:47] Unable to authenticate the request due to an error: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": context deadline exceeded
+2024-10-24T13:32:38.813590826Z E1024 13:32:38.813501    5386 auth.go:47] Unable to authenticate the request due to an error: context canceled

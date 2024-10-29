@@ -1,0 +1,248 @@
+---
+apiVersion: machine.openshift.io/v1beta1
+kind: Machine
+metadata:
+  annotations:
+    machine.openshift.io/instance-state: RUNNING
+  creationTimestamp: "2024-10-24T12:59:09Z"
+  finalizers:
+  - machine.machine.openshift.io
+  generation: 3
+  labels:
+    machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+    machine.openshift.io/cluster-api-machine-role: master
+    machine.openshift.io/cluster-api-machine-type: master
+    machine.openshift.io/instance-type: e2-custom-6-16384
+    machine.openshift.io/region: us-central1
+    machine.openshift.io/zone: us-central1-a
+  managedFields:
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+          f:machine.openshift.io/cluster-api-machine-role: {}
+          f:machine.openshift.io/cluster-api-machine-type: {}
+      f:spec:
+        .: {}
+        f:lifecycleHooks: {}
+        f:metadata: {}
+        f:providerSpec:
+          .: {}
+          f:value:
+            .: {}
+            f:apiVersion: {}
+            f:canIPForward: {}
+            f:credentialsSecret:
+              .: {}
+              f:name: {}
+            f:deletionProtection: {}
+            f:disks: {}
+            f:kind: {}
+            f:machineType: {}
+            f:metadata:
+              .: {}
+              f:creationTimestamp: {}
+            f:networkInterfaces: {}
+            f:projectID: {}
+            f:region: {}
+            f:serviceAccounts: {}
+            f:shieldedInstanceConfig: {}
+            f:tags: {}
+            f:userDataSecret:
+              .: {}
+              f:name: {}
+            f:zone: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2024-10-24T12:59:09Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:59:09Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machine.openshift.io/instance-state: {}
+        f:finalizers:
+          .: {}
+          v:"machine.machine.openshift.io": {}
+        f:labels:
+          f:machine.openshift.io/instance-type: {}
+          f:machine.openshift.io/region: {}
+          f:machine.openshift.io/zone: {}
+      f:spec:
+        f:providerID: {}
+    manager: machine-controller-manager
+    operation: Update
+    time: "2024-10-24T13:08:20Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:lifecycleHooks:
+          f:preDrain:
+            .: {}
+            k:{"name":"EtcdQuorumOperator"}:
+              .: {}
+              f:name: {}
+              f:owner: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2024-10-24T13:08:41Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:addresses: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Drainable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:severity: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"InstanceExists"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Terminable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:phase: {}
+        f:providerStatus:
+          .: {}
+          f:conditions: {}
+          f:instanceId: {}
+          f:instanceState: {}
+          f:metadata: {}
+    manager: machine-controller-manager
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:09:13Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"1f44de30-a00a-4efe-b4e0-1c284a4e72de"}: {}
+    manager: manager
+    operation: Update
+    time: "2024-10-24T13:11:19Z"
+  - apiVersion: machine.openshift.io/v1beta1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:lastUpdated: {}
+        f:nodeRef: {}
+    manager: nodelink-controller
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:21:06Z"
+  name: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: machine.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ControlPlaneMachineSet
+    name: cluster
+    uid: 1f44de30-a00a-4efe-b4e0-1c284a4e72de
+  resourceVersion: "22156"
+  uid: cc4d3cb4-b442-4226-af0c-f75713870c55
+spec:
+  lifecycleHooks:
+    preDrain:
+    - name: EtcdQuorumOperator
+      owner: clusteroperator/etcd
+  metadata: {}
+  providerID: gce://XXXXXXXXXXXXXXXXXXXXXXXX/us-central1-a/ci-op-2fcpj5j6-f6035-2lklf-master-0
+  providerSpec:
+    value:
+      apiVersion: machine.openshift.io/v1beta1
+      canIPForward: false
+      credentialsSecret:
+        name: gcp-cloud-credentials
+      deletionProtection: false
+      disks:
+      - autoDelete: true
+        boot: true
+        image: projects/rhcos-cloud/global/images/rhcos-418-94-202410090804-0-gcp-x86-64
+        labels: {}
+        sizeGb: 200
+        type: pd-ssd
+      kind: GCPMachineProviderSpec
+      machineType: e2-custom-6-16384
+      metadata:
+        creationTimestamp: null
+      networkInterfaces:
+      - network: ci-op-2fcpj5j6-f6035-2lklf-network
+        subnetwork: ci-op-2fcpj5j6-f6035-2lklf-master-subnet
+      projectID: XXXXXXXXXXXXXXXXXXXXXXXX
+      region: us-central1
+      serviceAccounts:
+      - email: ci-op-2fcpj5j6-f6035-2lklf-m@XXXXXXXXXXXXXXXXXXXXXXXX.iam.gserviceaccount.com
+        scopes:
+        - https://www.googleapis.com/auth/cloud-platform
+      shieldedInstanceConfig: {}
+      tags:
+      - ci-op-2fcpj5j6-f6035-2lklf-control-plane
+      - ci-op-2fcpj5j6-f6035-2lklf
+      userDataSecret:
+        name: master-user-data
+      zone: us-central1-a
+status:
+  addresses:
+  - address: 10.0.0.3
+    type: InternalIP
+  - address: ci-op-2fcpj5j6-f6035-2lklf-master-0.us-central1-a.c.XXXXXXXXXXXXXXXXXXXXXXXX.internal
+    type: InternalDNS
+  - address: ci-op-2fcpj5j6-f6035-2lklf-master-0.c.XXXXXXXXXXXXXXXXXXXXXXXX.internal
+    type: InternalDNS
+  - address: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    type: InternalDNS
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:09:13Z"
+    message: 'Drain operation currently blocked by: [{Name:EtcdQuorumOperator Owner:clusteroperator/etcd}]'
+    reason: HookPresent
+    severity: Warning
+    status: "False"
+    type: Drainable
+  - lastTransitionTime: "2024-10-24T13:09:13Z"
+    status: "True"
+    type: InstanceExists
+  - lastTransitionTime: "2024-10-24T13:06:11Z"
+    status: "True"
+    type: Terminable
+  lastUpdated: "2024-10-24T13:21:06Z"
+  nodeRef:
+    kind: Node
+    name: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    uid: 70cf08f3-a1d7-4bf2-aa24-f4dca7982067
+  phase: Running
+  providerStatus:
+    conditions:
+    - lastTransitionTime: "2024-10-24T13:09:13Z"
+      message: machine successfully created
+      reason: MachineCreationSucceeded
+      status: "True"
+      type: MachineCreated
+    instanceId: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    instanceState: RUNNING
+    metadata: {}

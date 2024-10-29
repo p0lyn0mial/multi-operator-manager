@@ -1,0 +1,1159 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.129.0.22/23"],"mac_address":"0a:58:0a:81:00:16","gateway_ips":["10.129.0.1"],"routes":[{"dest":"10.128.0.0/14","nextHop":"10.129.0.1"},{"dest":"172.30.0.0/16","nextHop":"10.129.0.1"},{"dest":"169.254.0.5/32","nextHop":"10.129.0.1"},{"dest":"100.64.0.0/16","nextHop":"10.129.0.1"}],"ip_address":"10.129.0.22/23","gateway_ip":"10.129.0.1","role":"primary"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.129.0.22"
+          ],
+          "mac": "0a:58:0a:81:00:16",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: ElMHxA==
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2024-10-24T13:05:28Z"
+  generateName: machine-api-controllers-7785d897-
+  labels:
+    api: clusterapi
+    k8s-app: controller
+    pod-template-hash: 7785d897
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: ci-op-2fcpj5j6-f6035-2lklf-master-0
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:05:28Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:operator.openshift.io/dep-openshift-machine-api.mao-trusted-ca.configmap: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:api: {}
+          f:k8s-app: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"14973e0a-0e68-45b3-a2e8-99ebb352469b"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"kube-rbac-proxy-machine-mtrc"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8441,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-rbac-proxy-machineset-mtrc"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8442,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-rbac-proxy-mhc-mtrc"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8444,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"machine-controller"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"RELEASE_VERSION"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8440,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9440,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/machine-api-operator/tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/run/secrets/openshift/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"machine-healthcheck-controller"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9442,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+          k:{"name":"machineset-controller"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8443,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":9441,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:startupProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/machine-api-operator/tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+          k:{"name":"nodelink-controller"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"bound-sa-token"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"machine-api-controllers-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"machine-webhook-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"machineset-webhook-cert"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:secretName: {}
+          k:{"name":"trusted-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2024-10-24T13:05:28Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+    manager: multus-daemon
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:05:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodReadyToStartContainers"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:hostIPs: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.129.0.22"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:18:58Z"
+  name: machine-api-controllers-7785d897-m4jlj
+  namespace: openshift-machine-api
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: machine-api-controllers-7785d897
+    uid: 14973e0a-0e68-45b3-a2e8-99ebb352469b
+  resourceVersion: "20630"
+  uid: 2c708b3c-bdf1-4a25-b8f3-01c9d84b80ee
+spec:
+  containers:
+  - args:
+    - --logtostderr=true
+    - --v=3
+    - --leader-elect=true
+    - --leader-elect-lease-duration=120s
+    - --namespace=openshift-machine-api
+    - --feature-gates=AzureWorkloadIdentity=true,GCPLabelsTags=true,MachineAPIMigration=false,VSphereStaticIPs=true
+    command:
+    - /machineset-controller
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c35448d60ca764dcef6dd31749ae6752939edd7851ab9e6db1a9a27c2bc33839
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: healthz
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: machineset-controller
+    ports:
+    - containerPort: 8443
+      name: webhook-server
+      protocol: TCP
+    - containerPort: 9441
+      name: healthz
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: healthz
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    startupProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /readyz
+        port: healthz
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 10
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/machine-api-operator/tls
+      name: machineset-webhook-cert
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+  - args:
+    - --logtostderr=true
+    - --v=3
+    - --leader-elect=true
+    - --leader-elect-lease-duration=120s
+    - --namespace=openshift-machine-api
+    - --feature-gates=AzureWorkloadIdentity=true,GCPLabelsTags=true,MachineAPIMigration=false,VSphereStaticIPs=true
+    command:
+    - /machine-controller-manager
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    - name: RELEASE_VERSION
+      value: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:2a18913ba70068e4f34dfd93992d0c71efbbf175fe66db130ad5880f9bb3b144
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: healthz
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: machine-controller
+    ports:
+    - containerPort: 8440
+      name: machine-webhook
+      protocol: TCP
+    - containerPort: 9440
+      name: healthz
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: healthz
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/openshift/serviceaccount
+      name: bound-sa-token
+      readOnly: true
+    - mountPath: /etc/machine-api-operator/tls
+      name: machine-webhook-cert
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+  - args:
+    - --logtostderr=true
+    - --v=3
+    - --leader-elect=true
+    - --leader-elect-lease-duration=120s
+    - --namespace=openshift-machine-api
+    command:
+    - /nodelink-controller
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c35448d60ca764dcef6dd31749ae6752939edd7851ab9e6db1a9a27c2bc33839
+    imagePullPolicy: IfNotPresent
+    name: nodelink-controller
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+  - args:
+    - --logtostderr=true
+    - --v=3
+    - --leader-elect=true
+    - --leader-elect-lease-duration=120s
+    - --namespace=openshift-machine-api
+    command:
+    - /machine-healthcheck
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c35448d60ca764dcef6dd31749ae6752939edd7851ab9e6db1a9a27c2bc33839
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /readyz
+        port: healthz
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: machine-healthcheck-controller
+    ports:
+    - containerPort: 9442
+      name: healthz
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: healthz
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:8442
+    - --upstream=http://localhost:8082
+    - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+    - --logtostderr=true
+    - --v=3
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-machineset-mtrc
+    ports:
+    - containerPort: 8442
+      name: machineset-mtrc
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: config
+    - mountPath: /etc/tls/private
+      name: machine-api-controllers-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:8441
+    - --upstream=http://localhost:8081
+    - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+    - --logtostderr=true
+    - --v=3
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-machine-mtrc
+    ports:
+    - containerPort: 8441
+      name: machine-mtrc
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: config
+    - mountPath: /etc/tls/private
+      name: machine-api-controllers-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:8444
+    - --upstream=http://localhost:8083
+    - --config-file=/etc/kube-rbac-proxy/config-file.yaml
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+    - --logtostderr=true
+    - --v=3
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-mhc-mtrc
+    ports:
+    - containerPort: 8444
+      name: mhc-mtrc
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 10m
+        memory: 20Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000490000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: config
+    - mountPath: /etc/tls/private
+      name: machine-api-controllers-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  nodeSelector:
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000490000
+    seLinuxOptions:
+      level: s0:c22,c14
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: machine-api-controllers
+  serviceAccountName: machine-api-controllers
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+  - key: CriticalAddonsOnly
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: machineset-webhook-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: tls.crt
+      - key: tls.key
+        path: tls.key
+      secretName: machine-api-operator-webhook-cert
+  - name: machine-webhook-cert
+    secret:
+      defaultMode: 420
+      items:
+      - key: tls.crt
+        path: tls.crt
+      - key: tls.key
+        path: tls.key
+      secretName: machine-api-operator-machine-webhook-cert
+  - name: bound-sa-token
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          audience: openshift
+          expirationSeconds: 3600
+          path: token
+  - configMap:
+      defaultMode: 420
+      name: kube-rbac-proxy
+    name: config
+  - name: machine-api-controllers-tls
+    secret:
+      defaultMode: 420
+      secretName: machine-api-controllers-tls
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: mao-trusted-ca
+      optional: true
+    name: trusted-ca
+  - name: kube-api-access-8k22r
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:05:41Z"
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:05:28Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:18:58Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:18:58Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-10-24T13:05:28Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://2311a92dfa8cb75ec9b25b56a33b4eabb860b95c457c8e827bfdfe2f4e39b500
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: kube-rbac-proxy-machine-mtrc
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:05:41Z"
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: config
+    - mountPath: /etc/tls/private
+      name: machine-api-controllers-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://65de6a2c712594ecb5378b8edddb2e4f58cdb70f60ea681255f0b96e80b74089
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: kube-rbac-proxy-machineset-mtrc
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:05:41Z"
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: config
+    - mountPath: /etc/tls/private
+      name: machine-api-controllers-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://7e403b6f451f4d858cbee5b6c5649ba0e2f4bafc28b2f273a82110869ba92510
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:ff7b9d9ed505a6b67f38f5a8c628d4fd03bd136119e29ee42d8368ef33f23e87
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:38795c2c7e40968bb7758d62851c52ac25eb36c85f462481e64804699b9f6c0a
+    lastState: {}
+    name: kube-rbac-proxy-mhc-mtrc
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:05:41Z"
+    volumeMounts:
+    - mountPath: /etc/kube-rbac-proxy
+      name: config
+    - mountPath: /etc/tls/private
+      name: machine-api-controllers-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://3ed856ecad89b705c15f8d41367698558f5f5787ff036f4c136e5061b943cb7c
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:2a18913ba70068e4f34dfd93992d0c71efbbf175fe66db130ad5880f9bb3b144
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:2a18913ba70068e4f34dfd93992d0c71efbbf175fe66db130ad5880f9bb3b144
+    lastState:
+      terminated:
+        containerID: cri-o://d528e0b7b280afbe583f68f621094701822abad2d603fb7fcce254ee1999c40d
+        exitCode: 255
+        finishedAt: "2024-10-24T13:17:50Z"
+        message: |-
+          pj5j6-f6035-2lklf-worker-c" "namespace"="openshift-machine-api"
+          E1024 13:17:28.082061       1 controller.go:515] Failed to update machine status "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": Timeout: request did not complete within requested timeout - context deadline exceeded
+          E1024 13:17:28.082100       1 controller.go:337] ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: error patching status: Timeout: request did not complete within requested timeout - context deadline exceeded
+          I1024 13:17:28.082240       1 controller.go:173] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling Machine
+          I1024 13:17:28.082263       1 actuator.go:95] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Checking if machine exists
+          I1024 13:17:28.464699       1 controller.go:332] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: reconciling machine triggers idempotent update
+          I1024 13:17:28.464730       1 actuator.go:136] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Updating machine
+          I1024 13:17:28.465264       1 reconciler.go:389] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: Reconciling machine object with cloud state
+          I1024 13:17:28.567239       1 machine_scope.go:164] ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz: status unchanged
+          I1024 13:17:28.567357       1 machine_scope.go:182] "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": patching machine
+          E1024 13:17:34.727406       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:50.621686       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-gcp-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider
+        reason: Error
+        startedAt: "2024-10-24T13:05:40Z"
+    name: machine-controller
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:17:50Z"
+    volumeMounts:
+    - mountPath: /etc/pki/ca-trust/extracted/pem
+      name: trusted-ca
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/openshift/serviceaccount
+      name: bound-sa-token
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /etc/machine-api-operator/tls
+      name: machine-webhook-cert
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://89d006c6fd1e2fe98af0646567e83198ac71c1c055eb449e67537ed55facfb97
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c35448d60ca764dcef6dd31749ae6752939edd7851ab9e6db1a9a27c2bc33839
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:916047af2f353903c72e37f04a26cbfd2697eb7c69a240d7682d48520db53386
+    lastState:
+      terminated:
+        containerID: cri-o://17ded19fdbeed600c941b8da866c5dfa73c9f8ba280b9638578ec00a719e7fb6
+        exitCode: 255
+        finishedAt: "2024-10-24T13:17:57Z"
+        message: |-
+          ternal/informers.go:106
+          I1024 13:16:15.573760       1 reflector.go:341] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+          I1024 13:16:15.596693       1 reflector.go:368] Caches populated for *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+          W1024 13:16:15.611718       1 machinehealthcheck_controller.go:578] No-op: Unable to retrieve machine from node "/ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2": expecting one machine for node ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2, got: []
+          W1024 13:16:15.614283       1 machinehealthcheck_controller.go:578] No-op: Unable to retrieve machine from node "/ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz": expecting one machine for node ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz, got: []
+          E1024 13:16:17.621593       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:17.623461       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-healthcheck-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-api-provider-healthcheck-leader)
+          E1024 13:17:50.634242       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:57.549414       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-healthcheck-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-p
+        reason: Error
+        startedAt: "2024-10-24T13:05:40Z"
+    name: machine-healthcheck-controller
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:17:57Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://6ba4600e9f9556f54d27d0f550b26cd142205ce9f5a2892607a297d4d6d41e9e
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c35448d60ca764dcef6dd31749ae6752939edd7851ab9e6db1a9a27c2bc33839
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:916047af2f353903c72e37f04a26cbfd2697eb7c69a240d7682d48520db53386
+    lastState:
+      terminated:
+        containerID: cri-o://a5188a17149e53002b5083f138cdd06eadd171cccebe6614ebc42e7ce9269bc7
+        exitCode: 1
+        finishedAt: "2024-10-24T13:18:00Z"
+        message: "still be processing the request (get leases.coordination.k8s.io
+          cluster-api-provider-machineset-leader)\nI1024 13:17:28.573757       1 machine_webhook.go:506]
+          Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz\nI1024
+          13:17:28.573785       1 machine_webhook.go:1156] Validating GCP providerSpec\nI1024
+          13:17:29.552459       1 machineset_webhook.go:118] Validate webhook called
+          for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c\nI1024 13:17:29.552556
+          \      1 machine_webhook.go:1156] Validating GCP providerSpec\nI1024 13:17:34.407760
+          \      1 machine_webhook.go:540] Mutate webhook called for Machine: \nI1024
+          13:17:34.407787       1 machine_webhook.go:1068] Defaulting GCP providerSpec\nI1024
+          13:17:34.411264       1 machine_webhook.go:484] Validate webhook called
+          for Machine: tmp-machine-dry-runp8pn5\nI1024 13:17:34.411292       1 machine_webhook.go:1156]
+          Validating GCP providerSpec\nI1024 13:17:36.554035       1 machine_webhook.go:506]
+          Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz\nI1024
+          13:17:36.554057       1 machine_webhook.go:1156] Validating GCP providerSpec\nI1024
+          13:17:43.840884       1 machineset_webhook.go:118] Validate webhook called
+          for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c\nI1024 13:17:43.840949
+          \      1 machine_webhook.go:1156] Validating GCP providerSpec\nE1024 13:17:53.378880
+          \      1 leaderelection.go:429] Failed to update lock optimitically: rpc
+          error: code = DeadlineExceeded desc = context deadline exceeded, falling
+          back to slow path\nE1024 13:18:00.330821       1 leaderelection.go:436]
+          error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader:
+          Get \"https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine"
+        reason: Error
+        startedAt: "2024-10-24T13:05:36Z"
+    name: machineset-controller
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:18:00Z"
+    volumeMounts:
+    - mountPath: /etc/machine-api-operator/tls
+      name: machineset-webhook-cert
+      readOnly: true
+      recursiveReadOnly: Disabled
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+      recursiveReadOnly: Disabled
+  - containerID: cri-o://770de58bbfb67e35f3a92759548fb43ba3f24319eed23eb7392605a2d1085813
+    image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:c35448d60ca764dcef6dd31749ae6752939edd7851ab9e6db1a9a27c2bc33839
+    imageID: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:916047af2f353903c72e37f04a26cbfd2697eb7c69a240d7682d48520db53386
+    lastState:
+      terminated:
+        containerID: cri-o://79dca5fd9e8d7d4d149d70aa570444bdba82d11b284a7b7caee89274b2d2bad0
+        exitCode: 255
+        finishedAt: "2024-10-24T13:17:57Z"
+        message: |-
+          -c-z8hfz" with providerID "gce://XXXXXXXXXXXXXXXXXXXXXXXX/us-central1-c/ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+          E1024 13:17:50.620796       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+          E1024 13:17:50.848345       1 controller.go:316] "Reconciler error" err="error updating nodeRef for machine \"ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz\" and node \"ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz\": error updating machine \"ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz\": rpc error: code = DeadlineExceeded desc = context deadline exceeded" controller="nodelink-controller" object="ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz" namespace="" name="ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz" reconcileID="f18d7670-ffc6-4fc4-86f7-dcdf5cce9345"
+          I1024 13:17:50.848400       1 nodelink_controller.go:191] Reconciling Node /ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+          I1024 13:17:50.848475       1 nodelink_controller.go:412] Finding machine from node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+          I1024 13:17:50.848483       1 nodelink_controller.go:429] Finding machine from node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2" by ProviderID
+          I1024 13:17:50.848564       1 nodelink_controller.go:445] Found machine "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2" for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2" with providerID "gce://XXXXXXXXXXXXXXXXXXXXXXXX/us-central1-b/ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+          E1024 13:17:57.538556       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-nodelink-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster
+        reason: Error
+        startedAt: "2024-10-24T13:05:40Z"
+    name: nodelink-controller
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2024-10-24T13:17:57Z"
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-8k22r
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.0.3
+  hostIPs:
+  - ip: 10.0.0.3
+  phase: Running
+  podIP: 10.129.0.22
+  podIPs:
+  - ip: 10.129.0.22
+  qosClass: Burstable
+  startTime: "2024-10-24T13:05:28Z"

@@ -1,0 +1,812 @@
+2024-10-24T13:18:00.871403863Z I1024 13:18:00.871141       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2024-10-24T13:18:00.871592453Z 2024/10/24 13:18:00 Watching cluster-api objects only in namespace "openshift-machine-api" for reconciliation.
+2024-10-24T13:18:00.871592453Z 2024/10/24 13:18:00 Registering Components.
+2024-10-24T13:18:00.871695253Z I1024 13:18:00.871654       1 leaderelection.go:121] The leader election gives 4 retries and allows for 13s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m26s. Worst graceful lease acquisition is {26s}.
+2024-10-24T13:18:00.872520314Z I1024 13:18:00.872472       1 main.go:172] Initializing feature gates: AllAlpha=true|false (ALPHA - default=false), AllBeta=true|false (BETA - default=false), MachineAPIMigration=true|false (ALPHA - default=false)
+2024-10-24T13:18:00.872520314Z W1024 13:18:00.872502       1 feature_gate.go:354] Setting GA feature gate VSphereStaticIPs=true. It will be removed in a future release.
+2024-10-24T13:18:00.872555063Z I1024 13:18:00.872519       1 feature_gate.go:387] feature gates: {map[MachineAPIMigration:false VSphereStaticIPs:true]}
+2024-10-24T13:18:00.872555063Z I1024 13:18:00.872537       1 main.go:178] Warnings setting feature gates from flags: [Ignoring unknown FeatureGate "AzureWorkloadIdentity" Ignoring unknown FeatureGate "GCPLabelsTags"]
+2024-10-24T13:18:00.872555063Z I1024 13:18:00.872551       1 main.go:181] FeatureGateMachineAPIMigration initialised: false
+2024-10-24T13:18:58.351176023Z I1024 13:18:58.351068       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/mutate-machine-openshift-io-v1beta1-machine"
+2024-10-24T13:18:58.351564953Z I1024 13:18:58.351515       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/validate-machine-openshift-io-v1beta1-machine"
+2024-10-24T13:18:58.351746263Z I1024 13:18:58.351707       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/mutate-machine-openshift-io-v1beta1-machineset"
+2024-10-24T13:18:58.351902303Z I1024 13:18:58.351885       1 server.go:183] "Registering webhook" logger="controller-runtime.webhook" path="/validate-machine-openshift-io-v1beta1-machineset"
+2024-10-24T13:18:58.351944203Z 2024/10/24 13:18:58 Registering Components.
+2024-10-24T13:18:58.352184613Z 2024/10/24 13:18:58 Starting the Cmd.
+2024-10-24T13:18:58.352574783Z I1024 13:18:58.352553       1 server.go:208] "Starting metrics server" logger="controller-runtime.metrics"
+2024-10-24T13:18:58.352767743Z I1024 13:18:58.352751       1 server.go:247] "Serving metrics server" logger="controller-runtime.metrics" bindAddress=":8082" secure=false
+2024-10-24T13:18:58.352946043Z I1024 13:18:58.352919       1 server.go:83] "starting server" name="health probe" addr="[::]:9441"
+2024-10-24T13:18:58.353011683Z I1024 13:18:58.352973       1 server.go:191] "Starting webhook server" logger="controller-runtime.webhook"
+2024-10-24T13:18:58.353787703Z I1024 13:18:58.353490       1 leaderelection.go:254] attempting to acquire leader lease openshift-machine-api/cluster-api-provider-machineset-leader...
+2024-10-24T13:18:58.355751542Z I1024 13:18:58.355714       1 certwatcher.go:161] "Updated current TLS certificate" logger="controller-runtime.certwatcher"
+2024-10-24T13:18:58.360022192Z I1024 13:18:58.358931       1 server.go:242] "Serving webhook server" logger="controller-runtime.webhook" host="" port=8443
+2024-10-24T13:18:58.360022192Z I1024 13:18:58.359112       1 certwatcher.go:115] "Starting certificate watcher" logger="controller-runtime.certwatcher"
+2024-10-24T13:21:18.762999977Z I1024 13:21:18.762891       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:21:18.762999977Z I1024 13:21:18.762925       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:21:18.770450746Z I1024 13:21:18.770393       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rung7865
+2024-10-24T13:21:18.770450746Z I1024 13:21:18.770434       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:18.774441586Z I1024 13:21:18.774393       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:21:18.774441586Z I1024 13:21:18.774427       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:21:18.774484676Z I1024 13:21:18.774455       1 reflector.go:305] Starting reflector *v1.Secret (10m55.369763224s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:18.774484676Z I1024 13:21:18.774467       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:18.776954726Z I1024 13:21:18.776865       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:18.893407368Z I1024 13:21:18.893314       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:21:18.893407368Z I1024 13:21:18.893338       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:21:18.897157908Z I1024 13:21:18.896983       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run7rtkl
+2024-10-24T13:21:18.897157908Z I1024 13:21:18.897000       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:18.909180337Z I1024 13:21:18.909025       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:21:18.909180337Z I1024 13:21:18.909055       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:21:18.911922917Z I1024 13:21:18.911806       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runkxlz9
+2024-10-24T13:21:18.911922917Z I1024 13:21:18.911838       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:18.942334945Z I1024 13:21:18.942235       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:21:18.942334945Z I1024 13:21:18.942262       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:21:18.946083525Z I1024 13:21:18.946030       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run8vhdc
+2024-10-24T13:21:18.946083525Z I1024 13:21:18.946060       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:18.956714184Z I1024 13:21:18.956581       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:21:18.956714184Z I1024 13:21:18.956605       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:21:18.959670394Z I1024 13:21:18.959630       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runrc7qx
+2024-10-24T13:21:18.959670394Z I1024 13:21:18.959652       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:18.970441263Z I1024 13:21:18.970372       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:21:18.970441263Z I1024 13:21:18.970397       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:21:18.974294863Z I1024 13:21:18.974188       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runsq55g
+2024-10-24T13:21:18.974294863Z I1024 13:21:18.974220       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:29.848283459Z I1024 13:21:29.848193       1 leaderelection.go:268] successfully acquired lease openshift-machine-api/cluster-api-provider-machineset-leader
+2024-10-24T13:21:29.848356419Z I1024 13:21:29.848336       1 recorder.go:104] "machine-api-controllers-7785d897-m4jlj_542df196-2ff1-4ba6-82e6-a5a1190b309f became leader" logger="events" type="Normal" object={"kind":"Lease","namespace":"openshift-machine-api","name":"cluster-api-provider-machineset-leader","uid":"08eac64b-db12-41e0-ab20-f85ac746f44e","apiVersion":"coordination.k8s.io/v1","resourceVersion":"22372"} reason="LeaderElection"
+2024-10-24T13:21:29.848557309Z I1024 13:21:29.848514       1 controller.go:175] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.MachineSet"
+2024-10-24T13:21:29.848685020Z I1024 13:21:29.848660       1 controller.go:175] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2024-10-24T13:21:29.848703829Z I1024 13:21:29.848682       1 controller.go:175] "Starting EventSource" controller="machineset_controller" source="kind source: *v1beta1.Machine"
+2024-10-24T13:21:29.848727740Z I1024 13:21:29.848714       1 controller.go:183] "Starting Controller" controller="machineset_controller"
+2024-10-24T13:21:29.851143589Z I1024 13:21:29.851051       1 reflector.go:305] Starting reflector *v1beta1.Machine (9m45.845360509s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.851143589Z I1024 13:21:29.851079       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.852781389Z I1024 13:21:29.852732       1 reflector.go:305] Starting reflector *v1beta1.MachineSet (9m36.628066867s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.852867229Z I1024 13:21:29.852850       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.857064409Z I1024 13:21:29.856951       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.858695679Z I1024 13:21:29.858653       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.954878383Z I1024 13:21:29.954797       1 controller.go:217] "Starting workers" controller="machineset_controller" worker count=1
+2024-10-24T13:21:29.956145872Z I1024 13:21:29.956068       1 reflector.go:305] Starting reflector *v1.Node (9m37.280366048s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.956145872Z I1024 13:21:29.956103       1 reflector.go:341] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:29.959685172Z I1024 13:21:29.959608       1 reflector.go:368] Caches populated for *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:21:40.585670254Z I1024 13:21:40.585592       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T13:21:40.585670254Z I1024 13:21:40.585661       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:40.722415215Z I1024 13:21:40.722343       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T13:21:40.722415215Z I1024 13:21:40.722397       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:40.834753258Z I1024 13:21:40.834682       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T13:21:40.834753258Z I1024 13:21:40.834741       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:40.957173510Z I1024 13:21:40.957082       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T13:21:40.957267090Z I1024 13:21:40.957182       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:41.214724783Z I1024 13:21:41.214627       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:21:41.214724783Z I1024 13:21:41.214665       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:41.972415183Z I1024 13:21:41.972333       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T13:21:41.972415183Z I1024 13:21:41.972364       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:42.781720900Z I1024 13:21:42.781617       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:21:42.781720900Z I1024 13:21:42.781648       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:43.235951420Z I1024 13:21:43.235867       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:21:43.235951420Z I1024 13:21:43.235893       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:43.682313251Z I1024 13:21:43.682247       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:21:43.682455941Z I1024 13:21:43.682436       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:44.975174136Z I1024 13:21:44.975058       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:21:44.975174136Z I1024 13:21:44.975083       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:45.381014350Z I1024 13:21:45.380912       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:21:45.381014350Z I1024 13:21:45.380943       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:21:45.838268719Z I1024 13:21:45.838199       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:21:45.838268719Z I1024 13:21:45.838229       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:24:05.933620177Z E1024 13:24:05.933480       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:24:05.934787397Z E1024 13:24:05.934720       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:24:31.938833224Z E1024 13:24:31.938762       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:24:31.940264664Z E1024 13:24:31.940220       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:25:28.548027183Z I1024 13:25:28.547962       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:28.548027183Z I1024 13:25:28.547994       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:28.555215662Z I1024 13:25:28.555166       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runmsqtb
+2024-10-24T13:25:28.555215662Z I1024 13:25:28.555191       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:28.570492070Z I1024 13:25:28.570417       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:28.570492070Z I1024 13:25:28.570449       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:28.574363459Z I1024 13:25:28.574308       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rungphqm
+2024-10-24T13:25:28.574363459Z I1024 13:25:28.574338       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:28.583772778Z I1024 13:25:28.583694       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:28.583772778Z I1024 13:25:28.583728       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:28.586835588Z I1024 13:25:28.586733       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runccgpq
+2024-10-24T13:25:28.586835588Z I1024 13:25:28.586762       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:36.330498531Z I1024 13:25:36.330394       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:36.334403080Z I1024 13:25:36.334334       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:36.795694566Z I1024 13:25:36.795600       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:25:36.795694566Z I1024 13:25:36.795626       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:37.566320779Z I1024 13:25:37.566220       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T13:25:37.566320779Z I1024 13:25:37.566271       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:38.288360719Z I1024 13:25:38.288284       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:25:38.288360719Z I1024 13:25:38.288310       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:38.761184323Z I1024 13:25:38.761053       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:25:38.761184323Z I1024 13:25:38.761091       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:39.195094293Z I1024 13:25:39.195032       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:25:39.195183142Z I1024 13:25:39.195175       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:39.679064535Z I1024 13:25:39.679005       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:25:39.679064535Z I1024 13:25:39.679032       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:46.868160326Z I1024 13:25:46.868024       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:46.871711855Z I1024 13:25:46.871615       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:48.397515883Z I1024 13:25:48.397415       1 reflector.go:341] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:48.400378813Z I1024 13:25:48.400274       1 reflector.go:368] Caches populated for *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:25:50.728826749Z I1024 13:25:50.728731       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:50.728826749Z I1024 13:25:50.728765       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:50.732794709Z I1024 13:25:50.732540       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runslhhm
+2024-10-24T13:25:50.732794709Z I1024 13:25:50.732572       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:50.745339807Z I1024 13:25:50.745280       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:50.745339807Z I1024 13:25:50.745307       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:50.750746846Z I1024 13:25:50.750668       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runkkwm6
+2024-10-24T13:25:50.750746846Z I1024 13:25:50.750698       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:50.764637674Z I1024 13:25:50.764556       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:50.764637674Z I1024 13:25:50.764582       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:50.768323664Z I1024 13:25:50.768252       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run65hd5
+2024-10-24T13:25:50.768323664Z I1024 13:25:50.768278       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:52.165423520Z I1024 13:25:52.165366       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:52.165423520Z I1024 13:25:52.165394       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:52.169500359Z I1024 13:25:52.169435       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rund7688
+2024-10-24T13:25:52.169597379Z I1024 13:25:52.169579       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:52.181036678Z I1024 13:25:52.180984       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:52.181163978Z I1024 13:25:52.181146       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:52.184435737Z I1024 13:25:52.184381       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run5fj4b
+2024-10-24T13:25:52.184435737Z I1024 13:25:52.184402       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:52.198860165Z I1024 13:25:52.198766       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:52.198860165Z I1024 13:25:52.198794       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:52.205830584Z I1024 13:25:52.205739       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runklj5b
+2024-10-24T13:25:52.205830584Z I1024 13:25:52.205773       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:56.289147456Z I1024 13:25:56.289049       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:56.289147456Z I1024 13:25:56.289081       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:56.292731206Z I1024 13:25:56.292640       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run6hbh6
+2024-10-24T13:25:56.292731206Z I1024 13:25:56.292666       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:56.304527874Z I1024 13:25:56.304464       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:56.304527874Z I1024 13:25:56.304488       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:56.308367834Z I1024 13:25:56.308294       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run4h5t7
+2024-10-24T13:25:56.308367834Z I1024 13:25:56.308325       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:56.317844762Z I1024 13:25:56.317767       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:56.317844762Z I1024 13:25:56.317788       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:56.320884722Z I1024 13:25:56.320839       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runl64jg
+2024-10-24T13:25:56.320884722Z I1024 13:25:56.320858       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:56.350092668Z I1024 13:25:56.350018       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:56.350092668Z I1024 13:25:56.350046       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:56.357298577Z I1024 13:25:56.356604       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runm2b7s
+2024-10-24T13:25:56.357298577Z I1024 13:25:56.356633       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:56.367829305Z I1024 13:25:56.367766       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:56.367829305Z I1024 13:25:56.367797       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:56.371927375Z I1024 13:25:56.371859       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runkqf4b
+2024-10-24T13:25:56.372040755Z I1024 13:25:56.372021       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:25:56.385648103Z I1024 13:25:56.385559       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:25:56.385648103Z I1024 13:25:56.385600       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:25:56.390272862Z I1024 13:25:56.390199       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runfzgv5
+2024-10-24T13:25:56.390272862Z I1024 13:25:56.390223       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:26:00.059950542Z I1024 13:26:00.059876       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T13:26:00.059950542Z I1024 13:26:00.059937       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:26:00.073739970Z I1024 13:26:00.073654       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T13:26:00.073828101Z I1024 13:26:00.073754       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:26:00.088980798Z I1024 13:26:00.088901       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T13:26:00.088980798Z I1024 13:26:00.088961       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:26:00.103770636Z I1024 13:26:00.103703       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T13:26:00.103820096Z I1024 13:26:00.103769       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:26:27.466378812Z I1024 13:26:27.466285       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:26:27.471430792Z I1024 13:26:27.471378       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:28:00.016002647Z E1024 13:28:00.015893       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:00.017305666Z E1024 13:28:00.017225       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:28:26.019690335Z E1024 13:28:26.019581       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:26.020711275Z E1024 13:28:26.020637       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:28:52.019648881Z E1024 13:28:52.019529       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:28:52.020505721Z E1024 13:28:52.020433       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:29:43.232497769Z I1024 13:29:43.232409       1 reflector.go:341] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:43.237749258Z I1024 13:29:43.237666       1 reflector.go:368] Caches populated for *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:29:55.740010439Z I1024 13:29:55.739942       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T13:29:55.740276800Z I1024 13:29:55.740203       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:55.756055058Z I1024 13:29:55.755991       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T13:29:55.756168298Z I1024 13:29:55.756098       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:55.773465846Z I1024 13:29:55.773402       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T13:29:55.773530896Z I1024 13:29:55.773462       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:55.793841664Z I1024 13:29:55.793732       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T13:29:55.793911594Z I1024 13:29:55.793889       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:56.964897920Z I1024 13:29:56.964661       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:29:56.964897920Z I1024 13:29:56.964701       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:57.822221556Z I1024 13:29:57.822103       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T13:29:57.822221556Z I1024 13:29:57.822190       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:58.186287641Z I1024 13:29:58.186200       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:29:58.186287641Z I1024 13:29:58.186234       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:29:58.193089610Z I1024 13:29:58.192985       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runzlwqg
+2024-10-24T13:29:58.193089610Z I1024 13:29:58.193018       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:58.211005619Z I1024 13:29:58.210936       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:29:58.211005619Z I1024 13:29:58.210968       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:29:58.214908848Z I1024 13:29:58.214849       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runr6fk5
+2024-10-24T13:29:58.214908848Z I1024 13:29:58.214876       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:58.225696297Z I1024 13:29:58.225610       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:29:58.225696297Z I1024 13:29:58.225641       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:29:58.229370267Z I1024 13:29:58.229246       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run4qb2n
+2024-10-24T13:29:58.229370267Z I1024 13:29:58.229269       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:58.259227983Z I1024 13:29:58.259142       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:29:58.259227983Z I1024 13:29:58.259172       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:29:58.262662584Z I1024 13:29:58.262568       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run8jc4r
+2024-10-24T13:29:58.262662584Z I1024 13:29:58.262597       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:58.275875292Z I1024 13:29:58.275804       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:29:58.276014422Z I1024 13:29:58.275961       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:29:58.279656652Z I1024 13:29:58.279613       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runlq2f7
+2024-10-24T13:29:58.279656652Z I1024 13:29:58.279636       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:58.290999751Z I1024 13:29:58.290892       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:29:58.290999751Z I1024 13:29:58.290927       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:29:58.295025470Z I1024 13:29:58.294927       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runhwfqb
+2024-10-24T13:29:58.295025470Z I1024 13:29:58.294960       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:58.640517766Z I1024 13:29:58.640443       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:29:58.640517766Z I1024 13:29:58.640473       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:59.106575831Z I1024 13:29:59.106514       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:29:59.106575831Z I1024 13:29:59.106542       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:29:59.573652185Z I1024 13:29:59.573558       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:29:59.573652185Z I1024 13:29:59.573603       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:00.027354561Z I1024 13:30:00.027258       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:30:00.027354561Z I1024 13:30:00.027292       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:05.442318153Z I1024 13:30:05.442248       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:30:05.448854463Z I1024 13:30:05.448620       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:30:11.396845833Z I1024 13:30:11.396747       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:11.396845833Z I1024 13:30:11.396779       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:11.400761263Z I1024 13:30:11.400710       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run9jxl5
+2024-10-24T13:30:11.400761263Z I1024 13:30:11.400738       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:11.412618572Z I1024 13:30:11.412534       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:11.412618572Z I1024 13:30:11.412564       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:11.416570981Z I1024 13:30:11.416428       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runv26mv
+2024-10-24T13:30:11.416570981Z I1024 13:30:11.416463       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:11.429462960Z I1024 13:30:11.429367       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:11.429462960Z I1024 13:30:11.429399       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:11.433103900Z I1024 13:30:11.433028       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runs8gdr
+2024-10-24T13:30:11.433103900Z I1024 13:30:11.433062       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:15.859747848Z I1024 13:30:15.859658       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:30:15.863926287Z I1024 13:30:15.863850       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:30:26.744928827Z I1024 13:30:26.744807       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:26.744928827Z I1024 13:30:26.744836       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:26.748277926Z I1024 13:30:26.748168       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runv248j
+2024-10-24T13:30:26.748277926Z I1024 13:30:26.748200       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:26.760664595Z I1024 13:30:26.760597       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:26.760761525Z I1024 13:30:26.760743       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:26.764523665Z I1024 13:30:26.764448       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runrmg2q
+2024-10-24T13:30:26.764523665Z I1024 13:30:26.764483       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:26.775791804Z I1024 13:30:26.775650       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:26.775791804Z I1024 13:30:26.775679       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:26.779324853Z I1024 13:30:26.779236       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runbj7xx
+2024-10-24T13:30:26.779324853Z I1024 13:30:26.779275       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:37.593362159Z I1024 13:30:37.593282       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:37.593362159Z I1024 13:30:37.593308       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:37.597028628Z I1024 13:30:37.596965       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run747rg
+2024-10-24T13:30:37.597028628Z I1024 13:30:37.596991       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:37.615286197Z I1024 13:30:37.615198       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:37.615286197Z I1024 13:30:37.615224       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:37.619008826Z I1024 13:30:37.618930       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run264df
+2024-10-24T13:30:37.619008826Z I1024 13:30:37.618966       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:37.630427435Z I1024 13:30:37.630282       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:30:37.630427435Z I1024 13:30:37.630318       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:30:37.634732695Z I1024 13:30:37.634667       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runq7jn7
+2024-10-24T13:30:37.634732695Z I1024 13:30:37.634688       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:30:54.275280113Z I1024 13:30:54.275206       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:30:54.280285982Z I1024 13:30:54.280224       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:32:46.100798937Z E1024 13:32:46.100691       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:32:46.101727177Z E1024 13:32:46.101668       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-api-provider-machineset-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-api-provider-machineset-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:33:09.664318151Z I1024 13:33:09.664235       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:09.664318151Z I1024 13:33:09.664270       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:09.673917231Z I1024 13:33:09.673816       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run5znrt
+2024-10-24T13:33:09.673917231Z I1024 13:33:09.673847       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:09.689566100Z I1024 13:33:09.689450       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:09.689566100Z I1024 13:33:09.689492       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:09.693760270Z I1024 13:33:09.693656       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run5zftw
+2024-10-24T13:33:09.693760270Z I1024 13:33:09.693691       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:09.709531189Z I1024 13:33:09.709440       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:09.709531189Z I1024 13:33:09.709485       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:09.714540759Z I1024 13:33:09.714479       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runvdv7h
+2024-10-24T13:33:09.714540759Z I1024 13:33:09.714509       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:09.745347447Z I1024 13:33:09.745274       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:09.745347447Z I1024 13:33:09.745300       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:09.749962627Z I1024 13:33:09.749881       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runcm9dk
+2024-10-24T13:33:09.749962627Z I1024 13:33:09.749915       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:09.759770987Z I1024 13:33:09.759687       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:09.759770987Z I1024 13:33:09.759714       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:09.762937686Z I1024 13:33:09.762811       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runfp8x4
+2024-10-24T13:33:09.762937686Z I1024 13:33:09.762831       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:09.774382576Z I1024 13:33:09.774267       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:09.774382576Z I1024 13:33:09.774307       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:09.777198426Z I1024 13:33:09.777107       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run2nll4
+2024-10-24T13:33:09.777198426Z I1024 13:33:09.777156       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:10.554404165Z I1024 13:33:10.554331       1 reflector.go:341] Listing and watching *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:10.558505975Z I1024 13:33:10.558439       1 reflector.go:368] Caches populated for *v1.Node from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:12.279505844Z I1024 13:33:12.279387       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:12.285371104Z I1024 13:33:12.285194       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:25.393399047Z I1024 13:33:25.393325       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:25.407337716Z I1024 13:33:25.407267       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:35.757977783Z I1024 13:33:35.757901       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:35.757977783Z I1024 13:33:35.757935       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:35.761558183Z I1024 13:33:35.761484       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rungzcbn
+2024-10-24T13:33:35.761558183Z I1024 13:33:35.761517       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:35.775831322Z I1024 13:33:35.775768       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:35.775831322Z I1024 13:33:35.775794       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:35.779954752Z I1024 13:33:35.779866       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runsh8b6
+2024-10-24T13:33:35.779954752Z I1024 13:33:35.779900       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:35.792701392Z I1024 13:33:35.792618       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:35.792701392Z I1024 13:33:35.792645       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:35.797292761Z I1024 13:33:35.797186       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runggm5r
+2024-10-24T13:33:35.797292761Z I1024 13:33:35.797222       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:44.932858042Z I1024 13:33:44.932753       1 reflector.go:341] Listing and watching *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:44.936153132Z I1024 13:33:44.936086       1 reflector.go:368] Caches populated for *v1.Secret from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:48.781536610Z I1024 13:33:48.781460       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:33:48.781536610Z I1024 13:33:48.781486       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:49.695535832Z I1024 13:33:49.695448       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T13:33:49.695535832Z I1024 13:33:49.695520       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:49.712653912Z I1024 13:33:49.712563       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T13:33:49.712725222Z I1024 13:33:49.712635       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:49.724743551Z I1024 13:33:49.724671       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T13:33:49.724852191Z I1024 13:33:49.724754       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:49.739622210Z I1024 13:33:49.739493       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T13:33:49.739702450Z I1024 13:33:49.739642       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:50.928996998Z I1024 13:33:50.928920       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T13:33:50.928996998Z I1024 13:33:50.928945       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:51.767259634Z I1024 13:33:51.767101       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:33:51.767259634Z I1024 13:33:51.767148       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:52.214671361Z I1024 13:33:52.214522       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:33:52.214671361Z I1024 13:33:52.214551       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:53.448475426Z I1024 13:33:53.448335       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:33:53.448475426Z I1024 13:33:53.448366       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:53.968996808Z I1024 13:33:53.968921       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:33:53.968996808Z I1024 13:33:53.968952       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:54.072008433Z I1024 13:33:54.071932       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:54.072008433Z I1024 13:33:54.071959       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:54.075939033Z I1024 13:33:54.075835       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runlw6dq
+2024-10-24T13:33:54.075939033Z I1024 13:33:54.075868       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:54.088483932Z I1024 13:33:54.088401       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:54.088483932Z I1024 13:33:54.088428       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:54.091619342Z I1024 13:33:54.091559       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runxjvk6
+2024-10-24T13:33:54.091619342Z I1024 13:33:54.091579       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:54.100050212Z I1024 13:33:54.099973       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:54.100201522Z I1024 13:33:54.100185       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:54.104348951Z I1024 13:33:54.104310       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runp44gm
+2024-10-24T13:33:54.104518821Z I1024 13:33:54.104440       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:55.559185955Z I1024 13:33:55.559022       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:55.559185955Z I1024 13:33:55.559046       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:55.562871055Z I1024 13:33:55.562794       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runrf9cz
+2024-10-24T13:33:55.562871055Z I1024 13:33:55.562821       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:55.575341264Z I1024 13:33:55.575253       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:55.575341264Z I1024 13:33:55.575286       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:55.579366654Z I1024 13:33:55.579287       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runqfht5
+2024-10-24T13:33:55.579366654Z I1024 13:33:55.579325       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:33:55.589218043Z I1024 13:33:55.589154       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:33:55.589218043Z I1024 13:33:55.589180       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:33:55.592486243Z I1024 13:33:55.592386       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runr9mkl
+2024-10-24T13:33:55.592486243Z I1024 13:33:55.592422       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:31.360836980Z I1024 13:44:31.360745       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:44:31.360836980Z I1024 13:44:31.360783       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:31.739025075Z I1024 13:44:31.738954       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:44:31.739025075Z I1024 13:44:31.738985       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:32.231852880Z I1024 13:44:32.231782       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:44:32.231852880Z I1024 13:44:32.231806       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:32.985743301Z I1024 13:44:32.985662       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:44:32.985743301Z I1024 13:44:32.985690       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:33.713300294Z I1024 13:44:33.713093       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T13:44:33.713300294Z I1024 13:44:33.713142       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:34.454941536Z I1024 13:44:34.454876       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:44:34.454941536Z I1024 13:44:34.454905       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:45.131815431Z I1024 13:44:45.131678       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T13:44:45.131815431Z I1024 13:44:45.131791       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:45.148774939Z I1024 13:44:45.148603       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T13:44:45.148774939Z I1024 13:44:45.148672       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:45.164098568Z I1024 13:44:45.164002       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T13:44:45.164098568Z I1024 13:44:45.164072       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:44:45.180249256Z I1024 13:44:45.180177       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T13:44:45.180249256Z I1024 13:44:45.180239       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.015534256Z I1024 13:50:51.015402       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:50:51.015534256Z I1024 13:50:51.015444       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:50:51.025965375Z I1024 13:50:51.025816       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run464xw
+2024-10-24T13:50:51.025965375Z I1024 13:50:51.025857       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.048058343Z I1024 13:50:51.047991       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:50:51.048058343Z I1024 13:50:51.048016       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:50:51.052661963Z I1024 13:50:51.052516       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runlst7d
+2024-10-24T13:50:51.052661963Z I1024 13:50:51.052556       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.063478752Z I1024 13:50:51.063408       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:50:51.063478752Z I1024 13:50:51.063436       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:50:51.068663181Z I1024 13:50:51.068590       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run27xfx
+2024-10-24T13:50:51.068663181Z I1024 13:50:51.068613       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.175690562Z I1024 13:50:51.175624       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T13:50:51.175875862Z I1024 13:50:51.175839       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.196027930Z I1024 13:50:51.195949       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T13:50:51.196027930Z I1024 13:50:51.196001       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.216387608Z I1024 13:50:51.216306       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T13:50:51.216387608Z I1024 13:50:51.216377       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.235865456Z I1024 13:50:51.235753       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T13:50:51.235865456Z I1024 13:50:51.235823       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.272246103Z I1024 13:50:51.272087       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:51.278971462Z I1024 13:50:51.278898       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:51.352037956Z I1024 13:50:51.351891       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:51.373647414Z I1024 13:50:51.373563       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:50:51.469865855Z I1024 13:50:51.469772       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:50:51.469865855Z I1024 13:50:51.469804       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.471217075Z I1024 13:50:51.471154       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:50:51.471217075Z I1024 13:50:51.471182       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:50:51.475784564Z I1024 13:50:51.475694       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run2nbhd
+2024-10-24T13:50:51.475856604Z I1024 13:50:51.475789       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.504877901Z I1024 13:50:51.504819       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:50:51.504877901Z I1024 13:50:51.504845       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:50:51.535480919Z I1024 13:50:51.535375       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runns48j
+2024-10-24T13:50:51.535480919Z I1024 13:50:51.535413       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:51.558073277Z I1024 13:50:51.557964       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:50:51.558073277Z I1024 13:50:51.557991       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:50:51.571245866Z I1024 13:50:51.571172       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run22zkx
+2024-10-24T13:50:51.571245866Z I1024 13:50:51.571215       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:52.271947231Z I1024 13:50:52.271878       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T13:50:52.272051691Z I1024 13:50:52.272038       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:53.116725064Z I1024 13:50:53.116604       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:50:53.116725064Z I1024 13:50:53.116645       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:53.545508585Z I1024 13:50:53.545434       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:50:53.545508585Z I1024 13:50:53.545459       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:53.950252738Z I1024 13:50:53.950074       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:50:53.950252738Z I1024 13:50:53.950101       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:50:54.445810433Z I1024 13:50:54.445749       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:50:54.445915322Z I1024 13:50:54.445891       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:23.141700734Z I1024 13:57:23.141596       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:57:23.141700734Z I1024 13:57:23.141628       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:57:23.152307293Z I1024 13:57:23.152223       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runh2gjn
+2024-10-24T13:57:23.152307293Z I1024 13:57:23.152262       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:23.176328362Z I1024 13:57:23.176267       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:57:23.176424101Z I1024 13:57:23.176408       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:57:23.180154391Z I1024 13:57:23.180093       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runrwdp6
+2024-10-24T13:57:23.180366741Z I1024 13:57:23.180348       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:23.207925790Z I1024 13:57:23.207865       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T13:57:23.208095370Z I1024 13:57:23.208056       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T13:57:23.216767529Z I1024 13:57:23.216705       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run766cg
+2024-10-24T13:57:23.216869999Z I1024 13:57:23.216849       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:23.256964167Z I1024 13:57:23.256887       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.264210277Z I1024 13:57:23.263866       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.380792330Z I1024 13:57:23.380729       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.387807100Z I1024 13:57:23.387745       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:57:23.503846913Z I1024 13:57:23.503777       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T13:57:23.504005913Z I1024 13:57:23.503984       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:23.532169321Z I1024 13:57:23.532093       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T13:57:23.532310921Z I1024 13:57:23.532290       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:23.551766720Z I1024 13:57:23.551705       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T13:57:23.551826260Z I1024 13:57:23.551770       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:23.574274859Z I1024 13:57:23.571114       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T13:57:23.574501049Z I1024 13:57:23.574479       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:24.271776829Z I1024 13:57:24.271689       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T13:57:24.271776829Z I1024 13:57:24.271723       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:25.095556931Z I1024 13:57:25.095478       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T13:57:25.095556931Z I1024 13:57:25.095508       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:25.868688927Z I1024 13:57:25.868634       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T13:57:25.868688927Z I1024 13:57:25.868658       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:26.323757511Z I1024 13:57:26.323697       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:57:26.323757511Z I1024 13:57:26.323729       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:26.755295296Z I1024 13:57:26.755215       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:57:26.755391726Z I1024 13:57:26.755329       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T13:57:27.174906462Z I1024 13:57:27.174847       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:57:27.174973852Z I1024 13:57:27.174913       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:00:59.904484371Z I1024 14:00:59.904359       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:00:59.904484371Z I1024 14:00:59.904394       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:00:59.917961880Z I1024 14:00:59.917879       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run9sbh7
+2024-10-24T14:00:59.917961880Z I1024 14:00:59.917913       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:00:59.941305239Z I1024 14:00:59.941202       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:00:59.941305239Z I1024 14:00:59.941254       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:00:59.948344619Z I1024 14:00:59.947965       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runzbpg5
+2024-10-24T14:00:59.948344619Z I1024 14:00:59.948157       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:00:59.970088897Z I1024 14:00:59.969992       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:00:59.970088897Z I1024 14:00:59.970033       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:00:59.976393817Z I1024 14:00:59.976011       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run2wqtv
+2024-10-24T14:00:59.976393817Z I1024 14:00:59.976052       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:14.903950098Z I1024 14:01:14.903842       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:14.903950098Z I1024 14:01:14.903869       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:14.923747767Z I1024 14:01:14.923638       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runbq92f
+2024-10-24T14:01:14.923747767Z I1024 14:01:14.923671       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:14.958050985Z I1024 14:01:14.957929       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:14.958050985Z I1024 14:01:14.957965       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:14.964245125Z I1024 14:01:14.964061       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run9vmnr
+2024-10-24T14:01:14.964245125Z I1024 14:01:14.964098       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:14.980715424Z I1024 14:01:14.980608       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:14.980715424Z I1024 14:01:14.980637       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:14.995560863Z I1024 14:01:14.995464       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runpmmr4
+2024-10-24T14:01:14.995560863Z I1024 14:01:14.995499       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:15.056101430Z I1024 14:01:15.056016       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:15.056101430Z I1024 14:01:15.056046       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:15.061653709Z I1024 14:01:15.061529       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runh8n4j
+2024-10-24T14:01:15.061653709Z I1024 14:01:15.061575       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:15.087324848Z I1024 14:01:15.087250       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:15.087324848Z I1024 14:01:15.087278       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:15.092788318Z I1024 14:01:15.092728       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run4gzqn
+2024-10-24T14:01:15.092871167Z I1024 14:01:15.092849       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:15.106400777Z I1024 14:01:15.106340       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:15.106400777Z I1024 14:01:15.106362       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:15.134874365Z I1024 14:01:15.134784       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runvffp2
+2024-10-24T14:01:15.134874365Z I1024 14:01:15.134818       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:16.077333531Z I1024 14:01:16.077222       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:16.077333531Z I1024 14:01:16.077247       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:16.087574840Z I1024 14:01:16.087474       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runlnzn2
+2024-10-24T14:01:16.087574840Z I1024 14:01:16.087504       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:16.110583499Z I1024 14:01:16.110495       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:16.110583499Z I1024 14:01:16.110532       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:16.115224898Z I1024 14:01:16.115087       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run75rch
+2024-10-24T14:01:16.115224898Z I1024 14:01:16.115136       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:16.130563108Z I1024 14:01:16.130494       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:16.130563108Z I1024 14:01:16.130527       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:16.135681748Z I1024 14:01:16.135604       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runxlzw2
+2024-10-24T14:01:16.135681748Z I1024 14:01:16.135638       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:16.374449944Z I1024 14:01:16.374393       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:16.374449944Z I1024 14:01:16.374418       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:16.381059233Z I1024 14:01:16.380939       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runvfppw
+2024-10-24T14:01:16.381059233Z I1024 14:01:16.380978       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:16.396202173Z I1024 14:01:16.396142       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:16.396202173Z I1024 14:01:16.396171       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:16.400942992Z I1024 14:01:16.400863       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runmw82m
+2024-10-24T14:01:16.400942992Z I1024 14:01:16.400899       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:01:16.418025961Z I1024 14:01:16.417930       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:01:16.418025961Z I1024 14:01:16.417962       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:01:16.422212481Z I1024 14:01:16.422102       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run2cxkv
+2024-10-24T14:01:16.422212481Z I1024 14:01:16.422147       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:03:41.391556832Z I1024 14:03:41.391439       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:03:41.391556832Z I1024 14:03:41.391485       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:03:41.404155892Z I1024 14:03:41.404041       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runzf5xh
+2024-10-24T14:03:41.404155892Z I1024 14:03:41.404075       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:03:41.423254521Z I1024 14:03:41.423132       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:03:41.423254521Z I1024 14:03:41.423163       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:03:41.427611410Z I1024 14:03:41.427498       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runq87mj
+2024-10-24T14:03:41.427611410Z I1024 14:03:41.427534       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:03:41.442446269Z I1024 14:03:41.442339       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:03:41.442446269Z I1024 14:03:41.442367       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:03:41.447099919Z I1024 14:03:41.447029       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run8fd5w
+2024-10-24T14:03:41.447099919Z I1024 14:03:41.447060       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:28.366537865Z I1024 14:04:28.366455       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:28.376178734Z I1024 14:04:28.373281       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:28.661515975Z I1024 14:04:28.661440       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T14:04:28.661657325Z I1024 14:04:28.661638       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:28.680210364Z I1024 14:04:28.680138       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T14:04:28.680434954Z I1024 14:04:28.680410       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:28.698856803Z I1024 14:04:28.698803       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T14:04:28.698932303Z I1024 14:04:28.698903       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:28.714447521Z I1024 14:04:28.714382       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T14:04:28.714585712Z I1024 14:04:28.714568       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:29.098010856Z I1024 14:04:29.097929       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:29.103507576Z I1024 14:04:29.103415       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:04:29.592191043Z I1024 14:04:29.592105       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:04:29.592191043Z I1024 14:04:29.592155       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:30.366795632Z I1024 14:04:30.366731       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T14:04:30.366904122Z I1024 14:04:30.366861       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:31.236114405Z I1024 14:04:31.236057       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T14:04:31.236114405Z I1024 14:04:31.236082       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:31.737238782Z I1024 14:04:31.737171       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T14:04:31.737238782Z I1024 14:04:31.737195       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:32.176314373Z I1024 14:04:32.176242       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T14:04:32.176314373Z I1024 14:04:32.176269       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:04:32.618656814Z I1024 14:04:32.618580       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T14:04:32.618795463Z I1024 14:04:32.618774       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:26.853767425Z I1024 14:13:26.853659       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:26.853767425Z I1024 14:13:26.853691       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:26.864540834Z I1024 14:13:26.864447       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rungznrw
+2024-10-24T14:13:26.864540834Z I1024 14:13:26.864485       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:26.891589912Z I1024 14:13:26.891502       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:26.891589912Z I1024 14:13:26.891537       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:26.897261472Z I1024 14:13:26.897156       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runfjt2g
+2024-10-24T14:13:26.897261472Z I1024 14:13:26.897191       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:26.912364931Z I1024 14:13:26.912270       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:26.912364931Z I1024 14:13:26.912304       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:26.916776771Z I1024 14:13:26.916709       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runkpr5x
+2024-10-24T14:13:26.916776771Z I1024 14:13:26.916743       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:26.946695308Z I1024 14:13:26.946569       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:26.946695308Z I1024 14:13:26.946608       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:26.951632998Z I1024 14:13:26.951557       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runwp82g
+2024-10-24T14:13:26.951632998Z I1024 14:13:26.951593       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:26.962992767Z I1024 14:13:26.962924       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:26.962992767Z I1024 14:13:26.962952       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:26.968602066Z I1024 14:13:26.968449       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run8f5z2
+2024-10-24T14:13:26.968602066Z I1024 14:13:26.968483       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:26.982748706Z I1024 14:13:26.982650       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:26.982748706Z I1024 14:13:26.982681       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:26.988409885Z I1024 14:13:26.988243       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run5hxxb
+2024-10-24T14:13:26.988409885Z I1024 14:13:26.988282       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:27.409092035Z I1024 14:13:27.409039       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:27.409092035Z I1024 14:13:27.409058       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:27.413789165Z I1024 14:13:27.413712       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runpsghq
+2024-10-24T14:13:27.413789165Z I1024 14:13:27.413741       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:27.430769564Z I1024 14:13:27.430695       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:27.430769564Z I1024 14:13:27.430726       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:27.436066763Z I1024 14:13:27.435992       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rung8dc2
+2024-10-24T14:13:27.436066763Z I1024 14:13:27.436017       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:27.450882672Z I1024 14:13:27.450775       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:27.450882672Z I1024 14:13:27.450802       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:27.458247682Z I1024 14:13:27.458088       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runj6sgj
+2024-10-24T14:13:27.458247682Z I1024 14:13:27.458154       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:27.499816229Z I1024 14:13:27.499757       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:27.499816229Z I1024 14:13:27.499785       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:27.504581759Z I1024 14:13:27.504498       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runsqkj5
+2024-10-24T14:13:27.504581759Z I1024 14:13:27.504532       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:27.521493837Z I1024 14:13:27.521435       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:27.521564547Z I1024 14:13:27.521531       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:27.527993117Z I1024 14:13:27.527925       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runq2nmk
+2024-10-24T14:13:27.527993117Z I1024 14:13:27.527958       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:13:27.542900926Z I1024 14:13:27.542844       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:13:27.542900926Z I1024 14:13:27.542867       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:13:27.549977746Z I1024 14:13:27.549886       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run6ffhc
+2024-10-24T14:13:27.549977746Z I1024 14:13:27.549910       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:12.173619681Z I1024 14:15:12.173537       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T14:15:12.173619681Z I1024 14:15:12.173568       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:12.972927925Z I1024 14:15:12.972840       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:15:12.972927925Z I1024 14:15:12.972870       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:13.750778160Z I1024 14:15:13.750697       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T14:15:13.750778160Z I1024 14:15:13.750737       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:14.586166411Z I1024 14:15:14.586061       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T14:15:14.586166411Z I1024 14:15:14.586105       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:15.043229519Z I1024 14:15:15.043091       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T14:15:15.043229519Z I1024 14:15:15.043152       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:15.417834813Z I1024 14:15:15.417752       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T14:15:15.417834813Z I1024 14:15:15.417792       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:24.094368152Z I1024 14:15:24.094270       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T14:15:24.094368152Z I1024 14:15:24.094338       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:24.115281561Z I1024 14:15:24.115211       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T14:15:24.115383321Z I1024 14:15:24.115294       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:24.133037559Z I1024 14:15:24.132944       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T14:15:24.133037559Z I1024 14:15:24.133011       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:15:24.150914258Z I1024 14:15:24.150831       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T14:15:24.150914258Z I1024 14:15:24.150899       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:26.456649603Z I1024 14:16:26.455724       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:26.463086713Z I1024 14:16:26.462024       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:27.438830194Z I1024 14:16:27.438763       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:16:27.438946494Z I1024 14:16:27.438927       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:27.717263055Z I1024 14:16:27.717192       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:27.720772744Z I1024 14:16:27.720717       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:16:27.815570357Z I1024 14:16:27.815483       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T14:16:27.815570357Z I1024 14:16:27.815546       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:27.833317566Z I1024 14:16:27.833235       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T14:16:27.833403826Z I1024 14:16:27.833312       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:27.851852645Z I1024 14:16:27.851753       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T14:16:27.851852645Z I1024 14:16:27.851823       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:27.869168854Z I1024 14:16:27.869061       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T14:16:27.869168854Z I1024 14:16:27.869132       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:28.286907415Z I1024 14:16:28.286823       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T14:16:28.286907415Z I1024 14:16:28.286855       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:29.058662260Z I1024 14:16:29.058559       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T14:16:29.058662260Z I1024 14:16:29.058596       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:29.499795329Z I1024 14:16:29.499537       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T14:16:29.499795329Z I1024 14:16:29.499583       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:29.889745971Z I1024 14:16:29.889671       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T14:16:29.889745971Z I1024 14:16:29.889697       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:16:30.305441152Z I1024 14:16:30.305334       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T14:16:30.305441152Z I1024 14:16:30.305363       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.480573412Z I1024 14:19:22.480506       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.480756702Z I1024 14:19:22.480736       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.492628771Z I1024 14:19:22.492562       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run2tg9b
+2024-10-24T14:19:22.492736751Z I1024 14:19:22.492719       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.520235689Z I1024 14:19:22.519995       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.520235689Z I1024 14:19:22.520073       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.524305889Z I1024 14:19:22.524237       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run2q582
+2024-10-24T14:19:22.524411829Z I1024 14:19:22.524395       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.535020028Z I1024 14:19:22.534946       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.535020028Z I1024 14:19:22.534972       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.545013238Z I1024 14:19:22.544955       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runlwhks
+2024-10-24T14:19:22.545013238Z I1024 14:19:22.544979       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.606772433Z I1024 14:19:22.606675       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.606772433Z I1024 14:19:22.606703       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.611211633Z I1024 14:19:22.611110       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rundqsv5
+2024-10-24T14:19:22.611295193Z I1024 14:19:22.611220       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.626329122Z I1024 14:19:22.626257       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.626329122Z I1024 14:19:22.626290       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.630990981Z I1024 14:19:22.630920       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run742bq
+2024-10-24T14:19:22.630990981Z I1024 14:19:22.630943       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.645971320Z I1024 14:19:22.645864       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.645971320Z I1024 14:19:22.645912       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.650497850Z I1024 14:19:22.650410       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run8n2dj
+2024-10-24T14:19:22.650497850Z I1024 14:19:22.650439       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.681834308Z I1024 14:19:22.681759       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.681834308Z I1024 14:19:22.681784       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.685556817Z I1024 14:19:22.685457       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runskjg2
+2024-10-24T14:19:22.685556817Z I1024 14:19:22.685505       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.698944947Z I1024 14:19:22.698852       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.698944947Z I1024 14:19:22.698884       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.703236696Z I1024 14:19:22.703155       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runqnwfw
+2024-10-24T14:19:22.703236696Z I1024 14:19:22.703199       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:19:22.716255055Z I1024 14:19:22.716173       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:19:22.716255055Z I1024 14:19:22.716204       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:19:22.721236995Z I1024 14:19:22.721150       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run5tmd5
+2024-10-24T14:19:22.721236995Z I1024 14:19:22.721174       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:10.033293512Z I1024 14:27:10.033204       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T14:27:10.033293512Z I1024 14:27:10.033240       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:10.450503242Z I1024 14:27:10.450392       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T14:27:10.450503242Z I1024 14:27:10.450422       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:11.275861534Z I1024 14:27:11.275725       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:27:11.275861534Z I1024 14:27:11.275772       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:11.994218404Z I1024 14:27:11.994147       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T14:27:11.994218404Z I1024 14:27:11.994184       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:12.763732079Z I1024 14:27:12.763564       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T14:27:12.763732079Z I1024 14:27:12.763593       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:13.209187518Z I1024 14:27:13.209084       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T14:27:13.209187518Z I1024 14:27:13.209112       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:23.255365131Z I1024 14:27:23.255231       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T14:27:23.255488991Z I1024 14:27:23.255435       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:23.274996009Z I1024 14:27:23.274917       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T14:27:23.274996009Z I1024 14:27:23.274978       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:23.294834928Z I1024 14:27:23.294743       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T14:27:23.294919788Z I1024 14:27:23.294858       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:27:23.313630907Z I1024 14:27:23.313341       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T14:27:23.313630907Z I1024 14:27:23.313397       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:28.403432517Z I1024 14:29:28.403344       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:28.409190077Z I1024 14:29:28.408818       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:28.626510583Z I1024 14:29:28.626422       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:28.635098293Z I1024 14:29:28.634944       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:29:29.114371532Z I1024 14:29:29.114301       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T14:29:29.114371532Z I1024 14:29:29.114358       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:29.138392211Z I1024 14:29:29.138304       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T14:29:29.138392211Z I1024 14:29:29.138361       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:29.168348829Z I1024 14:29:29.168255       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T14:29:29.168348829Z I1024 14:29:29.168335       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:29.200709817Z I1024 14:29:29.200616       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T14:29:29.200709817Z I1024 14:29:29.200669       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:29.284315641Z I1024 14:29:29.284240       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:29:29.284315641Z I1024 14:29:29.284269       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:30.102615659Z I1024 14:29:30.102521       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T14:29:30.102615659Z I1024 14:29:30.102555       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:31.025967020Z I1024 14:29:31.025885       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T14:29:31.025967020Z I1024 14:29:31.025919       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:31.473760682Z I1024 14:29:31.473690       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T14:29:31.473760682Z I1024 14:29:31.473724       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:31.984444259Z I1024 14:29:31.984363       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T14:29:31.984444259Z I1024 14:29:31.984398       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:29:32.423286211Z I1024 14:29:32.423205       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T14:29:32.423286211Z I1024 14:29:32.423234       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:48.267154206Z I1024 14:32:48.267076       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:48.267320046Z I1024 14:32:48.267295       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:48.274905595Z I1024 14:32:48.274836       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runqkcb4
+2024-10-24T14:32:48.274905595Z I1024 14:32:48.274869       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:48.296046164Z I1024 14:32:48.295966       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:48.296046164Z I1024 14:32:48.295998       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:48.300190133Z I1024 14:32:48.300070       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run7rfxf
+2024-10-24T14:32:48.300190133Z I1024 14:32:48.300101       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:48.311971223Z I1024 14:32:48.311893       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:48.311971223Z I1024 14:32:48.311918       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:48.315547133Z I1024 14:32:48.315460       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-rung5plp
+2024-10-24T14:32:48.315547133Z I1024 14:32:48.315496       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:48.350240320Z I1024 14:32:48.349169       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:48.350240320Z I1024 14:32:48.349208       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:48.352665390Z I1024 14:32:48.352610       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runkg6ld
+2024-10-24T14:32:48.352665390Z I1024 14:32:48.352639       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:48.366042429Z I1024 14:32:48.365975       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:48.366042429Z I1024 14:32:48.366007       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:48.370188399Z I1024 14:32:48.370102       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run4z7q6
+2024-10-24T14:32:48.370288679Z I1024 14:32:48.370258       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:48.383524478Z I1024 14:32:48.383434       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:48.383524478Z I1024 14:32:48.383464       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:48.387060558Z I1024 14:32:48.387006       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runvcrdf
+2024-10-24T14:32:48.387238038Z I1024 14:32:48.387215       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:49.897176521Z I1024 14:32:49.896999       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:49.897176521Z I1024 14:32:49.897027       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:49.900910121Z I1024 14:32:49.900814       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runnstbr
+2024-10-24T14:32:49.900910121Z I1024 14:32:49.900841       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:49.913026380Z I1024 14:32:49.912953       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:49.913026380Z I1024 14:32:49.912978       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:49.916661210Z I1024 14:32:49.916509       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runcg247
+2024-10-24T14:32:49.916661210Z I1024 14:32:49.916562       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:32:49.928400769Z I1024 14:32:49.928338       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:32:49.928400769Z I1024 14:32:49.928366       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:32:49.932874119Z I1024 14:32:49.932800       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runfpnjl
+2024-10-24T14:32:49.932874119Z I1024 14:32:49.932834       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:33:27.203534779Z I1024 14:33:27.203458       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:33:27.203534779Z I1024 14:33:27.203491       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:33:27.206899779Z I1024 14:33:27.206833       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runh75dm
+2024-10-24T14:33:27.206899779Z I1024 14:33:27.206856       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:33:27.229455397Z I1024 14:33:27.229378       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:33:27.229455397Z I1024 14:33:27.229406       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:33:27.233394127Z I1024 14:33:27.233311       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-run8f955
+2024-10-24T14:33:27.233394127Z I1024 14:33:27.233342       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:33:27.245421827Z I1024 14:33:27.245321       1 machine_webhook.go:540] Mutate webhook called for Machine: 
+2024-10-24T14:33:27.245421827Z I1024 14:33:27.245358       1 machine_webhook.go:1068] Defaulting GCP providerSpec
+2024-10-24T14:33:27.248557396Z I1024 14:33:27.248433       1 machine_webhook.go:484] Validate webhook called for Machine: tmp-machine-dry-runrxkl9
+2024-10-24T14:33:27.248557396Z I1024 14:33:27.248461       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:10.378822266Z I1024 14:36:10.378705       1 reflector.go:341] Listing and watching *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:10.388103635Z I1024 14:36:10.388031       1 reflector.go:368] Caches populated for *v1beta1.Machine from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:10.698825165Z I1024 14:36:10.698732       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-a
+2024-10-24T14:36:10.698903745Z I1024 14:36:10.698830       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:10.724507974Z I1024 14:36:10.724426       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-b
+2024-10-24T14:36:10.724574144Z I1024 14:36:10.724510       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:10.745359232Z I1024 14:36:10.745262       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-c
+2024-10-24T14:36:10.745420702Z I1024 14:36:10.745358       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:10.780961370Z I1024 14:36:10.780875       1 machineset_webhook.go:118] Validate webhook called for MachineSet: ci-op-2fcpj5j6-f6035-2lklf-worker-f
+2024-10-24T14:36:10.780961370Z I1024 14:36:10.780948       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:10.808293228Z I1024 14:36:10.808196       1 reflector.go:341] Listing and watching *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:10.813787998Z I1024 14:36:10.813711       1 reflector.go:368] Caches populated for *v1beta1.MachineSet from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T14:36:11.158205606Z I1024 14:36:11.158097       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-0
+2024-10-24T14:36:11.158205606Z I1024 14:36:11.158156       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:11.933305046Z I1024 14:36:11.933212       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-1
+2024-10-24T14:36:11.933427116Z I1024 14:36:11.933405       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:12.735193195Z I1024 14:36:12.735043       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-master-2
+2024-10-24T14:36:12.735193195Z I1024 14:36:12.735074       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:13.248014363Z I1024 14:36:13.247923       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T14:36:13.248014363Z I1024 14:36:13.247955       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:13.628097129Z I1024 14:36:13.628002       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T14:36:13.628097129Z I1024 14:36:13.628040       1 machine_webhook.go:1156] Validating GCP providerSpec
+2024-10-24T14:36:14.075518760Z I1024 14:36:14.075368       1 machine_webhook.go:506] Validate webhook called for Machine: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T14:36:14.075518760Z I1024 14:36:14.075412       1 machine_webhook.go:1156] Validating GCP providerSpec

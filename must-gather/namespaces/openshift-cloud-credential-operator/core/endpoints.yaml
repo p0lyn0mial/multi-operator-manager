@@ -1,0 +1,82 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:27Z"
+    creationTimestamp: "2024-10-24T12:59:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:27Z"
+    name: cco-metrics
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "13761"
+    uid: a23482e1-8c97-41fb-b217-aeeece4da4ed
+  subsets:
+  - addresses:
+    - ip: 10.130.0.27
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: cloud-credential-operator-585cd96855-j89wm
+        namespace: openshift-cloud-credential-operator
+        uid: 5bd7a677-d2ba-48ea-9fef-80d093fe0d8a
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:15:22Z"
+    creationTimestamp: "2024-10-24T13:15:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:19:18Z"
+    name: pod-identity-webhook
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "21341"
+    uid: 6aacf1b1-68b5-4f01-9433-344e61b1daa1
+  subsets:
+  - addresses:
+    - ip: 10.128.0.37
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: pod-identity-webhook-679666b9-lfgzj
+        namespace: openshift-cloud-credential-operator
+        uid: 5afa0922-af54-418e-9ab8-db641c23d4d8
+    - ip: 10.129.0.42
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+      targetRef:
+        kind: Pod
+        name: pod-identity-webhook-679666b9-xh4qj
+        namespace: openshift-cloud-credential-operator
+        uid: a8378eee-6540-4794-a1e5-7ad82217a21c
+    ports:
+    - port: 9443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60590"

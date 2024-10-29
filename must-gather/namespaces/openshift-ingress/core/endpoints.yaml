@@ -1,0 +1,113 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:22:02Z"
+    creationTimestamp: "2024-10-24T13:06:25Z"
+    labels:
+      app: router
+      ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+      router: router-default
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:ingresscontroller.operator.openshift.io/owning-ingresscontroller: {}
+            f:router: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:22:02Z"
+    name: router-default
+    namespace: openshift-ingress
+    resourceVersion: "23779"
+    uid: 140060dd-62a0-4038-af9f-954982f1e8b8
+  subsets:
+  - addresses:
+    - ip: 10.128.2.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+      targetRef:
+        kind: Pod
+        name: router-default-bbcfc976b-xnpn7
+        namespace: openshift-ingress
+        uid: 4c357844-43f1-4e2f-8eca-dcd211ee5d8f
+    - ip: 10.129.2.8
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+      targetRef:
+        kind: Pod
+        name: router-default-bbcfc976b-4r8cp
+        namespace: openshift-ingress
+        uid: f50ae1c0-a9a1-48af-aa57-6cf661fa071f
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+    - name: http
+      port: 80
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:22:02Z"
+    creationTimestamp: "2024-10-24T13:06:25Z"
+    labels:
+      ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:ingresscontroller.operator.openshift.io/owning-ingresscontroller: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:22:02Z"
+    name: router-internal-default
+    namespace: openshift-ingress
+    resourceVersion: "23777"
+    uid: 250f95a0-e42d-44c8-8b42-2e0830bd431f
+  subsets:
+  - addresses:
+    - ip: 10.128.2.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+      targetRef:
+        kind: Pod
+        name: router-default-bbcfc976b-xnpn7
+        namespace: openshift-ingress
+        uid: 4c357844-43f1-4e2f-8eca-dcd211ee5d8f
+    - ip: 10.129.2.8
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+      targetRef:
+        kind: Pod
+        name: router-default-bbcfc976b-4r8cp
+        namespace: openshift-ingress
+        uid: f50ae1c0-a9a1-48af-aa57-6cf661fa071f
+    ports:
+    - name: metrics
+      port: 1936
+      protocol: TCP
+    - name: https
+      port: 443
+      protocol: TCP
+    - name: http
+      port: 80
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60555"

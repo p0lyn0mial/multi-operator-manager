@@ -1,0 +1,30 @@
+---
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  creationTimestamp: "2024-10-24T13:03:44Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:allowVolumeExpansion: {}
+      f:parameters:
+        .: {}
+        f:replication-type: {}
+        f:type: {}
+      f:provisioner: {}
+      f:reclaimPolicy: {}
+      f:volumeBindingMode: {}
+    manager: gcp-pd-csi-driver-operator
+    operation: Update
+    time: "2024-10-24T13:03:44Z"
+  name: ssd-csi
+  resourceVersion: "7491"
+  uid: d846bc5c-a7a2-4779-af73-78988d859fe6
+parameters:
+  replication-type: none
+  type: pd-ssd
+provisioner: pd.csi.storage.gke.io
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer

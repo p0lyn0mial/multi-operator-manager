@@ -1,0 +1,672 @@
+---
+apiVersion: batch/v1
+items:
+- apiVersion: batch/v1
+  kind: Job
+  metadata:
+    annotations:
+      batch.kubernetes.io/cronjob-scheduled-timestamp: "2024-10-24T14:15:00Z"
+    creationTimestamp: "2024-10-24T14:15:00Z"
+    generation: 1
+    labels:
+      batch.kubernetes.io/controller-uid: 6533ace5-1451-4242-925b-e38f1d61ab37
+      batch.kubernetes.io/job-name: collect-profiles-28829655
+      controller-uid: 6533ace5-1451-4242-925b-e38f1d61ab37
+      job-name: collect-profiles-28829655
+    managedFields:
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:batch.kubernetes.io/cronjob-scheduled-timestamp: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"234497fc-ddea-41ec-bd15-a434b6bd08a7"}: {}
+        f:spec:
+          f:backoffLimit: {}
+          f:completionMode: {}
+          f:completions: {}
+          f:manualSelector: {}
+          f:parallelism: {}
+          f:podReplacementPolicy: {}
+          f:suspend: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:openshift.io/required-scc: {}
+                f:target.workload.openshift.io/management: {}
+            f:spec:
+              f:containers:
+                k:{"name":"collect-profiles"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/config"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"config-volume"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"secret-volume"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T14:15:00Z"
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:completionTime: {}
+          f:conditions: {}
+          f:ready: {}
+          f:startTime: {}
+          f:succeeded: {}
+          f:terminating: {}
+          f:uncountedTerminatedPods: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-24T14:15:03Z"
+    name: collect-profiles-28829655
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: CronJob
+      name: collect-profiles
+      uid: 234497fc-ddea-41ec-bd15-a434b6bd08a7
+    resourceVersion: "50276"
+    uid: 6533ace5-1451-4242-925b-e38f1d61ab37
+  spec:
+    backoffLimit: 6
+    completionMode: NonIndexed
+    completions: 1
+    manualSelector: false
+    parallelism: 1
+    podReplacementPolicy: TerminatingOrFailed
+    selector:
+      matchLabels:
+        batch.kubernetes.io/controller-uid: 6533ace5-1451-4242-925b-e38f1d61ab37
+    suspend: false
+    template:
+      metadata:
+        annotations:
+          openshift.io/required-scc: restricted-v2
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          batch.kubernetes.io/controller-uid: 6533ace5-1451-4242-925b-e38f1d61ab37
+          batch.kubernetes.io/job-name: collect-profiles-28829655
+          controller-uid: 6533ace5-1451-4242-925b-e38f1d61ab37
+          job-name: collect-profiles-28829655
+      spec:
+        containers:
+        - args:
+          - -n
+          - openshift-operator-lifecycle-manager
+          - --config-mount-path
+          - /etc/config
+          - --cert-mount-path
+          - /var/run/secrets/serving-cert
+          - olm-operator-heap-:https://olm-operator-metrics:8443/debug/pprof/heap
+          - catalog-operator-heap-:https://catalog-operator-metrics:8443/debug/pprof/heap
+          command:
+          - bin/collect-profiles
+          image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:4aa67ce7113d1b4dd76198d58084bdccc40df3b8f8f23546d31fe0f6f6a14a69
+          imagePullPolicy: IfNotPresent
+          name: collect-profiles
+          resources:
+            requests:
+              cpu: 10m
+              memory: 80Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /etc/config
+            name: config-volume
+          - mountPath: /var/run/secrets/serving-cert
+            name: secret-volume
+        dnsPolicy: ClusterFirst
+        priorityClassName: openshift-user-critical
+        restartPolicy: Never
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
+        serviceAccount: collect-profiles
+        serviceAccountName: collect-profiles
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: collect-profiles-config
+          name: config-volume
+        - name: secret-volume
+          secret:
+            defaultMode: 420
+            secretName: pprof-cert
+  status:
+    completionTime: "2024-10-24T14:15:03Z"
+    conditions:
+    - lastProbeTime: "2024-10-24T14:15:03Z"
+      lastTransitionTime: "2024-10-24T14:15:03Z"
+      message: Reached expected number of succeeded pods
+      reason: CompletionsReached
+      status: "True"
+      type: SuccessCriteriaMet
+    - lastProbeTime: "2024-10-24T14:15:03Z"
+      lastTransitionTime: "2024-10-24T14:15:03Z"
+      message: Reached expected number of succeeded pods
+      reason: CompletionsReached
+      status: "True"
+      type: Complete
+    ready: 0
+    startTime: "2024-10-24T14:15:00Z"
+    succeeded: 1
+    terminating: 0
+    uncountedTerminatedPods: {}
+- apiVersion: batch/v1
+  kind: Job
+  metadata:
+    annotations:
+      batch.kubernetes.io/cronjob-scheduled-timestamp: "2024-10-24T14:30:00Z"
+    creationTimestamp: "2024-10-24T14:30:00Z"
+    generation: 1
+    labels:
+      batch.kubernetes.io/controller-uid: 3329649d-4ec3-46ec-bc11-c63ea409b3d4
+      batch.kubernetes.io/job-name: collect-profiles-28829670
+      controller-uid: 3329649d-4ec3-46ec-bc11-c63ea409b3d4
+      job-name: collect-profiles-28829670
+    managedFields:
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:batch.kubernetes.io/cronjob-scheduled-timestamp: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"234497fc-ddea-41ec-bd15-a434b6bd08a7"}: {}
+        f:spec:
+          f:backoffLimit: {}
+          f:completionMode: {}
+          f:completions: {}
+          f:manualSelector: {}
+          f:parallelism: {}
+          f:podReplacementPolicy: {}
+          f:suspend: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:openshift.io/required-scc: {}
+                f:target.workload.openshift.io/management: {}
+            f:spec:
+              f:containers:
+                k:{"name":"collect-profiles"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/config"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"config-volume"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"secret-volume"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T14:30:00Z"
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:completionTime: {}
+          f:conditions: {}
+          f:ready: {}
+          f:startTime: {}
+          f:succeeded: {}
+          f:terminating: {}
+          f:uncountedTerminatedPods: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-24T14:30:03Z"
+    name: collect-profiles-28829670
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: CronJob
+      name: collect-profiles
+      uid: 234497fc-ddea-41ec-bd15-a434b6bd08a7
+    resourceVersion: "55449"
+    uid: 3329649d-4ec3-46ec-bc11-c63ea409b3d4
+  spec:
+    backoffLimit: 6
+    completionMode: NonIndexed
+    completions: 1
+    manualSelector: false
+    parallelism: 1
+    podReplacementPolicy: TerminatingOrFailed
+    selector:
+      matchLabels:
+        batch.kubernetes.io/controller-uid: 3329649d-4ec3-46ec-bc11-c63ea409b3d4
+    suspend: false
+    template:
+      metadata:
+        annotations:
+          openshift.io/required-scc: restricted-v2
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          batch.kubernetes.io/controller-uid: 3329649d-4ec3-46ec-bc11-c63ea409b3d4
+          batch.kubernetes.io/job-name: collect-profiles-28829670
+          controller-uid: 3329649d-4ec3-46ec-bc11-c63ea409b3d4
+          job-name: collect-profiles-28829670
+      spec:
+        containers:
+        - args:
+          - -n
+          - openshift-operator-lifecycle-manager
+          - --config-mount-path
+          - /etc/config
+          - --cert-mount-path
+          - /var/run/secrets/serving-cert
+          - olm-operator-heap-:https://olm-operator-metrics:8443/debug/pprof/heap
+          - catalog-operator-heap-:https://catalog-operator-metrics:8443/debug/pprof/heap
+          command:
+          - bin/collect-profiles
+          image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:4aa67ce7113d1b4dd76198d58084bdccc40df3b8f8f23546d31fe0f6f6a14a69
+          imagePullPolicy: IfNotPresent
+          name: collect-profiles
+          resources:
+            requests:
+              cpu: 10m
+              memory: 80Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /etc/config
+            name: config-volume
+          - mountPath: /var/run/secrets/serving-cert
+            name: secret-volume
+        dnsPolicy: ClusterFirst
+        priorityClassName: openshift-user-critical
+        restartPolicy: Never
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
+        serviceAccount: collect-profiles
+        serviceAccountName: collect-profiles
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: collect-profiles-config
+          name: config-volume
+        - name: secret-volume
+          secret:
+            defaultMode: 420
+            secretName: pprof-cert
+  status:
+    completionTime: "2024-10-24T14:30:03Z"
+    conditions:
+    - lastProbeTime: "2024-10-24T14:30:03Z"
+      lastTransitionTime: "2024-10-24T14:30:03Z"
+      message: Reached expected number of succeeded pods
+      reason: CompletionsReached
+      status: "True"
+      type: SuccessCriteriaMet
+    - lastProbeTime: "2024-10-24T14:30:03Z"
+      lastTransitionTime: "2024-10-24T14:30:03Z"
+      message: Reached expected number of succeeded pods
+      reason: CompletionsReached
+      status: "True"
+      type: Complete
+    ready: 0
+    startTime: "2024-10-24T14:30:00Z"
+    succeeded: 1
+    terminating: 0
+    uncountedTerminatedPods: {}
+- apiVersion: batch/v1
+  kind: Job
+  metadata:
+    annotations:
+      batch.kubernetes.io/cronjob-scheduled-timestamp: "2024-10-24T14:45:00Z"
+    creationTimestamp: "2024-10-24T14:45:00Z"
+    generation: 1
+    labels:
+      batch.kubernetes.io/controller-uid: a9bd210e-9783-4764-ad5b-fbbfe49ed0c8
+      batch.kubernetes.io/job-name: collect-profiles-28829685
+      controller-uid: a9bd210e-9783-4764-ad5b-fbbfe49ed0c8
+      job-name: collect-profiles-28829685
+    managedFields:
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:batch.kubernetes.io/cronjob-scheduled-timestamp: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"234497fc-ddea-41ec-bd15-a434b6bd08a7"}: {}
+        f:spec:
+          f:backoffLimit: {}
+          f:completionMode: {}
+          f:completions: {}
+          f:manualSelector: {}
+          f:parallelism: {}
+          f:podReplacementPolicy: {}
+          f:suspend: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:openshift.io/required-scc: {}
+                f:target.workload.openshift.io/management: {}
+            f:spec:
+              f:containers:
+                k:{"name":"collect-profiles"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/etc/config"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"config-volume"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+                k:{"name":"secret-volume"}:
+                  .: {}
+                  f:name: {}
+                  f:secret:
+                    .: {}
+                    f:defaultMode: {}
+                    f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T14:45:00Z"
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:completionTime: {}
+          f:conditions: {}
+          f:ready: {}
+          f:startTime: {}
+          f:succeeded: {}
+          f:terminating: {}
+          f:uncountedTerminatedPods: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-24T14:45:03Z"
+    name: collect-profiles-28829685
+    namespace: openshift-operator-lifecycle-manager
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: CronJob
+      name: collect-profiles
+      uid: 234497fc-ddea-41ec-bd15-a434b6bd08a7
+    resourceVersion: "61050"
+    uid: a9bd210e-9783-4764-ad5b-fbbfe49ed0c8
+  spec:
+    backoffLimit: 6
+    completionMode: NonIndexed
+    completions: 1
+    manualSelector: false
+    parallelism: 1
+    podReplacementPolicy: TerminatingOrFailed
+    selector:
+      matchLabels:
+        batch.kubernetes.io/controller-uid: a9bd210e-9783-4764-ad5b-fbbfe49ed0c8
+    suspend: false
+    template:
+      metadata:
+        annotations:
+          openshift.io/required-scc: restricted-v2
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          batch.kubernetes.io/controller-uid: a9bd210e-9783-4764-ad5b-fbbfe49ed0c8
+          batch.kubernetes.io/job-name: collect-profiles-28829685
+          controller-uid: a9bd210e-9783-4764-ad5b-fbbfe49ed0c8
+          job-name: collect-profiles-28829685
+      spec:
+        containers:
+        - args:
+          - -n
+          - openshift-operator-lifecycle-manager
+          - --config-mount-path
+          - /etc/config
+          - --cert-mount-path
+          - /var/run/secrets/serving-cert
+          - olm-operator-heap-:https://olm-operator-metrics:8443/debug/pprof/heap
+          - catalog-operator-heap-:https://catalog-operator-metrics:8443/debug/pprof/heap
+          command:
+          - bin/collect-profiles
+          image: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:4aa67ce7113d1b4dd76198d58084bdccc40df3b8f8f23546d31fe0f6f6a14a69
+          imagePullPolicy: IfNotPresent
+          name: collect-profiles
+          resources:
+            requests:
+              cpu: 10m
+              memory: 80Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /etc/config
+            name: config-volume
+          - mountPath: /var/run/secrets/serving-cert
+            name: secret-volume
+        dnsPolicy: ClusterFirst
+        priorityClassName: openshift-user-critical
+        restartPolicy: Never
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
+        serviceAccount: collect-profiles
+        serviceAccountName: collect-profiles
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: collect-profiles-config
+          name: config-volume
+        - name: secret-volume
+          secret:
+            defaultMode: 420
+            secretName: pprof-cert
+  status:
+    completionTime: "2024-10-24T14:45:03Z"
+    conditions:
+    - lastProbeTime: "2024-10-24T14:45:03Z"
+      lastTransitionTime: "2024-10-24T14:45:03Z"
+      message: Reached expected number of succeeded pods
+      reason: CompletionsReached
+      status: "True"
+      type: SuccessCriteriaMet
+    - lastProbeTime: "2024-10-24T14:45:03Z"
+      lastTransitionTime: "2024-10-24T14:45:03Z"
+      message: Reached expected number of succeeded pods
+      reason: CompletionsReached
+      status: "True"
+      type: Complete
+    ready: 0
+    startTime: "2024-10-24T14:45:00Z"
+    succeeded: 1
+    terminating: 0
+    uncountedTerminatedPods: {}
+kind: JobList
+metadata:
+  resourceVersion: "61086"

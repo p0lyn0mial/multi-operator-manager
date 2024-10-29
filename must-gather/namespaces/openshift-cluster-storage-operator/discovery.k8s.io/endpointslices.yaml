@@ -1,0 +1,216 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.24
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    targetRef:
+      kind: Pod
+      name: cluster-storage-operator-86f6b4f867-vvnvr
+      namespace: openshift-cluster-storage-operator
+      uid: 9de4853a-5d7b-46d2-99f7-262bb79f1024
+    zone: us-central1-b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:03:46Z"
+    creationTimestamp: "2024-10-24T12:59:07Z"
+    generateName: cluster-storage-operator-metrics-
+    generation: 5
+    labels:
+      app: cluster-storage-operator-metrics
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: cluster-storage-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3db8cde0-9d8b-4599-80de-74ea44c03a96"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:03:46Z"
+    name: cluster-storage-operator-metrics-hh6rx
+    namespace: openshift-cluster-storage-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: cluster-storage-operator-metrics
+      uid: 3db8cde0-9d8b-4599-80de-74ea44c03a96
+    resourceVersion: "7653"
+    uid: 9934b7d9-25f5-4375-bcb7-21183a5a40e1
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.10
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    targetRef:
+      kind: Pod
+      name: csi-snapshot-controller-operator-9bd7f8667-lfs5z
+      namespace: openshift-cluster-storage-operator
+      uid: 86f2ee3e-b83a-459d-80fe-59a5dbaa9356
+    zone: us-central1-b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:03:27Z"
+    creationTimestamp: "2024-10-24T12:58:49Z"
+    generateName: csi-snapshot-controller-operator-metrics-
+    generation: 2
+    labels:
+      app: csi-snapshot-controller-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: csi-snapshot-controller-operator-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"08a369ee-d5bb-489e-8730-fe457773f9c7"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:03:27Z"
+    name: csi-snapshot-controller-operator-metrics-mhlqc
+    namespace: openshift-cluster-storage-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: csi-snapshot-controller-operator-metrics
+      uid: 08a369ee-d5bb-489e-8730-fe457773f9c7
+    resourceVersion: "5493"
+    uid: 4fa1c4f5-abb4-41a3-a1ef-f9c923fba24b
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.13
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+    targetRef:
+      kind: Pod
+      name: csi-snapshot-webhook-74d568664-nsm6t
+      namespace: openshift-cluster-storage-operator
+      uid: 9ecad0f7-d4d5-47fb-aa8f-1f59b45d5cc1
+    zone: us-central1-c
+  - addresses:
+    - 10.130.0.43
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    targetRef:
+      kind: Pod
+      name: csi-snapshot-webhook-74d568664-qv7c9
+      namespace: openshift-cluster-storage-operator
+      uid: ef2b6957-0a1f-40e9-9c03-c1718d43911f
+    zone: us-central1-b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:04:41Z"
+    creationTimestamp: "2024-10-24T13:03:29Z"
+    generateName: csi-snapshot-webhook-
+    generation: 4
+    labels:
+      app: csi-snapshot-webhook
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      hypershift.openshift.io/allow-guest-webhooks: "true"
+      kubernetes.io/service-name: csi-snapshot-webhook
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:hypershift.openshift.io/allow-guest-webhooks: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"b210d030-c557-47b9-b927-aae66eb292d3"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:04:41Z"
+    name: csi-snapshot-webhook-8svl4
+    namespace: openshift-cluster-storage-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: csi-snapshot-webhook
+      uid: b210d030-c557-47b9-b927-aae66eb292d3
+    resourceVersion: "10068"
+    uid: e9029254-bab4-4975-a577-aa6f2e842885
+  ports:
+  - name: webhook
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "60637"

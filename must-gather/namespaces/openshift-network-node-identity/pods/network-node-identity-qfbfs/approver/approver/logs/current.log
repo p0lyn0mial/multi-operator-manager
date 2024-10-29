@@ -1,0 +1,59 @@
+2024-10-24T13:28:45.967372182Z + [[ -f /env/_master ]]
+2024-10-24T13:28:45.967794641Z ++ date '+%m%d %H:%M:%S.%N'
+2024-10-24T13:28:45.970272111Z I1024 13:28:45.969869201 - network-node-identity - start approver
+2024-10-24T13:28:45.970308561Z + echo 'I1024 13:28:45.969869201 - network-node-identity - start approver'
+2024-10-24T13:28:45.970319741Z + exec /usr/bin/ovnkube-identity --k8s-apiserver=https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443 --disable-webhook --csr-acceptance-conditions=/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json --loglevel=4
+2024-10-24T13:28:46.012025137Z I1024 13:28:46.011836       1 ovnkubeidentity.go:132] Config: {kubeconfig: apiServer:https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443 logLevel:4 port:9443 host:localhost certDir: metricsAddress:0 leaseNamespace: enableInterconnect:false enableHybridOverlay:false disableWebhook:true disableApprover:false waitForKAPIDuration:0 localKAPIPort:6443 extraAllowedUsers:{slice:[] hasBeenSet:false} csrAcceptanceConditionFile:/var/run/ovnkube-identity-config/additional-cert-acceptance-cond.json csrAcceptanceConditions:[] podAdmissionConditionFile: podAdmissionConditions:[]}
+2024-10-24T13:28:46.012025137Z W1024 13:28:46.012001       1 client_config.go:659] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2024-10-24T13:28:46.012995227Z I1024 13:28:46.012912       1 ovnkubeidentity.go:471] Starting certificate signing request approver
+2024-10-24T13:28:46.013064817Z I1024 13:28:46.013017       1 leaderelection.go:250] attempting to acquire leader lease openshift-network-node-identity/ovnkube-identity...
+2024-10-24T13:28:46.018479127Z E1024 13:28:46.018352       1 leaderelection.go:347] error retrieving resource lock openshift-network-node-identity/ovnkube-identity: Get "https://api-int.ci-op-2fcpj5j6-f6035.XXXXXXXXXXXXXXXXXXXXXX:6443/apis/coordination.k8s.io/v1/namespaces/openshift-network-node-identity/leases/ovnkube-identity": dial tcp 10.0.0.2:6443: connect: connection refused
+2024-10-24T13:28:46.018479127Z I1024 13:28:46.018395       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:29:26.589282451Z I1024 13:29:26.589177       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:29:26.589282451Z I1024 13:29:26.589212       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:30:06.655604795Z I1024 13:30:06.655512       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-0_a16c2283-0c51-4be9-8bba-fa0d07e8aadf and has not yet expired
+2024-10-24T13:30:06.655604795Z I1024 13:30:06.655545       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:30:28.434909522Z I1024 13:30:28.434846       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:30:28.435024032Z I1024 13:30:28.435007       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:31:10.305924789Z I1024 13:31:10.305866       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:31:10.305924789Z I1024 13:31:10.305891       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:31:47.499402909Z I1024 13:31:47.499273       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:31:47.499402909Z I1024 13:31:47.499301       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:32:20.485768680Z I1024 13:32:20.485690       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:32:20.485768680Z I1024 13:32:20.485718       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:32:55.406773939Z I1024 13:32:55.406677       1 leaderelection.go:367] lock is held by ci-op-2fcpj5j6-f6035-2lklf-master-1_331ee2a5-b7cb-4728-83f0-ad74208d78f5 and has not yet expired
+2024-10-24T13:32:55.406773939Z I1024 13:32:55.406732       1 leaderelection.go:255] failed to acquire lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:33:30.686367469Z I1024 13:33:30.686308       1 leaderelection.go:260] successfully acquired lease openshift-network-node-identity/ovnkube-identity
+2024-10-24T13:33:30.687165939Z I1024 13:33:30.686601       1 recorder.go:104] "ci-op-2fcpj5j6-f6035-2lklf-master-0_026f2466-89b0-4dc2-b2e7-c9a8076b4553 became leader" logger="events" type="Normal" object={"kind":"Lease","namespace":"openshift-network-node-identity","name":"ovnkube-identity","uid":"9f6e996c-2f74-438e-9db4-a56fd5b4299b","apiVersion":"coordination.k8s.io/v1","resourceVersion":"32208"} reason="LeaderElection"
+2024-10-24T13:33:30.687574109Z I1024 13:33:30.687549       1 controller.go:173] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2024-10-24T13:33:30.687693269Z I1024 13:33:30.687670       1 controller.go:181] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2024-10-24T13:33:30.689659999Z I1024 13:33:30.689635       1 reflector.go:296] Starting reflector *v1.CertificateSigningRequest (9h30m40.580748706s) from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:30.689753739Z I1024 13:33:30.689702       1 reflector.go:332] Listing and watching *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:30.693976969Z I1024 13:33:30.693862       1 reflector.go:359] Caches populated for *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:33:30.790818084Z I1024 13:33:30.790687       1 controller.go:215] "Starting workers" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" worker count=1
+2024-10-24T13:33:30.791349694Z I1024 13:33:30.791287       1 approver.go:230] Finished syncing CSR csr-2h6qj for unknown node in 30.851µs
+2024-10-24T13:33:30.791349694Z I1024 13:33:30.791341       1 approver.go:230] Finished syncing CSR csr-d5vph for unknown node in 21.171µs
+2024-10-24T13:33:30.791393214Z I1024 13:33:30.791378       1 approver.go:230] Finished syncing CSR csr-f9q29 for unknown node in 21.55µs
+2024-10-24T13:33:30.791506794Z I1024 13:33:30.791480       1 approver.go:230] Finished syncing CSR csr-5ssp6 for unknown node in 39.59µs
+2024-10-24T13:33:30.791704554Z I1024 13:33:30.791676       1 approver.go:230] Finished syncing CSR csr-5plv2 for unknown node in 18.51µs
+2024-10-24T13:33:30.791799834Z I1024 13:33:30.791775       1 approver.go:230] Finished syncing CSR csr-n4w6t for unknown node in 31.64µs
+2024-10-24T13:33:30.791924874Z I1024 13:33:30.791898       1 approver.go:230] Finished syncing CSR csr-tfv6j for unknown node in 21.281µs
+2024-10-24T13:33:30.792509034Z I1024 13:33:30.791944       1 approver.go:230] Finished syncing CSR csr-d42fm for unknown node in 24.48µs
+2024-10-24T13:33:30.792509034Z I1024 13:33:30.791999       1 approver.go:230] Finished syncing CSR csr-xzdjd for unknown node in 27.96µs
+2024-10-24T13:33:30.792509034Z I1024 13:33:30.792177       1 approver.go:230] Finished syncing CSR csr-8tzfw for unknown node in 21.48µs
+2024-10-24T13:33:30.792509034Z I1024 13:33:30.792295       1 approver.go:230] Finished syncing CSR csr-7zqpm for unknown node in 19.16µs
+2024-10-24T13:33:30.792509034Z I1024 13:33:30.792328       1 approver.go:230] Finished syncing CSR csr-ld4rr for unknown node in 18.95µs
+2024-10-24T13:42:46.695655522Z I1024 13:42:46.695559       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 10 items received
+2024-10-24T13:50:48.830233856Z I1024 13:50:48.829335       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 8 items received
+2024-10-24T13:56:01.119866959Z I1024 13:56:01.119757       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 7 items received
+2024-10-24T13:57:21.060840193Z I1024 13:57:21.057437       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 1 items received
+2024-10-24T14:01:13.137509130Z I1024 14:01:13.137431       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 3 items received
+2024-10-24T14:07:12.170572460Z I1024 14:07:12.170467       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 7 items received
+2024-10-24T14:07:18.857142388Z I1024 14:07:18.857041       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 0 items received
+2024-10-24T14:13:25.534452719Z I1024 14:13:25.534353       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 6 items received
+2024-10-24T14:16:24.865416885Z I1024 14:16:24.865342       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 2 items received
+2024-10-24T14:22:49.896535224Z I1024 14:22:49.896395       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 7 items received
+2024-10-24T14:27:54.899897697Z I1024 14:27:54.899792       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 6 items received
+2024-10-24T14:29:26.047841978Z I1024 14:29:26.047765       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 1 items received
+2024-10-24T14:32:47.025413455Z I1024 14:32:47.025338       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 3 items received
+2024-10-24T14:39:37.044995607Z I1024 14:39:37.044912       1 reflector.go:808] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Watch close - *v1.CertificateSigningRequest total 36 items received

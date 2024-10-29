@@ -1,0 +1,49 @@
+---
+apiVersion: migration.k8s.io/v1alpha1
+kind: StorageVersionMigration
+metadata:
+  annotations:
+    encryption.apiserver.operator.openshift.io/write-key: "1"
+  creationTimestamp: "2024-10-24T13:57:35Z"
+  generation: 1
+  managedFields:
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:encryption.apiserver.operator.openshift.io/write-key: {}
+      f:spec:
+        .: {}
+        f:resource:
+          .: {}
+          f:group: {}
+          f:resource: {}
+          f:version: {}
+    manager: cluster-openshift-apiserver-operator
+    operation: Update
+    time: "2024-10-24T13:57:35Z"
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: migrator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:57:35Z"
+  name: encryption-migration-route.openshift.io-routes
+  resourceVersion: "41811"
+  uid: 4100f1e1-48e3-41c5-9f8c-cb596e7ca9e2
+spec:
+  resource:
+    group: route.openshift.io
+    resource: routes
+    version: v1
+status:
+  conditions:
+  - lastUpdateTime: "2024-10-24T13:57:35Z"
+    status: "True"
+    type: Succeeded

@@ -1,0 +1,60 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:35:55Z"
+    creationTimestamp: "2024-10-24T13:03:35Z"
+    labels:
+      prometheus: kube-scheduler
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:prometheus: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:35:55Z"
+    name: scheduler
+    namespace: openshift-kube-scheduler
+    resourceVersion: "33315"
+    uid: 9a4f9a7e-14b8-4937-b040-2356b8dcecca
+  subsets:
+  - addresses:
+    - ip: 10.0.0.3
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+      targetRef:
+        kind: Pod
+        name: openshift-kube-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+        namespace: openshift-kube-scheduler
+        uid: 412d4998-a061-469c-b5b7-fe3ace2c0655
+    - ip: 10.0.0.4
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: openshift-kube-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-1
+        namespace: openshift-kube-scheduler
+        uid: 63d552f9-08b0-4946-8173-f90a9b67e492
+    - ip: 10.0.0.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: openshift-kube-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-2
+        namespace: openshift-kube-scheduler
+        uid: ecb35a09-7b4a-48e2-ba07-5b8500872cdb
+    ports:
+    - name: https
+      port: 10259
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60864"

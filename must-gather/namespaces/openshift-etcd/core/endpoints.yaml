@@ -1,0 +1,63 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:37:02Z"
+    creationTimestamp: "2024-10-24T12:58:27Z"
+    labels:
+      k8s-app: etcd
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:37:02Z"
+    name: etcd
+    namespace: openshift-etcd
+    resourceVersion: "33846"
+    uid: 5b134f9f-f830-4c97-b37d-2feca2594bfb
+  subsets:
+  - addresses:
+    - ip: 10.0.0.3
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+      targetRef:
+        kind: Pod
+        name: etcd-ci-op-2fcpj5j6-f6035-2lklf-master-0
+        namespace: openshift-etcd
+        uid: 3ea77357-4025-40f7-b22d-9633c2c1ca3f
+    - ip: 10.0.0.4
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: etcd-ci-op-2fcpj5j6-f6035-2lklf-master-1
+        namespace: openshift-etcd
+        uid: a84f3dfb-9831-4181-8422-30222ba796ff
+    - ip: 10.0.0.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: etcd-ci-op-2fcpj5j6-f6035-2lklf-master-2
+        namespace: openshift-etcd
+        uid: 645ba00e-fe22-4f14-a607-21c930237d58
+    ports:
+    - name: etcd
+      port: 2379
+      protocol: TCP
+    - name: etcd-metrics
+      port: 9979
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60681"

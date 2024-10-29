@@ -1,0 +1,658 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Console
+metadata:
+  annotations:
+    capability.openshift.io/name: Console
+    include.release.openshift.io/hypershift: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2024-10-24T13:21:55Z"
+  generation: 3
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/hypershift: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        .: {}
+        f:customization:
+          .: {}
+          f:capabilities:
+            .: {}
+            k:{"name":"GettingStartedBanner"}:
+              .: {}
+              f:name: {}
+              f:visibility:
+                .: {}
+                f:state: {}
+            k:{"name":"LightspeedButton"}:
+              .: {}
+              f:name: {}
+              f:visibility:
+                .: {}
+                f:state: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T13:21:55Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:customization:
+          f:addPage: {}
+          f:customLogoFile:
+            .: {}
+            f:name: {}
+          f:developerCatalog:
+            .: {}
+            f:types:
+              .: {}
+              f:state: {}
+          f:projectAccess: {}
+          f:quickStarts: {}
+        f:ingress:
+          .: {}
+          f:clientDownloadsURL: {}
+          f:consoleURL: {}
+        f:observedConfig: {}
+        f:plugins: {}
+        f:providers: {}
+        f:route:
+          .: {}
+          f:hostname: {}
+          f:secret:
+            .: {}
+            f:name: {}
+        f:unsupportedConfigOverrides: {}
+    manager: network-operator
+    operation: Update
+    time: "2024-10-24T13:25:28Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions:
+          .: {}
+          k:{"type":"AuthStatusHandlerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"AuthStatusHandlerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CLIAuthStatusHandlerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CLIAuthStatusHandlerProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CLIOIDCClientStatusDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CLIOIDCClientStatusProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConfigMapSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConfigMapSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleConfigDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleCustomRouteSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleCustomRouteSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleCustomRouteSyncUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleDefaultRouteSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleDefaultRouteSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleDefaultRouteSyncUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleNotificationSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsoleNotificationSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ConsolePublicConfigMapDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CustomLogoSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"CustomLogoSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DeploymentAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DeploymentSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DeploymentSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsCustomRouteSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsCustomRouteSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsCustomRouteSyncUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsDefaultRouteSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsDefaultRouteSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsDefaultRouteSyncUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsDeploymentSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"DownloadsDeploymentSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthClientSecretGetDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthClientSecretGetProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthClientSecretSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthClientSecretSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthClientSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthClientSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthClientsControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthServingCertValidationDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OAuthServingCertValidationProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OCDownloadsSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ODODownloadsSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OIDCClientConfigDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"OIDCClientConfigProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PDBSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PDBSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"RedirectServiceSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"RedirectServiceSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ResourceSyncControllerDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"RouteHealthAvailable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"RouteHealthDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"RouteHealthProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ServiceCASyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ServiceCASyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ServiceSyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ServiceSyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"SyncLoopRefreshDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"SyncLoopRefreshProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"TrustedCASyncDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"TrustedCASyncProgressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"UnsupportedConfigOverridesUpgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:generations: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+    manager: console
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:08:45Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "47782"
+  uid: 38af4230-9a89-42df-bc87-d7b1c530c01f
+spec:
+  customization:
+    addPage: {}
+    capabilities:
+    - name: LightspeedButton
+      visibility:
+        state: Enabled
+    - name: GettingStartedBanner
+      visibility:
+        state: Enabled
+    customLogoFile:
+      name: ""
+    developerCatalog:
+      types:
+        state: Enabled
+    projectAccess: {}
+    quickStarts: {}
+  ingress:
+    clientDownloadsURL: ""
+    consoleURL: ""
+  logLevel: Normal
+  managementState: Managed
+  observedConfig: null
+  operatorLogLevel: Normal
+  plugins:
+  - monitoring-plugin
+  - networking-console-plugin
+  providers: {}
+  route:
+    hostname: ""
+    secret:
+      name: ""
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:22:12Z"
+    status: "False"
+    type: ConsoleNotificationSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:12Z"
+    status: "False"
+    type: ConsoleNotificationSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:12Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2024-10-24T13:22:13Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2024-10-24T13:22:15Z"
+    status: "False"
+    type: DownloadsDeploymentSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:15Z"
+    status: "False"
+    type: DownloadsDeploymentSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:19Z"
+    status: "False"
+    type: OAuthClientSecretSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:19Z"
+    status: "False"
+    type: OAuthClientSecretSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:22Z"
+    status: "False"
+    type: OAuthClientSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:22Z"
+    status: "False"
+    type: OAuthClientSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:24Z"
+    reason: AsExpected
+    status: "False"
+    type: OAuthClientsControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:22:26Z"
+    status: "False"
+    type: PDBSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:26Z"
+    status: "False"
+    type: PDBSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:29Z"
+    status: "False"
+    type: ServiceSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:29Z"
+    status: "False"
+    type: ServiceSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:32:13Z"
+    status: "False"
+    type: RouteHealthDegraded
+  - lastTransitionTime: "2024-10-24T13:22:31Z"
+    status: "False"
+    type: RouteHealthProgressing
+  - lastTransitionTime: "2024-10-24T13:32:13Z"
+    status: "True"
+    type: RouteHealthAvailable
+  - lastTransitionTime: "2024-10-24T13:22:33Z"
+    status: "False"
+    type: OIDCClientConfigDegraded
+  - lastTransitionTime: "2024-10-24T13:22:33Z"
+    status: "False"
+    type: OIDCClientConfigProgressing
+  - lastTransitionTime: "2024-10-24T13:22:33Z"
+    status: "False"
+    type: AuthStatusHandlerDegraded
+  - lastTransitionTime: "2024-10-24T13:22:33Z"
+    status: "False"
+    type: AuthStatusHandlerProgressing
+  - lastTransitionTime: "2024-10-24T13:22:34Z"
+    status: "False"
+    type: CLIOIDCClientStatusDegraded
+  - lastTransitionTime: "2024-10-24T13:22:34Z"
+    status: "False"
+    type: CLIOIDCClientStatusProgressing
+  - lastTransitionTime: "2024-10-24T13:22:34Z"
+    status: "False"
+    type: CLIAuthStatusHandlerDegraded
+  - lastTransitionTime: "2024-10-24T13:22:34Z"
+    status: "False"
+    type: CLIAuthStatusHandlerProgressing
+  - lastTransitionTime: "2024-10-24T13:22:36Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2024-10-24T13:22:37Z"
+    status: "False"
+    type: OCDownloadsSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:37Z"
+    status: "False"
+    type: ODODownloadsSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:29:40Z"
+    status: "True"
+    type: DeploymentAvailable
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: SyncLoopRefreshDegraded
+  - lastTransitionTime: "2024-10-24T14:08:36Z"
+    status: "False"
+    type: SyncLoopRefreshProgressing
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: ConfigMapSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: ServiceCASyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: CustomLogoSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: OAuthClientSecretGetProgressing
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: DeploymentSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: TrustedCASyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: CustomLogoSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: OAuthServingCertValidationDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: ConsolePublicConfigMapDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: TrustedCASyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: OAuthServingCertValidationProgressing
+  - lastTransitionTime: "2024-10-24T14:07:57Z"
+    status: "False"
+    type: DeploymentSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: ConsoleConfigDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: ConfigMapSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: ServiceCASyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:38Z"
+    status: "False"
+    type: OAuthClientSecretGetDegraded
+  - lastTransitionTime: "2024-10-24T13:22:40Z"
+    status: "False"
+    type: DownloadsDefaultRouteSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:40Z"
+    status: "True"
+    type: DownloadsDefaultRouteSyncUpgradeable
+  - lastTransitionTime: "2024-10-24T13:25:32Z"
+    status: "False"
+    type: DownloadsCustomRouteSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:40Z"
+    status: "False"
+    type: DownloadsCustomRouteSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:25:32Z"
+    status: "True"
+    type: DownloadsCustomRouteSyncUpgradeable
+  - lastTransitionTime: "2024-10-24T13:22:40Z"
+    status: "False"
+    type: DownloadsDefaultRouteSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:25:32Z"
+    status: "False"
+    type: ConsoleCustomRouteSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:41Z"
+    status: "False"
+    type: ConsoleCustomRouteSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:25:32Z"
+    status: "True"
+    type: ConsoleCustomRouteSyncUpgradeable
+  - lastTransitionTime: "2024-10-24T13:22:41Z"
+    status: "False"
+    type: ConsoleDefaultRouteSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:41Z"
+    status: "False"
+    type: ConsoleDefaultRouteSyncProgressing
+  - lastTransitionTime: "2024-10-24T13:22:41Z"
+    status: "True"
+    type: ConsoleDefaultRouteSyncUpgradeable
+  - lastTransitionTime: "2024-10-24T13:22:41Z"
+    status: "False"
+    type: RedirectServiceSyncDegraded
+  - lastTransitionTime: "2024-10-24T13:22:41Z"
+    status: "False"
+    type: RedirectServiceSyncProgressing
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 1
+    name: downloads
+    namespace: openshift-console
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 8
+    name: console
+    namespace: openshift-console
+    resource: deployments
+  observedGeneration: 3
+  readyReplicas: 2

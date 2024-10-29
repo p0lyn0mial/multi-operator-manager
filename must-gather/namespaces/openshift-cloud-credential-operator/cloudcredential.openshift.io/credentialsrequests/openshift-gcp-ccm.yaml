@@ -1,0 +1,135 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    capability.openshift.io/name: CloudCredential+CloudControllerManager
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2024-10-24T13:00:57Z"
+  finalizers:
+  - cloudcredential.openshift.io/deprovision
+  generation: 1
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"cloudcredential.openshift.io/deprovision": {}
+    manager: cloud-credential-operator
+    operation: Update
+    time: "2024-10-24T13:00:57Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:permissions: {}
+          f:skipServiceCheck: {}
+        f:secretRef: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T13:00:57Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastSyncCloudCredsSecretResourceVersion: {}
+        f:lastSyncGeneration: {}
+        f:lastSyncInfrastructureResourceVersion: {}
+        f:lastSyncTimestamp: {}
+        f:providerStatus:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:roleID: {}
+          f:serviceAccountID: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:04:30Z"
+  name: openshift-gcp-ccm
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "44203"
+  uid: 4d4b77c8-7d95-4883-95b0-c4660dbd509d
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderSpec
+    permissions:
+    - compute.addresses.create
+    - compute.addresses.delete
+    - compute.addresses.get
+    - compute.addresses.list
+    - compute.firewalls.create
+    - compute.firewalls.delete
+    - compute.firewalls.get
+    - compute.firewalls.update
+    - compute.forwardingRules.create
+    - compute.forwardingRules.delete
+    - compute.forwardingRules.get
+    - compute.healthChecks.create
+    - compute.healthChecks.delete
+    - compute.healthChecks.get
+    - compute.healthChecks.update
+    - compute.httpHealthChecks.create
+    - compute.httpHealthChecks.delete
+    - compute.httpHealthChecks.get
+    - compute.httpHealthChecks.update
+    - compute.instanceGroups.create
+    - compute.instanceGroups.delete
+    - compute.instanceGroups.get
+    - compute.instanceGroups.update
+    - compute.instances.get
+    - compute.instances.use
+    - compute.regionBackendServices.create
+    - compute.regionBackendServices.delete
+    - compute.regionBackendServices.get
+    - compute.regionBackendServices.update
+    - compute.targetPools.addInstance
+    - compute.targetPools.create
+    - compute.targetPools.delete
+    - compute.targetPools.get
+    - compute.targetPools.removeInstance
+    - compute.zones.list
+    skipServiceCheck: true
+  secretRef:
+    name: gcp-ccm-cloud-credentials
+    namespace: openshift-cloud-controller-manager
+  serviceAccountNames:
+  - cloud-controller-manager
+status:
+  lastSyncCloudCredsSecretResourceVersion: "44193"
+  lastSyncGeneration: 1
+  lastSyncInfrastructureResourceVersion: "526"
+  lastSyncTimestamp: "2024-10-24T14:04:30Z"
+  providerStatus:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: GCPProviderStatus
+    roleID: openshiftgcedevelci3_openshiftgcpccm
+    serviceAccountID: ci-op-2fcpj5-openshift-g-q9g6c
+  provisioned: true

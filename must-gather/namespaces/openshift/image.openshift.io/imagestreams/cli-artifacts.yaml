@@ -1,0 +1,75 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    openshift.io/image.dockerRepositoryCheck: "2024-10-24T13:23:14Z"
+  creationTimestamp: "2024-10-24T13:22:41Z"
+  generation: 2
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T13:22:41Z"
+  name: cli-artifacts
+  namespace: openshift
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "26523"
+  uid: 97db1e10-9a20-44be-9677-413c1ee33b13
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:08a5b52d3b627c4ac4dbc720eee3f41ca43af342202c3c5c53a3bc1b203c585b
+    generation: 2
+    importPolicy:
+      importMode: PreserveOriginal
+      scheduled: true
+    name: latest
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/cli-artifacts
+  tags:
+  - items:
+    - created: "2024-10-24T13:23:14Z"
+      dockerImageReference: registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:08a5b52d3b627c4ac4dbc720eee3f41ca43af342202c3c5c53a3bc1b203c585b
+      generation: 2
+      image: sha256:08a5b52d3b627c4ac4dbc720eee3f41ca43af342202c3c5c53a3bc1b203c585b
+    tag: latest

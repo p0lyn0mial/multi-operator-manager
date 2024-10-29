@@ -1,0 +1,40 @@
+2024-10-24T13:21:54.982569611Z W1024 13:21:54.982402       1 cmd.go:254] Using insecure, self-signed certificates
+2024-10-24T13:21:55.371755203Z I1024 13:21:55.371664       1 observer_polling.go:159] Starting file observer
+2024-10-24T13:21:55.436344330Z I1024 13:21:55.436185       1 builder.go:298] check-endpoints version v0.0.0-unknown-de122830e-de122830e
+2024-10-24T13:21:55.866642025Z I1024 13:21:55.866582       1 secure_serving.go:57] Forcing use of http/1.1 only
+2024-10-24T13:21:55.866686641Z W1024 13:21:55.866641       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' detected.
+2024-10-24T13:21:55.866686641Z W1024 13:21:55.866647       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' detected.
+2024-10-24T13:21:55.866686641Z W1024 13:21:55.866654       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_128_GCM_SHA256' detected.
+2024-10-24T13:21:55.866686641Z W1024 13:21:55.866661       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_256_GCM_SHA384' detected.
+2024-10-24T13:21:55.866686641Z W1024 13:21:55.866666       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_128_CBC_SHA' detected.
+2024-10-24T13:21:55.866686641Z W1024 13:21:55.866671       1 secure_serving.go:69] Use of insecure cipher 'TLS_RSA_WITH_AES_256_CBC_SHA' detected.
+2024-10-24T13:21:55.898450327Z I1024 13:21:55.898375       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+2024-10-24T13:21:55.898595854Z I1024 13:21:55.898564       1 shared_informer.go:313] Waiting for caches to sync for RequestHeaderAuthRequestController
+2024-10-24T13:21:55.898667672Z I1024 13:21:55.898462       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2024-10-24T13:21:55.898758339Z I1024 13:21:55.898742       1 shared_informer.go:313] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2024-10-24T13:21:55.899172428Z I1024 13:21:55.898522       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2024-10-24T13:21:55.899236697Z I1024 13:21:55.899223       1 shared_informer.go:313] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2024-10-24T13:21:55.900210487Z I1024 13:21:55.900165       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/tmp/serving-cert-4129117380/tls.crt::/tmp/serving-cert-4129117380/tls.key"
+2024-10-24T13:21:55.900752758Z I1024 13:21:55.900713       1 secure_serving.go:213] Serving securely on [::]:17698
+2024-10-24T13:21:55.900780617Z I1024 13:21:55.900765       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+2024-10-24T13:21:55.932660760Z I1024 13:21:55.932610       1 base_controller.go:67] Waiting for caches to sync for CheckEndpointsTimeToStart
+2024-10-24T13:21:55.999395992Z I1024 13:21:55.999351       1 shared_informer.go:320] Caches are synced for RequestHeaderAuthRequestController
+2024-10-24T13:21:55.999538077Z I1024 13:21:55.999467       1 shared_informer.go:320] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2024-10-24T13:21:55.999567130Z I1024 13:21:55.999473       1 shared_informer.go:320] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2024-10-24T13:21:56.833623898Z I1024 13:21:56.833549       1 base_controller.go:73] Caches are synced for CheckEndpointsTimeToStart 
+2024-10-24T13:21:56.833623898Z I1024 13:21:56.833594       1 base_controller.go:110] Starting #1 worker of CheckEndpointsTimeToStart controller ...
+2024-10-24T13:32:38.057951161Z E1024 13:32:38.057845       1 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:32:38.058042393Z E1024 13:32:38.057970       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, Post \"https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews\": dial tcp 172.30.0.1:443: connect: connection refused]"
+2024-10-24T13:32:58.327802986Z E1024 13:32:58.327733       1 webhook.go:154] Failed to make webhook authenticator request: Post "https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:32:58.327874741Z E1024 13:32:58.327806       1 authentication.go:73] "Unable to authenticate the request" err="[invalid bearer token, Post \"https://172.30.0.1:443/apis/authentication.k8s.io/v1/tokenreviews\": dial tcp 172.30.0.1:443: connect: connection refused]"
+2024-10-24T13:36:58.323637707Z I1024 13:36:58.323539       1 base_controller.go:67] Waiting for caches to sync for CheckEndpointsStop
+2024-10-24T13:36:58.323824319Z I1024 13:36:58.323806       1 base_controller.go:73] Caches are synced for CheckEndpointsStop 
+2024-10-24T13:36:58.323865711Z I1024 13:36:58.323853       1 base_controller.go:110] Starting #1 worker of CheckEndpointsStop controller ...
+2024-10-24T13:36:58.323968455Z I1024 13:36:58.323573       1 base_controller.go:172] Shutting down CheckEndpointsTimeToStart ...
+2024-10-24T13:36:58.324056641Z I1024 13:36:58.323600       1 base_controller.go:114] Shutting down worker of CheckEndpointsTimeToStart controller ...
+2024-10-24T13:36:58.324080918Z I1024 13:36:58.324051       1 base_controller.go:104] All CheckEndpointsTimeToStart workers have been terminated
+2024-10-24T13:36:58.324080918Z I1024 13:36:58.323661       1 base_controller.go:67] Waiting for caches to sync for check-endpoints
+2024-10-24T13:36:58.329416023Z W1024 13:36:58.329197       1 reflector.go:547] k8s.io/client-go@v0.30.2/tools/cache/reflector.go:232: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2024-10-24T13:36:58.329416023Z E1024 13:36:58.329363       1 reflector.go:150] k8s.io/client-go@v0.30.2/tools/cache/reflector.go:232: Failed to watch *v1alpha1.PodNetworkConnectivityCheck: failed to list *v1alpha1.PodNetworkConnectivityCheck: the server could not find the requested resource (get podnetworkconnectivitychecks.controlplane.operator.openshift.io)
+2024-10-24T13:36:59.924874791Z I1024 13:36:59.924769       1 base_controller.go:73] Caches are synced for check-endpoints 
+2024-10-24T13:36:59.924874791Z I1024 13:36:59.924805       1 base_controller.go:110] Starting #1 worker of check-endpoints controller ...

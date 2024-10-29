@@ -1,0 +1,32 @@
+2024-10-24T13:06:58.956736651Z I1024 13:06:58.956571       1 main.go:108] "Version" version="v0.1.0-721-gcca3837a-dirty"
+2024-10-24T13:06:58.956736651Z I1024 13:06:58.956681       1 feature_gate.go:387] feature gates: {map[]}
+2024-10-24T13:06:58.959192601Z I1024 13:06:58.959150       1 common.go:143] "Probing CSI driver for readiness"
+2024-10-24T13:06:58.963777101Z I1024 13:06:58.963662       1 main.go:162] "CSI driver name" driverName="pd.csi.storage.gke.io"
+2024-10-24T13:06:58.965631941Z I1024 13:06:58.965554       1 common.go:143] "Probing CSI driver for readiness"
+2024-10-24T13:06:58.969410981Z I1024 13:06:58.969334       1 main.go:202] "ServeMux listening" address="localhost:8204"
+2024-10-24T13:06:58.970460671Z I1024 13:06:58.970431       1 controller.go:130] "Register Pod informer for resizer" controller="pd.csi.storage.gke.io"
+2024-10-24T13:06:58.970919001Z I1024 13:06:58.970897       1 leaderelection.go:254] attempting to acquire leader lease openshift-cluster-csi-drivers/external-resizer-pd-csi-storage-gke-io...
+2024-10-24T13:10:21.187221273Z E1024 13:10:21.187111       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-resizer-pd-csi-storage-gke-io: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-resizer-pd-csi-storage-gke-io": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:11:09.782245518Z I1024 13:11:09.782192       1 leaderelection.go:268] successfully acquired lease openshift-cluster-csi-drivers/external-resizer-pd-csi-storage-gke-io
+2024-10-24T13:11:09.782479419Z I1024 13:11:09.782409       1 leader_election.go:184] "became leader, starting"
+2024-10-24T13:11:09.782505868Z I1024 13:11:09.782476       1 controller.go:272] "Starting external resizer" controller="pd.csi.storage.gke.io"
+2024-10-24T13:11:09.782600198Z I1024 13:11:09.782532       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:11:09.782600198Z I1024 13:11:09.782591       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:11:09.786227777Z I1024 13:11:09.786157       1 reflector.go:368] Caches populated for *v1.PersistentVolumeClaim from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:11:09.787208306Z I1024 13:11:09.787162       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:11:09.895570153Z I1024 13:11:09.895491       1 reflector.go:368] Caches populated for *v1.Pod from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:12:57.812206435Z E1024 13:12:57.812099       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-resizer-pd-csi-storage-gke-io": dial tcp 172.30.0.1:443: i/o timeout, falling back to slow path
+2024-10-24T13:13:27.816293565Z E1024 13:13:27.816179       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-resizer-pd-csi-storage-gke-io: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-resizer-pd-csi-storage-gke-io": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:13:54.732772456Z I1024 13:13:54.732690       1 reflector.go:368] Caches populated for *v1.PersistentVolumeClaim from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:55.015326033Z I1024 13:13:55.015191       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:55.396426030Z I1024 13:13:55.396323       1 reflector.go:368] Caches populated for *v1.Pod from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:14:39.723070580Z E1024 13:14:39.723003       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:15:21.057985844Z I1024 13:15:21.057837       1 reflector.go:368] Caches populated for *v1.PersistentVolumeClaim from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:15:21.360948015Z I1024 13:15:21.360865       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:15:21.378010997Z I1024 13:15:21.377891       1 reflector.go:368] Caches populated for *v1.Pod from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:16:18.635899746Z E1024 13:16:18.635771       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:18.639383440Z E1024 13:17:18.639293       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-resizer-pd-csi-storage-gke-io: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io external-resizer-pd-csi-storage-gke-io)
+2024-10-24T13:17:51.648321350Z E1024 13:17:51.648228       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:58.581221087Z E1024 13:17:58.581105       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-resizer-pd-csi-storage-gke-io: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-resizer-pd-csi-storage-gke-io": context deadline exceeded
+2024-10-24T13:17:58.581221087Z I1024 13:17:58.581165       1 leaderelection.go:297] failed to renew lease openshift-cluster-csi-drivers/external-resizer-pd-csi-storage-gke-io: timed out waiting for the condition
+2024-10-24T13:17:58.581221087Z E1024 13:17:58.581196       1 leader_election.go:188] "Stopped leading"

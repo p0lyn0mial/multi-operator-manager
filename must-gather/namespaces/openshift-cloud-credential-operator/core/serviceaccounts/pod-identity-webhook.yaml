@@ -1,0 +1,28 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: pod-identity-webhook-dockercfg-xk42k
+kind: ServiceAccount
+metadata:
+  annotations:
+    openshift.io/internal-registry-pull-secret-ref: pod-identity-webhook-dockercfg-xk42k
+  creationTimestamp: "2024-10-24T13:15:20Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:metadata:
+        f:annotations:
+          f:openshift.io/internal-registry-pull-secret-ref: {}
+      f:secrets:
+        k:{"name":"pod-identity-webhook-dockercfg-xk42k"}: {}
+    manager: openshift.io/image-registry-pull-secrets_service-account-controller
+    operation: Apply
+    time: "2024-10-24T13:19:01Z"
+  name: pod-identity-webhook
+  namespace: openshift-cloud-credential-operator
+  resourceVersion: "21171"
+  uid: 8120468b-7f78-44ef-b547-548b3e3c7a33
+secrets:
+- name: pod-identity-webhook-dockercfg-xk42k

@@ -1,0 +1,95 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T14:08:45Z"
+    creationTimestamp: "2024-10-24T13:22:14Z"
+    labels:
+      app: console
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T14:08:45Z"
+    name: console
+    namespace: openshift-console
+    resourceVersion: "47777"
+    uid: 1b70b324-69b6-4c84-96c7-d91779994208
+  subsets:
+  - addresses:
+    - ip: 10.128.0.94
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: console-bf6f6f7f6-bl5sv
+        namespace: openshift-console
+        uid: 63cfe9b9-817f-4bb9-baf3-eba75ea75f54
+    - ip: 10.129.0.91
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+      targetRef:
+        kind: Pod
+        name: console-bf6f6f7f6-lk9bc
+        namespace: openshift-console
+        uid: 59fab6d4-709c-48ad-b90b-082d3e601e98
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:22:14Z"
+    creationTimestamp: "2024-10-24T13:22:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:24:50Z"
+    name: downloads
+    namespace: openshift-console
+    resourceVersion: "27304"
+    uid: 62073d64-720f-4e3c-957c-c0264b14c1d8
+  subsets:
+  - addresses:
+    - ip: 10.128.2.11
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+      targetRef:
+        kind: Pod
+        name: downloads-6957cb85f9-qq2b2
+        namespace: openshift-console
+        uid: 7ade3042-044c-4428-be5b-a552f8e9cba0
+    - ip: 10.131.0.13
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+      targetRef:
+        kind: Pod
+        name: downloads-6957cb85f9-5bf4w
+        namespace: openshift-console
+        uid: 79740a92-dab0-4c11-8cb5-f749b22626a9
+    ports:
+    - name: http
+      port: 8080
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60620"

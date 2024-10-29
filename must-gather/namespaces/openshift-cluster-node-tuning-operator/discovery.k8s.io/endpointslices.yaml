@@ -1,0 +1,138 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.9
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    targetRef:
+      kind: Pod
+      name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+      namespace: openshift-cluster-node-tuning-operator
+      uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+    zone: us-central1-b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:25Z"
+    creationTimestamp: "2024-10-24T12:58:50Z"
+    generateName: node-tuning-operator-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: node-tuning-operator
+      name: node-tuning-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"25960910-2227-4d09-b5c8-6e875322d01c"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: node-tuning-operator-rkgnr
+    namespace: openshift-cluster-node-tuning-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: node-tuning-operator
+      uid: 25960910-2227-4d09-b5c8-6e875322d01c
+    resourceVersion: "13713"
+    uid: c1725582-fcaf-4231-86f1-6b0a17b0cac8
+  ports:
+  - name: ""
+    port: 60000
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.130.0.9
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    targetRef:
+      kind: Pod
+      name: cluster-node-tuning-operator-5b66777f7c-9pqmc
+      namespace: openshift-cluster-node-tuning-operator
+      uid: 5bacb661-a5ed-4083-8539-df289aaabb11
+    zone: us-central1-b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:25Z"
+    creationTimestamp: "2024-10-24T12:59:04Z"
+    generateName: performance-addon-operator-service-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: performance-addon-operator-service
+      name: performance-addon-operator-service
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"94b8ee36-4dd7-40df-987f-4bd05ea77200"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:25Z"
+    name: performance-addon-operator-service-8lnp7
+    namespace: openshift-cluster-node-tuning-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: performance-addon-operator-service
+      uid: 94b8ee36-4dd7-40df-987f-4bd05ea77200
+    resourceVersion: "13712"
+    uid: 408ba761-6574-47ea-b4f7-b99850b7493a
+  ports:
+  - name: "443"
+    port: 4343
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "60773"

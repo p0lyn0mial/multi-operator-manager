@@ -1,0 +1,56 @@
+---
+apiVersion: migration.k8s.io/v1alpha1
+kind: StorageVersionMigration
+metadata:
+  annotations:
+    encryption.apiserver.operator.openshift.io/write-key: "1"
+  creationTimestamp: "2024-10-24T14:07:51Z"
+  generation: 2
+  managedFields:
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:encryption.apiserver.operator.openshift.io/write-key: {}
+      f:spec:
+        .: {}
+        f:resource:
+          .: {}
+          f:resource: {}
+          f:version: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2024-10-24T14:07:51Z"
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:continueToken: {}
+    manager: migrator
+    operation: Update
+    time: "2024-10-24T14:08:03Z"
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: migrator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T14:08:05Z"
+  name: encryption-migration-core-configmaps
+  resourceVersion: "46470"
+  uid: c03f323d-dd8c-4940-8a0e-e7d37a1fc677
+spec:
+  continueToken: eyJ2IjoibWV0YS5rOHMuaW8vdjEiLCJydiI6NDU0NzMsInN0YXJ0IjoiL29wZW5zaGlmdC1rdWJlLXNjaGVkdWxlci1vcGVyYXRvci9vcGVuc2hpZnQtc2VydmljZS1jYS5jcnRcdTAwMDAifQ
+  resource:
+    resource: configmaps
+    version: v1
+status:
+  conditions:
+  - lastUpdateTime: "2024-10-24T14:08:05Z"
+    status: "True"
+    type: Succeeded

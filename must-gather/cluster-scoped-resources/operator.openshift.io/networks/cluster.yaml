@@ -1,0 +1,196 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Network
+metadata:
+  creationTimestamp: "2024-10-24T13:01:43Z"
+  generation: 77
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:clusterNetwork: {}
+        f:defaultNetwork:
+          f:ovnKubernetesConfig:
+            f:egressIPConfig: {}
+            f:gatewayConfig:
+              f:ipv4: {}
+              f:ipv6: {}
+            f:genevePort: {}
+            f:mtu: {}
+            f:policyAuditConfig:
+              f:destination: {}
+              f:maxFileSize: {}
+              f:rateLimit: {}
+              f:syslogFacility: {}
+          f:type: {}
+        f:deployKubeProxy: {}
+        f:disableMultiNetwork: {}
+        f:disableNetworkDiagnostics: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:operatorLogLevel: {}
+        f:serviceNetwork: {}
+        f:unsupportedConfigOverrides: {}
+        f:useMultiNetworkPolicy: {}
+      f:status:
+        f:conditions:
+          k:{"type":"Degraded"}:
+            .: {}
+            f:type: {}
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:readyReplicas: {}
+        f:version: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:02:12Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Upgradeable"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:version: {}
+    manager: cluster-network-operator/status-manager
+    operation: Apply
+    time: "2024-10-24T13:26:47Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:clusterNetwork: {}
+        f:defaultNetwork:
+          f:type: {}
+        f:disableNetworkDiagnostics: {}
+        f:managementState: {}
+        f:observedConfig: {}
+        f:serviceNetwork: {}
+        f:unsupportedConfigOverrides: {}
+      f:status:
+        f:readyReplicas: {}
+    manager: cluster-network-operator/clusterconfig
+    operation: Apply
+    time: "2024-10-24T13:36:58Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"ManagementStateDegraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+    manager: network-operator
+    operation: Update
+    time: "2024-10-24T13:01:43Z"
+  name: cluster
+  resourceVersion: "33816"
+  uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+spec:
+  clusterNetwork:
+  - cidr: 10.128.0.0/14
+    hostPrefix: 23
+  defaultNetwork:
+    ovnKubernetesConfig:
+      egressIPConfig: {}
+      gatewayConfig:
+        ipv4: {}
+        ipv6: {}
+        routingViaHost: false
+      genevePort: 6081
+      ipsecConfig:
+        mode: Disabled
+      mtu: 1360
+      policyAuditConfig:
+        destination: "null"
+        maxFileSize: 50
+        maxLogFiles: 5
+        rateLimit: 20
+        syslogFacility: local0
+    type: OVNKubernetes
+  deployKubeProxy: false
+  disableMultiNetwork: false
+  disableNetworkDiagnostics: false
+  logLevel: Normal
+  managementState: Managed
+  observedConfig: null
+  operatorLogLevel: Normal
+  serviceNetwork:
+  - 172.30.0.0/16
+  unsupportedConfigOverrides: null
+  useMultiNetworkPolicy: false
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:01:43Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2024-10-24T13:22:01Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:01:43Z"
+    message: ""
+    reason: ""
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2024-10-24T13:26:47Z"
+    message: ""
+    reason: ""
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2024-10-24T13:02:13Z"
+    message: ""
+    reason: ""
+    status: "True"
+    type: Available
+  readyReplicas: 0
+  version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest

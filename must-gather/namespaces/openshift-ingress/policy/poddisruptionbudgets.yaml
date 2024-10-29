@@ -1,0 +1,76 @@
+---
+apiVersion: policy/v1
+items:
+- apiVersion: policy/v1
+  kind: PodDisruptionBudget
+  metadata:
+    creationTimestamp: "2024-10-24T13:06:25Z"
+    generation: 1
+    managedFields:
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"de76a8ae-7917-40d8-b08c-8dbbdd9aab12"}: {}
+        f:spec:
+          f:maxUnavailable: {}
+          f:selector: {}
+      manager: ingress-operator
+      operation: Update
+      time: "2024-10-24T13:06:25Z"
+    - apiVersion: policy/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"DisruptionAllowed"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:observedGeneration: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:currentHealthy: {}
+          f:desiredHealthy: {}
+          f:disruptionsAllowed: {}
+          f:expectedPods: {}
+          f:observedGeneration: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2024-10-24T13:22:02Z"
+    name: router-default
+    namespace: openshift-ingress
+    ownerReferences:
+    - apiVersion: apps/v1
+      controller: true
+      kind: Deployment
+      name: router-default
+      uid: de76a8ae-7917-40d8-b08c-8dbbdd9aab12
+    resourceVersion: "23780"
+    uid: 9cae7f27-3c90-451e-968c-07ee23205b76
+  spec:
+    maxUnavailable: 50%
+    selector:
+      matchLabels:
+        ingresscontroller.operator.openshift.io/deployment-ingresscontroller: default
+  status:
+    conditions:
+    - lastTransitionTime: "2024-10-24T13:22:02Z"
+      message: ""
+      observedGeneration: 1
+      reason: SufficientPods
+      status: "True"
+      type: DisruptionAllowed
+    currentHealthy: 2
+    desiredHealthy: 1
+    disruptionsAllowed: 1
+    expectedPods: 2
+    observedGeneration: 1
+kind: PodDisruptionBudgetList
+metadata:
+  resourceVersion: "60555"

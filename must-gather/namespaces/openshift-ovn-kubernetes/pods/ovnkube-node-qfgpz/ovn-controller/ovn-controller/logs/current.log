@@ -1,0 +1,201 @@
+2024-10-24T13:19:49.603180351Z ++ K8S_NODE=ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:19:49.603180351Z ++ [[ -n ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 ]]
+2024-10-24T13:19:49.603180351Z ++ [[ -f /env/ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 ]]
+2024-10-24T13:19:49.603180351Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2024-10-24T13:19:49.603180351Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2024-10-24T13:19:49.603307832Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2024-10-24T13:19:49.603307832Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2024-10-24T13:19:49.603307832Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2024-10-24T13:19:49.603307832Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2024-10-24T13:19:49.603307832Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2024-10-24T13:19:49.603307832Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2024-10-24T13:19:49.603307832Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2024-10-24T13:19:49.603307832Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2024-10-24T13:19:49.604462539Z + start-ovn-controller info
+2024-10-24T13:19:49.604462539Z + local log_level=info
+2024-10-24T13:19:49.604462539Z + [[ 1 -ne 1 ]]
+2024-10-24T13:19:49.605113873Z ++ date -Iseconds
+2024-10-24T13:19:49.607251640Z 2024-10-24T13:19:49+00:00 - starting ovn-controller
+2024-10-24T13:19:49.607280811Z + echo '2024-10-24T13:19:49+00:00 - starting ovn-controller'
+2024-10-24T13:19:49.607280811Z + exec ovn-controller unix:/var/run/openvswitch/db.sock -vfile:off --no-chdir --pidfile=/var/run/ovn/ovn-controller.pid --syslog-method=null --log-file=/var/log/ovn/acl-audit-log.log -vFACILITY:local0 -vconsole:info -vconsole:acl_log:off '-vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' -vsyslog:acl_log:info -vfile:acl_log:info
+2024-10-24T13:19:49.629389734Z 2024-10-24T13:19:49Z|00001|vlog|INFO|opened log file /var/log/ovn/acl-audit-log.log
+2024-10-24T13:19:49.637243435Z 2024-10-24T13:19:49.637Z|00002|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connecting...
+2024-10-24T13:19:49.637243435Z 2024-10-24T13:19:49.637Z|00003|reconnect|INFO|unix:/var/run/openvswitch/db.sock: connected
+2024-10-24T13:19:49.639944908Z 2024-10-24T13:19:49.639Z|00004|main|INFO|OVN internal version is : [24.09.0-20.37.0-73.6]
+2024-10-24T13:19:49.639944908Z 2024-10-24T13:19:49.639Z|00005|main|INFO|OVS IDL reconnected, force recompute.
+2024-10-24T13:19:49.639944908Z 2024-10-24T13:19:49.639Z|00006|main|INFO|OVNSB IDL reconnected, force recompute.
+2024-10-24T13:19:49.644515605Z 2024-10-24T13:19:49.644Z|00007|ovn_util|INFO|statctrl: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2024-10-24T13:19:49.644515605Z 2024-10-24T13:19:49.644Z|00008|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2024-10-24T13:19:49.644561550Z 2024-10-24T13:19:49.644Z|00009|rconn|WARN|unix:/var/run/openvswitch/br-int.mgmt: connection failed (No such file or directory)
+2024-10-24T13:19:49.644561550Z 2024-10-24T13:19:49.644Z|00010|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: waiting 1 seconds before reconnect
+2024-10-24T13:19:49.644577495Z 2024-10-24T13:19:49.644Z|00011|ovn_util|INFO|pinctrl: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2024-10-24T13:19:49.644585876Z 2024-10-24T13:19:49.644Z|00012|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2024-10-24T13:19:49.644621527Z 2024-10-24T13:19:49.644Z|00013|rconn|WARN|unix:/var/run/openvswitch/br-int.mgmt: connection failed (No such file or directory)
+2024-10-24T13:19:49.644621527Z 2024-10-24T13:19:49.644Z|00014|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: waiting 1 seconds before reconnect
+2024-10-24T13:19:50.645646191Z 2024-10-24T13:19:50.645Z|00001|rconn(ovn_statctrl1)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2024-10-24T13:19:50.645646191Z 2024-10-24T13:19:50.645Z|00001|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2024-10-24T13:19:50.646565737Z 2024-10-24T13:19:50.646Z|00002|rconn(ovn_statctrl1)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2024-10-24T13:19:50.646608690Z 2024-10-24T13:19:50.646Z|00002|rconn(ovn_pinctrl0)|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2024-10-24T13:19:58.997240343Z 2024-10-24T13:19:58.997Z|00015|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2024-10-24T13:19:58.997388960Z 2024-10-24T13:19:58.997Z|00016|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connected
+2024-10-24T13:19:59.051327811Z 2024-10-24T13:19:59.051Z|00017|ovn_util|INFO|features: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2024-10-24T13:19:59.053978504Z 2024-10-24T13:19:59.053Z|00018|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2024-10-24T13:19:59.056031133Z 2024-10-24T13:19:59.055Z|00019|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2024-10-24T13:19:59.057329731Z 2024-10-24T13:19:59.057Z|00020|features|INFO|OVS Feature: meter_support, state: supported
+2024-10-24T13:19:59.057386733Z 2024-10-24T13:19:59.057Z|00021|features|INFO|OVS Feature: group_support, state: supported
+2024-10-24T13:19:59.057427577Z 2024-10-24T13:19:59.057Z|00022|features|INFO|OVS Feature: sample_action_with_registers, state: supported
+2024-10-24T13:19:59.057462156Z 2024-10-24T13:19:59.057Z|00023|features|INFO|OVS Feature: ct_zero_snat, state: supported
+2024-10-24T13:19:59.057488191Z 2024-10-24T13:19:59.057Z|00024|features|INFO|OVS Feature: ct_flush, state: supported
+2024-10-24T13:19:59.057514844Z 2024-10-24T13:19:59.057Z|00025|features|INFO|OVS Feature: dp_hash_l4_sym_support, state: supported
+2024-10-24T13:19:59.057540178Z 2024-10-24T13:19:59.057Z|00026|main|INFO|OVS feature set changed, force recompute.
+2024-10-24T13:19:59.057569351Z 2024-10-24T13:19:59.057Z|00027|ovn_util|INFO|ofctrl: connecting to switch: "unix:/var/run/openvswitch/br-int.mgmt"
+2024-10-24T13:19:59.057597164Z 2024-10-24T13:19:59.057Z|00028|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connecting...
+2024-10-24T13:19:59.058105484Z 2024-10-24T13:19:59.058Z|00029|rconn|INFO|unix:/var/run/openvswitch/br-int.mgmt: connected
+2024-10-24T13:19:59.058554356Z 2024-10-24T13:19:59.058Z|00030|main|INFO|OVS OpenFlow connection reconnected,force recompute.
+2024-10-24T13:19:59.059068931Z 2024-10-24T13:19:59.059Z|00031|binding|INFO|Claiming lport cr-rtos-ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 for this chassis.
+2024-10-24T13:19:59.059155191Z 2024-10-24T13:19:59.059Z|00032|binding|INFO|cr-rtos-ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Claiming 0a:58:0a:81:02:01 10.129.2.1/23
+2024-10-24T13:19:59.059199314Z 2024-10-24T13:19:59.059Z|00033|binding|INFO|Claiming lport jtor-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 for this chassis.
+2024-10-24T13:19:59.059225216Z 2024-10-24T13:19:59.059Z|00034|binding|INFO|jtor-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Claiming router
+2024-10-24T13:19:59.059272356Z 2024-10-24T13:19:59.059Z|00035|binding|INFO|Claiming lport rtoe-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 for this chassis.
+2024-10-24T13:19:59.059297573Z 2024-10-24T13:19:59.059Z|00036|binding|INFO|rtoe-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Claiming 42:01:0a:00:80:03 10.0.128.3/32
+2024-10-24T13:19:59.059331806Z 2024-10-24T13:19:59.059Z|00037|binding|INFO|Claiming lport rtoj-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 for this chassis.
+2024-10-24T13:19:59.059358367Z 2024-10-24T13:19:59.059Z|00038|binding|INFO|rtoj-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Claiming 0a:58:64:40:00:07 100.64.0.7/16
+2024-10-24T13:19:59.059416690Z 2024-10-24T13:19:59.059Z|00039|binding|INFO|Claiming lport etor-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 for this chassis.
+2024-10-24T13:19:59.059442169Z 2024-10-24T13:19:59.059Z|00040|binding|INFO|etor-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Claiming 42:01:0a:00:80:03
+2024-10-24T13:19:59.059481840Z 2024-10-24T13:19:59.059Z|00041|binding|INFO|Claiming lport k8s-ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 for this chassis.
+2024-10-24T13:19:59.059506629Z 2024-10-24T13:19:59.059Z|00042|binding|INFO|k8s-ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2: Claiming 9a:c5:ab:34:a6:52 10.129.2.2
+2024-10-24T13:19:59.107857694Z 2024-10-24T13:19:59.107Z|00043|physical|WARN|Failed to locate tunnel to reach main chassis 0ea266e5-4375-40f8-b223-639412f2e349 for port tstor-ci-op-2fcpj5j6-f6035-2lklf-master-1.
+2024-10-24T13:19:59.118679607Z 2024-10-24T13:19:59.118Z|00044|binding|INFO|Setting lport rtoe-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 up in Southbound
+2024-10-24T13:19:59.118757849Z 2024-10-24T13:19:59.118Z|00045|binding|INFO|Setting lport cr-rtos-ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 up in Southbound
+2024-10-24T13:19:59.118794658Z 2024-10-24T13:19:59.118Z|00046|binding|INFO|Setting lport rtoj-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 up in Southbound
+2024-10-24T13:19:59.118838510Z 2024-10-24T13:19:59.118Z|00047|binding|INFO|Setting lport etor-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 up in Southbound
+2024-10-24T13:19:59.118880910Z 2024-10-24T13:19:59.118Z|00048|binding|INFO|Setting lport jtor-GR_ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 up in Southbound
+2024-10-24T13:19:59.329196335Z 2024-10-24T13:19:59.329Z|00049|binding|INFO|Setting lport k8s-ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 ovn-installed in OVS
+2024-10-24T13:19:59.329196335Z 2024-10-24T13:19:59.329Z|00050|binding|INFO|Setting lport k8s-ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 up in Southbound
+2024-10-24T13:19:59.639951129Z 2024-10-24T13:19:59.639Z|00051|memory|INFO|18304 kB peak resident set size after 10.0 seconds
+2024-10-24T13:19:59.640043994Z 2024-10-24T13:19:59.640Z|00052|memory|INFO|idl-cells-OVN_Southbound:11098 idl-cells-Open_vSwitch:693 if_status_mgr_ifaces_state_usage-KB:1 if_status_mgr_ifaces_usage-KB:1 lflow-cache-entries-cache-expr:173 lflow-cache-entries-cache-matches:569 lflow-cache-size-KB:724 local_datapath_usage-KB:1 ofctrl_desired_flow_usage-KB:460 ofctrl_installed_flow_usage-KB:346 ofctrl_sb_flow_ref_usage-KB:177
+2024-10-24T13:20:19.997663448Z 2024-10-24T13:20:19.997Z|00053|binding|INFO|Claiming lport openshift-multus_network-metrics-daemon-d5jsz for this chassis.
+2024-10-24T13:20:19.997663448Z 2024-10-24T13:20:19.997Z|00054|binding|INFO|openshift-multus_network-metrics-daemon-d5jsz: Claiming 0a:58:0a:81:02:04 10.129.2.4
+2024-10-24T13:20:20.008257515Z 2024-10-24T13:20:20.008Z|00055|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-d5jsz ovn-installed in OVS
+2024-10-24T13:20:20.008257515Z 2024-10-24T13:20:20.008Z|00056|binding|INFO|Setting lport openshift-multus_network-metrics-daemon-d5jsz up in Southbound
+2024-10-24T13:20:59.308317887Z 2024-10-24T13:20:59.308Z|00057|binding|INFO|Claiming lport openshift-network-diagnostics_network-check-target-vqt97 for this chassis.
+2024-10-24T13:20:59.308432316Z 2024-10-24T13:20:59.308Z|00058|binding|INFO|openshift-network-diagnostics_network-check-target-vqt97: Claiming 0a:58:0a:81:02:03 10.129.2.3
+2024-10-24T13:20:59.317875648Z 2024-10-24T13:20:59.317Z|00059|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-vqt97 ovn-installed in OVS
+2024-10-24T13:20:59.317875648Z 2024-10-24T13:20:59.317Z|00060|binding|INFO|Setting lport openshift-network-diagnostics_network-check-target-vqt97 up in Southbound
+2024-10-24T13:20:59.321532775Z 2024-10-24T13:20:59.321Z|00061|binding|INFO|Claiming lport openshift-e2e-loki_loki-promtail-w2z86 for this chassis.
+2024-10-24T13:20:59.321532775Z 2024-10-24T13:20:59.321Z|00062|binding|INFO|openshift-e2e-loki_loki-promtail-w2z86: Claiming 0a:58:0a:81:02:05 10.129.2.5
+2024-10-24T13:20:59.331797226Z 2024-10-24T13:20:59.331Z|00063|binding|INFO|Setting lport openshift-e2e-loki_loki-promtail-w2z86 ovn-installed in OVS
+2024-10-24T13:20:59.331797226Z 2024-10-24T13:20:59.331Z|00064|binding|INFO|Setting lport openshift-e2e-loki_loki-promtail-w2z86 up in Southbound
+2024-10-24T13:21:54.366884496Z 2024-10-24T13:21:54.366Z|00065|binding|INFO|Claiming lport openshift-dns_dns-default-fg6jx for this chassis.
+2024-10-24T13:21:54.367003223Z 2024-10-24T13:21:54.366Z|00066|binding|INFO|openshift-dns_dns-default-fg6jx: Claiming 0a:58:0a:81:02:06 10.129.2.6
+2024-10-24T13:21:54.398826055Z 2024-10-24T13:21:54.398Z|00067|binding|INFO|Setting lport openshift-dns_dns-default-fg6jx ovn-installed in OVS
+2024-10-24T13:21:54.398936822Z 2024-10-24T13:21:54.398Z|00068|binding|INFO|Setting lport openshift-dns_dns-default-fg6jx up in Southbound
+2024-10-24T13:21:54.445742346Z 2024-10-24T13:21:54.445Z|00069|binding|INFO|Claiming lport openshift-ingress_router-default-bbcfc976b-4r8cp for this chassis.
+2024-10-24T13:21:54.445817944Z 2024-10-24T13:21:54.445Z|00070|binding|INFO|openshift-ingress_router-default-bbcfc976b-4r8cp: Claiming 0a:58:0a:81:02:08 10.129.2.8
+2024-10-24T13:21:54.473475942Z 2024-10-24T13:21:54.473Z|00071|binding|INFO|Setting lport openshift-ingress_router-default-bbcfc976b-4r8cp up in Southbound
+2024-10-24T13:21:54.474345133Z 2024-10-24T13:21:54.474Z|00072|binding|INFO|Setting lport openshift-ingress_router-default-bbcfc976b-4r8cp ovn-installed in OVS
+2024-10-24T13:21:54.763782779Z 2024-10-24T13:21:54.763Z|00073|binding|INFO|Claiming lport openshift-image-registry_image-registry-7db6746b67-87llm for this chassis.
+2024-10-24T13:21:54.763869601Z 2024-10-24T13:21:54.763Z|00074|binding|INFO|openshift-image-registry_image-registry-7db6746b67-87llm: Claiming 0a:58:0a:81:02:09 10.129.2.9
+2024-10-24T13:21:54.791938559Z 2024-10-24T13:21:54.791Z|00075|binding|INFO|Setting lport openshift-image-registry_image-registry-7db6746b67-87llm ovn-installed in OVS
+2024-10-24T13:21:54.792031776Z 2024-10-24T13:21:54.792Z|00076|binding|INFO|Setting lport openshift-image-registry_image-registry-7db6746b67-87llm up in Southbound
+2024-10-24T13:21:55.932558832Z 2024-10-24T13:21:55.932Z|00077|binding|INFO|Claiming lport openshift-monitoring_prometheus-operator-admission-webhook-79648c8fd6-swcgw for this chassis.
+2024-10-24T13:21:55.932558832Z 2024-10-24T13:21:55.932Z|00078|binding|INFO|openshift-monitoring_prometheus-operator-admission-webhook-79648c8fd6-swcgw: Claiming 0a:58:0a:81:02:07 10.129.2.7
+2024-10-24T13:21:55.976510233Z 2024-10-24T13:21:55.976Z|00079|binding|INFO|Setting lport openshift-monitoring_prometheus-operator-admission-webhook-79648c8fd6-swcgw ovn-installed in OVS
+2024-10-24T13:21:55.976826381Z 2024-10-24T13:21:55.976Z|00080|binding|INFO|Setting lport openshift-monitoring_prometheus-operator-admission-webhook-79648c8fd6-swcgw up in Southbound
+2024-10-24T13:22:11.530023825Z 2024-10-24T13:22:11.528Z|00081|binding|INFO|Claiming lport openshift-monitoring_alertmanager-main-1 for this chassis.
+2024-10-24T13:22:11.530023825Z 2024-10-24T13:22:11.528Z|00082|binding|INFO|openshift-monitoring_alertmanager-main-1: Claiming 0a:58:0a:81:02:0b 10.129.2.11
+2024-10-24T13:22:11.556487706Z 2024-10-24T13:22:11.556Z|00083|binding|INFO|Setting lport openshift-monitoring_alertmanager-main-1 ovn-installed in OVS
+2024-10-24T13:22:11.556487706Z 2024-10-24T13:22:11.556Z|00084|binding|INFO|Setting lport openshift-monitoring_alertmanager-main-1 up in Southbound
+2024-10-24T13:22:16.667426213Z 2024-10-24T13:22:16.667Z|00085|binding|INFO|Claiming lport openshift-monitoring_metrics-server-58f6d575c4-qj8vk for this chassis.
+2024-10-24T13:22:16.667499103Z 2024-10-24T13:22:16.667Z|00086|binding|INFO|openshift-monitoring_metrics-server-58f6d575c4-qj8vk: Claiming 0a:58:0a:81:02:0c 10.129.2.12
+2024-10-24T13:22:16.696554995Z 2024-10-24T13:22:16.696Z|00087|binding|INFO|Setting lport openshift-monitoring_metrics-server-58f6d575c4-qj8vk up in Southbound
+2024-10-24T13:22:16.699926060Z 2024-10-24T13:22:16.699Z|00088|binding|INFO|Setting lport openshift-monitoring_metrics-server-58f6d575c4-qj8vk ovn-installed in OVS
+2024-10-24T13:24:13.455644609Z 2024-10-24T13:24:13.455Z|00089|memory_trim|INFO|Detected inactivity (last active 30002 ms ago): trimming memory
+2024-10-24T13:25:54.977077420Z 2024-10-24T13:25:54.977Z|00090|binding|INFO|Claiming lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw for this chassis.
+2024-10-24T13:25:54.977168669Z 2024-10-24T13:25:54.977Z|00091|binding|INFO|openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw: Claiming 0a:58:0a:81:02:0d 10.129.2.13
+2024-10-24T13:25:55.011375757Z 2024-10-24T13:25:55.011Z|00092|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw ovn-installed in OVS
+2024-10-24T13:25:55.011375757Z 2024-10-24T13:25:55.011Z|00093|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw up in Southbound
+2024-10-24T13:25:55.091722455Z 2024-10-24T13:25:55.091Z|00094|binding|INFO|Releasing lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw from this chassis (sb_readonly=0)
+2024-10-24T13:25:55.091813699Z 2024-10-24T13:25:55.091Z|00095|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw down in Southbound
+2024-10-24T13:25:58.553795248Z 2024-10-24T13:25:58.552Z|00096|binding|INFO|Claiming lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw for this chassis.
+2024-10-24T13:25:58.553795248Z 2024-10-24T13:25:58.552Z|00097|binding|INFO|openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw: Claiming 0a:58:0a:81:02:0d 10.129.2.13
+2024-10-24T13:25:58.580321603Z 2024-10-24T13:25:58.580Z|00098|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw ovn-installed in OVS
+2024-10-24T13:25:58.580321603Z 2024-10-24T13:25:58.580Z|00099|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw up in Southbound
+2024-10-24T13:25:58.664491946Z 2024-10-24T13:25:58.663Z|00100|binding|INFO|Releasing lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw from this chassis (sb_readonly=0)
+2024-10-24T13:25:58.664491946Z 2024-10-24T13:25:58.664Z|00101|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw down in Southbound
+2024-10-24T13:26:05.267293264Z 2024-10-24T13:26:05.267Z|00102|binding|INFO|Claiming lport openshift-ingress-canary_ingress-canary-hhkt7 for this chassis.
+2024-10-24T13:26:05.267365276Z 2024-10-24T13:26:05.267Z|00103|binding|INFO|openshift-ingress-canary_ingress-canary-hhkt7: Claiming 0a:58:0a:81:02:0a 10.129.2.10
+2024-10-24T13:26:05.294735344Z 2024-10-24T13:26:05.294Z|00104|binding|INFO|Setting lport openshift-ingress-canary_ingress-canary-hhkt7 up in Southbound
+2024-10-24T13:26:05.295639833Z 2024-10-24T13:26:05.295Z|00105|binding|INFO|Setting lport openshift-ingress-canary_ingress-canary-hhkt7 ovn-installed in OVS
+2024-10-24T13:26:15.978317749Z 2024-10-24T13:26:15.978Z|00106|binding|INFO|Claiming lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw for this chassis.
+2024-10-24T13:26:15.978317749Z 2024-10-24T13:26:15.978Z|00107|binding|INFO|openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw: Claiming 0a:58:0a:81:02:0d 10.129.2.13
+2024-10-24T13:26:16.007687863Z 2024-10-24T13:26:16.007Z|00108|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw ovn-installed in OVS
+2024-10-24T13:26:16.007771677Z 2024-10-24T13:26:16.007Z|00109|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw up in Southbound
+2024-10-24T13:26:16.088837318Z 2024-10-24T13:26:16.088Z|00110|binding|INFO|Releasing lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw from this chassis (sb_readonly=0)
+2024-10-24T13:26:16.088931849Z 2024-10-24T13:26:16.088Z|00111|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw down in Southbound
+2024-10-24T13:26:30.982210166Z 2024-10-24T13:26:30.982Z|00112|binding|INFO|Claiming lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw for this chassis.
+2024-10-24T13:26:30.982296924Z 2024-10-24T13:26:30.982Z|00113|binding|INFO|openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw: Claiming 0a:58:0a:81:02:0d 10.129.2.13
+2024-10-24T13:26:31.010252248Z 2024-10-24T13:26:31.010Z|00114|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw ovn-installed in OVS
+2024-10-24T13:26:31.010361130Z 2024-10-24T13:26:31.010Z|00115|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw up in Southbound
+2024-10-24T13:26:31.093867824Z 2024-10-24T13:26:31.093Z|00116|binding|INFO|Releasing lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw from this chassis (sb_readonly=0)
+2024-10-24T13:26:31.093985080Z 2024-10-24T13:26:31.093Z|00117|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw down in Southbound
+2024-10-24T13:26:41.470274385Z 2024-10-24T13:26:41.470Z|00118|binding|INFO|Claiming lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw for this chassis.
+2024-10-24T13:26:41.470360767Z 2024-10-24T13:26:41.470Z|00119|binding|INFO|openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw: Claiming 0a:58:0a:81:02:0d 10.129.2.13
+2024-10-24T13:26:41.498872359Z 2024-10-24T13:26:41.498Z|00120|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw ovn-installed in OVS
+2024-10-24T13:26:41.499040687Z 2024-10-24T13:26:41.499Z|00121|binding|INFO|Setting lport openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw up in Southbound
+2024-10-24T13:27:16.070350472Z 2024-10-24T13:27:16.070Z|00122|binding|INFO|Releasing lport openshift-monitoring_alertmanager-main-1 from this chassis (sb_readonly=0)
+2024-10-24T13:27:16.070439526Z 2024-10-24T13:27:16.070Z|00123|binding|INFO|Setting lport openshift-monitoring_alertmanager-main-1 down in Southbound
+2024-10-24T13:27:17.059252033Z 2024-10-24T13:27:17.059Z|00124|binding|INFO|Claiming lport openshift-monitoring_alertmanager-main-1 for this chassis.
+2024-10-24T13:27:17.059327608Z 2024-10-24T13:27:17.059Z|00125|binding|INFO|openshift-monitoring_alertmanager-main-1: Claiming 0a:58:0a:81:02:0e 10.129.2.14
+2024-10-24T13:27:17.091048538Z 2024-10-24T13:27:17.088Z|00126|binding|INFO|Setting lport openshift-monitoring_alertmanager-main-1 ovn-installed in OVS
+2024-10-24T13:27:17.091048538Z 2024-10-24T13:27:17.088Z|00127|binding|INFO|Setting lport openshift-monitoring_alertmanager-main-1 up in Southbound
+2024-10-24T13:27:34.177378761Z 2024-10-24T13:27:34.177Z|00128|binding|INFO|Claiming lport openshift-monitoring_prometheus-k8s-1 for this chassis.
+2024-10-24T13:27:34.177378761Z 2024-10-24T13:27:34.177Z|00129|binding|INFO|openshift-monitoring_prometheus-k8s-1: Claiming 0a:58:0a:81:02:0f 10.129.2.15
+2024-10-24T13:27:34.208087692Z 2024-10-24T13:27:34.208Z|00130|binding|INFO|Setting lport openshift-monitoring_prometheus-k8s-1 ovn-installed in OVS
+2024-10-24T13:27:34.208087692Z 2024-10-24T13:27:34.208Z|00131|binding|INFO|Setting lport openshift-monitoring_prometheus-k8s-1 up in Southbound
+2024-10-24T13:28:05.890574893Z 2024-10-24T13:28:05.890Z|00132|memory_trim|INFO|Detected inactivity (last active 30004 ms ago): trimming memory
+2024-10-24T13:31:54.309483836Z 2024-10-24T13:31:54.309Z|00133|memory_trim|INFO|Detected inactivity (last active 30007 ms ago): trimming memory
+2024-10-24T13:32:49.917601909Z 2024-10-24T13:32:49.917Z|00134|memory_trim|INFO|Detected inactivity (last active 30023 ms ago): trimming memory
+2024-10-24T13:36:25.322105773Z 2024-10-24T13:36:25.321Z|00135|memory_trim|INFO|Detected inactivity (last active 30001 ms ago): trimming memory
+2024-10-24T13:37:32.501572675Z 2024-10-24T13:37:32.501Z|00136|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory
+2024-10-24T13:38:04.810547061Z 2024-10-24T13:38:04.810Z|00137|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory
+2024-10-24T13:47:39.200943171Z 2024-10-24T13:47:39.200Z|00138|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory
+2024-10-24T13:48:21.151076753Z 2024-10-24T13:48:21.151Z|00139|memory_trim|INFO|Detected inactivity (last active 30006 ms ago): trimming memory
+2024-10-24T13:49:23.543309793Z 2024-10-24T13:49:23.543Z|00140|memory_trim|INFO|Detected inactivity (last active 30008 ms ago): trimming memory
+2024-10-24T13:49:39.363286281Z 2024-10-24T13:49:39.363Z|00141|binding|INFO|Releasing lport openshift-monitoring_metrics-server-58f6d575c4-qj8vk from this chassis (sb_readonly=0)
+2024-10-24T13:49:39.363447252Z 2024-10-24T13:49:39.363Z|00142|binding|INFO|Setting lport openshift-monitoring_metrics-server-58f6d575c4-qj8vk down in Southbound
+2024-10-24T13:50:27.083490454Z 2024-10-24T13:50:27.083Z|00143|memory_trim|INFO|Detected inactivity (last active 30024 ms ago): trimming memory
+2024-10-24T13:51:57.726142558Z 2024-10-24T13:51:57.726Z|00144|memory_trim|INFO|Detected inactivity (last active 30028 ms ago): trimming memory
+2024-10-24T13:53:53.826149702Z 2024-10-24T13:53:53.826Z|00145|memory_trim|INFO|Detected inactivity (last active 30010 ms ago): trimming memory
+2024-10-24T13:55:04.400618292Z 2024-10-24T13:55:04.400Z|00146|memory_trim|INFO|Detected inactivity (last active 30006 ms ago): trimming memory
+2024-10-24T13:56:48.919734378Z 2024-10-24T13:56:48.919Z|00147|memory_trim|INFO|Detected inactivity (last active 30002 ms ago): trimming memory
+2024-10-24T13:58:16.976214280Z 2024-10-24T13:58:16.976Z|00148|memory_trim|INFO|Detected inactivity (last active 30015 ms ago): trimming memory
+2024-10-24T14:00:31.091489953Z 2024-10-24T14:00:31.091Z|00149|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory
+2024-10-24T14:02:08.263235663Z 2024-10-24T14:02:08.263Z|00150|memory_trim|INFO|Detected inactivity (last active 30007 ms ago): trimming memory
+2024-10-24T14:03:44.695615166Z 2024-10-24T14:03:44.695Z|00151|memory_trim|INFO|Detected inactivity (last active 30018 ms ago): trimming memory
+2024-10-24T14:05:20.434407593Z 2024-10-24T14:05:20.434Z|00152|memory_trim|INFO|Detected inactivity (last active 30017 ms ago): trimming memory
+2024-10-24T14:06:36.823658241Z 2024-10-24T14:06:36.823Z|00153|memory_trim|INFO|Detected inactivity (last active 30010 ms ago): trimming memory
+2024-10-24T14:09:49.660643796Z 2024-10-24T14:09:49.660Z|00154|memory_trim|INFO|Detected inactivity (last active 30020 ms ago): trimming memory
+2024-10-24T14:10:41.596627418Z 2024-10-24T14:10:41.596Z|00155|memory_trim|INFO|Detected inactivity (last active 30005 ms ago): trimming memory
+2024-10-24T14:12:43.500514409Z 2024-10-24T14:12:43.500Z|00156|memory_trim|INFO|Detected inactivity (last active 30014 ms ago): trimming memory
+2024-10-24T14:14:25.277362908Z 2024-10-24T14:14:25.277Z|00157|memory_trim|INFO|Detected inactivity (last active 30016 ms ago): trimming memory
+2024-10-24T14:15:42.805250123Z 2024-10-24T14:15:42.805Z|00158|memory_trim|INFO|Detected inactivity (last active 30010 ms ago): trimming memory
+2024-10-24T14:17:21.439463220Z 2024-10-24T14:17:21.439Z|00159|memory_trim|INFO|Detected inactivity (last active 30022 ms ago): trimming memory
+2024-10-24T14:18:38.608755132Z 2024-10-24T14:18:38.608Z|00160|memory_trim|INFO|Detected inactivity (last active 30011 ms ago): trimming memory
+2024-10-24T14:20:21.007375258Z 2024-10-24T14:20:21.007Z|00161|memory_trim|INFO|Detected inactivity (last active 30019 ms ago): trimming memory
+2024-10-24T14:28:44.039595722Z 2024-10-24T14:28:44.039Z|00162|memory_trim|INFO|Detected inactivity (last active 30017 ms ago): trimming memory
+2024-10-24T14:30:27.279524627Z 2024-10-24T14:30:27.279Z|00163|memory_trim|INFO|Detected inactivity (last active 30016 ms ago): trimming memory
+2024-10-24T14:32:04.931700661Z 2024-10-24T14:32:04.931Z|00164|memory_trim|INFO|Detected inactivity (last active 30003 ms ago): trimming memory
+2024-10-24T14:33:47.426294014Z 2024-10-24T14:33:47.426Z|00165|memory_trim|INFO|Detected inactivity (last active 30007 ms ago): trimming memory
+2024-10-24T14:35:26.667398379Z 2024-10-24T14:35:26.667Z|00166|memory_trim|INFO|Detected inactivity (last active 30027 ms ago): trimming memory
+2024-10-24T14:37:10.992699771Z 2024-10-24T14:37:10.992Z|00167|memory_trim|INFO|Detected inactivity (last active 30013 ms ago): trimming memory
+2024-10-24T14:42:37.234328056Z 2024-10-24T14:42:37.234Z|00168|binding|INFO|Claiming lport openshift-monitoring_metrics-server-5ffb7997c-2fmcw for this chassis.
+2024-10-24T14:42:37.234439830Z 2024-10-24T14:42:37.234Z|00169|binding|INFO|openshift-monitoring_metrics-server-5ffb7997c-2fmcw: Claiming 0a:58:0a:81:02:10 10.129.2.16
+2024-10-24T14:42:37.268029942Z 2024-10-24T14:42:37.267Z|00170|binding|INFO|Setting lport openshift-monitoring_metrics-server-5ffb7997c-2fmcw ovn-installed in OVS
+2024-10-24T14:42:37.268172074Z 2024-10-24T14:42:37.268Z|00171|binding|INFO|Setting lport openshift-monitoring_metrics-server-5ffb7997c-2fmcw up in Southbound
+2024-10-24T14:43:46.537652633Z 2024-10-24T14:43:46.537Z|00172|binding|INFO|Claiming lport openshift-must-gather-b8249_perf-node-gather-daemonset-kfnjp for this chassis.
+2024-10-24T14:43:46.537652633Z 2024-10-24T14:43:46.537Z|00173|binding|INFO|openshift-must-gather-b8249_perf-node-gather-daemonset-kfnjp: Claiming 0a:58:0a:81:02:11 10.129.2.17
+2024-10-24T14:43:46.569051654Z 2024-10-24T14:43:46.568Z|00174|binding|INFO|Setting lport openshift-must-gather-b8249_perf-node-gather-daemonset-kfnjp ovn-installed in OVS
+2024-10-24T14:43:46.569145502Z 2024-10-24T14:43:46.569Z|00175|binding|INFO|Setting lport openshift-must-gather-b8249_perf-node-gather-daemonset-kfnjp up in Southbound
+2024-10-24T14:44:08.845228435Z 2024-10-24T14:44:08.845Z|00176|binding|INFO|Removing iface 9473aa14f6b78f1 ovn-installed in OVS
+2024-10-24T14:44:08.845505820Z 2024-10-24T14:44:08.845Z|00177|binding|INFO|Removing lport openshift-must-gather-b8249_perf-node-gather-daemonset-kfnjp ovn-installed in OVS

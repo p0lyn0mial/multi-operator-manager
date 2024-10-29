@@ -1,0 +1,42 @@
+2024-10-24T13:02:59.146092196Z + [[ -f /env/_master ]]
+2024-10-24T13:02:59.146092196Z + . /ovnkube-lib/ovnkube-lib.sh
+2024-10-24T13:02:59.146092196Z ++ set -x
+2024-10-24T13:02:59.146092196Z ++ K8S_NODE=
+2024-10-24T13:02:59.146232986Z ++ [[ -n '' ]]
+2024-10-24T13:02:59.146232986Z ++ northd_pidfile=/var/run/ovn/ovn-northd.pid
+2024-10-24T13:02:59.146232986Z ++ controller_pidfile=/var/run/ovn/ovn-controller.pid
+2024-10-24T13:02:59.146232986Z ++ controller_logfile=/var/log/ovn/acl-audit-log.log
+2024-10-24T13:02:59.146232986Z ++ vswitch_dbsock=/var/run/openvswitch/db.sock
+2024-10-24T13:02:59.146232986Z ++ nbdb_pidfile=/var/run/ovn/ovnnb_db.pid
+2024-10-24T13:02:59.146232986Z ++ nbdb_sock=/var/run/ovn/ovnnb_db.sock
+2024-10-24T13:02:59.146232986Z ++ nbdb_ctl=/var/run/ovn/ovnnb_db.ctl
+2024-10-24T13:02:59.146232986Z ++ sbdb_pidfile=/var/run/ovn/ovnsb_db.pid
+2024-10-24T13:02:59.146232986Z ++ sbdb_sock=/var/run/ovn/ovnsb_db.sock
+2024-10-24T13:02:59.146232986Z ++ sbdb_ctl=/var/run/ovn/ovnsb_db.ctl
+2024-10-24T13:02:59.146966687Z + trap quit-ovn-northd TERM INT
+2024-10-24T13:02:59.146966687Z + start-ovn-northd info
+2024-10-24T13:02:59.146966687Z + local log_level=info
+2024-10-24T13:02:59.146985187Z + [[ 1 -ne 1 ]]
+2024-10-24T13:02:59.147388847Z ++ date -Iseconds
+2024-10-24T13:02:59.149361279Z 2024-10-24T13:02:59+00:00 - starting ovn-northd
+2024-10-24T13:02:59.149375729Z + echo '2024-10-24T13:02:59+00:00 - starting ovn-northd'
+2024-10-24T13:02:59.149551510Z + wait 6561
+2024-10-24T13:02:59.149696850Z + exec ovn-northd --no-chdir -vconsole:info -vfile:off '-vPATTERN:console:%D{%Y-%m-%dT%H:%M:%S.###Z}|%05N|%c%T|%p|%m' --pidfile /var/run/ovn/ovn-northd.pid --n-threads=1
+2024-10-24T13:02:59.154000024Z 2024-10-24T13:02:59.153Z|00001|ovn_northd|INFO|OVN internal version is : [24.09.0-20.37.0-73.6]
+2024-10-24T13:02:59.154302885Z 2024-10-24T13:02:59.154Z|00002|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connecting...
+2024-10-24T13:02:59.154324855Z 2024-10-24T13:02:59.154Z|00003|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connection attempt failed (No such file or directory)
+2024-10-24T13:02:59.154355185Z 2024-10-24T13:02:59.154Z|00004|ovn_northd|INFO|OVN NB IDL reconnected, force recompute.
+2024-10-24T13:02:59.154391845Z 2024-10-24T13:02:59.154Z|00005|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2024-10-24T13:02:59.154401965Z 2024-10-24T13:02:59.154Z|00006|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2024-10-24T13:02:59.154428395Z 2024-10-24T13:02:59.154Z|00007|ovn_northd|INFO|OVN SB IDL reconnected, force recompute.
+2024-10-24T13:03:00.155781874Z 2024-10-24T13:03:00.155Z|00008|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connecting...
+2024-10-24T13:03:00.155781874Z 2024-10-24T13:03:00.155Z|00009|reconnect|INFO|unix:/var/run/ovn/ovnnb_db.sock: connected
+2024-10-24T13:03:00.155834184Z 2024-10-24T13:03:00.155Z|00010|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2024-10-24T13:03:00.155834184Z 2024-10-24T13:03:00.155Z|00011|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connection attempt failed (No such file or directory)
+2024-10-24T13:03:00.155866465Z 2024-10-24T13:03:00.155Z|00012|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: waiting 2 seconds before reconnect
+2024-10-24T13:03:02.156084854Z 2024-10-24T13:03:02.156Z|00013|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connecting...
+2024-10-24T13:03:02.156412245Z 2024-10-24T13:03:02.156Z|00014|reconnect|INFO|unix:/var/run/ovn/ovnsb_db.sock: connected
+2024-10-24T13:03:02.156618095Z 2024-10-24T13:03:02.156Z|00015|ovn_northd|INFO|ovn-northd lock acquired. This ovn-northd instance is now active.
+2024-10-24T13:03:04.115791392Z 2024-10-24T13:03:04.115Z|00016|ipam|WARN|72e68c75-cf9c-4c68-87db-c5f207b71935: Duplicate IP set: 10.130.0.2
+2024-10-24T13:03:16.867409887Z 2024-10-24T13:03:16.866Z|00017|memory|INFO|12416 kB peak resident set size after 17.7 seconds
+2024-10-24T13:03:16.867544297Z 2024-10-24T13:03:16.867Z|00018|memory|INFO|idl-cells-OVN_Northbound:1429 idl-cells-OVN_Southbound:9110

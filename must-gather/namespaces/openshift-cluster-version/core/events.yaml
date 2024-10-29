@@ -1,0 +1,1320 @@
+---
+apiVersion: v1
+items:
+- action: Scheduling
+  apiVersion: v1
+  eventTime: "2024-10-24T13:00:16.226722Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3042"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: null
+  message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.cloudprovider.kubernetes.io/uninitialized:
+    true}. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:00:16Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:00:16Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.18016507d69c5a54
+    namespace: openshift-cluster-version
+    resourceVersion: "3044"
+    uid: fc5afd29-1bac-44f6-afbb-47cfabe7044d
+  reason: FailedScheduling
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:01:05.775717Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3046"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-cluster-version/cluster-version-operator-59fc58bb8-h6cf2
+    to ci-op-2fcpj5j6-f6035-2lklf-master-0
+  metadata:
+    creationTimestamp: "2024-10-24T13:01:05Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:01:05Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.180165135ff622ab
+    namespace: openshift-cluster-version
+    resourceVersion: "3472"
+    uid: 89541f95-77c9-49ff-ab3b-4852d61df986
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 8
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:01:38Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3470"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: "2024-10-24T13:02:42Z"
+  message: 'MountVolume.SetUp failed for volume "serving-cert" : secret "cluster-version-operator-serving-cert"
+    not found'
+  metadata:
+    creationTimestamp: "2024-10-24T13:01:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:02:42Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.1801651af9247de3
+    namespace: openshift-cluster-version
+    resourceVersion: "4456"
+    uid: 864d9320-751f-4556-b263-64f3322abe0d
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:48Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:48Z"
+  message: Cancelling deletion of Pod openshift-cluster-version/cluster-version-operator-59fc58bb8-h6cf2
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:03:48Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.18016539596bc8eb
+    namespace: openshift-cluster-version
+    resourceVersion: "7931"
+    uid: 0f52ec16-e308-4743-850f-6062ff653dba
+  reason: TaintManagerEviction
+  reportingComponent: taint-eviction-controller
+  reportingInstance: ""
+  source:
+    component: taint-eviction-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:56Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-version-operator}
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3470"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:56Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:56Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.1801653b0a6c7cac
+    namespace: openshift-cluster-version
+    resourceVersion: "8561"
+    uid: 45dbbed6-7f21-498b-8d0a-287d3f0855f0
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-version-operator}
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3470"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: "2024-10-24T13:04:05Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+    in 9.158s (9.158s including waiting). Image size: 464578123 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:04:05Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.1801653d2c4f5de5
+    namespace: openshift-cluster-version
+    resourceVersion: "9081"
+    uid: 355bfe2c-7c9a-4876-81a2-9e050e214373
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-version-operator}
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3470"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:01Z"
+  message: Created container cluster-version-operator
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:01Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.1801653d395ef82b
+    namespace: openshift-cluster-version
+    resourceVersion: "21176"
+    uid: d47331e2-e856-454b-a4d5-c684d30288a1
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:04:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-version-operator}
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3470"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:01Z"
+  message: Started container cluster-version-operator
+  metadata:
+    creationTimestamp: "2024-10-24T13:04:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:01Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.1801653d3a72f25c
+    namespace: openshift-cluster-version
+    resourceVersion: "21177"
+    uid: 6e593e81-e95c-43cf-87b2-28cce1222938
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:19:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cluster-version-operator}
+    kind: Pod
+    name: cluster-version-operator-59fc58bb8-h6cf2
+    namespace: openshift-cluster-version
+    resourceVersion: "3470"
+    uid: 74b2d70a-7339-4397-a616-86fe73a80a06
+  kind: Event
+  lastTimestamp: "2024-10-24T13:19:01Z"
+  message: Container image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-10-24T13:19:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:19:01Z"
+    name: cluster-version-operator-59fc58bb8-h6cf2.1801660dc00f381c
+    namespace: openshift-cluster-version
+    resourceVersion: "21174"
+    uid: 31307fab-78c7-4a35-8743-5e65936ca7b5
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-0
+  type: Normal
+- apiVersion: v1
+  count: 13
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:59:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-version-operator-59fc58bb8
+    namespace: openshift-cluster-version
+    resourceVersion: "2516"
+    uid: 45fae63c-c836-4951-8b9b-c81b3df37f08
+  kind: Event
+  lastTimestamp: "2024-10-24T12:59:55Z"
+  message: 'Error creating: pods "cluster-version-operator-59fc58bb8-" is forbidden:
+    autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
+    nodes'
+  metadata:
+    creationTimestamp: "2024-10-24T12:59:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:59:55Z"
+    name: cluster-version-operator-59fc58bb8.180164fe481f9da4
+    namespace: openshift-cluster-version
+    resourceVersion: "2774"
+    uid: 91e54ec2-2f18-427c-8592-7039d3a4381f
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:00:16Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-version-operator-59fc58bb8
+    namespace: openshift-cluster-version
+    resourceVersion: "2521"
+    uid: 45fae63c-c836-4951-8b9b-c81b3df37f08
+  kind: Event
+  lastTimestamp: "2024-10-24T13:00:16Z"
+  message: 'Created pod: cluster-version-operator-59fc58bb8-h6cf2'
+  metadata:
+    creationTimestamp: "2024-10-24T13:00:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:00:16Z"
+    name: cluster-version-operator-59fc58bb8.18016507d68dd0e2
+    namespace: openshift-cluster-version
+    resourceVersion: "3043"
+    uid: 40923678-3985-4edc-b311-9269cfb69290
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 14
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: cluster-version-operator-7446f46455
+    namespace: openshift-cluster-version
+    resourceVersion: "657"
+    uid: f5adcafc-b36f-46a9-a91d-b15605bc11a9
+  kind: Event
+  lastTimestamp: "2024-10-24T12:59:15Z"
+  message: 'Error creating: pods "cluster-version-operator-7446f46455-" is forbidden:
+    autoscaling.openshift.io/ManagementCPUsOverride the cluster does not have any
+    nodes'
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:59:15Z"
+    name: cluster-version-operator-7446f46455.180164f012009a9d
+    namespace: openshift-cluster-version
+    resourceVersion: "2360"
+    uid: eef1b529-8c76-4475-8265-82ed469d300e
+  reason: FailedCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:34Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-version-operator
+    namespace: openshift-cluster-version
+    resourceVersion: "656"
+    uid: b399b1ed-e34b-47ba-ac40-271b7406f3dc
+  kind: Event
+  lastTimestamp: "2024-10-24T12:58:34Z"
+  message: Scaled up replica set cluster-version-operator-7446f46455 to 1
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:58:34Z"
+    name: cluster-version-operator.180164f0116f2b67
+    namespace: openshift-cluster-version
+    resourceVersion: "658"
+    uid: 01479077-cc03-4257-9f0f-bc5eb0380d7b
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:59:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-version-operator
+    namespace: openshift-cluster-version
+    resourceVersion: "2509"
+    uid: b399b1ed-e34b-47ba-ac40-271b7406f3dc
+  kind: Event
+  lastTimestamp: "2024-10-24T12:59:35Z"
+  message: Scaled down replica set cluster-version-operator-7446f46455 to 0 from 1
+  metadata:
+    creationTimestamp: "2024-10-24T12:59:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:59:35Z"
+    name: cluster-version-operator.180164fe45bd2be7
+    namespace: openshift-cluster-version
+    resourceVersion: "2511"
+    uid: dafdb222-265f-476a-8f1d-499b7548df49
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:59:35Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: cluster-version-operator
+    namespace: openshift-cluster-version
+    resourceVersion: "2514"
+    uid: b399b1ed-e34b-47ba-ac40-271b7406f3dc
+  kind: Event
+  lastTimestamp: "2024-10-24T12:59:35Z"
+  message: Scaled up replica set cluster-version-operator-59fc58bb8 to 1
+  metadata:
+    creationTimestamp: "2024-10-24T12:59:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T12:59:35Z"
+    name: cluster-version-operator.180164fe47dc8cf9
+    namespace: openshift-cluster-version
+    resourceVersion: "2518"
+    uid: 9b2316b9-86e8-409b-8254-6049bffe8c2e
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:09Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: version
+    namespace: openshift-cluster-version
+    resourceVersion: "541"
+    uid: 4120db55-21a7-4c82-8092-8c2be6f5e797
+  kind: Event
+  lastTimestamp: "2024-10-24T12:58:09Z"
+  message: ci-op-2fcpj5j6-f6035-2lklf-bootstrap_b2cad68b-5c38-40a4-a60c-a4c2533b1ae6
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T12:58:09Z"
+    name: version.180164ea522b08df
+    namespace: openshift-cluster-version
+    resourceVersion: "543"
+    uid: f3510d1a-268e-4ff5-8bc9-67e26693504e
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:21Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: version
+    namespace: openshift-cluster-version
+    resourceVersion: "608"
+    uid: 4120db55-21a7-4c82-8092-8c2be6f5e797
+  kind: Event
+  lastTimestamp: "2024-10-24T12:58:21Z"
+  message: ci-op-2fcpj5j6-f6035-2lklf-bootstrap_a79784c4-c75f-48ce-bc43-685314bd7ce6
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T12:58:21Z"
+    name: version.180164ed19fd414e
+    namespace: openshift-cluster-version
+    resourceVersion: "610"
+    uid: 7319700d-5e61-48da-84a3-ec66ceda94ca
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:36Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: version
+    namespace: openshift-cluster-version
+    resourceVersion: "684"
+    uid: 4120db55-21a7-4c82-8092-8c2be6f5e797
+  kind: Event
+  lastTimestamp: "2024-10-24T12:58:36Z"
+  message: ci-op-2fcpj5j6-f6035-2lklf-bootstrap_94fd7365-423a-4c70-aff5-fbcfd96937bb
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T12:58:36Z"
+    name: version.180164f0b3fa0404
+    namespace: openshift-cluster-version
+    resourceVersion: "686"
+    uid: a044c1b7-4323-4fac-af2f-5ada6921fdb4
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:38Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T12:58:38Z"
+  message: Retrieving and verifying payload version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T12:58:38Z"
+    name: version.180164f0f92df6ef
+    namespace: openshift-cluster-version
+    resourceVersion: "689"
+    uid: 7cb44c08-4fa4-41a6-821d-7d47aa136ecb
+  reason: RetrievePayload
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:38Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T12:58:38Z"
+  message: Loading payload version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T12:58:38Z"
+    name: version.180164f0f92e4d4d
+    namespace: openshift-cluster-version
+    resourceVersion: "690"
+    uid: 59e5bda0-39f3-4330-9e99-9e6685716ab4
+  reason: LoadPayload
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T12:58:39Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T12:58:39Z"
+  message: Payload loaded version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+    architecture="amd64"
+  metadata:
+    creationTimestamp: "2024-10-24T12:58:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T12:58:39Z"
+    name: version.180164f13bb24845
+    namespace: openshift-cluster-version
+    resourceVersion: "692"
+    uid: 23785d48-e336-4c86-90ee-bd5376b50d14
+  reason: PayloadLoaded
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:07:54Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: version
+    namespace: openshift-cluster-version
+    resourceVersion: "14667"
+    uid: 4120db55-21a7-4c82-8092-8c2be6f5e797
+  kind: Event
+  lastTimestamp: "2024-10-24T13:07:54Z"
+  message: ci-op-2fcpj5j6-f6035-2lklf-bootstrap_94fd7365-423a-4c70-aff5-fbcfd96937bb
+    stopped leading
+  metadata:
+    creationTimestamp: "2024-10-24T13:07:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:07:54Z"
+    name: version.180165728aa7da44
+    namespace: openshift-cluster-version
+    resourceVersion: "14669"
+    uid: e8e8fd0e-6275-4b51-9a1b-ccccc5fe3917
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:10:29Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: version
+    namespace: openshift-cluster-version
+    resourceVersion: "16822"
+    uid: 4120db55-21a7-4c82-8092-8c2be6f5e797
+  kind: Event
+  lastTimestamp: "2024-10-24T13:10:29Z"
+  message: ci-op-2fcpj5j6-f6035-2lklf-master-0_77cfffe2-c943-41b4-b25c-c3916b73ae9f
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T13:10:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:10:29Z"
+    name: version.180165968a971035
+    namespace: openshift-cluster-version
+    resourceVersion: "16823"
+    uid: 24761664-99eb-415c-8508-24ba4acd5c35
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:10:30Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T13:10:30Z"
+  message: Retrieving and verifying payload version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+  metadata:
+    creationTimestamp: "2024-10-24T13:10:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:10:30Z"
+    name: version.18016596d3ea660d
+    namespace: openshift-cluster-version
+    resourceVersion: "16827"
+    uid: 90b944b8-dc38-45dc-9c78-bb00f049a535
+  reason: RetrievePayload
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:10:30Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T13:10:30Z"
+  message: Loading payload version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+  metadata:
+    creationTimestamp: "2024-10-24T13:10:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:10:30Z"
+    name: version.18016596d3ea91af
+    namespace: openshift-cluster-version
+    resourceVersion: "16828"
+    uid: 89ee6b98-36ed-4070-8cdf-407aef9503ba
+  reason: LoadPayload
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:10:31Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T13:10:31Z"
+  message: Payload loaded version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+    architecture="amd64"
+  metadata:
+    creationTimestamp: "2024-10-24T13:10:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:10:31Z"
+    name: version.180165971b4d70d1
+    namespace: openshift-cluster-version
+    resourceVersion: "16834"
+    uid: a0ed1bd4-2424-4b5d-9e62-e54c6af21094
+  reason: PayloadLoaded
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:21:40Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: version
+    namespace: openshift-cluster-version
+    resourceVersion: "22467"
+    uid: 4120db55-21a7-4c82-8092-8c2be6f5e797
+  kind: Event
+  lastTimestamp: "2024-10-24T13:21:40Z"
+  message: ci-op-2fcpj5j6-f6035-2lklf-master-0_78f9ba2d-98f7-4972-9111-385add4bcf9a
+    became leader
+  metadata:
+    creationTimestamp: "2024-10-24T13:21:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:21:40Z"
+    name: version.18016632d77e70e0
+    namespace: openshift-cluster-version
+    resourceVersion: "22469"
+    uid: 3541a6f1-5052-4df4-ac9a-dd70d1a7732a
+  reason: LeaderElection
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:21:41Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T13:21:41Z"
+  message: Retrieving and verifying payload version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+  metadata:
+    creationTimestamp: "2024-10-24T13:21:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:21:41Z"
+    name: version.180166332cc9d234
+    namespace: openshift-cluster-version
+    resourceVersion: "22484"
+    uid: a52f03bd-0a34-4972-8448-20a97194c8e1
+  reason: RetrievePayload
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:21:41Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T13:21:41Z"
+  message: Loading payload version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+  metadata:
+    creationTimestamp: "2024-10-24T13:21:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:21:41Z"
+    name: version.180166332cca6ec4
+    namespace: openshift-cluster-version
+    resourceVersion: "22485"
+    uid: 96e3dd17-297b-483d-b487-9c2f282ad447
+  reason: LoadPayload
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:21:43Z"
+  involvedObject:
+    apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    namespace: openshift-cluster-version
+  kind: Event
+  lastTimestamp: "2024-10-24T13:21:43Z"
+  message: Payload loaded version="4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest"
+    image="registry.build02.ci.openshift.org/ci-op-2fcpj5j6/release@sha256:650171d292e22d33197d8e96d922613b50b4135ef9b5ae1581c858e3038de141"
+    architecture="amd64"
+  metadata:
+    creationTimestamp: "2024-10-24T13:21:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T13:21:43Z"
+    name: version.1801663380861584
+    namespace: openshift-cluster-version
+    resourceVersion: "22504"
+    uid: a67db624-3ac4-412a-aafe-41b7d2554fcb
+  reason: PayloadLoaded
+  reportingComponent: openshift-cluster-version
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-version
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "60363"

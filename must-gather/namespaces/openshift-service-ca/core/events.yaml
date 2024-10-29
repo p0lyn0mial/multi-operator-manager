@@ -1,0 +1,501 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:03:31.372747Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-7949b5fbb4-gsbvx
+    namespace: openshift-service-ca
+    resourceVersion: "6095"
+    uid: 90090ac2-b213-4ef5-b38d-152b3baa7bd5
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-service-ca/service-ca-7949b5fbb4-gsbvx
+    to ci-op-2fcpj5j6-f6035-2lklf-master-2
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:31Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:03:31Z"
+    name: service-ca-7949b5fbb4-gsbvx.1801653546386697
+    namespace: openshift-service-ca
+    resourceVersion: "6105"
+    uid: 7441ef75-cc52-4dca-888b-7e277280f48e
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-bootstrap
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: service-ca-7949b5fbb4-gsbvx
+    namespace: openshift-service-ca
+    resourceVersion: "6109"
+    uid: 90090ac2-b213-4ef5-b38d-152b3baa7bd5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:31Z"
+  message: Add eth0 [10.128.0.11/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:03:31Z"
+    name: service-ca-7949b5fbb4-gsbvx.180165355fd5375c
+    namespace: openshift-service-ca
+    resourceVersion: "6144"
+    uid: 50eee9b7-9968-4786-bc3e-c296dbe12d98
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-7949b5fbb4-gsbvx
+    namespace: openshift-service-ca
+    resourceVersion: "6100"
+    uid: 90090ac2-b213-4ef5-b38d-152b3baa7bd5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:31Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5c165af177cdd364042386f990d4f500b8aec6ad932d2d09904e2d4c66a843bb"
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:31Z"
+    name: service-ca-7949b5fbb4-gsbvx.1801653561341953
+    namespace: openshift-service-ca
+    resourceVersion: "6149"
+    uid: 2c4c3735-9b14-480f-ac29-bc7f6d23b46a
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:34Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-7949b5fbb4-gsbvx
+    namespace: openshift-service-ca
+    resourceVersion: "6100"
+    uid: 90090ac2-b213-4ef5-b38d-152b3baa7bd5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:34Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5c165af177cdd364042386f990d4f500b8aec6ad932d2d09904e2d4c66a843bb"
+    in 3.141s (3.141s including waiting). Image size: 495446250 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:03:34Z"
+    name: service-ca-7949b5fbb4-gsbvx.180165361c6ff3a5
+    namespace: openshift-service-ca
+    resourceVersion: "6527"
+    uid: e4d63113-a2bd-4429-9495-57858d4b6104
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-7949b5fbb4-gsbvx
+    namespace: openshift-service-ca
+    resourceVersion: "6100"
+    uid: 90090ac2-b213-4ef5-b38d-152b3baa7bd5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:07Z"
+  message: Created container service-ca-controller
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: service-ca-7949b5fbb4-gsbvx.1801653620c86dc8
+    namespace: openshift-service-ca
+    resourceVersion: "20761"
+    uid: 382264ee-aa65-44fe-befb-08b0412cfdc0
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-7949b5fbb4-gsbvx
+    namespace: openshift-service-ca
+    resourceVersion: "6100"
+    uid: 90090ac2-b213-4ef5-b38d-152b3baa7bd5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:07Z"
+  message: Started container service-ca-controller
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: service-ca-7949b5fbb4-gsbvx.18016536215f200f
+    namespace: openshift-service-ca
+    resourceVersion: "20771"
+    uid: 3a76d39b-229b-4acf-9b06-2b822fea034c
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:18:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{service-ca-controller}
+    kind: Pod
+    name: service-ca-7949b5fbb4-gsbvx
+    namespace: openshift-service-ca
+    resourceVersion: "6100"
+    uid: 90090ac2-b213-4ef5-b38d-152b3baa7bd5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:18:07Z"
+  message: Container image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5c165af177cdd364042386f990d4f500b8aec6ad932d2d09904e2d4c66a843bb"
+    already present on machine
+  metadata:
+    creationTimestamp: "2024-10-24T13:18:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:18:58Z"
+    name: service-ca-7949b5fbb4-gsbvx.18016601313a9726
+    namespace: openshift-service-ca
+    resourceVersion: "20755"
+    uid: 4c5c0dd5-da2b-4413-9f8f-bef0bb3bd8c3
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-master-2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:31Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: service-ca-7949b5fbb4
+    namespace: openshift-service-ca
+    resourceVersion: "6090"
+    uid: 6f9909ba-c271-4ede-aa23-32df11a5515b
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:31Z"
+  message: 'Created pod: service-ca-7949b5fbb4-gsbvx'
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:03:31Z"
+    name: service-ca-7949b5fbb4.18016535458d869a
+    namespace: openshift-service-ca
+    resourceVersion: "6097"
+    uid: bedff2d5-8b11-486c-8290-957bdcb3fbc3
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:35Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-controller-lock
+    namespace: openshift-service-ca
+    resourceVersion: "6603"
+    uid: da5add63-2676-4999-a426-287084eff017
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:35Z"
+  message: service-ca-7949b5fbb4-gsbvx_2e03f8c1-f0ab-4093-8690-ee2d46ca2509 became
+    leader
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2024-10-24T13:03:35Z"
+    name: service-ca-controller-lock.180165364dc32d2b
+    namespace: openshift-service-ca
+    resourceVersion: "6604"
+    uid: 981b2da0-630e-4e3c-9f15-cffdc10aa18e
+  reason: LeaderElection
+  reportingComponent: service-ca-controller
+  reportingInstance: ""
+  source:
+    component: service-ca-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:21:26Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: service-ca-controller-lock
+    namespace: openshift-service-ca
+    resourceVersion: "22299"
+    uid: da5add63-2676-4999-a426-287084eff017
+  kind: Event
+  lastTimestamp: "2024-10-24T13:21:26Z"
+  message: service-ca-7949b5fbb4-gsbvx_64d084cc-80cb-4821-bd51-5ed9c24c2d52 became
+    leader
+  metadata:
+    creationTimestamp: "2024-10-24T13:21:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2024-10-24T13:21:26Z"
+    name: service-ca-controller-lock.1801662f7e391d0e
+    namespace: openshift-service-ca
+    resourceVersion: "22300"
+    uid: 6bd9500c-3864-420a-9be7-aeb7ef286ff7
+  reason: LeaderElection
+  reportingComponent: service-ca-controller
+  reportingInstance: ""
+  source:
+    component: service-ca-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:03:31Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-ca
+    namespace: openshift-service-ca
+    resourceVersion: "6088"
+    uid: 5ce4181c-5c46-4954-a397-bc786a69a1b6
+  kind: Event
+  lastTimestamp: "2024-10-24T13:03:31Z"
+  message: Scaled up replica set service-ca-7949b5fbb4 to 1
+  metadata:
+    creationTimestamp: "2024-10-24T13:03:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:03:31Z"
+    name: service-ca.1801653544c6a335
+    namespace: openshift-service-ca
+    resourceVersion: "6092"
+    uid: c023f3d7-ad07-4df0-90b9-4bd03e07cf7d
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "61096"

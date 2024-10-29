@@ -1,0 +1,278 @@
+[openshift-must-gather-b8249/10.129.0.106/must-gather-w6j9g]
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "annotations": {
+            "k8s.ovn.org/pod-networks": "{\"default\":{\"ip_addresses\":[\"10.129.0.106/23\"],\"mac_address\":\"0a:58:0a:81:00:6a\",\"gateway_ips\":[\"10.129.0.1\"],\"routes\":[{\"dest\":\"10.128.0.0/14\",\"nextHop\":\"10.129.0.1\"},{\"dest\":\"172.30.0.0/16\",\"nextHop\":\"10.129.0.1\"},{\"dest\":\"169.254.0.5/32\",\"nextHop\":\"10.129.0.1\"},{\"dest\":\"100.64.0.0/16\",\"nextHop\":\"10.129.0.1\"}],\"ip_address\":\"10.129.0.106/23\",\"gateway_ip\":\"10.129.0.1\",\"role\":\"primary\"}}",
+            "k8s.v1.cni.cncf.io/network-status": "[{\n    \"name\": \"ovn-kubernetes\",\n    \"interface\": \"eth0\",\n    \"ips\": [\n        \"10.129.0.106\"\n    ],\n    \"mac\": \"0a:58:0a:81:00:6a\",\n    \"default\": true,\n    \"dns\": {}\n}]"
+        },
+        "creationTimestamp": "2024-10-24T14:43:28Z",
+        "generateName": "must-gather-",
+        "labels": {
+            "app": "must-gather"
+        },
+        "name": "must-gather-w6j9g",
+        "namespace": "openshift-must-gather-b8249",
+        "resourceVersion": "60342",
+        "uid": "2442a91e-e316-43c9-b6c4-2df3a6749ad2"
+    },
+    "spec": {
+        "containers": [
+            {
+                "command": [
+                    "/bin/bash",
+                    "-c",
+                    "\necho \"volume percentage checker started.....\"\nwhile true; do\ndisk_usage=$(du -s \"/must-gather\" | awk '{print $1}')\ndisk_space=$(df -P \"/must-gather\" | awk 'NR==2 {print $2}')\nusage_percentage=$(( (disk_usage * 100) / disk_space ))\necho \"volume usage percentage $usage_percentage\"\nif [ \"$usage_percentage\" -gt \"30\" ]; then\n\techo \"Disk usage exceeds the volume percentage of 30 for mounted directory. Exiting...\"\n\t# kill gathering process in gather container to prevent disk to use more.\n\tpkill --signal SIGKILL -f /usr/bin/gather\n\texit 1\nfi\nsleep 5\ndone \u0026 /usr/bin/gather; sync"
+                ],
+                "env": [
+                    {
+                        "name": "NODE_NAME",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "spec.nodeName"
+                            }
+                        }
+                    },
+                    {
+                        "name": "POD_NAME",
+                        "valueFrom": {
+                            "fieldRef": {
+                                "apiVersion": "v1",
+                                "fieldPath": "metadata.name"
+                            }
+                        }
+                    }
+                ],
+                "image": "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:fef29852e73a941e8dba268a00f300e5d654ecdeefe23d59dfdae2ec90bc6950",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "gather",
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "FallbackToLogsOnError",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/must-gather",
+                        "name": "must-gather-output"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-79tpx",
+                        "readOnly": true
+                    }
+                ]
+            },
+            {
+                "command": [
+                    "/bin/bash",
+                    "-c",
+                    "trap : TERM INT; sleep infinity \u0026 wait"
+                ],
+                "image": "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:fef29852e73a941e8dba268a00f300e5d654ecdeefe23d59dfdae2ec90bc6950",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "copy",
+                "resources": {},
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "FallbackToLogsOnError",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/must-gather",
+                        "name": "must-gather-output"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-79tpx",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "imagePullSecrets": [
+            {
+                "name": "default-dockercfg-nb2md"
+            }
+        ],
+        "nodeName": "ci-op-2fcpj5j6-f6035-2lklf-master-0",
+        "nodeSelector": {
+            "kubernetes.io/os": "linux",
+            "node-role.kubernetes.io/master": ""
+        },
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 2000000000,
+        "priorityClassName": "system-cluster-critical",
+        "restartPolicy": "Never",
+        "schedulerName": "default-scheduler",
+        "securityContext": {},
+        "serviceAccount": "default",
+        "serviceAccountName": "default",
+        "terminationGracePeriodSeconds": 0,
+        "tolerations": [
+            {
+                "operator": "Exists"
+            }
+        ],
+        "volumes": [
+            {
+                "emptyDir": {},
+                "name": "must-gather-output"
+            },
+            {
+                "name": "kube-api-access-79tpx",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "service-ca.crt",
+                                        "path": "service-ca.crt"
+                                    }
+                                ],
+                                "name": "openshift-service-ca.crt"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-10-24T14:43:32Z",
+                "status": "True",
+                "type": "PodReadyToStartContainers"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-10-24T14:43:28Z",
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-10-24T14:43:32Z",
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-10-24T14:43:32Z",
+                "status": "True",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2024-10-24T14:43:28Z",
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "containerID": "cri-o://6d5edc5fc06baa6d9016b87f16cab59f67b6c771a9ebf2c9e5a5e028b62fc013",
+                "image": "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:fef29852e73a941e8dba268a00f300e5d654ecdeefe23d59dfdae2ec90bc6950",
+                "imageID": "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:f74ec6d914dd49530c4327e3ab9ca8504cff9953856f9f4c9dc964c1fa26f387",
+                "lastState": {},
+                "name": "copy",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2024-10-24T14:43:32Z"
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/must-gather",
+                        "name": "must-gather-output"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-79tpx",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            },
+            {
+                "containerID": "cri-o://8ae576d5dd892308ebd6141a3a8ff8f7bfbdd6cb5b7cca0640242b250689121e",
+                "image": "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:fef29852e73a941e8dba268a00f300e5d654ecdeefe23d59dfdae2ec90bc6950",
+                "imageID": "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:f74ec6d914dd49530c4327e3ab9ca8504cff9953856f9f4c9dc964c1fa26f387",
+                "lastState": {},
+                "name": "gather",
+                "ready": true,
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2024-10-24T14:43:32Z"
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/must-gather",
+                        "name": "must-gather-output"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-79tpx",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "hostIP": "10.0.0.3",
+        "hostIPs": [
+            {
+                "ip": "10.0.0.3"
+            }
+        ],
+        "phase": "Running",
+        "podIP": "10.129.0.106",
+        "podIPs": [
+            {
+                "ip": "10.129.0.106"
+            }
+        ],
+        "qosClass": "BestEffort",
+        "startTime": "2024-10-24T14:43:28Z"
+    }
+}

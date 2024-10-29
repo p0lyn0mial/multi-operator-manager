@@ -1,0 +1,90 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: openshift-samples
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2024-10-24T12:58:39Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+        f:relatedObjects: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:58:39Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:versions: {}
+    manager: cluster-samples-operator
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:22:37Z"
+  name: openshift-samples
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    controller: true
+    kind: ClusterVersion
+    name: version
+    uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+  resourceVersion: "25935"
+  uid: 32933c86-da40-40b2-b6af-52df7ec3f4e7
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:22:26Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:22:37Z"
+    message: Samples installation successful at 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:22:37Z"
+    message: Samples installation successful at 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+    status: "False"
+    type: Progressing
+  extension: null
+  relatedObjects:
+  - group: samples.operator.openshift.io
+    name: cluster
+    resource: configs
+  - group: ""
+    name: openshift-cluster-samples-operator
+    resource: namespaces
+  - group: template.openshift.io
+    name: ""
+    namespace: openshift
+    resource: templates
+  - group: image.openshift.io
+    name: ""
+    namespace: openshift
+    resource: imagestreams
+  versions:
+  - name: operator
+    version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest

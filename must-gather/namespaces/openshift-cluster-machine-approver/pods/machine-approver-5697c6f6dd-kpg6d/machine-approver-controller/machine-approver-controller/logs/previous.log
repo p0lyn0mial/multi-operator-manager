@@ -1,0 +1,410 @@
+2024-10-24T13:07:13.285015921Z W1024 13:07:13.284879       1 client_config.go:659] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2024-10-24T13:07:13.285106651Z W1024 13:07:13.285096       1 client_config.go:659] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2024-10-24T13:07:13.285202951Z I1024 13:07:13.285174       1 main.go:150] setting up manager
+2024-10-24T13:07:13.285457901Z I1024 13:07:13.285431       1 main.go:168] registering components
+2024-10-24T13:07:13.285457901Z I1024 13:07:13.285444       1 main.go:170] setting up scheme
+2024-10-24T13:07:13.285686761Z I1024 13:07:13.285662       1 main.go:208] setting up controllers
+2024-10-24T13:07:13.285702011Z I1024 13:07:13.285690       1 config.go:33] using default as failed to load config /var/run/configmaps/config/config.yaml: open /var/run/configmaps/config/config.yaml: no such file or directory
+2024-10-24T13:07:13.285708721Z I1024 13:07:13.285698       1 config.go:23] machine approver config: {NodeClientCert:{Disabled:false}}
+2024-10-24T13:07:13.285872701Z I1024 13:07:13.285838       1 main.go:233] starting the cmd
+2024-10-24T13:07:13.286067171Z I1024 13:07:13.286031       1 server.go:208] "Starting metrics server" logger="controller-runtime.metrics"
+2024-10-24T13:07:13.286231411Z I1024 13:07:13.286196       1 leaderelection.go:254] attempting to acquire leader lease openshift-cluster-machine-approver/cluster-machine-approver-leader...
+2024-10-24T13:07:13.286397621Z I1024 13:07:13.286362       1 server.go:247] "Serving metrics server" logger="controller-runtime.metrics" bindAddress="127.0.0.1:9191" secure=false
+2024-10-24T13:07:13.309335770Z I1024 13:07:13.309297       1 leaderelection.go:268] successfully acquired lease openshift-cluster-machine-approver/cluster-machine-approver-leader
+2024-10-24T13:07:13.309580751Z I1024 13:07:13.309558       1 controller.go:175] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.CertificateSigningRequest"
+2024-10-24T13:07:13.309666551Z I1024 13:07:13.309559       1 recorder.go:104] "ci-op-2fcpj5j6-f6035-2lklf-master-1_8a0a5328-f407-456f-9d45-a1e2b0cfcadf became leader" logger="events" type="Normal" object={"kind":"Lease","namespace":"openshift-cluster-machine-approver","name":"cluster-machine-approver-leader","uid":"799c9565-545b-43a3-abfc-935bf13d53c8","apiVersion":"coordination.k8s.io/v1","resourceVersion":"13587"} reason="LeaderElection"
+2024-10-24T13:07:13.309666551Z I1024 13:07:13.309575       1 status.go:97] Starting cluster operator status controller
+2024-10-24T13:07:13.309684171Z I1024 13:07:13.309626       1 controller.go:175] "Starting EventSource" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" source="kind source: *v1.ConfigMap"
+2024-10-24T13:07:13.309722051Z I1024 13:07:13.309694       1 controller.go:183] "Starting Controller" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest"
+2024-10-24T13:07:13.309932410Z I1024 13:07:13.309886       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:07:13.309948341Z I1024 13:07:13.309930       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:07:13.313874411Z I1024 13:07:13.313828       1 reflector.go:368] Caches populated for *v1.ClusterOperator from github.com/openshift/cluster-machine-approver/status.go:99
+2024-10-24T13:07:13.317465250Z I1024 13:07:13.317393       1 reflector.go:368] Caches populated for *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:07:13.442111138Z I1024 13:07:13.442058       1 reflector.go:368] Caches populated for *v1.ConfigMap from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:07:13.519288187Z I1024 13:07:13.519235       1 controller.go:217] "Starting workers" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" worker count=10
+2024-10-24T13:09:53.356095370Z E1024 13:09:53.356011       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-machine-approver/leases/cluster-machine-approver-leader": dial tcp 172.30.0.1:443: i/o timeout, falling back to slow path
+2024-10-24T13:10:23.356808550Z E1024 13:10:23.356710       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-machine-approver/cluster-machine-approver-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-machine-approver/leases/cluster-machine-approver-leader": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:10:47.113092887Z I1024 13:10:47.113026       1 reflector.go:368] Caches populated for *v1.ClusterOperator from github.com/openshift/cluster-machine-approver/status.go:99
+2024-10-24T13:10:47.462257945Z I1024 13:10:47.462199       1 reflector.go:368] Caches populated for *v1.ConfigMap from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:10:47.635390579Z I1024 13:10:47.635327       1 reflector.go:368] Caches populated for *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:12:02.697471174Z I1024 13:12:02.697404       1 controller.go:120] Reconciling CSR: csr-pjkdq
+2024-10-24T13:12:32.698629800Z E1024 13:12:32.698530       1 controller.go:138] csr-pjkdq: Failed to list machines in API group machine.openshift.io/v1beta1: failed to get ServerGroups: Get "https://172.30.0.1:443/api?timeout=32s": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:12:32.698705050Z E1024 13:12:32.698628       1 controller.go:316] "Reconciler error" err="Failed to list machines: failed to get ServerGroups: Get \"https://172.30.0.1:443/api?timeout=32s\": dial tcp 172.30.0.1:443: i/o timeout" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-pjkdq" namespace="" name="csr-pjkdq" reconcileID="84c83d1a-5c07-4b85-9100-67bf0870c6e6"
+2024-10-24T13:12:32.703986340Z I1024 13:12:32.703945       1 controller.go:120] Reconciling CSR: csr-pjkdq
+2024-10-24T13:13:02.705303784Z E1024 13:13:02.705226       1 controller.go:138] csr-pjkdq: Failed to list machines in API group machine.openshift.io/v1beta1: failed to get ServerGroups: Get "https://172.30.0.1:443/api?timeout=32s": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:13:02.705375294Z E1024 13:13:02.705300       1 controller.go:316] "Reconciler error" err="Failed to list machines: failed to get ServerGroups: Get \"https://172.30.0.1:443/api?timeout=32s\": dial tcp 172.30.0.1:443: i/o timeout" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-pjkdq" namespace="" name="csr-pjkdq" reconcileID="dfcb22d1-0ffa-4ae2-9ada-a7956d1e1f8f"
+2024-10-24T13:13:02.715675754Z I1024 13:13:02.715636       1 controller.go:120] Reconciling CSR: csr-pjkdq
+2024-10-24T13:13:03.401464606Z E1024 13:13:03.401392       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-machine-approver/leases/cluster-machine-approver-leader": dial tcp 172.30.0.1:443: i/o timeout, falling back to slow path
+2024-10-24T13:13:30.773285936Z I1024 13:13:30.773229       1 reflector.go:368] Caches populated for *v1.ClusterOperator from github.com/openshift/cluster-machine-approver/status.go:99
+2024-10-24T13:13:31.033381456Z I1024 13:13:31.033312       1 reflector.go:368] Caches populated for *v1.ConfigMap from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:13:31.193691594Z I1024 13:13:31.193621       1 reflector.go:368] Caches populated for *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:13:32.717133454Z E1024 13:13:32.717038       1 controller.go:138] csr-pjkdq: Failed to list machines in API group machine.openshift.io/v1beta1: failed to get ServerGroups: Get "https://172.30.0.1:443/api?timeout=32s": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:13:32.717195164Z E1024 13:13:32.717141       1 controller.go:316] "Reconciler error" err="Failed to list machines: failed to get ServerGroups: Get \"https://172.30.0.1:443/api?timeout=32s\": dial tcp 172.30.0.1:443: i/o timeout" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-pjkdq" namespace="" name="csr-pjkdq" reconcileID="a09751de-0872-40ff-b779-4ed8438c7437"
+2024-10-24T13:13:32.717195164Z I1024 13:13:32.717183       1 controller.go:120] Reconciling CSR: csr-pjkdq
+2024-10-24T13:13:32.778889129Z I1024 13:13:32.778830       1 controller.go:239] CSR csr-pjkdq approved
+2024-10-24T13:13:32.787781299Z I1024 13:13:32.787723       1 controller.go:120] Reconciling CSR: csr-pjkdq
+2024-10-24T13:13:32.862469793Z I1024 13:13:32.862409       1 controller.go:213] csr-pjkdq: CSR is already approved
+2024-10-24T13:14:05.784783212Z I1024 13:14:05.784689       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:05.825648099Z I1024 13:14:05.825575       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:05.830919088Z I1024 13:14:05.830871       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:05.835551488Z I1024 13:14:05.835506       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:05.835551488Z I1024 13:14:05.835534       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:05.835551488Z E1024 13:14:05.835544       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:05.835606678Z I1024 13:14:05.835555       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:05.846072517Z I1024 13:14:05.846010       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:05.846122237Z E1024 13:14:05.846082       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="11776255-382b-44c8-95c9-9f679ec1b8e6"
+2024-10-24T13:14:05.851454037Z I1024 13:14:05.851383       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:05.927061911Z I1024 13:14:05.926995       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:05.935646100Z I1024 13:14:05.935596       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:05.938268570Z I1024 13:14:05.938211       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:05.938268570Z I1024 13:14:05.938240       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:05.938268570Z E1024 13:14:05.938252       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:05.938268570Z I1024 13:14:05.938263       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:05.947776239Z I1024 13:14:05.947722       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:05.947851739Z E1024 13:14:05.947812       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="c826b375-26df-47da-8751-b00aa1df5218"
+2024-10-24T13:14:05.958136638Z I1024 13:14:05.958102       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:06.051907351Z I1024 13:14:06.051734       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:06.061069100Z I1024 13:14:06.061024       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:06.063638730Z I1024 13:14:06.063571       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:06.063638730Z I1024 13:14:06.063595       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:06.063638730Z E1024 13:14:06.063616       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:06.063638730Z I1024 13:14:06.063627       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:06.075496319Z I1024 13:14:06.075418       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:06.075559719Z E1024 13:14:06.075496       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="91a00c99-0430-4162-9146-75f4ed8e4fdd"
+2024-10-24T13:14:06.095960928Z I1024 13:14:06.095894       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:06.151138733Z I1024 13:14:06.151067       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:06.160907372Z I1024 13:14:06.160821       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:06.163550532Z I1024 13:14:06.163485       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:06.163550532Z I1024 13:14:06.163521       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:06.163550532Z E1024 13:14:06.163535       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:06.163550532Z I1024 13:14:06.163543       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:06.169887382Z I1024 13:14:06.169861       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:06.170050652Z E1024 13:14:06.170011       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="7d8eeef9-2140-47e7-b3c1-f0535f7ad282"
+2024-10-24T13:14:06.210496628Z I1024 13:14:06.210423       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:06.252857405Z I1024 13:14:06.252784       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:06.259525635Z I1024 13:14:06.259430       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:06.262155495Z I1024 13:14:06.262080       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:06.262155495Z I1024 13:14:06.262111       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:06.262155495Z E1024 13:14:06.262121       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:06.262155495Z I1024 13:14:06.262134       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:06.271041614Z I1024 13:14:06.270993       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:06.271153404Z E1024 13:14:06.271093       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="f84f0378-35d4-4f2c-9343-59f576b68d00"
+2024-10-24T13:14:06.313017990Z I1024 13:14:06.312963       1 controller.go:120] Reconciling CSR: csr-54d7v
+2024-10-24T13:14:06.352023408Z I1024 13:14:06.351965       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:06.372816426Z I1024 13:14:06.372768       1 controller.go:239] CSR csr-54d7v approved
+2024-10-24T13:14:06.453459970Z I1024 13:14:06.453401       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:06.473416428Z I1024 13:14:06.473345       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:06.475987668Z I1024 13:14:06.475889       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:06.475987668Z I1024 13:14:06.475923       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:06.475987668Z E1024 13:14:06.475940       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:06.475987668Z I1024 13:14:06.475950       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:06.483223117Z I1024 13:14:06.483171       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:06.483296427Z E1024 13:14:06.483234       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="624988f9-0399-4ab8-b139-08a2090d8795"
+2024-10-24T13:14:06.643697195Z I1024 13:14:06.643612       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:06.678107402Z I1024 13:14:06.678028       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:06.686785451Z I1024 13:14:06.686711       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:06.689462461Z I1024 13:14:06.689367       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:06.689462461Z I1024 13:14:06.689407       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:06.689462461Z E1024 13:14:06.689422       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:06.689462461Z I1024 13:14:06.689432       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:06.695889380Z I1024 13:14:06.695825       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:06.695989620Z E1024 13:14:06.695950       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="71a92c9a-6331-4679-99c5-c4bbdf3b15a0"
+2024-10-24T13:14:07.016604815Z I1024 13:14:07.016535       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:07.051001452Z I1024 13:14:07.050939       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:07.057004892Z I1024 13:14:07.056969       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:07.059559032Z I1024 13:14:07.059396       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:07.059559032Z I1024 13:14:07.059423       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:07.059559032Z E1024 13:14:07.059433       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:07.059559032Z I1024 13:14:07.059442       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:07.064541422Z I1024 13:14:07.064486       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:07.064579762Z E1024 13:14:07.064559       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="db76db2e-2b92-4cb9-935b-38ac8474d433"
+2024-10-24T13:14:07.705083801Z I1024 13:14:07.704971       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:07.740248759Z I1024 13:14:07.740193       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:14:07.749909088Z I1024 13:14:07.749850       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:14:07.752267058Z I1024 13:14:07.752213       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:14:07.752267058Z I1024 13:14:07.752231       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:14:07.752267058Z E1024 13:14:07.752238       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:14:07.752267058Z I1024 13:14:07.752248       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:14:07.760397657Z I1024 13:14:07.760312       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:14:07.760397657Z E1024 13:14:07.760386       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="eee72110-4b14-492c-8974-0563166a0d90"
+2024-10-24T13:14:09.040883856Z I1024 13:14:09.040808       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:14:28.782423684Z E1024 13:14:28.782359       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:15:09.064096022Z E1024 13:15:09.064004       1 controller.go:138] csr-fq6mp: Failed to list machines in API group machine.openshift.io/v1beta1: the server was unable to return a response in the time allotted, but may still be processing the request (get machines.machine.openshift.io)
+2024-10-24T13:15:09.064157902Z E1024 13:15:09.064121       1 controller.go:316] "Reconciler error" err="Failed to list machines: the server was unable to return a response in the time allotted, but may still be processing the request (get machines.machine.openshift.io)" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="6e8cde7b-d96f-49c4-8d86-6974e6cccc97"
+2024-10-24T13:15:11.624778602Z I1024 13:15:11.624694       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:15:18.607770941Z I1024 13:15:18.600702       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:15:18.786303551Z I1024 13:15:18.786259       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:15:18.792193140Z I1024 13:15:18.792150       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:18.792532990Z I1024 13:15:18.792519       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:15:18.793140170Z E1024 13:15:18.793124       1 csr_check.go:366] csr-fq6mp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x"
+2024-10-24T13:15:18.793224311Z I1024 13:15:18.793210       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:18.865432286Z I1024 13:15:18.865383       1 controller.go:232] csr-fq6mp: CSR not authorized
+2024-10-24T13:15:18.865644027Z E1024 13:15:18.865602       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-fq6mp" namespace="" name="csr-fq6mp" reconcileID="7b901055-0932-4d1a-b8e2-e1813a8fabbd"
+2024-10-24T13:15:20.860503338Z I1024 13:15:20.860443       1 reflector.go:368] Caches populated for *v1.CertificateSigningRequest from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:15:20.860979527Z I1024 13:15:20.860958       1 controller.go:120] Reconciling CSR: csr-7zqpm
+2024-10-24T13:15:20.861450778Z I1024 13:15:20.861400       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:15:20.861669197Z I1024 13:15:20.861643       1 controller.go:120] Reconciling CSR: csr-smzg4
+2024-10-24T13:15:20.861904007Z I1024 13:15:20.861864       1 controller.go:120] Reconciling CSR: csr-v8nl9
+2024-10-24T13:15:21.444211319Z I1024 13:15:21.444166       1 controller.go:213] csr-7zqpm: CSR is already approved
+2024-10-24T13:15:21.444392300Z I1024 13:15:21.444243       1 csr_check.go:163] csr-fq6mp: CSR does not appear to be client csr
+2024-10-24T13:15:21.542138066Z I1024 13:15:21.542072       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x (10.0.128.2:10250)
+2024-10-24T13:15:21.544520335Z I1024 13:15:21.544485       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:21.544585925Z I1024 13:15:21.544560       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+2024-10-24T13:15:21.657347300Z I1024 13:15:21.657296       1 controller.go:239] CSR csr-v8nl9 approved
+2024-10-24T13:15:21.677198120Z I1024 13:15:21.677123       1 controller.go:239] CSR csr-fq6mp approved
+2024-10-24T13:15:21.677301360Z I1024 13:15:21.677126       1 controller.go:239] CSR csr-smzg4 approved
+2024-10-24T13:15:22.026929185Z I1024 13:15:22.026857       1 reflector.go:368] Caches populated for *v1.ClusterOperator from github.com/openshift/cluster-machine-approver/status.go:99
+2024-10-24T13:15:22.703532515Z I1024 13:15:22.703477       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:22.870801798Z I1024 13:15:22.870177       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:22.888254878Z I1024 13:15:22.886179       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:22.895822957Z I1024 13:15:22.895702       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:22.895874107Z I1024 13:15:22.895850       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:22.895874107Z E1024 13:15:22.895868       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:22.895886577Z I1024 13:15:22.895879       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:22.910540086Z I1024 13:15:22.910424       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:22.910540086Z E1024 13:15:22.910505       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="e73d9bdf-cee0-4954-9cfd-48eae217487f"
+2024-10-24T13:15:22.916091027Z I1024 13:15:22.916027       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:23.007924153Z I1024 13:15:23.007873       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:23.036898501Z I1024 13:15:23.036835       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:23.039397701Z I1024 13:15:23.039340       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:23.039397701Z I1024 13:15:23.039370       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:23.039397701Z E1024 13:15:23.039382       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:23.039440341Z I1024 13:15:23.039393       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:23.058072920Z I1024 13:15:23.056738       1 controller.go:120] Reconciling CSR: csr-7zqpm
+2024-10-24T13:15:23.100056429Z I1024 13:15:23.098412       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:23.100056429Z E1024 13:15:23.098493       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="09b2e7d2-d5b0-42ef-ae58-1aaa0b4110d2"
+2024-10-24T13:15:23.109511648Z I1024 13:15:23.109434       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:23.148959136Z I1024 13:15:23.148913       1 controller.go:213] csr-7zqpm: CSR is already approved
+2024-10-24T13:15:23.230573703Z I1024 13:15:23.230531       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:23.254184482Z I1024 13:15:23.254139       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:23.256650352Z I1024 13:15:23.256604       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:23.256650352Z I1024 13:15:23.256625       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:23.256650352Z E1024 13:15:23.256636       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:23.256680562Z I1024 13:15:23.256646       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:23.273976121Z I1024 13:15:23.273924       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:23.274008141Z E1024 13:15:23.273994       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="d8b6b583-8a20-41bd-bc19-79da59c46f9e"
+2024-10-24T13:15:23.294222380Z I1024 13:15:23.294145       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:23.386122946Z I1024 13:15:23.386053       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:23.419260615Z I1024 13:15:23.419191       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:23.421777745Z I1024 13:15:23.421705       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:23.421777745Z I1024 13:15:23.421725       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:23.421777745Z E1024 13:15:23.421736       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:23.421777745Z I1024 13:15:23.421765       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:23.455511963Z I1024 13:15:23.455442       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:23.455560493Z E1024 13:15:23.455524       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="421f954a-9784-4661-b4e7-7e56bfda9ade"
+2024-10-24T13:15:23.496332261Z I1024 13:15:23.496259       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:23.642835555Z I1024 13:15:23.642785       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:23.674515424Z I1024 13:15:23.674452       1 reflector.go:368] Caches populated for *v1.ConfigMap from sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106
+2024-10-24T13:15:23.714179622Z I1024 13:15:23.714094       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:23.716682952Z I1024 13:15:23.716618       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:23.716682952Z I1024 13:15:23.716657       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:23.716682952Z E1024 13:15:23.716671       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:23.716738662Z I1024 13:15:23.716678       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:23.751733641Z I1024 13:15:23.751695       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:23.751809561Z E1024 13:15:23.751788       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="eafc4b8f-407b-4155-9ea4-b1db353915d0"
+2024-10-24T13:15:23.832538387Z I1024 13:15:23.832487       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:23.944028042Z I1024 13:15:23.943968       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:23.983544951Z I1024 13:15:23.983491       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:23.985795650Z I1024 13:15:23.985768       1 controller.go:120] Reconciling CSR: csr-fq6mp
+2024-10-24T13:15:23.986406251Z I1024 13:15:23.986359       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:23.986406251Z I1024 13:15:23.986395       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:23.986431791Z E1024 13:15:23.986409       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:23.986431791Z I1024 13:15:23.986420       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:24.054942578Z I1024 13:15:24.054886       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:24.054992267Z E1024 13:15:24.054958       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="185c9083-9b0b-4206-9035-6d4f60413a1f"
+2024-10-24T13:15:24.112653515Z I1024 13:15:24.112583       1 controller.go:213] csr-fq6mp: CSR is already approved
+2024-10-24T13:15:24.215247711Z I1024 13:15:24.215155       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:24.347671415Z I1024 13:15:24.347597       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:24.389035563Z I1024 13:15:24.388963       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:24.391532263Z I1024 13:15:24.391497       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:24.391532263Z I1024 13:15:24.391521       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:24.391567433Z E1024 13:15:24.391532       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:24.391567433Z I1024 13:15:24.391544       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:24.420454662Z I1024 13:15:24.420418       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:24.420543012Z E1024 13:15:24.420493       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="2e0d0eec-b069-465c-a496-5207237486d2"
+2024-10-24T13:15:24.743309288Z I1024 13:15:24.743262       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:24.780361276Z I1024 13:15:24.780289       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:24.804403745Z I1024 13:15:24.804357       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:24.808787875Z I1024 13:15:24.808721       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:24.808821355Z I1024 13:15:24.808744       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:24.808821355Z E1024 13:15:24.808795       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:24.808821355Z I1024 13:15:24.808806       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:24.821826435Z I1024 13:15:24.821784       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:24.821908305Z E1024 13:15:24.821880       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="eb56994d-8855-43e3-8abc-135cebf8c72b"
+2024-10-24T13:15:25.462169737Z I1024 13:15:25.462087       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:25.512284885Z I1024 13:15:25.512009       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:25.517814545Z I1024 13:15:25.517741       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:25.520434655Z I1024 13:15:25.520407       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:25.520499305Z I1024 13:15:25.520483       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:25.520546575Z E1024 13:15:25.520529       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:25.520591615Z I1024 13:15:25.520576       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:25.528542684Z I1024 13:15:25.528365       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:25.528542684Z E1024 13:15:25.528446       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="735e977a-539e-46ce-abb8-46048022e1c1"
+2024-10-24T13:15:26.809189720Z I1024 13:15:26.809093       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:26.895534556Z I1024 13:15:26.895482       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:26.903979405Z I1024 13:15:26.903694       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:26.906479205Z I1024 13:15:26.906449       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:26.906554245Z I1024 13:15:26.906537       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:26.906607805Z E1024 13:15:26.906591       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:26.906660525Z I1024 13:15:26.906638       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:26.915223005Z I1024 13:15:26.915146       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:26.915293345Z E1024 13:15:26.915226       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="df61ba48-008c-415a-bb2d-dbf3a725f77e"
+2024-10-24T13:15:28.505057457Z I1024 13:15:28.505002       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:28.579211113Z I1024 13:15:28.579143       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:28.608410682Z I1024 13:15:28.608377       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:28.611852782Z I1024 13:15:28.611809       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:28.611852782Z I1024 13:15:28.611831       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:28.611852782Z E1024 13:15:28.611840       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:28.611852782Z I1024 13:15:28.611846       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:28.625103541Z I1024 13:15:28.625029       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:28.625103541Z E1024 13:15:28.625082       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="85eb6397-b85a-467e-aee6-61e4cb14dacd"
+2024-10-24T13:15:28.630400581Z I1024 13:15:28.630332       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:28.706929548Z I1024 13:15:28.706868       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:28.735379517Z I1024 13:15:28.735311       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:28.737822227Z I1024 13:15:28.737735       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:28.737822227Z I1024 13:15:28.737790       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:28.737822227Z E1024 13:15:28.737808       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:28.737850277Z I1024 13:15:28.737819       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:28.767691726Z I1024 13:15:28.767643       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:28.767788395Z E1024 13:15:28.767721       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="64f54dd6-898a-4de4-8f73-e23d2f094ec9"
+2024-10-24T13:15:28.778045735Z I1024 13:15:28.777995       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:28.842406022Z I1024 13:15:28.842342       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:28.851092202Z I1024 13:15:28.851056       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:28.853355672Z I1024 13:15:28.853319       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:28.853355672Z I1024 13:15:28.853336       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:28.853355672Z E1024 13:15:28.853345       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:28.853380312Z I1024 13:15:28.853355       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:28.859625112Z I1024 13:15:28.859591       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:28.859743102Z E1024 13:15:28.859701       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="03093eba-37af-43f9-991b-1af26bfdc674"
+2024-10-24T13:15:28.880050001Z I1024 13:15:28.880006       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:28.942318138Z I1024 13:15:28.942260       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:28.950531657Z I1024 13:15:28.950491       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:28.953059858Z I1024 13:15:28.953009       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:28.953059858Z I1024 13:15:28.953043       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:28.953059858Z E1024 13:15:28.953055       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:28.953089398Z I1024 13:15:28.953063       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:28.959524857Z I1024 13:15:28.959435       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:28.959524857Z E1024 13:15:28.959499       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="96f9682d-0d32-4713-b2f5-036ce149e5ac"
+2024-10-24T13:15:28.999994575Z I1024 13:15:28.999927       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:29.046198203Z I1024 13:15:29.046139       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:29.064519863Z I1024 13:15:29.064480       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:29.067244353Z I1024 13:15:29.067165       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:29.067244353Z I1024 13:15:29.067207       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:29.067244353Z E1024 13:15:29.067225       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:29.067244353Z I1024 13:15:29.067236       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:29.077678012Z I1024 13:15:29.077621       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:29.077774052Z E1024 13:15:29.077698       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="c695500c-b252-401a-8eda-d4d6d4a1b703"
+2024-10-24T13:15:29.158176959Z I1024 13:15:29.158116       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:29.192030407Z I1024 13:15:29.191950       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:29.200642517Z I1024 13:15:29.200594       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:29.202995647Z I1024 13:15:29.202949       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:29.202995647Z I1024 13:15:29.202975       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:29.202995647Z E1024 13:15:29.202984       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:29.202995647Z I1024 13:15:29.202992       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:29.209255317Z I1024 13:15:29.209189       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:29.209306197Z E1024 13:15:29.209262       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="fe2ad506-2a8a-47c3-93a0-6faa044a759c"
+2024-10-24T13:15:29.369625529Z I1024 13:15:29.369546       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:29.402548348Z I1024 13:15:29.402491       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:29.409307088Z I1024 13:15:29.409240       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:29.411784618Z I1024 13:15:29.411735       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:29.411784618Z I1024 13:15:29.411778       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:29.411812908Z E1024 13:15:29.411788       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:29.411812908Z I1024 13:15:29.411799       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:29.419092218Z I1024 13:15:29.419047       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:29.419127118Z E1024 13:15:29.419110       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="d2d645b1-a75d-4206-8de5-2535eac0c4db"
+2024-10-24T13:15:29.475442395Z I1024 13:15:29.475389       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:29.509222213Z I1024 13:15:29.509185       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:29.516375013Z I1024 13:15:29.516328       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:29.518851453Z I1024 13:15:29.518812       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:29.518851453Z I1024 13:15:29.518833       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:29.518851453Z E1024 13:15:29.518843       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:29.518883173Z I1024 13:15:29.518853       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:29.529518953Z I1024 13:15:29.529472       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:29.529550993Z E1024 13:15:29.529532       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="0e24bc98-2dc3-41d6-a342-0e540382815b"
+2024-10-24T13:15:29.740067474Z I1024 13:15:29.739993       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:29.779345732Z I1024 13:15:29.779297       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:29.786803282Z I1024 13:15:29.786745       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:29.789302562Z I1024 13:15:29.789216       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:29.789302562Z I1024 13:15:29.789246       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:29.789302562Z E1024 13:15:29.789255       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:29.789302562Z I1024 13:15:29.789262       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:29.797581301Z I1024 13:15:29.797539       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:29.797610411Z E1024 13:15:29.797593       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="5640192a-12dd-44cc-8ec5-07e9fc5c7813"
+2024-10-24T13:15:30.438141754Z I1024 13:15:30.438091       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:30.470134882Z I1024 13:15:30.470083       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:30.477067742Z I1024 13:15:30.476968       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:30.479505562Z I1024 13:15:30.479462       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:30.479505562Z I1024 13:15:30.479483       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:30.479505562Z E1024 13:15:30.479493       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:30.479553412Z I1024 13:15:30.479507       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:30.486343642Z I1024 13:15:30.486298       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:30.486377922Z E1024 13:15:30.486364       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="b00ede19-3567-4e69-add2-e449fd8ced93"
+2024-10-24T13:15:31.767060187Z I1024 13:15:31.766982       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:31.808388545Z I1024 13:15:31.808351       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:31.816216415Z I1024 13:15:31.816153       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:31.818558114Z I1024 13:15:31.818524       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:31.818558114Z I1024 13:15:31.818543       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:31.818558114Z E1024 13:15:31.818551       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:31.818585705Z I1024 13:15:31.818557       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:31.825149914Z I1024 13:15:31.825115       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:31.825185124Z E1024 13:15:31.825167       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="f2d19e42-524c-4463-893b-88495508ac9a"
+2024-10-24T13:15:34.386186774Z I1024 13:15:34.386136       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:34.427857863Z I1024 13:15:34.427799       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:34.434635332Z I1024 13:15:34.434597       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:34.437067782Z I1024 13:15:34.437022       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:34.437067782Z I1024 13:15:34.437040       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:34.437067782Z E1024 13:15:34.437049       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:34.437067782Z I1024 13:15:34.437059       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:34.444133192Z I1024 13:15:34.444097       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:34.444433462Z E1024 13:15:34.444148       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="4dced131-e0f4-43b8-92fb-df7f327cc14d"
+2024-10-24T13:15:34.650797373Z I1024 13:15:34.650706       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:34.680865852Z I1024 13:15:34.680804       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:34.687391891Z I1024 13:15:34.687259       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:34.690025061Z I1024 13:15:34.689986       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:34.690025061Z I1024 13:15:34.690008       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:34.690025061Z E1024 13:15:34.690019       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:34.690052771Z I1024 13:15:34.690029       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:34.697670281Z I1024 13:15:34.697625       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:34.697701121Z E1024 13:15:34.697688       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="4a025e5b-44a6-44a0-a4ce-306cb476e10d"
+2024-10-24T13:15:39.565354432Z I1024 13:15:39.565252       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:39.602331561Z I1024 13:15:39.602244       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:39.608812460Z I1024 13:15:39.608715       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:39.612099790Z I1024 13:15:39.612034       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:39.612099790Z I1024 13:15:39.612052       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:39.612099790Z E1024 13:15:39.612058       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:39.612099790Z I1024 13:15:39.612066       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:39.619787630Z I1024 13:15:39.619683       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:39.619847010Z E1024 13:15:39.619789       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="71d3e7fc-2d53-4575-b26d-32c52a2c9d73"
+2024-10-24T13:15:44.938208242Z I1024 13:15:44.938146       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:15:44.976021970Z I1024 13:15:44.975973       1 csr_check.go:163] csr-n4pnp: CSR does not appear to be client csr
+2024-10-24T13:15:44.982997020Z I1024 13:15:44.982957       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz (10.0.128.4:10250)
+2024-10-24T13:15:44.987489310Z I1024 13:15:44.987400       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:44.987489310Z I1024 13:15:44.987434       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz
+2024-10-24T13:15:44.987489310Z E1024 13:15:44.987443       1 csr_check.go:366] csr-n4pnp: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-c-z8hfz"
+2024-10-24T13:15:44.987489310Z I1024 13:15:44.987450       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:44.993857229Z I1024 13:15:44.993799       1 controller.go:232] csr-n4pnp: CSR not authorized
+2024-10-24T13:15:44.993915209Z E1024 13:15:44.993856       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="03e975cc-d283-4724-b600-3c390ab07c5b"
+2024-10-24T13:15:49.859972961Z I1024 13:15:49.859909       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:15:49.906586029Z I1024 13:15:49.906543       1 csr_check.go:163] csr-j5kz2: CSR does not appear to be client csr
+2024-10-24T13:15:49.918559559Z I1024 13:15:49.918514       1 csr_check.go:565] retrieving serving cert from ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2 (10.0.128.3:10250)
+2024-10-24T13:15:49.925330158Z I1024 13:15:49.925271       1 csr_check.go:188] Failed to retrieve current serving cert: remote error: tls: internal error
+2024-10-24T13:15:49.925427268Z I1024 13:15:49.925413       1 csr_check.go:208] Falling back to machine-api authorization for ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+2024-10-24T13:15:49.925466358Z E1024 13:15:49.925453       1 csr_check.go:366] csr-j5kz2: Serving Cert: No target machine for node "ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2"
+2024-10-24T13:15:49.925526128Z I1024 13:15:49.925512       1 csr_check.go:211] Could not use Machine for serving cert authorization: Unable to find machine for node
+2024-10-24T13:15:49.935246648Z I1024 13:15:49.935200       1 controller.go:232] csr-j5kz2: CSR not authorized
+2024-10-24T13:15:49.935418138Z E1024 13:15:49.935384       1 controller.go:316] "Reconciler error" err="could not reconcile CSR: could not authorize CSR: exhausted all authorization methods: Unable to find machine for node" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="9e901670-8346-44ff-822b-00fdfaf8f652"
+2024-10-24T13:16:05.474513512Z I1024 13:16:05.474468       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:16:10.420912169Z I1024 13:16:10.420701       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:16:19.670390103Z E1024 13:16:19.670344       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:05.502994629Z E1024 13:17:05.502933       1 controller.go:138] csr-n4pnp: Failed to list machines in API group machine.openshift.io/v1beta1: the server was unable to return a response in the time allotted, but may still be processing the request (get machines.machine.openshift.io)
+2024-10-24T13:17:05.503059599Z E1024 13:17:05.503015       1 controller.go:316] "Reconciler error" err="Failed to list machines: the server was unable to return a response in the time allotted, but may still be processing the request (get machines.machine.openshift.io)" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-n4pnp" namespace="" name="csr-n4pnp" reconcileID="95700787-70ce-4379-9738-5a87c45c7520"
+2024-10-24T13:17:10.577522478Z E1024 13:17:10.577469       1 controller.go:138] csr-j5kz2: Failed to list machines in API group machine.openshift.io/v1beta1: the server was unable to return a response in the time allotted, but may still be processing the request (get machines.machine.openshift.io)
+2024-10-24T13:17:10.577570188Z E1024 13:17:10.577539       1 controller.go:316] "Reconciler error" err="Failed to list machines: the server was unable to return a response in the time allotted, but may still be processing the request (get machines.machine.openshift.io)" controller="certificatesigningrequest" controllerGroup="certificates.k8s.io" controllerKind="CertificateSigningRequest" CertificateSigningRequest="csr-j5kz2" namespace="" name="csr-j5kz2" reconcileID="5d75ef18-fee0-4324-9916-8e1f8b592030"
+2024-10-24T13:17:19.675573282Z E1024 13:17:19.675491       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-machine-approver/cluster-machine-approver-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-machine-approver-leader)
+2024-10-24T13:17:46.464165520Z I1024 13:17:46.464094       1 controller.go:120] Reconciling CSR: csr-n4pnp
+2024-10-24T13:17:51.537991719Z I1024 13:17:51.537926       1 controller.go:120] Reconciling CSR: csr-j5kz2
+2024-10-24T13:17:52.685270366Z E1024 13:17:52.685176       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:59.634282194Z E1024 13:17:59.634214       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-machine-approver/cluster-machine-approver-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-machine-approver/leases/cluster-machine-approver-leader": context deadline exceeded
+2024-10-24T13:17:59.634282194Z I1024 13:17:59.634251       1 leaderelection.go:297] failed to renew lease openshift-cluster-machine-approver/cluster-machine-approver-leader: timed out waiting for the condition
+2024-10-24T13:18:06.642707836Z E1024 13:18:06.642626       1 leaderelection.go:322] Failed to release lock: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:18:06.642781246Z F1024 13:18:06.642706       1 main.go:235] unable to run the manager: leader election lost

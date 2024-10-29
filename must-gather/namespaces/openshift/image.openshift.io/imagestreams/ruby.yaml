@@ -1,0 +1,351 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: Ruby
+    openshift.io/image.dockerRepositoryCheck: "2024-10-24T13:25:23Z"
+    samples.operator.openshift.io/version: 4.18.0-0.ci.test-2024-10-24-124520-ci-op-2fcpj5j6-latest
+  creationTimestamp: "2024-10-24T13:22:31Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:samples.operator.openshift.io/version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"2.5-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.0-ubi9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.1-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.1-ubi9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.3-ubi8"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"3.3-ubi9"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:openshift.io/provider-display-name: {}
+              f:sampleRepo: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2024-10-24T13:22:31Z"
+  name: ruby
+  namespace: openshift
+  resourceVersion: "27548"
+  uid: c36a7e30-5430-496a-8d68-416510411b2c
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: Build and run Ruby 2.5 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-ruby-container/blob/master/2.5/README.md.
+      iconClass: icon-ruby
+      openshift.io/display-name: Ruby 2.5 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/ruby-ex.git
+      tags: builder,ruby
+      version: "2.5"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/ruby-25:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 2.5-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Ruby 3.0 applications on UBI 9. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-ruby-container/blob/master/3.0/README.md.
+      iconClass: icon-ruby
+      openshift.io/display-name: Ruby 3.0 (UBI 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/ruby-ex.git
+      tags: builder,ruby
+      version: "3.0"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi9/ruby-30:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.0-ubi9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Ruby 3.1 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-ruby-container/blob/master/3.1/README.md.
+      iconClass: icon-ruby
+      openshift.io/display-name: Ruby 3.1 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/ruby-ex.git
+      tags: builder,ruby
+      version: "3.1"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/ruby-31:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.1-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Ruby 3.1 applications on UBI 9. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-ruby-container/blob/master/3.1/README.md.
+      iconClass: icon-ruby
+      openshift.io/display-name: Ruby 3.1 (UBI 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/ruby-ex.git
+      tags: builder,ruby
+      version: "3.1"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi9/ruby-31:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.1-ubi9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Ruby 3.3 applications on UBI 8. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-ruby-container/blob/master/3.3/README.md.
+      iconClass: icon-ruby
+      openshift.io/display-name: Ruby 3.3 (UBI 8)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/ruby-ex.git
+      tags: builder,ruby
+      version: "3.3"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi8/ruby-33:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.3-ubi8
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: Build and run Ruby 3.3 applications on UBI 9. For more information
+        about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-ruby-container/blob/master/3.3/README.md.
+      iconClass: icon-ruby
+      openshift.io/display-name: Ruby 3.3 (UBI 9)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/ruby-ex.git
+      tags: builder,ruby
+      version: "3.3"
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/ubi9/ruby-33:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 3.3-ubi9
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: |
+        Build and run Ruby 3.3 applications on UBI 9. For more information about using this builder image, including OpenShift considerations, see https://github.com/sclorg/s2i-ruby-container/blob/master/3.3/README.md.
+
+        WARNING: By selecting this tag, your application will automatically update to use the latest version available on OpenShift, including major version updates.
+      iconClass: icon-ruby
+      openshift.io/display-name: Ruby 3.3 (Latest)
+      openshift.io/provider-display-name: Red Hat, Inc.
+      sampleRepo: https://github.com/sclorg/ruby-ex.git
+      tags: builder,ruby
+      version: "3.3"
+    from:
+      kind: ImageStreamTag
+      name: 3.3-ubi9
+    generation: 1
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: image-registry.openshift-image-registry.svc:5000/openshift/ruby
+  tags:
+  - items:
+    - created: "2024-10-24T13:25:23Z"
+      dockerImageReference: registry.redhat.io/ubi8/ruby-25@sha256:3ac535260a567bd9cba4e9778ea2ede1d036e66d46f281b45c7e1224951e2b4a
+      generation: 2
+      image: sha256:3ac535260a567bd9cba4e9778ea2ede1d036e66d46f281b45c7e1224951e2b4a
+    tag: 2.5-ubi8
+  - items:
+    - created: "2024-10-24T13:25:23Z"
+      dockerImageReference: registry.redhat.io/ubi9/ruby-30@sha256:bd67646abe19440aed883006930af4a73d1c60e1938da560d5d71b60c2bc3743
+      generation: 2
+      image: sha256:bd67646abe19440aed883006930af4a73d1c60e1938da560d5d71b60c2bc3743
+    tag: 3.0-ubi9
+  - items:
+    - created: "2024-10-24T13:25:23Z"
+      dockerImageReference: registry.redhat.io/ubi8/ruby-31@sha256:4ecda113a64e044057d86b6acaa5ca7b6737ef3358d7cf4ca0dc8fe812c8422a
+      generation: 2
+      image: sha256:4ecda113a64e044057d86b6acaa5ca7b6737ef3358d7cf4ca0dc8fe812c8422a
+    tag: 3.1-ubi8
+  - items:
+    - created: "2024-10-24T13:25:23Z"
+      dockerImageReference: registry.redhat.io/ubi9/ruby-31@sha256:676a7c33779d1913062cdb053cc5a155f99510b6d7f458888cd703bc37f89cf7
+      generation: 2
+      image: sha256:676a7c33779d1913062cdb053cc5a155f99510b6d7f458888cd703bc37f89cf7
+    tag: 3.1-ubi9
+  - items:
+    - created: "2024-10-24T13:25:23Z"
+      dockerImageReference: registry.redhat.io/ubi8/ruby-33@sha256:c571b6e625d994a79cc1a95682326b7d68caf90e9abb8ca6c5d5b05b270ddf2d
+      generation: 2
+      image: sha256:c571b6e625d994a79cc1a95682326b7d68caf90e9abb8ca6c5d5b05b270ddf2d
+    tag: 3.3-ubi8
+  - items:
+    - created: "2024-10-24T13:25:23Z"
+      dockerImageReference: registry.redhat.io/ubi9/ruby-33@sha256:164b8e3420ca8b9637427cb0a3985292a487ad67caabf3c95fc05f281d37551d
+      generation: 2
+      image: sha256:164b8e3420ca8b9637427cb0a3985292a487ad67caabf3c95fc05f281d37551d
+    tag: 3.3-ubi9
+  - items:
+    - created: "2024-10-24T13:25:23Z"
+      dockerImageReference: registry.redhat.io/ubi9/ruby-33@sha256:164b8e3420ca8b9637427cb0a3985292a487ad67caabf3c95fc05f281d37551d
+      generation: 2
+      image: sha256:164b8e3420ca8b9637427cb0a3985292a487ad67caabf3c95fc05f281d37551d
+    tag: latest

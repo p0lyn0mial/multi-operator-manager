@@ -1,0 +1,55 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T14:36:40Z"
+    creationTimestamp: "2024-10-24T13:03:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T14:36:40Z"
+    name: apiserver
+    namespace: openshift-kube-apiserver
+    resourceVersion: "57675"
+    uid: 6129f361-eaaf-4082-a624-473a024a64f0
+  subsets:
+  - addresses:
+    - ip: 10.0.0.3
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-0
+      targetRef:
+        kind: Pod
+        name: kube-apiserver-ci-op-2fcpj5j6-f6035-2lklf-master-0
+        namespace: openshift-kube-apiserver
+        uid: 39b749b8-2171-4a1b-87ad-1e3e4967679a
+    - ip: 10.0.0.4
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: kube-apiserver-ci-op-2fcpj5j6-f6035-2lklf-master-1
+        namespace: openshift-kube-apiserver
+        uid: fa113875-87fb-455b-b2a9-b713b07a4c58
+    - ip: 10.0.0.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: kube-apiserver-ci-op-2fcpj5j6-f6035-2lklf-master-2
+        namespace: openshift-kube-apiserver
+        uid: 9f69c58a-d733-45ec-8139-4035776ff4be
+    ports:
+    - name: https
+      port: 6443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "60809"

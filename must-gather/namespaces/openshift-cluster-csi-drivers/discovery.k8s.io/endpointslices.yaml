@@ -1,0 +1,93 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.0.0.4
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+    targetRef:
+      kind: Pod
+      name: gcp-pd-csi-driver-controller-745666687f-8zwgp
+      namespace: openshift-cluster-csi-drivers
+      uid: 269a35fb-6456-4ad7-99d4-2045a7f2c37c
+    zone: us-central1-b
+  - addresses:
+    - 10.0.0.6
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+    targetRef:
+      kind: Pod
+      name: gcp-pd-csi-driver-controller-745666687f-b5rxc
+      namespace: openshift-cluster-csi-drivers
+      uid: 18408301-194e-4fd2-a729-c66b1e630837
+    zone: us-central1-c
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:03Z"
+    creationTimestamp: "2024-10-24T13:03:44Z"
+    generateName: gcp-pd-csi-driver-controller-metrics-
+    generation: 15
+    labels:
+      app: gcp-pd-csi-driver-controller-metrics
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: gcp-pd-csi-driver-controller-metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8567912f-a592-4e6e-b770-e892f92e117d"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:03Z"
+    name: gcp-pd-csi-driver-controller-metrics-h6xgf
+    namespace: openshift-cluster-csi-drivers
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: gcp-pd-csi-driver-controller-metrics
+      uid: 8567912f-a592-4e6e-b770-e892f92e117d
+    resourceVersion: "13412"
+    uid: 835be69c-e73e-4510-8969-b4e379e1b5d4
+  ports:
+  - name: attacher-m
+    port: 9203
+    protocol: TCP
+  - name: snapshotter-m
+    port: 9205
+    protocol: TCP
+  - name: provisioner-m
+    port: 9202
+    protocol: TCP
+  - name: resizer-m
+    port: 9204
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "61111"

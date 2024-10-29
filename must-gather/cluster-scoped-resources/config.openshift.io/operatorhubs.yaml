@@ -1,0 +1,72 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: OperatorHub
+  metadata:
+    annotations:
+      capability.openshift.io/name: marketplace
+      include.release.openshift.io/hypershift: "true"
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      release.openshift.io/create-only: "true"
+    creationTimestamp: "2024-10-24T12:58:44Z"
+    generation: 1
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:capability.openshift.io/name: {}
+            f:include.release.openshift.io/hypershift: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+            f:release.openshift.io/create-only: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"d726a5bc-9162-42f2-89fe-3db09b88b9e5"}: {}
+        f:spec: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2024-10-24T12:58:44Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          .: {}
+          f:sources: {}
+      manager: marketplace-operator
+      operation: Update
+      subresource: status
+      time: "2024-10-24T14:32:48Z"
+    name: cluster
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: d726a5bc-9162-42f2-89fe-3db09b88b9e5
+    resourceVersion: "56357"
+    uid: 7eb6a01f-b496-478f-a2ac-6a480ddb3fd9
+  spec: {}
+  status:
+    sources:
+    - disabled: false
+      name: redhat-operators
+      status: Success
+    - disabled: false
+      name: certified-operators
+      status: Success
+    - disabled: false
+      name: community-operators
+      status: Success
+    - disabled: false
+      name: redhat-marketplace
+      status: Success
+kind: OperatorHubList
+metadata:
+  continue: ""
+  resourceVersion: "60442"

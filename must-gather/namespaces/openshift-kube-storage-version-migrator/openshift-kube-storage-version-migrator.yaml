@@ -1,0 +1,57 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/sa.scc.mcs: s0:c24,c9
+    openshift.io/sa.scc.supplemental-groups: 1000570000/10000
+    openshift.io/sa.scc.uid-range: 1000570000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2024-10-24T13:03:29Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-kube-storage-version-migrator
+    olm.operatorgroup.uid/ef9fb4ff-a719-4fda-beb0-3b1fea871d36: ""
+    openshift.io/cluster-monitoring: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+    manager: cluster-kube-storage-version-migrator-operator
+    operation: Update
+    time: "2024-10-24T13:03:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2024-10-24T13:03:29Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/ef9fb4ff-a719-4fda-beb0-3b1fea871d36: {}
+    manager: olm
+    operation: Update
+    time: "2024-10-24T13:05:23Z"
+  name: openshift-kube-storage-version-migrator
+  resourceVersion: "11318"
+  uid: b4a46d5b-c99c-4655-9750-dd6da5f04a4c
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

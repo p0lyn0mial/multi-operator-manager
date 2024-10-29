@@ -1,0 +1,58 @@
+---
+apiVersion: console.openshift.io/v1
+kind: ConsolePlugin
+metadata:
+  creationTimestamp: "2024-10-24T13:25:51Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: networking-console-plugin
+    app.kubernetes.io/managed-by: cluster-network-operator
+    app.kubernetes.io/name: networking-console-plugin
+    app.kubernetes.io/part-of: cluster-network-operator
+  managedFields:
+  - apiVersion: console.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+        f:ownerReferences:
+          k:{"uid":"5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d"}: {}
+      f:spec:
+        f:backend:
+          f:service:
+            f:basePath: {}
+            f:name: {}
+            f:namespace: {}
+            f:port: {}
+          f:type: {}
+        f:displayName: {}
+        f:i18n:
+          f:loadType: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2024-10-24T13:25:51Z"
+  name: networking-console-plugin
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: 5fd09b98-1d3f-4b9a-a44c-e7d1a8665f5d
+  resourceVersion: "27898"
+  uid: 1c048155-4995-415e-b3a9-a0b5e1fe6fd7
+spec:
+  backend:
+    service:
+      basePath: /
+      name: networking-console-plugin
+      namespace: openshift-network-console
+      port: 9443
+    type: Service
+  displayName: Networking Console Plugin
+  i18n:
+    loadType: Preload

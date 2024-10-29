@@ -1,0 +1,62 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2024-10-24T13:07:03Z"
+    creationTimestamp: "2024-10-24T13:03:44Z"
+    labels:
+      app: gcp-pd-csi-driver-controller-metrics
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:07:03Z"
+    name: gcp-pd-csi-driver-controller-metrics
+    namespace: openshift-cluster-csi-drivers
+    resourceVersion: "13413"
+    uid: 22281f5c-c177-4885-8f4e-579c680002d9
+  subsets:
+  - addresses:
+    - ip: 10.0.0.4
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-1
+      targetRef:
+        kind: Pod
+        name: gcp-pd-csi-driver-controller-745666687f-8zwgp
+        namespace: openshift-cluster-csi-drivers
+        uid: 269a35fb-6456-4ad7-99d4-2045a7f2c37c
+    - ip: 10.0.0.6
+      nodeName: ci-op-2fcpj5j6-f6035-2lklf-master-2
+      targetRef:
+        kind: Pod
+        name: gcp-pd-csi-driver-controller-745666687f-b5rxc
+        namespace: openshift-cluster-csi-drivers
+        uid: 18408301-194e-4fd2-a729-c66b1e630837
+    ports:
+    - name: attacher-m
+      port: 9203
+      protocol: TCP
+    - name: snapshotter-m
+      port: 9205
+      protocol: TCP
+    - name: provisioner-m
+      port: 9202
+      protocol: TCP
+    - name: resizer-m
+      port: 9204
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "61111"

@@ -1,0 +1,235 @@
+---
+apiVersion: machine.openshift.io/v1
+kind: ControlPlaneMachineSet
+metadata:
+  creationTimestamp: "2024-10-24T12:59:12Z"
+  finalizers:
+  - controlplanemachineset.machine.openshift.io
+  generation: 1
+  labels:
+    machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+  managedFields:
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:machine.openshift.io/cluster-api-cluster: {}
+      f:spec:
+        .: {}
+        f:replicas: {}
+        f:selector: {}
+        f:state: {}
+        f:strategy:
+          .: {}
+          f:type: {}
+        f:template:
+          .: {}
+          f:machineType: {}
+          f:machines_v1beta1_machine_openshift_io:
+            .: {}
+            f:failureDomains:
+              .: {}
+              f:gcp: {}
+              f:platform: {}
+            f:metadata:
+              .: {}
+              f:labels:
+                .: {}
+                f:machine.openshift.io/cluster-api-cluster: {}
+                f:machine.openshift.io/cluster-api-machine-role: {}
+                f:machine.openshift.io/cluster-api-machine-type: {}
+            f:spec:
+              .: {}
+              f:lifecycleHooks: {}
+              f:metadata: {}
+              f:providerSpec:
+                .: {}
+                f:value:
+                  .: {}
+                  f:apiVersion: {}
+                  f:canIPForward: {}
+                  f:credentialsSecret:
+                    .: {}
+                    f:name: {}
+                  f:deletionProtection: {}
+                  f:disks: {}
+                  f:kind: {}
+                  f:machineType: {}
+                  f:metadata:
+                    .: {}
+                    f:creationTimestamp: {}
+                  f:networkInterfaces: {}
+                  f:projectID: {}
+                  f:region: {}
+                  f:serviceAccounts: {}
+                  f:shieldedInstanceConfig: {}
+                  f:tags: {}
+                  f:userDataSecret:
+                    .: {}
+                    f:name: {}
+                  f:zone: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2024-10-24T12:59:12Z"
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status: {}
+    manager: cluster-bootstrap
+    operation: Update
+    subresource: status
+    time: "2024-10-24T12:59:12Z"
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"controlplanemachineset.machine.openshift.io": {}
+    manager: manager
+    operation: Update
+    time: "2024-10-24T13:05:24Z"
+  - apiVersion: machine.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Degraded"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Error"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:observedGeneration: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: manager
+    operation: Update
+    subresource: status
+    time: "2024-10-24T13:12:04Z"
+  name: cluster
+  namespace: openshift-machine-api
+  resourceVersion: "18237"
+  uid: 1f44de30-a00a-4efe-b4e0-1c284a4e72de
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+      machine.openshift.io/cluster-api-machine-role: master
+      machine.openshift.io/cluster-api-machine-type: master
+  state: Active
+  strategy:
+    type: RollingUpdate
+  template:
+    machineType: machines_v1beta1_machine_openshift_io
+    machines_v1beta1_machine_openshift_io:
+      failureDomains:
+        gcp:
+        - zone: us-central1-a
+        - zone: us-central1-b
+        - zone: us-central1-c
+        - zone: us-central1-f
+        platform: GCP
+      metadata:
+        labels:
+          machine.openshift.io/cluster-api-cluster: ci-op-2fcpj5j6-f6035-2lklf
+          machine.openshift.io/cluster-api-machine-role: master
+          machine.openshift.io/cluster-api-machine-type: master
+      spec:
+        lifecycleHooks: {}
+        metadata: {}
+        providerSpec:
+          value:
+            apiVersion: machine.openshift.io/v1beta1
+            canIPForward: false
+            credentialsSecret:
+              name: gcp-cloud-credentials
+            deletionProtection: false
+            disks:
+            - autoDelete: true
+              boot: true
+              image: projects/rhcos-cloud/global/images/rhcos-418-94-202410090804-0-gcp-x86-64
+              labels: {}
+              sizeGb: 200
+              type: pd-ssd
+            kind: GCPMachineProviderSpec
+            machineType: e2-custom-6-16384
+            metadata:
+              creationTimestamp: null
+            networkInterfaces:
+            - network: ci-op-2fcpj5j6-f6035-2lklf-network
+              subnetwork: ci-op-2fcpj5j6-f6035-2lklf-master-subnet
+            projectID: XXXXXXXXXXXXXXXXXXXXXXXX
+            region: us-central1
+            serviceAccounts:
+            - email: ci-op-2fcpj5j6-f6035-2lklf-m@XXXXXXXXXXXXXXXXXXXXXXXX.iam.gserviceaccount.com
+              scopes:
+              - https://www.googleapis.com/auth/cloud-platform
+            shieldedInstanceConfig: {}
+            tags:
+            - ci-op-2fcpj5j6-f6035-2lklf-control-plane
+            - ci-op-2fcpj5j6-f6035-2lklf
+            userDataSecret:
+              name: master-user-data
+            zone: ""
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-24T13:05:24Z"
+    message: ""
+    observedGeneration: 1
+    reason: AsExpected
+    status: "False"
+    type: Error
+  - lastTransitionTime: "2024-10-24T13:12:04Z"
+    message: ""
+    observedGeneration: 1
+    reason: AllReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-10-24T13:11:19Z"
+    message: ""
+    observedGeneration: 1
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2024-10-24T13:12:04Z"
+    message: ""
+    observedGeneration: 1
+    reason: AllReplicasUpdated
+    status: "False"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 3
+  replicas: 3
+  updatedReplicas: 3

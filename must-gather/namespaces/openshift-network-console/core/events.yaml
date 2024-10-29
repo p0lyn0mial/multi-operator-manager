@@ -1,0 +1,1112 @@
+---
+apiVersion: v1
+items:
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:25:51.411606Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27871"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48
+    to ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:25:51Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801666d46c2abbc
+    namespace: openshift-network-console
+    resourceVersion: "27879"
+    uid: 9fb7afe1-3d6b-43d4-b6c1-afbeb593f1b1
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 5
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "28024"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:42Z"
+  message: Add eth0 [10.131.0.16/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:26:42Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801666ed653b6eb
+    namespace: openshift-network-console
+    resourceVersion: "28736"
+    uid: d5ea3b5e-a421-4980-8117-4244589a0a72
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:25:58Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-4mr48_openshift-network-console_12d67959-0d4f-4beb-b36c-78f41974f8f4_0(60c469e03723e5f2a2cb7c52414ecee7ae4f367c9611bc69840735a05b88d78d): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-4mr48 to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"60c469e03723e5f2a2cb7c52414ecee7ae4f367c9611bc69840735a05b88d78d" Netns:"/var/run/netns/87cc5855-115b-416e-8a3a-2a4c9cf53460" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-4mr48;K8S_POD_INFRA_CONTAINER_ID=60c469e03723e5f2a2cb7c52414ecee7ae4f367c9611bc69840735a05b88d78d;K8S_POD_UID=12d67959-0d4f-4beb-b36c-78f41974f8f4" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48/12d67959-0d4f-4beb-b36c-78f41974f8f4]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-4mr48 in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-4mr48" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:25:58Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801666edf614ce2
+    namespace: openshift-network-console
+    resourceVersion: "28047"
+    uid: 378a1197-b2ba-4f86-b6a4-5f7f888254a1
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:01Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:01Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-4mr48_openshift-network-console_12d67959-0d4f-4beb-b36c-78f41974f8f4_0(aded3cbf1e4ebd5c114140606b18e311d8e72818b2cf46098f34692533027669): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-4mr48 to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"aded3cbf1e4ebd5c114140606b18e311d8e72818b2cf46098f34692533027669" Netns:"/var/run/netns/35edcc16-50e0-48fe-81bc-380fd84750a2" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-4mr48;K8S_POD_INFRA_CONTAINER_ID=aded3cbf1e4ebd5c114140606b18e311d8e72818b2cf46098f34692533027669;K8S_POD_UID=12d67959-0d4f-4beb-b36c-78f41974f8f4" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48/12d67959-0d4f-4beb-b36c-78f41974f8f4]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-4mr48 in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-4mr48" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:01Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801666fa4fcf15a
+    namespace: openshift-network-console
+    resourceVersion: "28115"
+    uid: 5d66bee2-fcd0-419b-aa26-ce053c6f8ab7
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:18Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:18Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-4mr48_openshift-network-console_12d67959-0d4f-4beb-b36c-78f41974f8f4_0(ce7951abe2e535d1f4aad0248ed86a0bba165be9b5647e429570349c937dfc25): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-4mr48 to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"ce7951abe2e535d1f4aad0248ed86a0bba165be9b5647e429570349c937dfc25" Netns:"/var/run/netns/458e163e-b367-469d-a7b7-cf9cc3557b3b" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-4mr48;K8S_POD_INFRA_CONTAINER_ID=ce7951abe2e535d1f4aad0248ed86a0bba165be9b5647e429570349c937dfc25;K8S_POD_UID=12d67959-0d4f-4beb-b36c-78f41974f8f4" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48/12d67959-0d4f-4beb-b36c-78f41974f8f4]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-4mr48 in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-4mr48" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:18Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801667396a3bf84
+    namespace: openshift-network-console
+    resourceVersion: "28342"
+    uid: 93842a2d-a32c-48a6-a2f6-3628677e6ad0
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:31Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-4mr48_openshift-network-console_12d67959-0d4f-4beb-b36c-78f41974f8f4_0(5aef6f2dedc873fb7148671ad05d618b8b9edc0e0f0bbf75c5c0354346979c2e): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-4mr48 to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"5aef6f2dedc873fb7148671ad05d618b8b9edc0e0f0bbf75c5c0354346979c2e" Netns:"/var/run/netns/aa4b3072-fa82-4e6c-8e4e-51368e33ed32" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-4mr48;K8S_POD_INFRA_CONTAINER_ID=5aef6f2dedc873fb7148671ad05d618b8b9edc0e0f0bbf75c5c0354346979c2e;K8S_POD_UID=12d67959-0d4f-4beb-b36c-78f41974f8f4" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-4mr48/12d67959-0d4f-4beb-b36c-78f41974f8f4]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-4mr48 in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-4mr48" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:31Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.180166769f600519
+    namespace: openshift-network-console
+    resourceVersion: "28461"
+    uid: 7584cf24-f75a-400b-9219-0ad59b90ba16
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:42Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8"
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:42Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.18016679431c9427
+    namespace: openshift-network-console
+    resourceVersion: "28739"
+    uid: 13f62e96-bebe-4dc1-9a55-01bf2c85c244
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:46Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8"
+    in 3.863s (3.863s including waiting). Image size: 366440567 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:46Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801667a29681e28
+    namespace: openshift-network-console
+    resourceVersion: "28795"
+    uid: e97e396a-63e7-4d44-941a-25a24b26abc9
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:46Z"
+  message: Created container networking-console-plugin
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:46Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801667a2e51a26c
+    namespace: openshift-network-console
+    resourceVersion: "28796"
+    uid: 76fa16bd-a568-456a-934c-42442a393bb5
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-4mr48
+    namespace: openshift-network-console
+    resourceVersion: "27873"
+    uid: 12d67959-0d4f-4beb-b36c-78f41974f8f4
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:46Z"
+  message: Started container networking-console-plugin
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:46Z"
+    name: networking-console-plugin-5cd86b96f5-4mr48.1801667a2f796d1f
+    namespace: openshift-network-console
+    resourceVersion: "28797"
+    uid: 6fdbd142-27ce-4676-9d21-9c9cc24608d6
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-a-8hj4x
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2024-10-24T13:25:51.435238Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27877"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw
+    to ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2024-10-24T13:25:51Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.1801666d482b644b
+    namespace: openshift-network-console
+    resourceVersion: "27883"
+    uid: 2302f40b-7e46-4c9e-b556-785285dee20d
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-ci-op-2fcpj5j6-f6035-2lklf-master-0
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:51Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:25:51Z"
+  message: 'MountVolume.SetUp failed for volume "networking-console-plugin-cert" :
+    secret "networking-console-plugin-cert" not found'
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:25:51Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.1801666d55d2f699
+    namespace: openshift-network-console
+    resourceVersion: "27894"
+    uid: 5418cc05-387b-4cf6-989c-c5e0972701fd
+  reason: FailedMount
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 5
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:55Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27991"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:41Z"
+  message: Add eth0 [10.129.2.13/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus-daemon
+      operation: Update
+      time: "2024-10-24T13:26:41Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.1801666e1dc4019d
+    namespace: openshift-network-console
+    resourceVersion: "28705"
+    uid: f2c011ef-6bdb-44a8-9868-7f7efe2b9bd6
+  reason: AddedInterface
+  reportingComponent: multus
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:55Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:25:55Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-dh6vw_openshift-network-console_6c63032a-fda9-4676-bf46-e9f2c4c0ed34_0(984c0a3a3f3fcee0a7ebef0d628b39d0febccf12513f90911d355cc9de1db69f): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"984c0a3a3f3fcee0a7ebef0d628b39d0febccf12513f90911d355cc9de1db69f" Netns:"/var/run/netns/021ef39d-5791-4de2-ad6e-5d6eaf51c416" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-dh6vw;K8S_POD_INFRA_CONTAINER_ID=984c0a3a3f3fcee0a7ebef0d628b39d0febccf12513f90911d355cc9de1db69f;K8S_POD_UID=6c63032a-fda9-4676-bf46-e9f2c4c0ed34" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw/6c63032a-fda9-4676-bf46-e9f2c4c0ed34]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-dh6vw in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-dh6vw" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:25:55Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.1801666e275184f2
+    namespace: openshift-network-console
+    resourceVersion: "28000"
+    uid: 1f955e94-7eee-4798-ba1b-b891ad179b18
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:25:58Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-dh6vw_openshift-network-console_6c63032a-fda9-4676-bf46-e9f2c4c0ed34_0(e195998c1367d9c40a7fae70fbf06aedd6c4568bc6866a26629033c0f717fd7f): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"e195998c1367d9c40a7fae70fbf06aedd6c4568bc6866a26629033c0f717fd7f" Netns:"/var/run/netns/999333a9-821d-46d1-8f5f-55fe97de1250" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-dh6vw;K8S_POD_INFRA_CONTAINER_ID=e195998c1367d9c40a7fae70fbf06aedd6c4568bc6866a26629033c0f717fd7f;K8S_POD_UID=6c63032a-fda9-4676-bf46-e9f2c4c0ed34" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw/6c63032a-fda9-4676-bf46-e9f2c4c0ed34]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-dh6vw in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-dh6vw" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:25:58Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.1801666efbf3c2b9
+    namespace: openshift-network-console
+    resourceVersion: "28062"
+    uid: 134e0f5a-3531-4d5f-b7ae-5cba35ade152
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:16Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:16Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-dh6vw_openshift-network-console_6c63032a-fda9-4676-bf46-e9f2c4c0ed34_0(f6ab86961c61e674a0138c6755f3f1073086a1d0aced024585d9f110bd4a77dd): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"f6ab86961c61e674a0138c6755f3f1073086a1d0aced024585d9f110bd4a77dd" Netns:"/var/run/netns/abef234f-4a7f-4def-90dd-3a8c2200b2c2" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-dh6vw;K8S_POD_INFRA_CONTAINER_ID=f6ab86961c61e674a0138c6755f3f1073086a1d0aced024585d9f110bd4a77dd;K8S_POD_UID=6c63032a-fda9-4676-bf46-e9f2c4c0ed34" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw/6c63032a-fda9-4676-bf46-e9f2c4c0ed34]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-dh6vw in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-dh6vw" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:16Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.180166730ad0aa40
+    namespace: openshift-network-console
+    resourceVersion: "28313"
+    uid: bbaed2fe-1338-46c7-8231-ce130af7e6b9
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:31Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:31Z"
+  message: |-
+    Failed to create pod sandbox: rpc error: code = Unknown desc = failed to create pod network sandbox k8s_networking-console-plugin-5cd86b96f5-dh6vw_openshift-network-console_6c63032a-fda9-4676-bf46-e9f2c4c0ed34_0(d561da67b9e22d829649b73b1cbf15d0b029f7d385e015469d1667dfc192b0df): error adding pod openshift-network-console_networking-console-plugin-5cd86b96f5-dh6vw to CNI network "multus-cni-network": plugin type="multus-shim" name="multus-cni-network" failed (add): CmdAdd (shim): CNI request failed with status 400: 'ContainerID:"d561da67b9e22d829649b73b1cbf15d0b029f7d385e015469d1667dfc192b0df" Netns:"/var/run/netns/7b8a4104-8ab8-4f82-b4b6-29387b9a5910" IfName:"eth0" Args:"IgnoreUnknown=1;K8S_POD_NAMESPACE=openshift-network-console;K8S_POD_NAME=networking-console-plugin-5cd86b96f5-dh6vw;K8S_POD_INFRA_CONTAINER_ID=d561da67b9e22d829649b73b1cbf15d0b029f7d385e015469d1667dfc192b0df;K8S_POD_UID=6c63032a-fda9-4676-bf46-e9f2c4c0ed34" Path:"" ERRORED: error configuring pod [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw] networking: Multus: [openshift-network-console/networking-console-plugin-5cd86b96f5-dh6vw/6c63032a-fda9-4676-bf46-e9f2c4c0ed34]: error setting the networks status, pod was already deleted: SetPodNetworkStatusAnnotation: failed to query the pod networking-console-plugin-5cd86b96f5-dh6vw in out of cluster comm: pod "networking-console-plugin-5cd86b96f5-dh6vw" not found
+    ': StdinData: {"binDir":"/var/lib/cni/bin","clusterNetwork":"/host/run/multus/cni/net.d/10-ovn-kubernetes.conf","cniVersion":"0.3.1","daemonSocketDir":"/run/multus/socket","globalNamespaces":"default,openshift-multus,openshift-sriov-network-operator,openshift-cnv","logLevel":"verbose","logToStderr":true,"name":"multus-cni-network","namespaceIsolation":true,"type":"multus-shim"}
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:31Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.18016676891d5ad1
+    namespace: openshift-network-console
+    resourceVersion: "28455"
+    uid: 9cac0353-172c-470b-8724-4d93053e2dd7
+  reason: FailedCreatePodSandBox
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:41Z"
+  message: Pulling image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8"
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:41Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.18016678f3112a18
+    namespace: openshift-network-console
+    resourceVersion: "28707"
+    uid: 513fd968-cb83-4910-8135-d1a70e24d2bd
+  reason: Pulling
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:45Z"
+  message: 'Successfully pulled image "registry.build02.ci.openshift.org/ci-op-2fcpj5j6/stable@sha256:5922faf77c005dda67080ab24a6f4c91177a822c378520fe7738138fc9dce3a8"
+    in 3.849s (3.849s including waiting). Image size: 366440567 bytes.'
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:45Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.18016679d8856493
+    namespace: openshift-network-console
+    resourceVersion: "28772"
+    uid: 4223df6c-bf39-4d69-a552-9464ffa00a30
+  reason: Pulled
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:45Z"
+  message: Created container networking-console-plugin
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:45Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.18016679ddd8454c
+    namespace: openshift-network-console
+    resourceVersion: "28773"
+    uid: d23a98d1-248f-4b57-82f0-cc3059a2c1f3
+  reason: Created
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:26:45Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{networking-console-plugin}
+    kind: Pod
+    name: networking-console-plugin-5cd86b96f5-dh6vw
+    namespace: openshift-network-console
+    resourceVersion: "27881"
+    uid: 6c63032a-fda9-4676-bf46-e9f2c4c0ed34
+  kind: Event
+  lastTimestamp: "2024-10-24T13:26:45Z"
+  message: Started container networking-console-plugin
+  metadata:
+    creationTimestamp: "2024-10-24T13:26:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:reportingInstance: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2024-10-24T13:26:45Z"
+    name: networking-console-plugin-5cd86b96f5-dh6vw.18016679de726afd
+    namespace: openshift-network-console
+    resourceVersion: "28774"
+    uid: a53aa1e5-c007-4266-b782-fd272db2267b
+  reason: Started
+  reportingComponent: kubelet
+  reportingInstance: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  source:
+    component: kubelet
+    host: ci-op-2fcpj5j6-f6035-2lklf-worker-b-hj8l2
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:51Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: networking-console-plugin-5cd86b96f5
+    namespace: openshift-network-console
+    resourceVersion: "27868"
+    uid: 10b5fdc1-29aa-4bed-9975-59e9ef0960a5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:25:51Z"
+  message: 'Created pod: networking-console-plugin-5cd86b96f5-4mr48'
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:25:51Z"
+    name: networking-console-plugin-5cd86b96f5.1801666d460bba44
+    namespace: openshift-network-console
+    resourceVersion: "27872"
+    uid: ffc849e0-4d2b-4424-b47a-225e12329058
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:51Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: networking-console-plugin-5cd86b96f5
+    namespace: openshift-network-console
+    resourceVersion: "27868"
+    uid: 10b5fdc1-29aa-4bed-9975-59e9ef0960a5
+  kind: Event
+  lastTimestamp: "2024-10-24T13:25:51Z"
+  message: 'Created pod: networking-console-plugin-5cd86b96f5-dh6vw'
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:25:51Z"
+    name: networking-console-plugin-5cd86b96f5.1801666d4750d391
+    namespace: openshift-network-console
+    resourceVersion: "27880"
+    uid: 0e9c7b9d-54fc-4902-a672-b95ff03ee59e
+  reason: SuccessfulCreate
+  reportingComponent: replicaset-controller
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2024-10-24T13:25:51Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: networking-console-plugin
+    namespace: openshift-network-console
+    resourceVersion: "27867"
+    uid: cb2c387c-d852-459f-9044-5090832d0933
+  kind: Event
+  lastTimestamp: "2024-10-24T13:25:51Z"
+  message: Scaled up replica set networking-console-plugin-5cd86b96f5 to 2
+  metadata:
+    creationTimestamp: "2024-10-24T13:25:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:reportingComponent: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2024-10-24T13:25:51Z"
+    name: networking-console-plugin.1801666d44ce5437
+    namespace: openshift-network-console
+    resourceVersion: "27869"
+    uid: 7389c800-8ead-43b3-8c9a-de160a866e4d
+  reason: ScalingReplicaSet
+  reportingComponent: deployment-controller
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "61008"

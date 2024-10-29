@@ -1,0 +1,30 @@
+2024-10-24T13:05:44.445904047Z I1024 13:05:44.445680       1 main.go:109] "Version" version="v0.4.0-1042-g39b37c06-dirty"
+2024-10-24T13:05:44.448084726Z I1024 13:05:44.448049       1 common.go:143] "Probing CSI driver for readiness"
+2024-10-24T13:05:44.452694046Z I1024 13:05:44.452655       1 main.go:169] "CSI driver name" driver="pd.csi.storage.gke.io"
+2024-10-24T13:05:44.454396776Z I1024 13:05:44.454376       1 common.go:143] "Probing CSI driver for readiness"
+2024-10-24T13:05:44.454958496Z I1024 13:05:44.454920       1 main.go:195] "ServeMux listening" driver="pd.csi.storage.gke.io" address="localhost:8203" metricsPath="/metrics"
+2024-10-24T13:05:44.456337386Z I1024 13:05:44.456260       1 main.go:249] "CSI driver supports ControllerPublishUnpublish, using real CSI handler" driver="pd.csi.storage.gke.io"
+2024-10-24T13:05:44.456337386Z I1024 13:05:44.456301       1 main.go:257] "CSI driver supports list volumes published nodes. Using capability to reconcile volume attachment objects with actual backend state" driver="pd.csi.storage.gke.io"
+2024-10-24T13:05:44.456861276Z I1024 13:05:44.456838       1 leaderelection.go:254] attempting to acquire leader lease openshift-cluster-csi-drivers/external-attacher-leader-pd-csi-storage-gke-io...
+2024-10-24T13:09:58.387199297Z E1024 13:09:58.387128       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-attacher-leader-pd-csi-storage-gke-io: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-attacher-leader-pd-csi-storage-gke-io": dial tcp 172.30.0.1:443: i/o timeout
+2024-10-24T13:10:51.084015391Z I1024 13:10:51.083940       1 leaderelection.go:268] successfully acquired lease openshift-cluster-csi-drivers/external-attacher-leader-pd-csi-storage-gke-io
+2024-10-24T13:10:51.084201271Z I1024 13:10:51.084147       1 leader_election.go:184] "became leader, starting"
+2024-10-24T13:10:51.084201271Z I1024 13:10:51.084196       1 controller.go:129] "Starting CSI attacher"
+2024-10-24T13:10:51.084378151Z I1024 13:10:51.084294       1 envvar.go:172] "Feature gate default state" feature="WatchListClient" enabled=false
+2024-10-24T13:10:51.084378151Z I1024 13:10:51.084339       1 envvar.go:172] "Feature gate default state" feature="InformerResourceVersion" enabled=false
+2024-10-24T13:10:51.087303071Z I1024 13:10:51.087260       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:10:51.087404211Z I1024 13:10:51.087367       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:10:51.087836581Z I1024 13:10:51.087807       1 reflector.go:368] Caches populated for *v1.VolumeAttachment from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:05.130938915Z E1024 13:13:05.130860       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-attacher-leader-pd-csi-storage-gke-io": dial tcp 172.30.0.1:443: i/o timeout, falling back to slow path
+2024-10-24T13:13:30.632512767Z I1024 13:13:30.632452       1 reflector.go:368] Caches populated for *v1.VolumeAttachment from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:30.703314502Z I1024 13:13:30.703243       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:13:30.713364811Z I1024 13:13:30.713312       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:14:28.772053454Z E1024 13:14:28.771979       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:15:20.908397435Z I1024 13:15:20.908312       1 reflector.go:368] Caches populated for *v1.PersistentVolume from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:15:21.151089222Z I1024 13:15:21.151042       1 reflector.go:368] Caches populated for *v1.CSINode from k8s.io/client-go/informers/factory.go:160
+2024-10-24T13:16:20.484094128Z E1024 13:16:20.484037       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:20.497118385Z E1024 13:17:20.497043       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-attacher-leader-pd-csi-storage-gke-io: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io external-attacher-leader-pd-csi-storage-gke-io)
+2024-10-24T13:17:53.506241110Z E1024 13:17:53.506171       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:18:00.435348478Z E1024 13:18:00.435029       1 leaderelection.go:436] error retrieving resource lock openshift-cluster-csi-drivers/external-attacher-leader-pd-csi-storage-gke-io: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-cluster-csi-drivers/leases/external-attacher-leader-pd-csi-storage-gke-io": context deadline exceeded
+2024-10-24T13:18:00.435348478Z I1024 13:18:00.435080       1 leaderelection.go:297] failed to renew lease openshift-cluster-csi-drivers/external-attacher-leader-pd-csi-storage-gke-io: timed out waiting for the condition
+2024-10-24T13:18:00.435348478Z E1024 13:18:00.435116       1 leader_election.go:188] "Stopped leading"

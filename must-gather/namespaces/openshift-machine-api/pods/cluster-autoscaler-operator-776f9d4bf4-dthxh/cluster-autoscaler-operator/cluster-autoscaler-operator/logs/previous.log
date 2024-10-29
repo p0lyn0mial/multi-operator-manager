@@ -1,0 +1,477 @@
+2024-10-24T13:05:24.217272374Z I1024 13:05:24.217095       1 main.go:15] Go Version: go1.22.7 (Red Hat 1.22.7-1.el9_5) X:strictfipsruntime
+2024-10-24T13:05:24.217272374Z I1024 13:05:24.217234       1 main.go:16] Go OS/Arch: linux/amd64
+2024-10-24T13:05:24.217272374Z I1024 13:05:24.217240       1 main.go:17] Version: cluster-autoscaler-operator v0.0.0-545-g1a9b775-dirty
+2024-10-24T13:05:24.218225505Z I1024 13:05:24.217521       1 leaderelection.go:121] The leader election gives 4 retries and allows for 30s of clock skew. The kube-apiserver downtime tolerance is 78s. Worst non-graceful lease acquisition is 2m43s. Worst graceful lease acquisition is {26s}.
+2024-10-24T13:05:24.246556745Z I1024 13:05:24.245741       1 server.go:183] "msg"="Registering webhook" "logger"="controller-runtime.webhook" "path"="/validate-clusterautoscalers"
+2024-10-24T13:05:24.246556745Z I1024 13:05:24.246073       1 server.go:183] "msg"="Registering webhook" "logger"="controller-runtime.webhook" "path"="/validate-machineautoscalers"
+2024-10-24T13:05:24.246556745Z I1024 13:05:24.246481       1 main.go:41] Starting cluster-autoscaler-operator
+2024-10-24T13:05:24.246833635Z I1024 13:05:24.246788       1 server.go:208] "msg"="Starting metrics server" "logger"="controller-runtime.metrics"
+2024-10-24T13:05:24.247160005Z I1024 13:05:24.247106       1 server.go:191] "msg"="Starting webhook server" "logger"="controller-runtime.webhook"
+2024-10-24T13:05:24.247334245Z I1024 13:05:24.247289       1 server.go:247] "msg"="Serving metrics server" "bindAddress"="127.0.0.1:9191" "logger"="controller-runtime.metrics" "secure"=false
+2024-10-24T13:05:24.247567535Z I1024 13:05:24.247517       1 certwatcher.go:161] "msg"="Updated current TLS certificate" "logger"="controller-runtime.certwatcher"
+2024-10-24T13:05:24.247644925Z I1024 13:05:24.247628       1 leaderelection.go:254] attempting to acquire leader lease openshift-machine-api/cluster-autoscaler-operator-leader...
+2024-10-24T13:05:24.247951115Z I1024 13:05:24.247916       1 server.go:242] "msg"="Serving webhook server" "host"="" "logger"="controller-runtime.webhook" "port"=8443
+2024-10-24T13:05:24.248167605Z I1024 13:05:24.248120       1 certwatcher.go:115] "msg"="Starting certificate watcher" "logger"="controller-runtime.certwatcher"
+2024-10-24T13:05:24.271394875Z I1024 13:05:24.271180       1 leaderelection.go:268] successfully acquired lease openshift-machine-api/cluster-autoscaler-operator-leader
+2024-10-24T13:05:24.271735995Z I1024 13:05:24.271691       1 controller.go:175] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.ClusterAutoscaler"
+2024-10-24T13:05:24.271771905Z I1024 13:05:24.271735       1 controller.go:175] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.Deployment"
+2024-10-24T13:05:24.271786634Z I1024 13:05:24.271769       1 controller.go:175] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.Service"
+2024-10-24T13:05:24.271797205Z I1024 13:05:24.271791       1 controller.go:175] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.ServiceMonitor"
+2024-10-24T13:05:24.271835814Z I1024 13:05:24.271805       1 controller.go:175] "msg"="Starting EventSource" "controller"="cluster_autoscaler_controller" "source"="kind source: *v1.PrometheusRule"
+2024-10-24T13:05:24.271845134Z I1024 13:05:24.271834       1 controller.go:183] "msg"="Starting Controller" "controller"="cluster_autoscaler_controller"
+2024-10-24T13:05:24.272085175Z I1024 13:05:24.272052       1 status.go:341] Starting status reporter: cluster operator informers
+2024-10-24T13:05:24.272136945Z I1024 13:05:24.272098       1 controller.go:175] "msg"="Starting EventSource" "controller"="machine_autoscaler_controller" "source"="kind source: *v1beta1.MachineAutoscaler"
+2024-10-24T13:05:24.272162935Z I1024 13:05:24.272156       1 controller.go:175] "msg"="Starting EventSource" "controller"="machine_autoscaler_controller" "source"="kind source: *unstructured.Unstructured"
+2024-10-24T13:05:24.272173325Z I1024 13:05:24.272168       1 controller.go:183] "msg"="Starting Controller" "controller"="machine_autoscaler_controller"
+2024-10-24T13:05:24.373816465Z I1024 13:05:24.372521       1 status.go:352] Starting status reporter: worker
+2024-10-24T13:05:24.379212165Z I1024 13:05:24.379172       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:24.379299715Z W1024 13:05:24.379286       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:24.396788155Z I1024 13:05:24.396710       1 webhookconfig.go:72] Webhook configuration status: created
+2024-10-24T13:05:24.409347975Z I1024 13:05:24.409294       1 controller.go:217] "msg"="Starting workers" "controller"="cluster_autoscaler_controller" "worker count"=1
+2024-10-24T13:05:24.409832615Z I1024 13:05:24.409730       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:24.409903095Z W1024 13:05:24.409888       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:24.414255655Z I1024 13:05:24.414235       1 controller.go:217] "msg"="Starting workers" "controller"="machine_autoscaler_controller" "worker count"=1
+2024-10-24T13:05:24.422342025Z I1024 13:05:24.422315       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:24.422394005Z W1024 13:05:24.422379       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:24.480888175Z I1024 13:05:24.480839       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:24.480996045Z W1024 13:05:24.480981       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:24.553809225Z I1024 13:05:24.553717       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:24.553891215Z W1024 13:05:24.553874       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:24.572489855Z I1024 13:05:24.572456       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:24.572565935Z W1024 13:05:24.572552       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:24.899848625Z I1024 13:05:24.899813       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:24.899907035Z W1024 13:05:24.899848       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:25.172790116Z I1024 13:05:25.172237       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:25.172790116Z W1024 13:05:25.172585       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:28.468015610Z I1024 13:05:28.467957       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:28.468015610Z W1024 13:05:28.467975       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:28.482223300Z I1024 13:05:28.482168       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:28.482223300Z W1024 13:05:28.482186       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:28.496733220Z I1024 13:05:28.496677       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:28.496733220Z W1024 13:05:28.496698       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:35.906697069Z I1024 13:05:35.906653       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:35.906697069Z W1024 13:05:35.906675       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:35.926413249Z I1024 13:05:35.926359       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:35.926413249Z W1024 13:05:35.926378       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:35.936286499Z I1024 13:05:35.936200       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:35.936286499Z W1024 13:05:35.936216       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:39.381881571Z I1024 13:05:39.381833       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:39.381881571Z W1024 13:05:39.381852       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:40.088574100Z I1024 13:05:40.088238       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:40.088574100Z W1024 13:05:40.088492       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:42.914709516Z I1024 13:05:42.914456       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:42.914709516Z W1024 13:05:42.914690       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:46.417406752Z I1024 13:05:46.417132       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:46.417406752Z W1024 13:05:46.417388       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:52.616804481Z I1024 13:05:52.616726       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:52.616804481Z W1024 13:05:52.616787       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:54.377940868Z I1024 13:05:54.377880       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:54.377940868Z W1024 13:05:54.377899       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:57.874462734Z I1024 13:05:57.873818       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:57.874462734Z W1024 13:05:57.874409       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:05:58.167775047Z I1024 13:05:58.167690       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:05:58.167775047Z W1024 13:05:58.167711       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:00.210246038Z I1024 13:06:00.209983       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:00.210246038Z W1024 13:06:00.210211       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:01.230368139Z I1024 13:06:01.230306       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:01.230368139Z W1024 13:06:01.230324       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:03.409570902Z I1024 13:06:03.409509       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:03.409570902Z W1024 13:06:03.409531       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:09.380306163Z I1024 13:06:09.379999       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:09.380306163Z W1024 13:06:09.380262       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:11.223664546Z I1024 13:06:11.223610       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:11.223664546Z W1024 13:06:11.223629       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:11.245581275Z I1024 13:06:11.245535       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:11.245581275Z W1024 13:06:11.245557       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:13.036409360Z I1024 13:06:13.036142       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:13.036409360Z W1024 13:06:13.036374       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:15.243114281Z I1024 13:06:15.243046       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:15.243114281Z W1024 13:06:15.243063       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:17.026605427Z I1024 13:06:17.026556       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:17.026605427Z W1024 13:06:17.026572       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:20.838556874Z I1024 13:06:20.838197       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:20.838556874Z W1024 13:06:20.838537       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:21.452718348Z I1024 13:06:21.452663       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:21.452718348Z W1024 13:06:21.452681       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:22.720995515Z I1024 13:06:22.720946       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:22.720995515Z W1024 13:06:22.720964       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:24.377205148Z I1024 13:06:24.377163       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:24.377205148Z W1024 13:06:24.377181       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:24.867159240Z I1024 13:06:24.866580       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:24.867269500Z W1024 13:06:24.867246       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:26.002634973Z I1024 13:06:26.002585       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:26.002634973Z W1024 13:06:26.002614       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:26.016039153Z I1024 13:06:26.015978       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:26.016039153Z W1024 13:06:26.016000       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:26.160719445Z I1024 13:06:26.160677       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:26.160823924Z W1024 13:06:26.160807       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:26.205417522Z I1024 13:06:26.205369       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:26.205417522Z W1024 13:06:26.205386       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:26.219187511Z I1024 13:06:26.219126       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:26.219187511Z W1024 13:06:26.219153       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:34.030620955Z I1024 13:06:34.030296       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:34.030620955Z W1024 13:06:34.030575       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:38.358046083Z I1024 13:06:38.357539       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:38.358046083Z W1024 13:06:38.358007       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:38.645358016Z I1024 13:06:38.645295       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:38.645358016Z W1024 13:06:38.645316       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:39.300230408Z I1024 13:06:39.300075       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:39.300230408Z W1024 13:06:39.300194       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:39.378127543Z I1024 13:06:39.378067       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:39.378127543Z W1024 13:06:39.378085       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:41.820654711Z I1024 13:06:41.820590       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:41.820654711Z W1024 13:06:41.820610       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:46.225697690Z I1024 13:06:46.225296       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:46.225697690Z W1024 13:06:46.225671       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:49.038683135Z I1024 13:06:49.038350       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:49.038683135Z W1024 13:06:49.038651       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:49.285404520Z I1024 13:06:49.285346       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:49.285404520Z W1024 13:06:49.285368       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:49.316311670Z I1024 13:06:49.316246       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:49.316311670Z W1024 13:06:49.316276       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:50.963239858Z I1024 13:06:50.962812       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:50.963239858Z W1024 13:06:50.963218       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:51.426951149Z I1024 13:06:51.426900       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:51.426951149Z W1024 13:06:51.426920       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:52.649795966Z I1024 13:06:52.649597       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:52.649795966Z W1024 13:06:52.649616       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:54.377660103Z I1024 13:06:54.377459       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:54.377660103Z W1024 13:06:54.377622       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:54.633794028Z I1024 13:06:54.633529       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:54.633794028Z W1024 13:06:54.633725       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:55.138180139Z I1024 13:06:55.138141       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:55.138180139Z W1024 13:06:55.138158       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:55.266577646Z I1024 13:06:55.266538       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:55.266577646Z W1024 13:06:55.266555       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:55.491925802Z I1024 13:06:55.491875       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:55.491925802Z W1024 13:06:55.491898       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:56.149394549Z I1024 13:06:56.149327       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:56.149394549Z W1024 13:06:56.149353       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:57.355120376Z I1024 13:06:57.355040       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:57.355120376Z W1024 13:06:57.355059       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:57.617589791Z I1024 13:06:57.617537       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:57.617589791Z W1024 13:06:57.617553       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:58.714777440Z I1024 13:06:58.714720       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:58.714777440Z W1024 13:06:58.714738       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:06:58.753578610Z I1024 13:06:58.753520       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:06:58.753578610Z W1024 13:06:58.753542       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:03.397417101Z I1024 13:07:03.396936       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:03.397500830Z W1024 13:07:03.397473       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:03.702393685Z I1024 13:07:03.702338       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:03.702393685Z W1024 13:07:03.702356       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:03.731028944Z I1024 13:07:03.730971       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:03.731028944Z W1024 13:07:03.730993       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:09.378498746Z I1024 13:07:09.378024       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:09.378498746Z W1024 13:07:09.378475       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:09.404499876Z I1024 13:07:09.404443       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:09.404499876Z W1024 13:07:09.404466       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:10.116549482Z I1024 13:07:10.116496       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:10.116549482Z W1024 13:07:10.116518       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:10.906554097Z I1024 13:07:10.906503       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:10.906554097Z W1024 13:07:10.906523       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:11.686381652Z I1024 13:07:11.686329       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:11.686381652Z W1024 13:07:11.686350       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:13.432095738Z I1024 13:07:13.432028       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:13.432095738Z W1024 13:07:13.432047       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:24.379348810Z I1024 13:07:24.378862       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:24.379451950Z W1024 13:07:24.379434       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:25.104972456Z I1024 13:07:25.104430       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:25.104972456Z W1024 13:07:25.104940       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:26.200370785Z I1024 13:07:26.200332       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:26.200370785Z W1024 13:07:26.200352       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:26.222707005Z I1024 13:07:26.222657       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:26.222815984Z W1024 13:07:26.222793       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:27.391166792Z I1024 13:07:27.390674       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:27.391166792Z W1024 13:07:27.391125       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:27.958395891Z I1024 13:07:27.958337       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:27.958395891Z W1024 13:07:27.958357       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:29.788845706Z I1024 13:07:29.788782       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:29.788845706Z W1024 13:07:29.788799       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:31.180834988Z I1024 13:07:31.180742       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:31.180834988Z W1024 13:07:31.180779       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:31.503575432Z I1024 13:07:31.503506       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:31.503575432Z W1024 13:07:31.503525       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:36.021599136Z I1024 13:07:36.021537       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:36.021599136Z W1024 13:07:36.021560       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:36.354915359Z I1024 13:07:36.354846       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:36.354915359Z W1024 13:07:36.354869       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:36.964598077Z I1024 13:07:36.964044       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:36.964598077Z W1024 13:07:36.964081       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:39.378629181Z I1024 13:07:39.378584       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:39.378716001Z W1024 13:07:39.378700       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:39.516690138Z I1024 13:07:39.516628       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:39.516690138Z W1024 13:07:39.516649       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:44.150043319Z I1024 13:07:44.150000       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:44.150043319Z W1024 13:07:44.150025       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:45.692477230Z I1024 13:07:45.692438       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:45.692543150Z W1024 13:07:45.692527       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:46.297854228Z I1024 13:07:46.297811       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:46.297944568Z W1024 13:07:46.297926       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:49.661891374Z I1024 13:07:49.661850       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:49.661891374Z W1024 13:07:49.661872       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:51.391940866Z I1024 13:07:51.391874       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:51.391940866Z W1024 13:07:51.391901       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:52.107337753Z I1024 13:07:52.107261       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:52.107337753Z W1024 13:07:52.107285       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:53.990114850Z I1024 13:07:53.990013       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:53.990114850Z W1024 13:07:53.990035       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:54.101348661Z I1024 13:07:54.101293       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:54.101348661Z W1024 13:07:54.101315       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:54.378992407Z I1024 13:07:54.378922       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:54.378992407Z W1024 13:07:54.378943       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:07:55.783412518Z I1024 13:07:55.782559       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:07:55.783412518Z W1024 13:07:55.782584       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:01.900901122Z I1024 13:08:01.900860       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:01.900970802Z W1024 13:08:01.900957       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:09.378152424Z I1024 13:08:09.378095       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:09.378152424Z W1024 13:08:09.378121       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:09.749550269Z I1024 13:08:09.749394       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:09.749550269Z W1024 13:08:09.749420       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:17.232399691Z I1024 13:08:17.232343       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:17.232399691Z W1024 13:08:17.232366       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:24.378030751Z I1024 13:08:24.377962       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:24.378030751Z W1024 13:08:24.377998       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:26.529707214Z I1024 13:08:26.529645       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:26.529707214Z W1024 13:08:26.529662       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:26.668116527Z I1024 13:08:26.668063       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:26.668116527Z W1024 13:08:26.668082       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:39.380200589Z I1024 13:08:39.380136       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:39.380200589Z W1024 13:08:39.380159       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:40.534959237Z I1024 13:08:40.534893       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:40.534959237Z W1024 13:08:40.534916       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:40.979523469Z I1024 13:08:40.979163       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:40.979523469Z W1024 13:08:40.979196       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:44.941577600Z I1024 13:08:44.940903       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:44.941577600Z W1024 13:08:44.940927       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:49.137719514Z I1024 13:08:49.137632       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:49.137719514Z W1024 13:08:49.137654       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:49.287382608Z I1024 13:08:49.287328       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:49.287382608Z W1024 13:08:49.287345       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:53.779290474Z I1024 13:08:53.779226       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:53.779290474Z W1024 13:08:53.779246       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:53.818998015Z I1024 13:08:53.818932       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:53.818998015Z W1024 13:08:53.818960       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:08:54.382512325Z I1024 13:08:54.382463       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:08:54.382512325Z W1024 13:08:54.382488       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:09:00.535030188Z I1024 13:09:00.534963       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:09:00.535030188Z W1024 13:09:00.534984       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:09:01.162188220Z I1024 13:09:01.162116       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:09:01.162188220Z W1024 13:09:01.162149       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:09:14.377573696Z E1024 13:09:14.377491       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.377573696Z W1024 13:09:14.377537       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.378292657Z E1024 13:09:14.378168       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.384273807Z E1024 13:09:14.384184       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.384273807Z W1024 13:09:14.384214       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.384878157Z E1024 13:09:14.384840       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.395877357Z E1024 13:09:14.395810       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.395877357Z W1024 13:09:14.395841       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.396458247Z E1024 13:09:14.396399       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.417333298Z E1024 13:09:14.417264       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.417333298Z W1024 13:09:14.417289       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.417889088Z E1024 13:09:14.417847       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.458789449Z E1024 13:09:14.458722       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.458789449Z W1024 13:09:14.458765       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.459389939Z E1024 13:09:14.459363       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.541157322Z E1024 13:09:14.541091       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.541157322Z W1024 13:09:14.541123       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.541854052Z E1024 13:09:14.541717       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.703624318Z E1024 13:09:14.703549       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.703624318Z W1024 13:09:14.703591       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:14.704256438Z E1024 13:09:14.704200       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:15.026169039Z E1024 13:09:15.026099       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:15.026169039Z W1024 13:09:15.026133       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:15.027499849Z E1024 13:09:15.027418       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:15.669524311Z E1024 13:09:15.669442       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:15.669524311Z W1024 13:09:15.669483       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:15.670245162Z E1024 13:09:15.670194       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:16.951584866Z E1024 13:09:16.951524       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:16.951584866Z W1024 13:09:16.951558       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:16.953178276Z E1024 13:09:16.953105       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:18.355873865Z E1024 13:09:18.355798       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:09:18.356572335Z E1024 13:09:18.356518       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:19.514112635Z E1024 13:09:19.514048       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:19.514112635Z W1024 13:09:19.514086       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:19.514928845Z E1024 13:09:19.514890       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:24.374494674Z E1024 13:09:24.374425       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:24.374494674Z W1024 13:09:24.374456       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:24.375112104Z E1024 13:09:24.375074       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:24.636834313Z E1024 13:09:24.636701       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:24.636834313Z W1024 13:09:24.636731       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:24.637562633Z E1024 13:09:24.637509       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:39.373686783Z E1024 13:09:39.373613       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:39.373686783Z W1024 13:09:39.373644       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:39.374387723Z E1024 13:09:39.374351       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:44.358511152Z E1024 13:09:44.358443       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:09:44.359343933Z E1024 13:09:44.359289       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:45.119075107Z E1024 13:09:45.119011       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:45.119075107Z W1024 13:09:45.119039       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:45.119641618Z E1024 13:09:45.119596       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:54.374258075Z E1024 13:09:54.374195       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:54.374258075Z W1024 13:09:54.374226       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:09:54.374871395Z E1024 13:09:54.374809       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:09.374417738Z E1024 13:10:09.374330       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:09.374417738Z W1024 13:10:09.374370       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:09.375070308Z E1024 13:10:09.375015       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:10.357792331Z E1024 13:10:10.357695       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:10:10.358719641Z E1024 13:10:10.358672       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:24.373937915Z E1024 13:10:24.373880       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:24.373937915Z W1024 13:10:24.373911       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:24.374414535Z E1024 13:10:24.374364       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:36.358091630Z E1024 13:10:36.358024       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:10:36.358695940Z E1024 13:10:36.358648       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:10:39.388036402Z I1024 13:10:39.387983       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:10:39.388036402Z W1024 13:10:39.388010       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:10:54.384023450Z I1024 13:10:54.383966       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:10:54.384023450Z W1024 13:10:54.383985       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:07.047328855Z I1024 13:11:07.047264       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:07.047328855Z W1024 13:11:07.047285       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:09.382350010Z I1024 13:11:09.382261       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:09.382350010Z W1024 13:11:09.382284       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:24.379449828Z I1024 13:11:24.379382       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:24.379507338Z W1024 13:11:24.379441       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:39.380615728Z I1024 13:11:39.380557       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:39.380615728Z W1024 13:11:39.380577       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:49.568983315Z I1024 13:11:49.568920       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:49.568983315Z W1024 13:11:49.568940       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:49.583010895Z I1024 13:11:49.582947       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:49.583010895Z W1024 13:11:49.582972       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:53.802793870Z I1024 13:11:53.802692       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:53.802793870Z W1024 13:11:53.802712       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:54.380325966Z I1024 13:11:54.380259       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:54.380325966Z W1024 13:11:54.380288       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:54.914825561Z I1024 13:11:54.914783       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:54.914897421Z W1024 13:11:54.914881       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:56.043628163Z I1024 13:11:56.043572       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:56.043628163Z W1024 13:11:56.043597       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:56.108639004Z I1024 13:11:56.108562       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:56.108639004Z W1024 13:11:56.108585       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:56.462470227Z I1024 13:11:56.462421       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:56.462470227Z W1024 13:11:56.462447       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:59.394533519Z I1024 13:11:59.393574       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:59.394533519Z W1024 13:11:59.393601       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:59.428692930Z I1024 13:11:59.428631       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:59.428692930Z W1024 13:11:59.428655       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:11:59.786691373Z I1024 13:11:59.786643       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:11:59.786691373Z W1024 13:11:59.786665       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:01.346426780Z I1024 13:12:01.346383       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:01.346510960Z W1024 13:12:01.346495       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:03.047233798Z I1024 13:12:03.047184       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:03.047336448Z W1024 13:12:03.047319       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:03.162719499Z I1024 13:12:03.162669       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:03.162719499Z W1024 13:12:03.162687       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:04.281879721Z I1024 13:12:04.281838       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:04.281922481Z W1024 13:12:04.281886       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:06.126835990Z I1024 13:12:06.126792       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:06.126835990Z W1024 13:12:06.126816       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:09.380694648Z I1024 13:12:09.380633       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:09.380694648Z W1024 13:12:09.380653       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:09.693560315Z I1024 13:12:09.693499       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:09.693560315Z W1024 13:12:09.693520       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:09.826495513Z I1024 13:12:09.826398       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:09.826495513Z W1024 13:12:09.826450       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:12.462056263Z I1024 13:12:12.461994       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:12.462056263Z W1024 13:12:12.462019       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:13.190148954Z I1024 13:12:13.190097       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:13.190289134Z W1024 13:12:13.190270       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:13.251264383Z I1024 13:12:13.251198       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:13.251264383Z W1024 13:12:13.251223       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:20.782674186Z I1024 13:12:20.782617       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:20.782674186Z W1024 13:12:20.782637       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:21.096112433Z I1024 13:12:21.096050       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:21.096112433Z W1024 13:12:21.096077       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:21.242324121Z I1024 13:12:21.242255       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:21.242324121Z W1024 13:12:21.242278       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:23.848463851Z I1024 13:12:23.848380       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:23.848463851Z W1024 13:12:23.848419       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:23.901616060Z I1024 13:12:23.901564       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:23.901616060Z W1024 13:12:23.901587       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:24.379689235Z I1024 13:12:24.379583       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:12:24.379689235Z W1024 13:12:24.379607       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:12:26.194676954Z W1024 13:12:26.194580       1 reflector.go:561] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: failed to list *v1.Service: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-machine-api/services?resourceVersion=15934": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:26.194738214Z E1024 13:12:26.194701       1 reflector.go:158] "Unhandled Error" err="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Failed to watch *v1.Service: failed to list *v1.Service: Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-machine-api/services?resourceVersion=15934\": dial tcp 172.30.0.1:443: connect: connection refused" logger="UnhandledError"
+2024-10-24T13:12:27.265970162Z W1024 13:12:27.265868       1 reflector.go:561] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: failed to list *v1.ServiceMonitor: Get "https://172.30.0.1:443/apis/monitoring.coreos.com/v1/namespaces/openshift-machine-api/servicemonitors?resourceVersion=15934": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:27.266022612Z E1024 13:12:27.265969       1 reflector.go:158] "Unhandled Error" err="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Failed to watch *v1.ServiceMonitor: failed to list *v1.ServiceMonitor: Get \"https://172.30.0.1:443/apis/monitoring.coreos.com/v1/namespaces/openshift-machine-api/servicemonitors?resourceVersion=15934\": dial tcp 172.30.0.1:443: connect: connection refused" logger="UnhandledError"
+2024-10-24T13:12:39.374354512Z E1024 13:12:39.374285       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.374354512Z W1024 13:12:39.374314       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.375003882Z E1024 13:12:39.374942       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.380891722Z E1024 13:12:39.380836       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.380891722Z W1024 13:12:39.380863       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.381593401Z E1024 13:12:39.381542       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.392569271Z E1024 13:12:39.392525       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.392569271Z W1024 13:12:39.392546       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.393096131Z E1024 13:12:39.393046       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.414132971Z E1024 13:12:39.414072       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.414132971Z W1024 13:12:39.414092       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.414695641Z E1024 13:12:39.414645       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.455852881Z E1024 13:12:39.455741       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.455852881Z W1024 13:12:39.455825       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.456675931Z E1024 13:12:39.456635       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.537676630Z E1024 13:12:39.537621       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.537676630Z W1024 13:12:39.537650       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.538274030Z E1024 13:12:39.538244       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.699269948Z E1024 13:12:39.699203       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.699269948Z W1024 13:12:39.699229       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:39.699849918Z E1024 13:12:39.699744       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:40.021454014Z E1024 13:12:40.021381       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:40.021454014Z W1024 13:12:40.021416       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:40.022060174Z E1024 13:12:40.022026       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:40.663857187Z E1024 13:12:40.663781       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:40.663857187Z W1024 13:12:40.663822       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:40.664698167Z E1024 13:12:40.664656       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:41.945903412Z E1024 13:12:41.945843       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:41.945903412Z W1024 13:12:41.945872       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:41.946454502Z E1024 13:12:41.946405       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:44.507515532Z E1024 13:12:44.507449       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:44.507515532Z W1024 13:12:44.507483       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:44.508047462Z E1024 13:12:44.508007       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:46.400212381Z E1024 13:12:46.400133       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:12:46.401080651Z E1024 13:12:46.401034       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:49.629229314Z E1024 13:12:49.629162       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:49.629229314Z W1024 13:12:49.629196       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:49.629973784Z E1024 13:12:49.629927       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:54.374300369Z E1024 13:12:54.374238       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:54.374300369Z W1024 13:12:54.374285       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:54.374910069Z E1024 13:12:54.374882       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:59.871780926Z E1024 13:12:59.871716       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:59.871826926Z W1024 13:12:59.871784       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:12:59.872354596Z E1024 13:12:59.872317       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:13:09.374359297Z E1024 13:13:09.374299       1 status.go:426] failed to get dependency machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:13:09.374359297Z W1024 13:13:09.374330       1 status.go:271] Operator status degraded: error checking machine-api status: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/machine-api": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:13:09.374912667Z E1024 13:13:09.374878       1 status.go:311] status reporting failed: Get "https://172.30.0.1:443/apis/config.openshift.io/v1/clusteroperators/cluster-autoscaler": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:13:10.244926707Z W1024 13:13:10.244858       1 reflector.go:561] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: failed to list *v1.ServiceMonitor: Get "https://172.30.0.1:443/apis/monitoring.coreos.com/v1/namespaces/openshift-machine-api/servicemonitors?resourceVersion=15934": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:13:10.244926707Z E1024 13:13:10.244919       1 reflector.go:158] "Unhandled Error" err="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Failed to watch *v1.ServiceMonitor: failed to list *v1.ServiceMonitor: Get \"https://172.30.0.1:443/apis/monitoring.coreos.com/v1/namespaces/openshift-machine-api/servicemonitors?resourceVersion=15934\": dial tcp 172.30.0.1:443: connect: connection refused" logger="UnhandledError"
+2024-10-24T13:13:12.402382315Z E1024 13:13:12.402318       1 leaderelection.go:429] Failed to update lock optimitically: Put "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused, falling back to slow path
+2024-10-24T13:13:12.402926445Z E1024 13:13:12.402891       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:13:13.139710277Z W1024 13:13:13.139638       1 reflector.go:561] sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: failed to list *v1.Service: Get "https://172.30.0.1:443/api/v1/namespaces/openshift-machine-api/services?resourceVersion=15934": dial tcp 172.30.0.1:443: connect: connection refused
+2024-10-24T13:13:13.139781717Z E1024 13:13:13.139710       1 reflector.go:158] "Unhandled Error" err="sigs.k8s.io/controller-runtime/pkg/cache/internal/informers.go:106: Failed to watch *v1.Service: failed to list *v1.Service: Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-machine-api/services?resourceVersion=15934\": dial tcp 172.30.0.1:443: connect: connection refused" logger="UnhandledError"
+2024-10-24T13:13:24.385879506Z I1024 13:13:24.385821       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:13:24.385879506Z W1024 13:13:24.385842       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:13:39.382217581Z I1024 13:13:39.382159       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:13:39.382217581Z W1024 13:13:39.382183       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:13:40.842645737Z I1024 13:13:40.842576       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:13:40.842645737Z W1024 13:13:40.842593       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:13:54.382301296Z I1024 13:13:54.382236       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:13:54.382301296Z W1024 13:13:54.382257       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:14:08.197576973Z I1024 13:14:08.197485       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:14:08.197576973Z W1024 13:14:08.197510       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:14:08.215409751Z I1024 13:14:08.215350       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:14:08.215409751Z W1024 13:14:08.215368       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:14:37.463036069Z E1024 13:14:37.462987       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:15:09.378942585Z E1024 13:15:09.378878       1 status.go:426] failed to get dependency machine-api status: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io machine-api)
+2024-10-24T13:15:09.378942585Z W1024 13:15:09.378922       1 status.go:271] Operator status degraded: error checking machine-api status: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io machine-api)
+2024-10-24T13:15:19.093559274Z I1024 13:15:19.092877       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:15:19.093559274Z W1024 13:15:19.092904       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:15:24.400180733Z I1024 13:15:24.400133       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:15:24.400180733Z W1024 13:15:24.400157       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:15:39.384005840Z I1024 13:15:39.383959       1 status.go:437] machine-api-operator not ready yet
+2024-10-24T13:15:39.384005840Z W1024 13:15:39.383976       1 status.go:271] Operator status degraded: machine-api not ready
+2024-10-24T13:16:18.724788773Z E1024 13:16:18.722998       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:16:54.377060811Z E1024 13:16:54.376994       1 status.go:426] failed to get dependency machine-api status: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io machine-api)
+2024-10-24T13:16:54.377060811Z W1024 13:16:54.377024       1 status.go:271] Operator status degraded: error checking machine-api status: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io machine-api)
+2024-10-24T13:17:18.730068598Z E1024 13:17:18.730006       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: the server was unable to return a response in the time allotted, but may still be processing the request (get leases.coordination.k8s.io cluster-autoscaler-operator-leader)
+2024-10-24T13:17:51.741430323Z E1024 13:17:51.741357       1 leaderelection.go:429] Failed to update lock optimitically: rpc error: code = DeadlineExceeded desc = context deadline exceeded, falling back to slow path
+2024-10-24T13:17:54.380158449Z E1024 13:17:54.380086       1 status.go:311] status reporting failed: the server was unable to return a response in the time allotted, but may still be processing the request (get clusteroperators.config.openshift.io cluster-autoscaler)
+2024-10-24T13:17:58.615910306Z E1024 13:17:58.615840       1 leaderelection.go:436] error retrieving resource lock openshift-machine-api/cluster-autoscaler-operator-leader: Get "https://172.30.0.1:443/apis/coordination.k8s.io/v1/namespaces/openshift-machine-api/leases/cluster-autoscaler-operator-leader": context deadline exceeded
+2024-10-24T13:17:58.615910306Z I1024 13:17:58.615888       1 leaderelection.go:297] failed to renew lease openshift-machine-api/cluster-autoscaler-operator-leader: timed out waiting for the condition
+2024-10-24T13:18:05.624852168Z E1024 13:18:05.624786       1 leaderelection.go:322] Failed to release lock: rpc error: code = DeadlineExceeded desc = context deadline exceeded
+2024-10-24T13:18:05.624929518Z F1024 13:18:05.624857       1 main.go:43] Failed to start operator: leader election lost
